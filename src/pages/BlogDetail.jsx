@@ -1,6 +1,37 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const BlogDetail = () => {
+  const [blogs, setBlogs] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    axios
+      .get(`${apiUrl}/blogs?populate[Blogs][populate]=*`)
+      .then((res) => {
+        setBlogs(res.data.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching blogs:", error);
+      });
+  }, []);
+
+  if (blogs.length === 0) {
+    return <div>Loading...</div>;
+  }
+
+  const currentBlog = blogs[currentIndex]?.Blogs?.[0];
+  const prevBlog = currentIndex > 0 ? blogs[currentIndex - 1].Blogs?.[0] : null;
+  const nextBlog =
+    currentIndex < blogs.length - 1 ? blogs[currentIndex + 1].Blogs?.[0] : null;
+
+  // Helper to get full image URL for Strapi images
+  const getImageUrl = (image) => {
+    if (!image || !image.url) return "";
+    return apiUrl.replace("/api", "") + image.url;
+  };
+
   return (
     <>
       <div className="container-fluid px-0">
@@ -14,9 +45,9 @@ const BlogDetail = () => {
                 data-wow-delay="0.2s"
               >
                 <span className="text-dark fw_500">
-                  Navigating Leadership Change:
+                  {currentBlog?.Blog_Title_1 || ""}
                 </span>
-                <br /> Why Every CEO Transition Needs a Communications Strategy?
+                <br /> {currentBlog?.Blog_Title_2 || ""}
               </h2>
             </div>
           </div>
@@ -59,17 +90,23 @@ const BlogDetail = () => {
         </div>
       </div>
 
-      {/* <!-----blog-banner-section-----> */}
-
-      <div className="container-fluid blog_banner bg_cover px-0">
+      {/* Blog Banner with Header Image */}
+      <div
+        className="container-fluid blog_banner bg_cover px-0"
+        style={{
+          backgroundImage: `url(${getImageUrl(currentBlog?.Header_Image)})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "430px",
+        }}
+      >
         <div className="row mx-0">
           <div className="col-md-4 empty-overlay"></div>
           <div className="col-md-8"></div>
         </div>
       </div>
 
-      {/* <!-----blog-detail-----> */}
-
+      {/* Blog Detail Content */}
       <div
         className="container-fluid px-0"
         data-bs-spy="scroll"
@@ -78,153 +115,107 @@ const BlogDetail = () => {
         tabIndex="0"
       >
         <div className="row mx-0">
-          {/* <!-- Sticky Left Column --> */}
+          {/* Sticky Left Sidebar */}
           <div className="col-md-4 left-sidebar px-5 pt-5 pb-5">
             <div className="sticky-sidebar" id="sidebar">
-              <a href="#last" className="heading-link"></a>
-              <a href="#approach" className="heading-link">
-                Our Approach: Strategy Before Statements
-              </a>
-              <a href="#execution" className="heading-link">
-                Phase 2: Execution
-              </a>
-              <a href="#why" className="heading-link">
-                Why It Works
-              </a>
-              <a href="#bottom" className="heading-link">
-                The Bottom Line
-              </a>
+              {/* Dynamically generate links based on Blog_Content Titles */}
+              {currentBlog?.Blog_Content?.map((section, idx) => (
+                <a
+                  key={section.id}
+                  href={`#section-${idx}`}
+                  className="heading-link"
+                >
+                  {section.Title || `Section ${idx + 1}`}
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* <!-- Scrollable Content Right Column --> */}
+          {/* Scrollable Content Right Column */}
           <div className="col-md-8 px-5 pt-5 right-sidebar pb-5">
-            <section id="last">
-              {/* <!-- <h2>The Bottom Line</h2> --> */}
-              <p>
-                Leadership transitions are inevitable, but how they're
-                communicated can define a brand's future. We've seen firsthand
-                how a well-executed CEO transition communications plan can
-                preserve trust, protect morale, and position a brand for
-                long-term success. On the flip side, a poorly executed plan can
-                damage a company's reputation, cause confusion, and even
-                decrease shareholder value.
-              </p>
-              <p>
-                A CEO isn't just a title, it's the face of a company's vision,
-                culture, and credibility. When that face changes, stakeholders —
-                from employees to investors — need clarity, reassurance, and a
-                reason to stay engaged. Without a plan, transitions can trigger
-                confusion, attrition, and reputational risk. With a plan, they
-                can reinforce stability and signal growth.
-              </p>
-            </section>
-            <section id="approach">
-              {/* <!-- <h2>Our Approach</h2> --> */}
-              <p>
-                The first phase of developing a communications plan for a CEO
-                transition is foundation setting: preparing all internal and
-                external messaging before the transition is publicly announced.
-                This way, all internal stakeholders are operating from the same
-                playbook and messaging is synchronized. There are many "behind
-                the scenes" steps to make this happen, like understanding the
-                incoming and outgoing CEO's values, interpersonal management
-                style, and more, but ultimately the output includes:
-              </p>
-              <ul className="ps-3">
-                <li>
-                  Message Development: Crafting the internal announcement with
-                  the outgoing CEO.
-                </li>
-                <li>
-                  Stakeholder Mapping: Identifying areas of concern across
-                  departments and leadership.
-                </li>
-                <li>
-                  FAQ Creation: Developing department-specific FAQs to address
-                  anticipated questions.
-                </li>
-                <li>
-                  Video Messaging: Writing, filming, and producing a video
-                  message from the outgoing CEO.
-                </li>
-                <li>
-                  Pre-Written Communications: Preparing press releases, vendor
-                  announcements, and social media responses — ready to deploy
-                  when the transition is announced.
-                </li>
-              </ul>
-              <p>
-                In the lead-up to announcing the CEO transition, our teams also
-                outline internal protocols for message dissemination and social
-                media use and provide one-on-one executive coaching for message
-                delivery and team communication. These exercises are designed to
-                ensure clarity, stability, and confidence across all
-                stakeholders.
-              </p>
-            </section>
-
-            <section id="execution">
-              {/* <!-- <h2>Phase 2: Execution</h2> --> */}
-              <p>
-                Then, the second phase begins when the announcement is ready to
-                be made. In the execution phase, we distribute the transition
-                announcement internally and externally, manage media and social
-                media responses, and welcome the new CEO with internal
-                introductions. Often, this phase is partnered with a targeted PR
-                campaign to drive external awareness.
-              </p>
-            </section>
-
-            <section id="why">
-              {/* <!-- <h2>Why It Works</h2> --> */}
-              <p>
-                CEO transitions are more than HR updates, they're brand-defining
-                moments. Our plan ensures that every stakeholder, from employees
-                to investors, hears a consistent, confident message.
-              </p>
-            </section>
-
-            <section id="bottom">
-              {/* <!-- <h2>The Bottom Line</h2> --> */}
-              <p>
-                Whether you're a startup or a national brand, a CEO transition
-                is a high-stakes moment that demands more than a memo. It
-                requires a strategic communications plan that's proactive,
-                people-focused, and aligned with your business goals. At
-                Piccadilly, we help brands turn leadership change into a
-                leadership opportunity.
-              </p>
-            </section>
+            {currentBlog?.Blog_Content?.map((section, idx) => (
+              <section key={section.id} id={`section-${idx}`}>
+                {section.Title && <h2>{section.Title}</h2>}
+                <div
+                  dangerouslySetInnerHTML={{ __html: section.Description }}
+                />
+              </section>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* <!-----project-section-----> */}
-
+      {/* Previous and Next Blogs */}
       <div className="container-fluid px-0">
         <div className="row mx-0">
+          {/* Previous Blog */}
           <div className="col-md-6 project-col px-0">
-            <a href="#">
+            {prevBlog ? (
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentIndex(currentIndex - 1);
+                }}
+              >
+                <div className="overlay-div text-end">
+                  <span className="mb-5"> ⟵</span>
+                  <br />
+                  <h5 className="text-white mb-3 font_18 fw_500">
+                    Category : {/* If you have category, put here */}
+                  </h5>
+                  <h3 className="text-white fw_600">{prevBlog.Blog_Title_1}</h3>
+                </div>
+                <img
+                  src={getImageUrl(prevBlog.Header_Image)}
+                  alt={prevBlog.Blog_Title_1}
+                />
+              </a>
+            ) : (
               <div className="overlay-div text-end">
                 <span className="mb-5"> ⟵</span>
                 <br />
                 <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
-                <h3 className="text-white fw_600">Previous Blog Header</h3>
+                <h3 className="text-white fw_600">No Previous Blog</h3>
+                <img src="images/previous-blog.png" alt="No previous blog" />
               </div>
-              <img src="images/previous-blog.png" />
-            </a>
+            )}
           </div>
+
+          {/* Next Blog */}
           <div className="col-md-6 project-col px-0">
-            <a href="#">
+            {nextBlog ? (
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentIndex(currentIndex + 1);
+                }}
+              >
+                <div className="overlay-div text-start">
+                  <span className="mb-5"> ⟶</span>
+                  <br />
+                  <h5 className="text-white mb-3 font_18 fw_500">
+                    Category : {/* If you have category, put here */}
+                  </h5>
+                  <h3 className="text-white font_40 fw_600">
+                    {nextBlog.Blog_Title_1}
+                  </h3>
+                </div>
+                <img
+                  src={getImageUrl(nextBlog.Header_Image)}
+                  alt={nextBlog.Blog_Title_1}
+                />
+              </a>
+            ) : (
               <div className="overlay-div text-start">
                 <span className="mb-5"> ⟶</span>
                 <br />
                 <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
-                <h3 className="text-white font_40 fw_600">Next Blog Header</h3>
+                <h3 className="text-white font_40 fw_600">No Next Blog</h3>
+                <img src="images/next-blog.png" alt="No next blog" />
               </div>
-              <img src="images/next-blog.png" />
-            </a>
+            )}
           </div>
         </div>
       </div>
