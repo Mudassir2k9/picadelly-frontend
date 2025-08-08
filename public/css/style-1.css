@@ -1,0 +1,137 @@
+ .tourism_col {
+     background: rgb(245, 185, 20) !important;
+     background-image: url("../images/half-ring.jpg") !important;
+     background-position: center right !important;
+     background: var(--primary_color);
+     background-blend-mode: multiply;
+     background-size: 70% !important;
+     background-repeat: no-repeat !important;
+ }
+
+ .tourism_right_col::before {
+     position: absolute;
+     content: "";
+     height: 350px;
+     width: 350px;
+     border-radius: 100%;
+     background-color: #f7bd02b5;
+     left: -25%;
+     z-index: 1111;
+ }
+
+ .tourism_col::after,
+ .non-profit_col::after,
+ .education_col::after {
+     display: none;
+ }
+
+ .non-profit_col {
+     background: rgb(241, 136, 87) !important;
+     background-image: url("../images/half-ring.jpg") !important;
+     background-position: center right !important;
+     background: var(--primary_color);
+     background-blend-mode: multiply;
+     background-size: 70% !important;
+     background-repeat: no-repeat !important;
+ }
+
+ .non-profit_right_col::before {
+     position: absolute;
+     content: "";
+     height: 350px;
+     width: 350px;
+     border-radius: 100%;
+     background-color: #fc8e4fb2;
+     left: -25%;
+     z-index: 1111;
+ }
+
+ .lists {
+     font-size: small;
+ }
+
+ .education_col {
+     background: rgb(87, 185, 241) !important;
+     background-image: url("../images/half-ring.jpg") !important;
+     background-position: center right !important;
+     background: var(--primary_color);
+     background-blend-mode: multiply;
+     background-size: 70% !important;
+     background-repeat: no-repeat !important;
+ }
+
+ .education_right_col::before {
+     position: absolute;
+     content: "";
+     height: 350px;
+     width: 350px;
+     border-radius: 100%;
+     background-color: #4fcbfcb2;
+     left: -25%;
+     z-index: 1111;
+ }
+
+ /* buzz section */
+ .buzz_banner {
+     background-color: gray !important;
+     padding-bottom: 20px;
+
+ }
+
+
+ .large_heading {
+     right: 50px;
+
+ }
+
+ .buzz_col {
+     height: 500px;
+     position: relative;
+     min-height: 500px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 37px;
+
+ }
+
+ .buzz_banner .hamburger {
+     padding: 12px 20px;
+ }
+
+
+ .announcement-section {
+     background-color: #50b7c6 !important;
+ }
+
+
+
+ .team-section {
+     background-color: gray;
+     height: auto;
+
+ }
+
+ .team-item {
+     padding-top: 80px;
+     padding-left: 100px;
+     padding-right: 100px;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .team-item::after {
+     position: absolute;
+     content: "";
+     background-color: #b3c93552;
+     height: 400px;
+     width: 400px;
+     background-size: 100%;
+     right: -35%;
+     border-radius: 100%;
+     top: 10%;
+     bottom: 0;
+     margin: auto;
+ }
+
+ @media only screen and (max-width: 576px) {}

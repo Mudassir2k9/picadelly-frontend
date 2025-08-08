@@ -1,0 +1,568 @@
+import React from "react";
+
+const Services = () => {
+  return (
+    <>
+      {/* <!-- team modals --> */}
+      <div
+        className="modal fade team_popup "
+        id="team1"
+        tabIndex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable shadow radius-0">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                type="button"
+                className="btn-close text-dark"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body px-5 pb-5">
+              <div className="row">
+                <div className="col-md-4">
+                  <img src="images/pop-up-vintage.png" />
+                  <h5 className="text-dark fw-bold pt-3">Vintage Foster</h5>
+                  <p>CEO</p>
+                  <p className="team_contacts">
+                    <a href="javascript:void(0)">
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <i className="fa-solid fa-envelope"></i>
+                    </a>
+                  </p>
+                </div>
+                <div className="col-md-8">
+                  <p className="font_14">
+                    Vintage founded Piccadilly in the Bay Area in 2007 and has
+                    since expanded it across multiple cities, including Los
+                    Angeles, Dallas, and Vancouver. Under his leadership,
+                    Piccadilly delivers integrated marketing, branding, digital,
+                    and public relations services to a slate of national brands
+                    as well as regional powerhouses. A committed philanthropist,
+                    Vintage has been honored as Citizen of the Year by the Bay
+                    Area Leadership Foundation and the East Bay Economic
+                    Development Alliance, and named a Scholarship Impact Award
+                    recipient by Bay Area Blacks in Philanthropy for his work
+                    helping disadvantaged youth attend college. He is also
+                    widely sought after for his expertise in crisis
+                    communications, leading Piccadilly to be named Crisis
+                    Communications Firm of the Year by Dow Jones and Ragan's PR
+                    Daily. Vintage has also served as an adjunct professor at
+                    the University of the Pacific and Middlebury College. A
+                    vintage car enthusiast in every sense, Vintage spends his
+                    weekends behind the wheel of a 1965 Corvette—a timeless
+                    classic that mirrors his appreciation for craftsmanship,
+                    performance, and enduring style.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section className="container-fluid executive_banner services_banner">
+        <div className="container">
+          <div className="executive_col">
+            <h2
+              className="large_heading_2  text-center text-white fw_300 wow animate__fadeInDownBig"
+              data-wow-duration="1s"
+              data-wow-delay="0.2s"
+            >
+              {" "}
+              A Full-Service<span className="fw-bold"> Marketing Agency </span>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- start about section --> */}
+
+      <section className="about_section d-flex align-items-center justify-content-center text-center">
+        <div className="row w-100">
+          <div className="col-xl-6 mx-auto d-flex justify-content-center">
+            <h1
+              className="large_heading  wow animate__fadeInUp"
+              data-wow-duration="1s"
+              data-wow-delay="0.3s"
+            >
+              Authentically Integrated <strong>– All in House</strong>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- start services section --> */}
+
+      <section className="services_section bg_cover sec_py">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-8 mx-auto text-center">
+              <h3 className="large_heading">
+                Authentically Integrated <strong>– All in House</strong>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div className="overflow_slider py-5">
+          <div className="owl-carousel owl-theme strategy_slider">
+            <div className="item">
+              <div className="strategy_wrap">
+                <div className="inner_wrap">
+                  <p className="text-dark">
+                    Marketing Strategy and Planning that Delivers Results and
+                    Market Growth
+                  </p>
+                  <a href="javascript:void(0)" className="btn btn_primary">
+                    Learn More
+                  </a>
+                </div>
+                <p className="text-dark fw-bold pt-3 font_18 px-4">
+                  Market Research
+                </p>
+              </div>
+              <div>
+                <img src="images/markte-strategy-img.jpg" />
+                <p className="text-white fw-bold font_18 pt-3 fade_text">
+                  Market Research
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <div className="strategy_wrap">
+                <div className="inner_wrap">
+                  <p className="text-dark">
+                    Marketing Strategy and Planning that Delivers Results and
+                    Market Growth
+                  </p>
+                  <a href="javascript:void(0)" className="btn btn_primary">
+                    Learn More
+                  </a>
+                </div>
+                <p className="text-dark fw-bold pt-3 font_18 px-4">
+                  Market Research
+                </p>
+              </div>
+              <div>
+                <img src="images/strat.jpg" />
+                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
+                  Strategic Planning
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <div className="strategy_wrap">
+                <div className="inner_wrap">
+                  <p className="text-dark">
+                    Marketing Strategy and Planning that Delivers Results and
+                    Market Growth
+                  </p>
+                  <a href="javascript:void(0)" className="btn btn_primary">
+                    Learn More
+                  </a>
+                </div>
+                <p className="text-dark fw-bold pt-3 font_18 px-4">
+                  Brand Strategy & Identity
+                </p>
+              </div>
+              <div>
+                <img src="images/brand-strategy-img.jpg" />
+                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
+                  Brand Strategy & Identity
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <div className="strategy_wrap">
+                <div className="inner_wrap">
+                  <p className="text-dark">
+                    Marketing Strategy and Planning that Delivers Results and
+                    Market Growth
+                  </p>
+                  <a href="javascript:void(0)" className="btn btn_primary">
+                    Learn More
+                  </a>
+                </div>
+                <p className="text-dark fw-bold pt-3 font_18 px-4">
+                  Campaign Strategy & Development
+                </p>
+              </div>
+              <div>
+                <img src="images/compaign-strategy-img.jpg" />
+                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
+                  Campaign Strategy & Development
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <div className="strategy_wrap">
+                <div className="inner_wrap">
+                  <p className="text-dark">
+                    Marketing Strategy and Planning that Delivers Results and
+                    Market Growth
+                  </p>
+                  <a href="javascript:void(0)" className="btn btn_primary">
+                    Learn More
+                  </a>
+                </div>
+                <p className="text-dark fw-bold pt-3 font_18 px-4">
+                  Video, TV, Radio & Podcast Production Services
+                </p>
+              </div>
+              <div>
+                <img src="images/digital-img.jpg" />
+                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
+                  Video, TV, Radio & Podcast Production Services
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <div className="strategy_wrap">
+                <div className="inner_wrap">
+                  <p className="text-dark">
+                    Marketing Strategy and Planning that Delivers Results and
+                    Market Growth
+                  </p>
+                  <a href="javascript:void(0)" className="btn btn_primary">
+                    Learn More
+                  </a>
+                </div>
+                <p className="text-dark fw-bold pt-3 font_18 px-4">
+                  Digital & Traditional Media
+                </p>
+              </div>
+              <div>
+                <img src="images/website-img.jpg" />
+                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
+                  Digital & Traditional Media
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <div className="strategy_wrap">
+                <div className="inner_wrap">
+                  <p className="text-dark">
+                    Marketing Strategy and Planning that Delivers Results and
+                    Market Growth
+                  </p>
+                  <a href="javascript:void(0)" className="btn btn_primary">
+                    Learn More
+                  </a>
+                </div>
+                <p className="text-dark fw-bold pt-3 font_18 px-4">
+                  Website Audit, SEO & Design
+                </p>
+              </div>
+              <div>
+                <img src="images/public-media-img.jpg" />
+                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
+                  Website Audit, SEO & Design
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <div className="strategy_wrap">
+                <div className="inner_wrap">
+                  <p className="text-dark">
+                    Marketing Strategy and Planning that Delivers Results and
+                    Market Growth
+                  </p>
+                  <a href="javascript:void(0)" className="btn btn_primary">
+                    Learn More
+                  </a>
+                </div>
+                <p className="text-dark fw-bold pt-3 font_18 px-4">
+                  Public & Media Relations
+                </p>
+              </div>
+              <div>
+                <img src="images/social-media-img.jpg" />
+                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
+                  Public & Media Relations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- start team section --> */}
+
+      <section className="horizontal_parallax services_parallax">
+        <div className="panel ">
+          <div className="row">
+            <div className="heading_col d-flex align-items-center px-5 team_col bg_primary healthcare_col">
+              <div className="px-3 px-md-5 mx-0 mx-md-5 ">
+                <div
+                  id="carouselExampleIndicators"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="0"
+                      className="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div className="carousel-inner pb-3 text-start pe-5">
+                    <div className="carousel-item active">
+                      <h3 className="font_40 fw-bold text-white ">
+                        Healthcare
+                      </h3>
+                      <p className="font_18 text-white py-4">
+                        Named one of America's top marketing agencies in
+                        healthcare, Piccadilly’s deep knowledge generates
+                        measurable results and impact for your organization.
+                      </p>
+                      <a href="javascript:void(0)" className="btn btn_light">
+                        View the Work
+                      </a>
+                    </div>
+                    <div className="carousel-item">
+                      <h3 className="font_40 fw-bold text-white ">
+                        Healthcare
+                      </h3>
+                      <p className="font_18 text-white py-4">
+                        Named one of America's top marketing agencies in
+                        healthcare, Piccadilly’s deep knowledge generates
+                        measurable results and impact for your organization.
+                      </p>
+                      <a href="javascript:void(0)" className="btn btn_light">
+                        View the Work
+                      </a>
+                    </div>
+                    <div className="carousel-item">
+                      <h3 className="font_40 fw-bold text-white ">
+                        Healthcare
+                      </h3>
+                      <p className="font_18 text-white py-4">
+                        Named one of America's top marketing agencies in
+                        healthcare, Piccadilly’s deep knowledge generates
+                        measurable results and impact for your organization.
+                      </p>
+                      <a href="javascript:void(0)" className="btn btn_light">
+                        View the Work
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="right_content_col px-0 d-flex align-items-center team_right_col">
+              <img
+                src="images/healthcare-img.jpg"
+                className="img-fluid w-100 h-100 object_cover"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="panel ">
+          <div className="row ">
+            <div className="heading_col d-flex align-items-center px-5 team_col bg_primary financial_col  ">
+              <div className="px-3 px-md-5 mx-0 mx-md-5 ">
+                <div
+                  id="financial_slider"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#financial_slider"
+                      data-bs-slide-to="0"
+                      className="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#financial_slider"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#financial_slider"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div className="carousel-inner pb-3 text-start pe-5">
+                    <div className="carousel-item active">
+                      <h3 className="font_40 fw-bold text-white ">
+                        Financial Services
+                      </h3>
+                      <p className="font_18 text-white py-4">
+                        Our strategic planning and results-driven marketing
+                        capabilities spark engagement and foster long-term
+                        customer growth, maximizing your ROI.
+                      </p>
+                      <a href="javascript:void(0)" className="btn btn_light">
+                        View the Work
+                      </a>
+                    </div>
+                    <div className="carousel-item">
+                      <h3 className="font_40 fw-bold text-white ">
+                        Financial Services
+                      </h3>
+                      <p className="font_18 text-white py-4">
+                        Our strategic planning and results-driven marketing
+                        capabilities spark engagement and foster long-term
+                        customer growth, maximizing your ROI.
+                      </p>
+                      <a href="javascript:void(0)" className="btn btn_light">
+                        View the Work
+                      </a>
+                    </div>
+                    <div className="carousel-item">
+                      <h3 className="font_40 fw-bold text-white ">
+                        Financial Services
+                      </h3>
+                      <p className="font_18 text-white py-4">
+                        Our strategic planning and results-driven marketing
+                        capabilities spark engagement and foster long-term
+                        customer growth, maximizing your ROI.
+                      </p>
+                      <a href="javascript:void(0)" className="btn btn_light">
+                        View the Work
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="right_content_col d-flex align-items-center justify-content-center px-0 right_member_col financial_right_col position-relative ">
+              <img
+                src="images/financial-img.jpg"
+                className="img-fluid w-100 h-100 object_cover"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="panel ">
+          <div className="team_overlay">
+            <a
+              href="javascript:void(0)"
+              className="text-decoration-none"
+              data-bs-toggle="modal"
+              data-bs-target="#team2"
+            >
+              <div className="team_circle text-center d-flex align-items-center justify-content-center">
+                <div>
+                  <h3 className="text-dark fw-bold team_name font_40">Craig</h3>
+                  <h4 className="text-dark fw-bold team_last_name">Brown</h4>
+                  <p className="team_post text-dark text-center">
+                    Chief Digital Officer
+                  </p>
+                  <p className=" text-dark text-center">
+                    Innovative digital advertising technologies to deliver
+                    highly effective ROI.
+                  </p>
+                  <i className="fa-solid fa-circle-user text-dark"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div className="row ">
+            <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_yellow ">
+              <img src="images/Craig-Brown-Portrait.png" />
+            </div>
+            <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
+              <img
+                src="images/Craig-Brown-Personal.jpg"
+                className="img-fluid w-100"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- start culture section --> */}
+      <section className="culture_section bg_cover">
+        <div className="container">
+          <div className="row pt-5">
+            <div className="col-md-7">
+              <h3 className="text-dark fw-bold pb-2">Piccadilly Vibe</h3>
+              <p className="text-white">
+                Our culture is rooted in intellectual curiosity and a genuine
+                commitment to partnership. We foster an environment where
+                diverse perspectives converge to create breakthrough ideas. We
+                encourage each of our team members to challenge assumptions and
+                push creative boundaries while maintaining an unwavering focus
+                on delivering measurable results. This collaborative approach
+                overcomes the traditional silos between strategy, creative, and
+                account teams. We believe that the best work emerges when smart,
+                passionate people feel empowered to take ownership of their
+                craft while remaining deeply connected to our clients' business
+                objectives. The result is a culture where personal growth and
+                client success are inextricably linked.
+              </p>
+            </div>
+            <div className="col-md-5">
+              <h3 className="text-dark fw-bold pb-2">Our Core Value: Agile</h3>
+              <p className="text-white">
+                We hire based on this essential value. Piccadilly team members
+                must be nimble and responsive, ready to pivot quickly as client
+                challenges and opportunities evolve. Markets shift constantly,
+                and competitors make their moves — we understand this reality.
+                That's why our agency and teams are structured for rapid,
+                real-time adjustments.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="overflow_slider py-5">
+          <div className="owl-carousel owl-theme c_slider">
+            <div className="item">
+              <img src="images/c-img1.jpg" />
+            </div>
+            <div className="item">
+              <img src="images/c-img2.jpg" />
+            </div>
+            <div className="item">
+              <img src="images/c-img3.jpg" />
+            </div>
+            <div className="item">
+              <img src="images/c-img4.jpg" />
+            </div>
+            <div className="item">
+              <img src="images/c-img1.jpg" />
+            </div>
+            <div className="item">
+              <img src="images/c-img2.jpg" />
+            </div>
+            <div className="item">
+              <img src="images/c-img3.jpg" />
+            </div>
+            <div className="item">
+              <img src="images/c-img4.jpg" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Services;

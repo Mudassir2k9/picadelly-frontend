@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picadelly</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style_2.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/style-1.css" />
+    <script
+      type="text/javascript"
+      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://assets.codepen.io/16327/ScrollTrigger.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"
+    ></script>
+    <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+      window.addEventListener("load", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const interval = setInterval(() => {
+          const sections = gsap.utils.toArray(".panel");
+          console.log("Checking panels:", sections.length);
+
+          if (sections.length > 1) {
+            clearInterval(interval); // Stop checking
+            const horizontalParallax = document.querySelector(
+              ".horizontal_parallax"
+            );
+
+            if (horizontalParallax) {
+              gsap.to(sections, {
+                xPercent: -100 * (sections.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                  trigger: horizontalParallax,
+                  pin: true,
+                  scrub: 1,
+                  snap: 1 / (sections.length - 1),
+                  end: () => "+=" + horizontalParallax.offsetWidth,
+                },
+              });
+            }
+          } else {
+            clearInterval(interval);
+          }
+        }, 200); // Check every 200ms
+      });
+
+      window.addEventListener("load", function () {
+        // Layered video scroll effect
+        $(window).on("scroll", function () {
+          var x = $(window).scrollTop();
+          if (x > 500) {
+            x = (x - 500) * 2.5;
+            let y = x + "px";
+            $(".second_video").css("clip-path", `circle(${y} at center)`);
+          } else {
+            $(".second_video").css("clip-path", "circle(0px at center)");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
