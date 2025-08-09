@@ -285,6 +285,9 @@ background-color: var(--peal-green) !important;
     height: 550px;
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 0px 6% !important;
 }
 .banner-row{
     height: 100%;
@@ -1258,7 +1261,7 @@ width: 350px !important;
 }
 .mobile_slider_left_heading, .mobile_slider_right_heading{
     position: absolute;
-    left: 13%;
+    left: 11%;
     top: 0;
     bottom: 0;
     display: flex;
@@ -1266,7 +1269,7 @@ width: 350px !important;
 }
 .mobile_slider_right_heading{
     left: auto;
-    right: 15%;
+    right: 13%;
 }
 @media (min-width: 768px) {
 
@@ -1332,6 +1335,11 @@ width: 350px !important;
 
 }
 @media only screen and (max-width: 576px){
+    .container:has(> .banner-row) {
+    padding: 0px 0% !important;
+}
+
+
     .mobile_slider_left_heading, .mobile_slider_right_heading{
         position: relative;
         right: auto;
