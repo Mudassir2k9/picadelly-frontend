@@ -1,6 +1,69 @@
 import React from "react";
 
 const Services = () => {
+
+
+setTimeout(() => {
+          if (window.$) {
+            const $cSlider = window.$(".strategy_slider");
+
+            if ($cSlider.hasClass("owl-loaded")) {
+              $cSlider.trigger("destroy.owl.carousel");
+              $cSlider.removeClass("owl-loaded");
+              $cSlider.find(".owl-stage-outer").children().unwrap();
+              $cSlider.find(".owl-item").children().unwrap();
+              $cSlider.find(".owl-dots.disabled").removeClass("disabled");
+            }
+
+            $cSlider.owlCarousel({
+              loop: true,
+              nav: false,
+              autoplay: true,
+              center: true,
+              // autoWidth: true, // ❌ commented to match strategy_slider
+              autoplayTimeout: 5000,
+              autoplaySpeed: 800,
+              margin: 10,
+              responsive: {
+                0: {
+                  items: 4,
+                },
+                1200: {
+                  items: 5,
+                },
+              },
+            });
+          }
+        }, 1000);
+setTimeout(() => {
+          if (window.$) {
+            const $cSlider = window.$(".c_slider");
+
+            if ($cSlider.hasClass("owl-loaded")) {
+              $cSlider.trigger("destroy.owl.carousel");
+              $cSlider.removeClass("owl-loaded");
+              $cSlider.find(".owl-stage-outer").children().unwrap();
+              $cSlider.find(".owl-item").children().unwrap();
+              $cSlider.find(".owl-dots.disabled").removeClass("disabled");
+            }
+
+            $cSlider.owlCarousel({
+              loop: true,
+              nav: false,
+              dots: true,
+              autoplay: true,
+              autoWidth: true,
+              autoplayTimeout: 5000,
+              autoplaySpeed: 800,
+              margin: 10,
+              responsive: {
+                0: { items: 2 },
+                1200: { items: 4 },
+              },
+            });
+          }
+        }, 1000); // small delay to allow DOM to render
+
   return (
     <>
       {/* <!-- team modals --> */}
