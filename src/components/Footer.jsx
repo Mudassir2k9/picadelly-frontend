@@ -30,40 +30,40 @@ const Footer = () => {
                 <ul>
                   {linkGroup.subTitle?.map((item) => (
                     <li key={item.id}>
-                      <a href={item.url}>{item.title}</a>
+                      <Link to={item.url}>{item.title}</Link>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
             <div className="col-md-2 footer-col">
-              <a href={footerData?.buttonUrl} className="btn_light">
+              <Link to={footerData?.buttonUrl} className="btn_light">
                 {footerData?.buttonLabel}
-              </a>
+              </Link>
               <ul className="pt-3">
                 <li>{footerData?.email}</li>
                 <li>{footerData?.phone}</li>
               </ul>
               <ul className="pt-3 icon-col">
                 <li>
-                  <a href={footerData?.socialLink[0].url}>
+                  <Link to={footerData?.socialLink[0].url}>
                     <i className="fa-brands fa-facebook-f"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={footerData?.socialLink[2].url}>
+                  <Link to={footerData?.socialLink[2].url}>
                     <i className="fa-brands fa-linkedin-in"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={footerData?.socialLink[1].url}>
+                  <Link to={footerData?.socialLink[1].url}>
                     <i className="fa-brands fa-instagram"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={footerData?.socialLink[3].url}>
+                  <Link to={footerData?.socialLink[3].url}>
                     <i className="fa-brands fa-youtube"></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -94,7 +94,7 @@ const Footer = () => {
                 {footerData?.copyright?.[0]?.pages?.map((page) => (
                   <span key={page.id}>
                     {" │ "}
-                    <a href={page.url}>{page.title}</a>
+                    <Link to={page.url}>{page.title}</Link>
                   </span>
                 ))}
               </p>
