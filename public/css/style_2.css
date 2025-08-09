@@ -1,6 +1,6 @@
 .executive_banner{
-          background-image: url(../images/executive-banner_bg.png);
-        height: 700px;
+          background-image: url(../images/services-bg1.jpg);
+        height: 800px;
         background-size: cover;
         background-position: center;
         background-repealt: no-repealt;
@@ -702,7 +702,7 @@
     padding: 0;
     margin-right: 15%;
     margin-bottom: 1rem;
-    margin-left: 10% !important;
+    margin-left: 9% !important;
   }
 
 

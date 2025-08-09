@@ -19,14 +19,14 @@ setTimeout(() => {
               loop: true,
               nav: false,
               autoplay: true,
-              center: true,
+              // center: true,
               // autoWidth: true, // ❌ commented to match strategy_slider
               autoplayTimeout: 5000,
               autoplaySpeed: 800,
               margin: 10,
               responsive: {
                 0: {
-                  items: 4,
+                  items: 1,
                 },
                 1200: {
                   items: 5,
@@ -148,7 +148,7 @@ setTimeout(() => {
 
       <section className="about_section d-flex align-items-center justify-content-center text-center">
         <div className="row w-100">
-          <div className="col-xl-6 mx-auto d-flex justify-content-center">
+          <div className="mx-auto d-flex justify-content-center fix_width_content">
             <h1
               className="large_heading  wow animate__fadeInUp"
               data-wow-duration="1s"
@@ -165,7 +165,7 @@ setTimeout(() => {
       <section className="services_section bg_cover sec_py">
         <div className="container">
           <div className="row">
-            <div className="col-xl-8 mx-auto text-center">
+            <div className="fix_width_content mx-auto text-center">
               <h3 className="large_heading">
                 Authentically Integrated <strong>– All in House</strong>
               </h3>
@@ -474,68 +474,7 @@ setTimeout(() => {
 
 
       {/* <!-- start culture section --> */}
-      <section className="culture_section bg_cover">
-        <div className="container">
-          <div className="row pt-5">
-            <div className="col-md-7">
-              <h3 className="text-dark fw-bold pb-2">Piccadilly Vibe</h3>
-              <p className="text-white">
-                Our culture is rooted in intellectual curiosity and a genuine
-                commitment to partnership. We foster an environment where
-                diverse perspectives converge to create breakthrough ideas. We
-                encourage each of our team members to challenge assumptions and
-                push creative boundaries while maintaining an unwavering focus
-                on delivering measurable results. This collaborative approach
-                overcomes the traditional silos between strategy, creative, and
-                account teams. We believe that the best work emerges when smart,
-                passionate people feel empowered to take ownership of their
-                craft while remaining deeply connected to our clients' business
-                objectives. The result is a culture where personal growth and
-                client success are inextricably linked.
-              </p>
-            </div>
-            <div className="col-md-5">
-              <h3 className="text-dark fw-bold pb-2">Our Core Value: Agile</h3>
-              <p className="text-white">
-                We hire based on this essential value. Piccadilly team members
-                must be nimble and responsive, ready to pivot quickly as client
-                challenges and opportunities evolve. Markets shift constantly,
-                and competitors make their moves — we understand this reality.
-                That's why our agency and teams are structured for rapid,
-                real-time adjustments.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="overflow_slider py-5">
-          <div className="owl-carousel owl-theme c_slider">
-            <div className="item">
-              <img src="images/c-img1.jpg" />
-            </div>
-            <div className="item">
-              <img src="images/c-img2.jpg" />
-            </div>
-            <div className="item">
-              <img src="images/c-img3.jpg" />
-            </div>
-            <div className="item">
-              <img src="images/c-img4.jpg" />
-            </div>
-            <div className="item">
-              <img src="images/c-img1.jpg" />
-            </div>
-            <div className="item">
-              <img src="images/c-img2.jpg" />
-            </div>
-            <div className="item">
-              <img src="images/c-img3.jpg" />
-            </div>
-            <div className="item">
-              <img src="images/c-img4.jpg" />
-            </div>
-          </div>
-        </div>
-      </section>
+   
     </>
   );
 };
