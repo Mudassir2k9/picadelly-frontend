@@ -210,6 +210,7 @@ background-color: var(--peal-green) !important;
       cursor: pointer;
       border: none;
       background: none;
+      padding-right: 0px !important;
     }
 
     .overlay {
@@ -914,7 +915,7 @@ object-position: top;
 }
 .services_section{
     background-image: url("../images/services-section-bg.jpg");
-    min-height: 100vh;
+/*    min-height: 100vh;*/
     position: relative;
    
 }
