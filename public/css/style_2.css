@@ -869,6 +869,9 @@
   background-image: url(../images/blog-banner.jpg);
   min-height: 70vh;
 }
+.blog_banner .row{
+  height: 100vh;
+}
 .empty-overlay{
    min-height: 70vh;
    position: relative;
@@ -974,6 +977,8 @@
 }
 .project-col img{
   width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
  :root {
    --teal-light:#87D2D9;
@@ -1026,14 +1031,42 @@
 
 
     }
-     section:not(:last-child){
-      border-bottom: 1px solid #ddd;
-     }
-
-
+    .right-sidebar  h2{
+      display: none;
+    }
 /*------Responsiveness------*/
 
 @media only screen and (max-width:576px) {
+  .project-col img {
+    height: 190px;
+}
+  .empty-overlay::after{
+    display: none;
+  }
+  .empty-overlay {
+    min-height: auto;
+  }
+  .blog_banner{
+    min-height: 150px
+  }
+  .blog_banner .row{
+    height: auto;
+  }
+  .blog_col_2{
+    background-color: transparent;
+  }
+  .blog_detail_banner{
+    background: linear-gradient(to right, #eeeeee, #f3f3f3 40%, #ffffff); 
+  }
+   .right-sidebar  h2{
+    background-color: var(--teal-medium);
+    padding: 20px;
+    display: block;
+    color: #fff;
+   }
+    .left-sidebar {
+      display: none;
+    }
   .pills-part .nav-pills .nav-link{
     font-size: 14px !important;
     padding: 8px 11px !important;

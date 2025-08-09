@@ -95,9 +95,6 @@ const BlogDetail = () => {
         className="container-fluid blog_banner bg_cover px-0"
         style={{
           backgroundImage: `url(${getImageUrl(currentBlog?.Header_Image)})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "430px",
         }}
       >
         <div className="row mx-0">
@@ -159,7 +156,7 @@ const BlogDetail = () => {
                 }}
               >
                 <div className="overlay-div text-end">
-                  <span className="mb-5"> ⟵</span>
+                  <span className=""> ⟵</span>
                   <br />
                   <h5 className="text-white mb-3 font_18 fw_500">
                     Category : {/* If you have category, put here */}
@@ -172,13 +169,16 @@ const BlogDetail = () => {
                 />
               </a>
             ) : (
+            <>
               <div className="overlay-div text-end">
-                <span className="mb-5"> ⟵</span>
+                <span className=""> ⟵</span>
                 <br />
                 <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
                 <h3 className="text-white fw_600">No Previous Blog</h3>
-                <img src="images/previous-blog.png" alt="No previous blog" />
+                
               </div>
+              <img src="images/previous-blog.png" alt="No previous blog" />
+              </>
             )}
           </div>
 
@@ -193,7 +193,7 @@ const BlogDetail = () => {
                 }}
               >
                 <div className="overlay-div text-start">
-                  <span className="mb-5"> ⟶</span>
+                  <span className=""> ⟶</span>
                   <br />
                   <h5 className="text-white mb-3 font_18 fw_500">
                     Category : {/* If you have category, put here */}
@@ -208,13 +208,15 @@ const BlogDetail = () => {
                 />
               </a>
             ) : (
+            <>
               <div className="overlay-div text-start">
-                <span className="mb-5"> ⟶</span>
+                <span className=""> ⟶</span>
                 <br />
                 <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
                 <h3 className="text-white font_40 fw_600">No Next Blog</h3>
-                <img src="images/next-blog.png" alt="No next blog" />
               </div>
+                <img src="images/next-blog.png" alt="No next blog" />
+                </>
             )}
           </div>
         </div>
