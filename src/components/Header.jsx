@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
@@ -29,15 +30,13 @@ const Header = () => {
       <header>
         <nav className="navbar navbar-custom d-flex justify-content-between align-items-center flex-nowrap">
           <div className="navbar-brand">
+            <Link to={headerData?.logoLink} >
             <img src={`${baseUrl}${headerData?.logo.url}`} alt="Logo" />
+            </Link>
           </div>
           <div className="nav-btn">
-            <a
-              href={headerData?.buttonUrl}
-              className="btn_primary d-none d-md-inline-block"
-            >
-              {headerData?.buttonLabel}
-            </a>
+            <Link to={headerData?.buttonUrl}  className="btn_primary d-none d-md-inline-block">{headerData?.buttonLabel}</Link>
+            
             <button className="hamburger" onClick={navBar}>
               <i className="fa-regular fa-bars hamburger-icon text-dark"></i>
             </button>
@@ -59,7 +58,7 @@ const Header = () => {
                   <ul className={index === 0 ? "visible" : ""}>
                     {menuItem.submenuItems.map((subItem) => (
                       <li key={subItem.id}>
-                        <a href={subItem.url}>{subItem.title}</a>
+                        <Link to={subItem.url}>{subItem.title}</Link>
                       </li>
                     ))}
                   </ul>
