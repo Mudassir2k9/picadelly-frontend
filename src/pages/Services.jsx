@@ -292,211 +292,123 @@ const Services = () => {
       </section>
 
       {/* <!-- start team section --> */}
+<div className="container-fluid px-0 team-section d-flex justify-content-center align-items-center">
+  {/* Carousel */}
+  <div id="demo" className="carousel slide" data-bs-ride="carousel">
+    {/* Indicators/dots */}
+    <div className="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+    </div>
 
-      <section className="horizontal_parallax services_parallax">
-        <div className="panel ">
-          <div className="row">
-            <div className="heading_col d-flex align-items-center px-5 team_col bg_primary healthcare_col">
-              <div className="px-3 px-md-5 mx-0 mx-md-5 ">
-                <div
-                  id="carouselExampleIndicators"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 3"
-                    ></button>
-                  </div>
-                  <div className="carousel-inner pb-3 text-start pe-5">
-                    <div className="carousel-item active">
-                      <h3 className="font_40 fw-bold text-white ">
-                        Healthcare
-                      </h3>
-                      <p className="font_18 text-white py-4">
-                        Named one of America's top marketing agencies in
-                        healthcare, Piccadilly’s deep knowledge generates
-                        measurable results and impact for your organization.
-                      </p>
-                      <a href="javascript:void(0)" className="btn btn_light">
-                        View the Work
-                      </a>
-                    </div>
-                    <div className="carousel-item">
-                      <h3 className="font_40 fw-bold text-white ">
-                        Healthcare
-                      </h3>
-                      <p className="font_18 text-white py-4">
-                        Named one of America's top marketing agencies in
-                        healthcare, Piccadilly’s deep knowledge generates
-                        measurable results and impact for your organization.
-                      </p>
-                      <a href="javascript:void(0)" className="btn btn_light">
-                        View the Work
-                      </a>
-                    </div>
-                    <div className="carousel-item">
-                      <h3 className="font_40 fw-bold text-white ">
-                        Healthcare
-                      </h3>
-                      <p className="font_18 text-white py-4">
-                        Named one of America's top marketing agencies in
-                        healthcare, Piccadilly’s deep knowledge generates
-                        measurable results and impact for your organization.
-                      </p>
-                      <a href="javascript:void(0)" className="btn btn_light">
-                        View the Work
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    {/* The slideshow/carousel */}
+    <div className="carousel-inner">
+      {/* Healthcare */}
+      <div className="carousel-item active">
+        <div className="row mx-0">
+          <div className="heading_col d-flex align-items-center px-5 team_col bg_primary healthcare_col">
+            <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
+              <h3 className="font_40 fw-bold text-white">Healthcare</h3>
+              <p className="font_18 text-white py-4">
+                Named one of America's top marketing agencies in healthcare, Piccadilly’s deep knowledge generates measurable results and impact for your organization.
+              </p>
+              <a href="#" className="btn btn_light">View the Work</a>
             </div>
-            <div className="right_content_col px-0 d-flex align-items-center team_right_col">
-              <img
-                src="images/healthcare-img.jpg"
-                className="img-fluid w-100 h-100 object_cover"
-              />
-            </div>
+          </div>
+          <div className="right_content_col px-0 d-flex align-items-center team_right_col">
+            <img src="images/healthcare-img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Healthcare" />
           </div>
         </div>
-        <div className="panel ">
-          <div className="row ">
-            <div className="heading_col d-flex align-items-center px-5 team_col bg_primary financial_col  ">
-              <div className="px-3 px-md-5 mx-0 mx-md-5 ">
-                <div
-                  id="financial_slider"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#financial_slider"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#financial_slider"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#financial_slider"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 3"
-                    ></button>
-                  </div>
-                  <div className="carousel-inner pb-3 text-start pe-5">
-                    <div className="carousel-item active">
-                      <h3 className="font_40 fw-bold text-white ">
-                        Financial Services
-                      </h3>
-                      <p className="font_18 text-white py-4">
-                        Our strategic planning and results-driven marketing
-                        capabilities spark engagement and foster long-term
-                        customer growth, maximizing your ROI.
-                      </p>
-                      <a href="javascript:void(0)" className="btn btn_light">
-                        View the Work
-                      </a>
-                    </div>
-                    <div className="carousel-item">
-                      <h3 className="font_40 fw-bold text-white ">
-                        Financial Services
-                      </h3>
-                      <p className="font_18 text-white py-4">
-                        Our strategic planning and results-driven marketing
-                        capabilities spark engagement and foster long-term
-                        customer growth, maximizing your ROI.
-                      </p>
-                      <a href="javascript:void(0)" className="btn btn_light">
-                        View the Work
-                      </a>
-                    </div>
-                    <div className="carousel-item">
-                      <h3 className="font_40 fw-bold text-white ">
-                        Financial Services
-                      </h3>
-                      <p className="font_18 text-white py-4">
-                        Our strategic planning and results-driven marketing
-                        capabilities spark engagement and foster long-term
-                        customer growth, maximizing your ROI.
-                      </p>
-                      <a href="javascript:void(0)" className="btn btn_light">
-                        View the Work
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      </div>
+
+      {/* Financial Services */}
+      <div className="carousel-item">
+        <div className="row mx-0">
+          <div className="heading_col d-flex align-items-center px-5 team_col bg_primary financial_col">
+            <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
+              <h3 className="font_40 fw-bold text-white">Financial Services</h3>
+              <p className="font_18 text-white py-4">
+                Our strategic planning and results-driven marketing capabilities spark engagement and foster long-term customer growth, maximizing your ROI.
+              </p>
+              <a href="#" className="btn btn_light">View the Work</a>
             </div>
-            <div className="right_content_col d-flex align-items-center justify-content-center px-0 right_member_col financial_right_col position-relative ">
-              <img
-                src="images/financial-img.jpg"
-                className="img-fluid w-100 h-100 object_cover"
-              />
-            </div>
+          </div>
+          <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col financial_right_col position-relative">
+            <img src="images/financial-img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Financial Services" />
           </div>
         </div>
-        <div className="panel ">
-          <div className="team_overlay">
-            <a
-              href="javascript:void(0)"
-              className="text-decoration-none"
-              data-bs-toggle="modal"
-              data-bs-target="#team2"
-            >
-              <div className="team_circle text-center d-flex align-items-center justify-content-center">
-                <div>
-                  <h3 className="text-dark fw-bold team_name font_40">Craig</h3>
-                  <h4 className="text-dark fw-bold team_last_name">Brown</h4>
-                  <p className="team_post text-dark text-center">
-                    Chief Digital Officer
-                  </p>
-                  <p className=" text-dark text-center">
-                    Innovative digital advertising technologies to deliver
-                    highly effective ROI.
-                  </p>
-                  <i className="fa-solid fa-circle-user text-dark"></i>
-                </div>
-              </div>
-            </a>
+      </div>
+
+      {/* Tourism */}
+      <div className="carousel-item">
+        <div className="row mx-0">
+          <div className="heading_col d-flex align-items-center px-5 team_col bg_primary tourism_col">
+            <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
+              <h3 className="font_40 fw-bold text-white">Tourism</h3>
+              <p className="font_18 text-white py-4">
+                Our award-winning travel and tourism experience grabs your audience's attention, increases visitor spending, and boosts transient occupancy tax revenue.
+              </p>
+              <a href="#" className="btn btn_light">View the Work</a>
+            </div>
           </div>
-          <div className="row ">
-            <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_yellow ">
-              <img src="images/Craig-Brown-Portrait.png" />
-            </div>
-            <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
-              <img
-                src="images/Craig-Brown-Personal.jpg"
-                className="img-fluid w-100"
-              />
-            </div>
+          <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col tourism_right_col financial_right_col position-relative">
+            <img src="images/tourism_img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Tourism" />
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Non-Profit */}
+      <div className="carousel-item">
+        <div className="row mx-0">
+          <div className="heading_col d-flex align-items-center px-5 team_col bg_primary non-profit_col">
+            <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
+              <h3 className="font_40 fw-bold text-white">Non-Profit</h3>
+              <p className="font_18 text-white py-4">
+                Piccadilly has a proven track record of leveraging nonprofit marketing dollars to produce measurable impact and raise awareness of your mission.
+              </p>
+              <a href="#" className="btn btn_light">View the Work</a>
+            </div>
+          </div>
+          <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col tourism_right_col financial_right_col non-stop_right_col position-relative">
+            <img src="images/non-profit_img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Non-Profit" />
+          </div>
+        </div>
+      </div>
+
+      {/* Education */}
+      <div className="carousel-item">
+        <div className="row mx-0">
+          <div className="heading_col d-flex align-items-center px-5 team_col bg_primary education_col mx-0">
+            <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
+              <h3 className="font_40 fw-bold text-white">Education</h3>
+              <p className="font_18 text-white py-4">
+                Piccadilly's team of marketing experts craft campaigns and messaging designed to increase brand visibility and differentiation, and to catapult enrollment.
+              </p>
+              <a href="#" className="btn btn_light">View the Work</a>
+            </div>
+          </div>
+          <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col financial_right_col education_right_col position-relative">
+            <img src="images/education_img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Education" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Controls (optional) */}
+    {/*
+    <button className="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span className="carousel-control-prev-icon"></span>
+    </button>
+    <button className="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span className="carousel-control-next-icon"></span>
+    </button>
+    */}
+  </div>
+</div>
+
 
       {/* <!-- start culture section --> */}
       <section className="culture_section bg_cover">
