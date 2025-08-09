@@ -77,7 +77,15 @@ $(document).ready(function () {
 // script for nav sidebar
 
 function openNav() {
-  document.getElementById("myNav").style.width = "50%";
+  
+        if (window.matchMedia("(max-width: 768px)").matches) {
+          // Mobile
+           document.getElementById("myNav").style.width = "100%";
+        } else {
+          // Laptop/Desktop
+           document.getElementById("myNav").style.width = "50%";
+        }
+  
 }
 
 function closeNav() {

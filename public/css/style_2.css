@@ -1,5 +1,5 @@
 .executive_banner{
-	        background-image: url(../images/executive-banner_bg.png);
+          background-image: url(../images/executive-banner_bg.png);
         height: 700px;
         background-size: cover;
         background-position: center;
@@ -18,14 +18,14 @@
     margin-top: 17px;
 }
 .large_heading_2{
-	font-size: 90px;
+  font-size: 90px;
 }
 
 .executive_banner .hamburger{
-	padding: 12px 20px;
+  padding: 12px 20px;
 }
 .impact_section{
-		    background-image: url(../images/impact_bg.png);
+        background-image: url(../images/impact_bg.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -33,7 +33,7 @@
       position: relative;
 }
 .impact_section::after{
-	    position: absolute;
+      position: absolute;
     content: "";
     height: 350px;
     width: 350px;
@@ -143,22 +143,23 @@
   z-index: 11;
 }
 .testimonials-inner{
-    height: 800px;
-    width: 800px;
+    height: 900px !important;
+    width: 900px !important;
     background-color: rgb(255 255 255 / 70%);;  
     border-radius: 100%;
     padding: 30px;
-    margin-bottom: -395px;
+    margin-bottom: -480px !important;
     display: flex;
     justify-content: center;
 
 }
+
 .testimonials_part{
    overflow: hidden;
    position: relative;
 }
 .testimonials-inner .carousel{
-      width: 65%;
+      width: 75%;
     max-height: 350px;
     display: flex;
     justify-content: center;
@@ -171,7 +172,7 @@
     right: 0;
     bottom: 25px !important;
 }
-.testimonials-inner .carousel-indicators [data-bs-target] {
+.testimonials-inner .carousel-indicators [data-bs-target], .team-section .carousel-indicators [data-bs-target]{
     box-sizing: content-box;
     flex: 0 1 auto;
     width: 36px;
@@ -190,7 +191,11 @@
     transition: opacity .6s ease;
     border-radius: 13px;
 }
- .testimonials-inner .carousel-indicators .active{
+.team-section .carousel-indicators [data-bs-target]{
+  width: 30px !important;
+}
+
+ .testimonials-inner .carousel-indicators .active, .team-section .carousel-indicators .active{
      background-color:#000 !important;
 }
 .testimonials_part::after {
@@ -263,8 +268,6 @@
   position: absolute;
   content: "";
   background-image: url(../images/ring_img.png);
-/*  width: 500px;
-  height: 500px;*/
   z-index: 111;
   width: 500px;
   height: 500px;
@@ -313,10 +316,10 @@
     justify-content: center;
     align-items: center;
   }
-  .third-logo-row{
+/*  .third-logo-row{
     width: 59%;
     margin: auto;
-  }
+  }*/
   .faqs_section::after{
     position: absolute;
     content: "";
@@ -683,6 +686,27 @@
       font-size: 29px;
      }
 
+
+
+/*-----services-section-----*/
+
+  .team-section .carousel-indicators{
+    z-index: 11111;
+        position: absolute;
+    right: auto !important;
+    bottom: 40px !important;
+    left: 0;
+   
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 10% !important;
+  }
+
+
+
 /*-------news-landing-page-----*/
      .blog-spotlight{
       min-height: 100vh;
@@ -789,10 +813,10 @@
 .on_hover-img{
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 0 !important;
     transform: translate(-40%, -51%);
-    width: 180px;
-    height: 180px;
+    width: 180px !important;
+    height: 180px !important;
     border-radius: 50%;
     overflow: hidden;
     display: none;
@@ -999,15 +1023,18 @@
       border-bottom: 1px solid #ddd;
      }
 
-    section {
-      padding-top: 16px;
-      padding-bottom: 16px;
-      
-    }
 
 /*------Responsiveness------*/
 
 @media only screen and (max-width:576px) {
+  .pills-part .nav-pills .nav-link{
+    font-size: 14px !important;
+    padding: 8px 11px !important;
+  }
+  .pills-part .nav-item{
+    width: 45%;
+    margin: 5px 0px;
+  }
     .executive_banner .navbar-brand, .nav-btn{
       width: 47%;
     }
@@ -1032,7 +1059,7 @@
   height: auto !important;
   padding:40px 25px !important;
   align-items: center !important;
-
+  min-height: 100vh;
 }
 .impact_section .content, .leader_section .content, .join-section .content, .blog-spotlight .content, .case-study-faqs .content, .case-study-faqs .accordion-part{
   margin: 0px!important;
@@ -1100,9 +1127,13 @@ position: absolute;
     
 }
 .testimonials-inner{
-  height: 500px;
-  width: 500px;
-  margin-bottom: 0px;
+  height: 450px !important;
+        width: 450px !important;
+        margin-bottom: 0px !important;
+        flex-shrink: 0;
+        overflow: hidden;
+        position: relative;
+        left: 9%;
 }
 .testimonials-heading h3{
   font-size: 30px !important;
@@ -1118,13 +1149,13 @@ position: absolute;
     align-items: center;
     margin-top: 70px;
 }
-    .testimonials-inner {
+  /*  .testimonials-inner {
         height: 420px;
         width: 420px;
         margin-bottom: 0px;
         position: absolute;
         left: 1%;
-    }
+    }*/
 .testimonials_part{
   padding: 40px 0px;
 }
@@ -1134,7 +1165,7 @@ position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
-         margin-top: 0px !important; 
+         margin-top: 17px !important; 
     }
   .testimonials-inner .carousel-item p:nth-child(1){
       font-size: 20px !important;
@@ -1146,7 +1177,7 @@ position: absolute;
    .testimonials_part{
     min-height: 127vh;
    }
-   .testimonials-inner .carousel-indicators {
+   .testimonials-inner .carousel-indicators{
     position: absolute;
     right: 0;
     bottom: 20px !important;
@@ -1250,6 +1281,9 @@ position: absolute;
     .Articles_intro:hover .info h3{
       max-width: 80% !important;
     }
+    .info{
+      z-index: 1111;
+    }
     .blog-right-col{
       min-height: 70vh;
     }
@@ -1258,8 +1292,8 @@ position: absolute;
       flex-direction: column-reverse !important;
     }
     .on_hover-img{
-        width: 80px;
-         height: 80px;
+        width: 80px !important;
+         height: 80px !important;
     }
     .info h3{
       font-size: 15px !important;
@@ -1332,12 +1366,12 @@ position: absolute;
      flex-wrap: wrap;
 }
 .logo_col_inner{
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
 }
 .logo_col_inner img{
-  max-width: 130px;
-  max-height: 130px; 
+  max-width: 110px;
+  max-height: 110px; 
   width: auto;
 }
 .companies_section h3{
@@ -1370,5 +1404,17 @@ position: absolute;
 }
 .right-sidebar{
   padding: 40px 25px !important;
+}
+.join-section::after{
+  height: 450px;
+  width: 450px;
+
+}
+.testimonials_part{
+  padding-bottom: 70px !important;
+}
+.story_row{
+  display: flex;
+  justify-content: center !important;
 }
 }

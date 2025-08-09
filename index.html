@@ -77,19 +77,42 @@
         }, 200); // Check every 200ms
       });
 
-      window.addEventListener("load", function () {
-        // Layered video scroll effect
-        $(window).on("scroll", function () {
-          var x = $(window).scrollTop();
-          if (x > 500) {
-            x = (x - 500) * 2.5;
-            let y = x + "px";
-            $(".second_video").css("clip-path", `circle(${y} at center)`);
-          } else {
-            $(".second_video").css("clip-path", "circle(0px at center)");
-          }
-        });
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+          // Mobile
+           window.addEventListener("load", function () {
+            // Layered video scroll effect
+            $(window).on("scroll", function () {
+              var x = $(window).scrollTop();
+              if (x > 380) {
+                x = (x - 380) *0.8;
+                let y = x + "px";
+                $(".second_video").css("clip-path", `circle(${y} at 18%)`);
+              } else {
+                $(".second_video").css("clip-path", "circle(0px at 20%)");
+              }
+            });
+          });
+        } else {
+          // Laptop/Desktop
+           window.addEventListener("load", function () {
+            // Layered video scroll effect
+            $(window).on("scroll", function () {
+              var x = $(window).scrollTop();
+              if (x > 500) {
+                x = (x - 500) * 2.5;
+                let y = x + "px";
+                $(".second_video").css("clip-path", `circle(${y} at center)`);
+              } else {
+                $(".second_video").css("clip-path", "circle(0px at center)");
+              }
+            });
+          });
+        }
       });
+
+
+     
     </script>
   </body>
 </html>
