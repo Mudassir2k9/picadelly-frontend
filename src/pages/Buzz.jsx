@@ -75,7 +75,7 @@ const Buzz = () => {
 
       <section className="culture_section announcement-section">
         <div className="container">
-          <div className="row pt-5">
+          <div className="row pt-5 w-auto">
             <h2>{buzzData?.Announcement?.Heading1}</h2>
             <h2 className="text-white pt-2 pb-5">
               {buzzData?.Announcement?.Heading2}
@@ -110,7 +110,7 @@ const Buzz = () => {
         </div>
       </section>
       <section className="team_section bg_cover py-0">
-        <div className="row">
+        <div className="row w-auto">
           <div className="col-lg-6 col-md-12 col-12 bg-light team-item">
             <h2 className="color_primary ">{buzzData?.Team_Action?.Heading}</h2>
             <div
