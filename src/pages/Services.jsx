@@ -1,3 +1,6 @@
+
+
+
 import React from "react";
 
 const Services = () => {
@@ -67,6 +70,12 @@ setTimeout(() => {
   return (
     <>
       {/* <!-- team modals --> */}
+    <style>{`
+  .hamburger i {
+    color: #fff !important;
+  }
+`}</style>
+
       <div
         className="modal fade team_popup "
         id="team1"
