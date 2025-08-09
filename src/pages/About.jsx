@@ -43,7 +43,22 @@ const About = () => {
           }
         }, 1000);
 
-      
+       
+
+        const interval = setInterval(() => {
+          if (window.$) {
+              const dots = $(document).find(".culture_section .c_slider .owl-dots");
+
+              // Remove class if it exists
+              dots.removeClass("disabled");
+
+              // Stop interval when .disabled is no longer present
+              if (!dots.hasClass("disabled")) {
+                  clearInterval(interval);
+                  console.log("Interval stopped — class removed.");
+              }
+          }
+      }, 2000); // runs every 2 seconds
 
 
       })
