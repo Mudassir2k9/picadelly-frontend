@@ -43,7 +43,17 @@ const About = () => {
           }
         }, 1000);
 
-        setTimeout(() => {
+      
+
+
+      })
+        
+      .catch((error) => {
+        console.error("Error fetching about data:", error);
+      });
+  }, []);
+
+  setTimeout(() => {
           if (window.$) {
             const $cSlider = window.$(".c_slider");
 
@@ -52,7 +62,7 @@ const About = () => {
               $cSlider.removeClass("owl-loaded");
               $cSlider.find(".owl-stage-outer").children().unwrap();
               $cSlider.find(".owl-item").children().unwrap();
-              $cSlider.find(".owl-dots").removeClass("disabled");
+              $cSlider.find(".owl-dots.disabled").removeClass("disabled");
             }
 
             $cSlider.owlCarousel({
@@ -70,23 +80,8 @@ const About = () => {
               },
             });
           }
-        }, 150); // small delay to allow DOM to render
+        }, 1000);
 
-        setInterval(() => {
-    if (window.$) {
-        $(document)
-            .find(".culture_section .c_slider .owl-dots")
-            .removeClass("disabled");
-    }
-}, 1000); // runs every 1 second
-
-
-      })
-        
-      .catch((error) => {
-        console.error("Error fetching about data:", error);
-      });
-  }, []);
 
   console.log(aboutData);
   return (
