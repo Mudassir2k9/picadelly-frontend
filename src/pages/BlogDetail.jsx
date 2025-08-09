@@ -34,10 +34,10 @@ const BlogDetail = () => {
 
   return (
     <>
-      <div className="container-fluid px-0">
+      <div className="container-fluid  blog_detail_banner">
         <div className="row banner-row mx-0">
-          <div className="col-md-8 case_study-col-1 blog_col-1 px-5 pb-5">
-            <div className="inner-div px-4">
+          <div className="col-md-8 case_study-col-1 px-0 blog_col-1  pb-5">
+            <div className="inner-div ">
               <p className="font_20">BLOG POST</p>
               <h2
                 className="color_primary fw_600"
@@ -51,7 +51,7 @@ const BlogDetail = () => {
               </h2>
             </div>
           </div>
-          <div className="col-md-4 banner-col blog_col-1 case_study-col-1 px-5 pb-5">
+          <div className="col-md-4 banner-col blog_col-1 blog_col_2 case_study-col-1 px-0 px-md-5 pb-5">
             <div className="inner-div d-flex" style={{ width: "100%" }}>
               <div className=" d-flex justify-content-center">
                 <div className="list-inner">

@@ -290,6 +290,7 @@ background-color: var(--peal-green) !important;
     max-width: 100%;
     padding: 0px 6% !important;
 }
+
 .banner-row{
     height: 100%;
 }
@@ -799,11 +800,11 @@ position: relative;
     position: absolute;
     content: "";
     background-image: url("../images/ring.png");
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     background-size: 100%;
-    right: -35%;
-    top: 10%;
+    right: -25%;
+    top: 0;
     bottom: 0;
     margin: auto;
 
@@ -1340,6 +1341,23 @@ width: 350px !important;
 
 }
 @media only screen and (max-width: 576px){
+    .team_right_col::before, .financial_right_col::before {
+        left: 0;
+    right: 0;
+    margin: auto;
+    top: -35%;
+}
+.about_section{
+    min-height: auto;
+}
+.team_col::after {
+    height: 400px;
+    width: 400px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: -88%;
+}
     .fix_width_content {
     max-width: 300px;
 }
