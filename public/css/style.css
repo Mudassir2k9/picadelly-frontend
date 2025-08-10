@@ -1354,7 +1354,7 @@ width: 350px !important;
   height: 500px;
 }
 .parallax_container .right-colum{
-    background-size: 5000px;
+    background-size: 5000px !important;
 }
 .team-item{
     padding: 40px 25px !important;
