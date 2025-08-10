@@ -48,7 +48,7 @@ const Buzz = () => {
         },
       });
     }
-  }, 150); // small delay to allow DOM to render
+  }, 3000); // small delay to allow DOM to render
 
   return (
     <>
