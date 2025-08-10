@@ -656,7 +656,6 @@ background-color: var(--peal-green) !important;
      width: 50%;
 /*    height: 100vh;*/
     background-blend-mode: multiply;
-    background-attachment: scroll;
 }
 
 #myVideo {
@@ -1353,6 +1352,9 @@ width: 350px !important;
 @media only screen and (max-width: 576px){
     .team_section img{
   height: 500px;
+}
+.right-colum{
+    background-size: 5000px;
 }
 .team-item{
     padding: 40px 25px !important;
