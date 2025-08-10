@@ -16,22 +16,16 @@ setTimeout(() => {
     }
 
     // Reinitialize carousel
-    if (window.innerWidth < 768) {
-  // Mobile
-  var speed = 4000;
-} else {
-  // Desktop
-  var speed = 800;
-}
+    var isMobile = window.innerWidth < 768;
 
 $cSlider.owlCarousel({
   loop: true,
   nav: false,
   autoplay: true,
   autoplayTimeout: 5000,
-  autoplaySpeed: speed,
+  autoplaySpeed: isMobile ? 3000 : 800,
   margin: 10,
-  autoWidth: true,
+  autoWidth: !isMobile, // false on mobile, true otherwise
   responsive: {
     0: { items: 1 },
     768: { items: 1 },
