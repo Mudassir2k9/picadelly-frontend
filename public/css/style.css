@@ -244,14 +244,17 @@ background-color: var(--peal-green) !important;
     }
 
     .overlay .closebtn {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      font-size: 2rem;
-      color: #fff;
-      background: none;
-      border: none;
-      z-index: 11111;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 4rem;
+    color: #fff;
+    background: none;
+    border: none;
+    z-index: 11111;
+    padding: 0px;
+    line-height: 46px;
+
     }
     .banner_section{
         height: 700px;
