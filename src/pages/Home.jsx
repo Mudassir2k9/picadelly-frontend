@@ -20,8 +20,8 @@ setTimeout(() => {
       loop: true,
       nav: false,
       autoplay: true,
-      autoplayTimeout: 5000,
-      autoplaySpeed: 800,
+      // autoplayTimeout: 5000,
+      // autoplaySpeed: 800,
       margin: 10,
       autoWidth: true,
       responsive: {
