@@ -3,10 +3,10 @@ import React from "react";
 const CaseStudy = () => {
   return (
     <>
-      <div className="container-fluid px-0">
+      <div className="container-fluid case_study_banner">
         <div className="row banner-row mx-0">
-          <div className="col-md-6 case_study-col-1 px-5">
-            <div className="inner-div px-4">
+          <div className="col-md-6 case_study-col-1 px-0 ">
+            <div className="inner-div">
               <p className="font_20">Brand Refresh and Marketing Campaign</p>
               <h2
                 className="color_primary fw-bold"

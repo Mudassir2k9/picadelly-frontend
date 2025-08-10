@@ -22,6 +22,11 @@ const TalentExecutive = () => {
   console.log(talentExectiveData);
   return (
     <>
+        <style>{`
+  .hamburger i {
+    color: #fff !important;
+  }
+`}</style>
       <div className="container-fluid executive_banner">
         <div className="container">
           <div className="executive_col">

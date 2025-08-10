@@ -514,7 +514,7 @@
       }
 
 /*--------case-study-page-style-------*/
-.blog_detail_banner{
+.blog_detail_banner, .case_study_banner, .news_item_banner{
   
    min-height: 400px;
    padding: 150px 6% 0px 6%;
@@ -1457,7 +1457,7 @@ position: absolute;
 .case_study-col-1 {
     padding-left: 0%;
 }
-.blog_detail_banner .banner-row{
+.blog_detail_banner .banner-row, .case_study_banner .banner-row, .news_item_banner .banner-row{
   padding: 0px;
 }
 }

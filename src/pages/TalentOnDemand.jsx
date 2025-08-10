@@ -55,6 +55,11 @@ const TalentOnDemand = () => {
 
   return (
     <>
+        <style>{`
+  .hamburger i {
+    color: #fff !important;
+  }
+`}</style>
       <div className="container-fluid executive_banner On-Demand-banner">
         <div className="container">
           <div className="executive_col">
