@@ -656,6 +656,7 @@ background-color: var(--peal-green) !important;
      width: 50%;
 /*    height: 100vh;*/
     background-blend-mode: multiply;
+    background-attachment: scroll;
 }
 
 #myVideo {
