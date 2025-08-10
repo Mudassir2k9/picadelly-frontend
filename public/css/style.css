@@ -670,6 +670,9 @@ background-color: var(--peal-green) !important;
   object-fit: cover;
   object-position: top;
 }
+.banner_section #myVideo{
+    height: 100vh;
+}
 .left_video{
     right: auto;
     left: 0;
