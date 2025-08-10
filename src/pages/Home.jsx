@@ -16,21 +16,30 @@ setTimeout(() => {
     }
 
     // Reinitialize carousel
-    $cSlider.owlCarousel({
-      loop: true,
-      nav: false,
-      autoplay: true,
-      // autoplayTimeout: 5000,
-      // autoplaySpeed: 800,
-      margin: 10,
-      autoWidth: true,
-      responsive: {
-        0: { items: 1 },
-        768: { items: 1 },
-        992: { items: 1 },
-        1200: { items: 1 }
-      }
-    });
+    if (window.innerWidth < 768) {
+  // Mobile
+  var speed = 4000;
+} else {
+  // Desktop
+  var speed = 800;
+}
+
+$cSlider.owlCarousel({
+  loop: true,
+  nav: false,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplaySpeed: speed,
+  margin: 10,
+  autoWidth: true,
+  responsive: {
+    0: { items: 1 },
+    768: { items: 1 },
+    992: { items: 1 },
+    1200: { items: 1 }
+  }
+});
+
   }
 },3000);
 
