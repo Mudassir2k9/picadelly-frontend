@@ -1353,7 +1353,7 @@ width: 350px !important;
     .team_section img{
   height: 500px;
 }
-.right-colum{
+.parallax_container .right-colum{
     background-size: 5000px;
 }
 .team-item{
@@ -1420,7 +1420,7 @@ width: 350px !important;
         background-image: url("../images/companies-slider-mobile-bg.jpg");
         padding-top: 50px;
     }
-    .companies_logos_slider img{
+    .mobile_slider img{
         height: 100px;
     }
     .mobile_slider .container{
