@@ -16,21 +16,24 @@ setTimeout(() => {
     }
 
     // Reinitialize carousel
-    $cSlider.owlCarousel({
-      loop: true,
-      nav: false,
-      autoplay: true,
-      // autoplayTimeout: 5000,
-      // autoplaySpeed: 800,
-      margin: 10,
-      autoWidth: true,
-      responsive: {
-        0: { items: 1 },
-        768: { items: 1 },
-        992: { items: 1 },
-        1200: { items: 1 }
-      }
-    });
+    var isMobile = window.innerWidth < 768;
+
+$cSlider.owlCarousel({
+  loop: true,
+  nav: false,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplaySpeed: isMobile ? 3000 : 800,
+  margin: 10,
+  autoWidth: !isMobile, // false on mobile, true otherwise
+  responsive: {
+    0: { items: 1 },
+    768: { items: 1 },
+    992: { items: 1 },
+    1200: { items: 1 }
+  }
+});
+
   }
 },3000);
 
