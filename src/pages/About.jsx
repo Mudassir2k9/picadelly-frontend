@@ -225,7 +225,7 @@ const interval = setInterval(() => {
 
       {/* <!-- start team section --> */}
 
-      <section className="horizontal_parallax team_section">
+      <section className="horizontal_parallax team_section d-none d-md-block">
         <div className="panel">
           <div className="row">
             <div className="heading_col d-flex align-items-center px-5 team_col">
