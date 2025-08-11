@@ -34,9 +34,7 @@ const Header = () => {
   };
   return (
     <>
-      <div id="fullpage-loader" class="fullpage-loader">
-        <div class="spinner"></div>
-      </div>
+      
       <header>
         <nav className="navbar navbar-custom d-flex justify-content-between align-items-center flex-nowrap">
           <div className="navbar-brand">
