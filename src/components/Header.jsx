@@ -43,9 +43,9 @@ const Header = () => {
           </div>
         </nav>
         <div id="myNav" className="overlay">
-          <Link to={headerData?.buttonUrl} className="btn_light inner-nav-btn">
+          <a href="/contact-us" className="btn_light inner-nav-btn">
             Let's Connect
-          </Link>
+          </a>
           <button className="closebtn" onClick={navBarClose}>
             &times;
           </button>
