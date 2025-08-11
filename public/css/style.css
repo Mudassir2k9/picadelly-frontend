@@ -1289,6 +1289,9 @@ width: 350px !important;
 .team_section img{
     object-fit: cover;
 }
+.banner_video video{
+    height: 700px !important;
+}
 @media (min-width: 768px) {
 
     .testimonials-inner{
