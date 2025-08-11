@@ -303,7 +303,7 @@ const TalentOnDemand = () => {
               )
             )}
           </div>
-          <div className="row d-flex mt-4 justify-content-between align-items-center third-logo-row">
+          <div className="row d-flex mt-4 justify-content-center align-items-center third-logo-row">
             {talentDemandData?.Brands_Images?.slice(10, 15)?.map(
               (brand, index) => (
                 <div className="logo_col" key={`brand1-${index}`}>
