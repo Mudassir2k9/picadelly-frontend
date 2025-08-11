@@ -111,7 +111,16 @@
         }
       });
 
+const timestamp = Date.now();
 
+  // Select all link elements with rel="stylesheet"
+  document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+    const href = link.getAttribute('href');
+    // Only add ?v= if not already present
+    if (href && !href.includes('?v=')) {
+      link.setAttribute('href', href + '?v=' + timestamp);
+    }
+  });
      
     </script>
   </body>
