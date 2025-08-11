@@ -6,7 +6,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 const Header = () => {
   const [headerData, setHeaderData] = useState(null);
-const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     axios
       .get(
@@ -17,14 +17,7 @@ const [loading, setLoading] = useState(true);
       })
       .catch((error) => {
         console.error("Error fetching header data:", error);
-      }).finally(() => {
-      setLoading(false);
-      // Remove loader from index.html
-      const loader = document.getElementById('fullpage-loader');
-      if (loader) {
-        loader.parentNode.removeChild(loader);
-      }
-    });
+      });
   }, []);
   const navBar = () => {
     openNav();
@@ -34,7 +27,6 @@ const [loading, setLoading] = useState(true);
   };
   return (
     <>
-      
       <header>
         <nav className="navbar navbar-custom d-flex justify-content-between align-items-center flex-nowrap">
           <div className="navbar-brand">
