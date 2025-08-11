@@ -674,7 +674,7 @@ background-color: var(--peal-green) !important;
   object-position: top;
 }
 .banner_section #myVideo{
-    height: 700px;
+    height: 700px; 
 }
 .left_video{
     right: auto;
