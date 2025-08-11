@@ -1355,10 +1355,12 @@ width: 350px !important;
 
 }
 @media only screen and (max-width: 576px){
-.announcement-section, .culture_section{
+.announcement-section, .culture_section, .culture_section .container{
     position: relative;
+    z-index: 111;
 }
-    .announcement-section.culture_section .container::after{
+
+    .announcement-section.culture_section::after{
         position: absolute;
         content: "";
            top: 0;
