@@ -1034,6 +1034,60 @@
     .right-sidebar  h2{
       display: none;
     }
+
+/*  teams mobile section  */
+     .content_div{
+      padding: 0px !important;
+     
+     }
+          body .about-mobile-slider .heading_col {
+        background-image: none !important;
+     
+    }
+        body .about-mobile-slider .team_col::after {
+        height: 400px;
+        width: 400px;
+        right: 0px;
+        left: -15px;
+        margin: auto;
+        bottom: -88%;
+        z-index: -1;
+    }
+    body .about-mobile-slider .right_content_col{
+        padding: 0px !important;
+    }
+   .about-mobile-slider .carousel-inner-div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+   .about-mobile-slider .team_circle {
+    height: 300px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+    transition: all 0.3s;
+}
+ body .carousel-inner-div .heading_col{
+  padding: 40px 25px 0px 25px !important;
+}
+.carousel-inner-div .left_member_col img{
+  height: auto !important;
+  width: 300px !important;
+}
+.carousel-inner-div .team_circle h3{
+  font-size: 36px !important;
+}
+.carousel-inner-div .team_circle{
+  padding:15px !important;
+}
+#m-team2 .modal-body, #m-team1 .modal-body{
+  padding:0px 25px 30px 25px !important;
+}
+#m-team1 img, #m-team2 img{
+  width: 160px !important;
+  height: 160px !important;
+}
 /*------Responsiveness------*/
 
 @media only screen and (max-width:576px) {
