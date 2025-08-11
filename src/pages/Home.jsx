@@ -25,7 +25,7 @@ $cSlider.owlCarousel({
   autoplayTimeout: 5000,
   autoplaySpeed: isMobile ? 3000 : 800,
   margin: 10,
-  autoWidth: !isMobile, // false on mobile, true otherwise
+  autoWidth: false, // false on mobile, true otherwise
   responsive: {
     0: { items: 1 },
     768: { items: 1 },
