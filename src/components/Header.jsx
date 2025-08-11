@@ -18,11 +18,21 @@ const Header = () => {
       })
       .catch((error) => {
         console.error("Error fetching header data:", error);
-      })
-      .finally(() => {
-        setLoading(false);
       });
+      const onLoad = () => {
+    setLoading(false);  // mark loading false only when page fully loaded
+  };
+
+  window.addEventListener("load", onLoad);
+
+  // Cleanup event listener on unmount
+  return () => window.removeEventListener("load", onLoad);
+     
   }, []);
+
+ 
+
+
   const navBar = () => {
     openNav();
   };
@@ -31,7 +41,11 @@ const Header = () => {
   };
   return (
     <>
-      
+      {loading && (
+        <div className="fullpage-loader">
+          <div className="spinner"></div>
+        </div>
+      )}
       <header>
         <nav className="navbar navbar-custom d-flex justify-content-between align-items-center flex-nowrap">
           <div className="navbar-brand">
@@ -73,11 +87,6 @@ const Header = () => {
           </ul>
         </div>
       </header>
-      {loading && (
-        <div className="fullpage-loader">
-          <div className="spinner"></div>
-        </div>
-      )}
     </>
   );
 };
