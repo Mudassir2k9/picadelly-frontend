@@ -6,7 +6,6 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 const Header = () => {
   const [headerData, setHeaderData] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -19,20 +18,7 @@ const Header = () => {
       .catch((error) => {
         console.error("Error fetching header data:", error);
       });
-      const onLoad = () => {
-    setLoading(false);  // mark loading false only when page fully loaded
-  };
-
-  window.addEventListener("load", onLoad);
-
-  // Cleanup event listener on unmount
-  return () => window.removeEventListener("load", onLoad);
-     
   }, []);
-
- 
-
-
   const navBar = () => {
     openNav();
   };
@@ -41,11 +27,6 @@ const Header = () => {
   };
   return (
     <>
-      {loading && (
-        <div className="fullpage-loader">
-          <div className="spinner"></div>
-        </div>
-      )}
       <header>
         <nav className="navbar navbar-custom d-flex justify-content-between align-items-center flex-nowrap">
           <div className="navbar-brand">
