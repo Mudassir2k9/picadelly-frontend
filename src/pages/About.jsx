@@ -83,20 +83,7 @@ const About = () => {
             });
           }
         }, 10000);
-const interval = setInterval(() => {
-          if (window.$) {
-              const dots = $(document).find(".c_slider .owl-dots");
 
-              // Remove className if it exists
-              dots.removeClass("disabled");
-
-              // // Stop interval when .disabled is no longer present
-              // if (!dots.hasClass("disabled")) {
-              //     clearInterval(interval);
-              //     console.log("Interval stopped — className removed.");
-              // }
-          }
-      }, 2000); // runs every 2 seconds
 
   console.log(aboutData);
   return (
