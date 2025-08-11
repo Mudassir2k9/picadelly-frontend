@@ -6,7 +6,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 const Header = () => {
   const [headerData, setHeaderData] = useState(null);
-
+const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios
       .get(
