@@ -175,7 +175,7 @@ background-color: var(--peal-green) !important;
     background-color: #51beccc9;
 }
 .large_heading{
-        font-size: 70px !important;
+        font-size: 64pt !important;
      }
      header{
         right: 0;
@@ -219,12 +219,12 @@ background-color: var(--peal-green) !important;
       width: 0;
       position: fixed;
       top: 0;
-      right: 0;
+      right: 35px;
       background-color:rgb(36 145 154 / 100%);
       overflow: hidden;
       transition: 0.5s;
       z-index: 9999;
-      min-height: 100vh;
+      min-height: 450px;
     }
 
     .nav-items a {
@@ -235,6 +235,9 @@ background-color: var(--peal-green) !important;
       transition: 0.3s;
       font-weight: 600;
       font-size: 23px;
+    }
+    .nav-items li ul a{
+        font-size: 16px;
     }
 .nav-items a:hover{
     color: var(--yellow) !important;
@@ -263,6 +266,7 @@ background-color: var(--peal-green) !important;
     .banner_section h1{
         z-index: 111111;
     }
+
     .btn_primary{
         font-size: 15px;
     font-weight: 600;
@@ -278,7 +282,7 @@ background-color: var(--peal-green) !important;
     
     .banner-col h2{
         font-weight: 400 !important;
-        font-size: 50px !important;
+        font-size: 78px !important;
     }
     .banner-col i{
         color: var(--primary_color);
@@ -289,20 +293,22 @@ background-color: var(--peal-green) !important;
 
     }
 .container:has(> .banner-row){
-    height: 550px;
+    height: 100%;
     position: relative;
     z-index: 1;
     width: 100%;
     max-width: 100%;
     padding: 0px 6% !important;
 }
-
+.banner_section .banner-row{
+    padding-bottom: 40px;
+}
 .banner-row{
     height: 100%;
 }
 
 .nav-items{
-    padding-top: 100px;
+    padding-top: 130px;
     height: 100%;
     width: 50%;
 }
@@ -317,9 +323,12 @@ background-color: var(--peal-green) !important;
     overflow-y: hidden;
     width: 0px;
     top: 0;
-    padding-top: 100px;
+    padding-top: 130px;
     right: 0;
-/*    padding-left: 0;*/
+    padding-left: 0;
+}
+.nav-items li ul li{
+    padding-left: 30px;
 }
 .nav-items li:hover ul{
     width: 50%;
@@ -752,13 +761,14 @@ background-color: var(--peal-green) !important;
 /*start layerd video styling*/
 .section2  h1{
     position: absolute;
-    top: 35%;
+    top: 30%;
     text-align: center;
     right: 0;
     left: 0;
-    font-size: 50px;
-    max-width:760px;
+    font-size: 64pt;
+    max-width:1100px;
     margin: auto;
+    font-weight: 600 !important;
 }
 .section2 {
   width: 100vw;
@@ -1292,7 +1302,9 @@ width: 350px !important;
 }
 
 @media (min-width: 768px) {
-
+   .banner_section .inner-div{
+        width: 650px;
+    }
     .testimonials-inner{
         height: 600px !important;
         width: 600px !important;
@@ -1355,6 +1367,14 @@ width: 350px !important;
 
 }
 @media only screen and (max-width: 576px){
+    .overlay{
+        right: 0px;
+        height: 100vh;
+    }
+    .banner_section .banner-row{
+    padding-bottom:0px !important;
+            padding-top: 70px;
+}
 .announcement-section, .culture_section, .culture_section .container{
     position: relative;
     z-index: 111;
@@ -1454,11 +1474,22 @@ width: 350px !important;
         padding-top: 250px;
     }
     .nav-items a{
-        font-size: 14px;
+        font-size: 14px !important;
     }
     .nav-items{
         padding-left: 10px;
     }
+
+.overlay .closebtn{
+    font-size: 30px;
+}
+.nav-items>li>a::after {
+    right: 5px;
+    margin-top: 10px;
+}
+.nav-items li ul li {
+    padding-left: 10px;
+}
     .second_video{
         height: 100vh;
     }

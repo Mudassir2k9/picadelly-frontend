@@ -50,11 +50,10 @@ $cSlider.owlCarousel({
             data-wow-duration="1s"
             data-wow-delay="0.2s"
           >
-            Where <b>Strategy,</b>
-            <br />
-            <b>Creativity,</b> and
-            <br />
-            <b>Results</b> <i>Converge.</i>
+            Where <b>Strategy, </b>
+            
+            <b>Creativity,</b> and 
+            <b> Results</b> <i>Converge.</i>
           </h2>
         </div>
       </div>
