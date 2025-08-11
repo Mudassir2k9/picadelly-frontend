@@ -1355,11 +1355,23 @@ width: 350px !important;
 
 }
 @media only screen and (max-width: 576px){
-    .announcement-section.culture_section .container{
+    .announcement-section.culture_section .container::after{
+        position: absolute;
+        content: "";
+           top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-color: #50b7c6 !important;
 }
-.culture_section .container{
+.culture_section::after{
+    position: absolute;
+    content: "";
     background-color: #f2682acf !important;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
     .team_section img{
   height: 500px;
