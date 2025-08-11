@@ -17,7 +17,14 @@ const Header = () => {
       })
       .catch((error) => {
         console.error("Error fetching header data:", error);
-      });
+      }).finally(() => {
+      setLoading(false);
+      // Remove loader from index.html
+      const loader = document.getElementById('fullpage-loader');
+      if (loader) {
+        loader.parentNode.removeChild(loader);
+      }
+    });
   }, []);
   const navBar = () => {
     openNav();
