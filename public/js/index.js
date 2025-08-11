@@ -85,11 +85,13 @@ function openNav() {
           // Laptop/Desktop
            document.getElementById("myNav").style.width = "50%";
         }
+         document.getElementById("overlay").style.display = "block";
   
 }
 
 function closeNav() {
   document.getElementById("myNav").style.width = "0";
+   document.getElementById("overlay").style.display = "none";
 }
 
 // script for wow JS activation
