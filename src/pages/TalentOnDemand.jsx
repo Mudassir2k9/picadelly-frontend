@@ -276,7 +276,7 @@ const TalentOnDemand = () => {
             </p>
           </div>
           <div className="row d-flex justify-content-between mt-4 first-logo-row">
-            {talentDemandData?.Brands_Images?.slice(0, 5)?.map(
+            {talentDemandData?.Brands_Images?.slice(0, 50)?.map(
               (brand, index) => (
                 <div className="logo_col" key={`brand1-${index}`}>
                   <div className="logo_col_inner">
@@ -289,34 +289,7 @@ const TalentOnDemand = () => {
               )
             )}
           </div>
-          <div className="row d-flex justify-content-between mt-4 second-logo-row">
-            {talentDemandData?.Brands_Images?.slice(5, 10)?.map(
-              (brand, index) => (
-                <div className="logo_col" key={`brand1-${index}`}>
-                  <div className="logo_col_inner">
-                    <img
-                      src={`${baseUrl}${brand?.url}`}
-                      alt={`brand-${index}`}
-                    />
-                  </div>
-                </div>
-              )
-            )}
-          </div>
-          <div className="row d-flex mt-4 justify-content-center align-items-center third-logo-row">
-            {talentDemandData?.Brands_Images?.slice(10, 15)?.map(
-              (brand, index) => (
-                <div className="logo_col" key={`brand1-${index}`}>
-                  <div className="logo_col_inner">
-                    <img
-                      src={`${baseUrl}${brand?.url}`}
-                      alt={`brand-${index}`}
-                    />
-                  </div>
-                </div>
-              )
-            )}
-          </div>
+          
         </div>
       </div>
 
