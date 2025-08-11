@@ -886,6 +886,12 @@ object-position: top;
     background-blend-mode: multiply;
     min-height: 100vh;
 }
+.announcement-section .container{
+    background-color: #50b7c6 !important;
+}
+.culture_section .container{
+    background-color: #f2682acf !important;
+}
 .overflow_slider .owl-dots{
     display: flex;
     background-color: #fff;
