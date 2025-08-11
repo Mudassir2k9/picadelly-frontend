@@ -1094,7 +1094,9 @@
   height: 160px !important;
 }
 /*------Responsiveness------*/
-
+.executive_banner .container, .executive_banner .executive_col{
+  height: 100%;
+}
 @media only screen and (max-width:576px) {
   .project-col img {
     height: 190px;
@@ -1153,6 +1155,7 @@
 .executive_banner{
   height: 600px;
 }
+
 .impact_section .heading_col, .only_content .heading_col, .content_inner, .content-col-1, .dif-col, .case-study-faqs .heading_col{
   text-align: left;
   height: auto !important;
