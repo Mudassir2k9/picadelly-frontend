@@ -82,7 +82,7 @@ const About = () => {
               },
             });
           }
-        }, 5000);
+        }, 10000);
 const interval = setInterval(() => {
           if (window.$) {
               const dots = $(document).find(".c_slider .owl-dots");
