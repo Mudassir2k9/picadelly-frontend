@@ -1759,5 +1759,7 @@ body .team-item::after {
     right: 0;
     left: 0;
 }
-
+.banner_section #myVideo {
+height: 100vh;
+}
 }
