@@ -1360,7 +1360,7 @@ width: 350px !important;
     z-index: 111;
 }
 
-    .announcement-section.culture_section::after{
+/*    .announcement-section.culture_section::after{
         position: absolute;
         content: "";
            top: 0;
@@ -1377,7 +1377,7 @@ width: 350px !important;
     bottom: 0;
     right: 0;
     left: 0;
-}
+}*/
     .team_section img{
   height: 500px;
 }

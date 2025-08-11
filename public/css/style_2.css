@@ -670,7 +670,10 @@
           width: 250px;
      }
      .overlay-div{
-      padding: 60px;
+      padding: 30px;
+     }
+     .overlay-div span{
+      margin-bottom: 0px !important;
      }
      .flexible_part .heading_col h3{
       font-size: 27px;
