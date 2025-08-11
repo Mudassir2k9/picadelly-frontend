@@ -275,8 +275,8 @@ const TalentOnDemand = () => {
               {talentDemandData?.Brand_Section_Description}
             </p>
           </div>
-          <div className="row d-flex justify-content-between mt-4 first-logo-row">
-            {talentDemandData?.Brands_Images?.slice(0, 50)?.map(
+          <div className="row d-flex justify-content-center mt-4 first-logo-row">
+            {talentDemandData?.Brands_Images?.map(
               (brand, index) => (
                 <div className="logo_col" key={`brand1-${index}`}>
                   <div className="logo_col_inner">
