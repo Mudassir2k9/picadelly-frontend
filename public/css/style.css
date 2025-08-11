@@ -1413,9 +1413,7 @@ width: 350px !important;
     margin: auto;
     top: -35%;
 }
-.about_section{
-    min-height: auto;
-}
+
 .team_col::after {
     height: 400px;
     width: 400px;

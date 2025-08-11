@@ -37,7 +37,7 @@ const TalentOnDemand = () => {
               margin: 10,
               responsive: {
                 0: {
-                  items: 4,
+                  items: 1,
                 },
                 1200: {
                   items: 5,
