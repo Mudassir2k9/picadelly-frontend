@@ -127,6 +127,7 @@
             // Layered video scroll effect
             $(window).on("scroll", function () {
               var x = $(window).scrollTop();
+              var y = x;
               console.log("Scroll position:", x);
 
               if (x > 700) {
@@ -136,14 +137,14 @@
               } else {
                 $(".second_video").css("clip-path", "circle(0px at center)");
               }
-            });
 
-            const box = document.querySelector("#myBox"); // Change selector to your element
+              const box = document.querySelector("#myBox"); // Change selector to your element
+            console.log("Box element:", box);
             if (!box) return; // Prevent errors if element doesn't exist
 
-            const scrollY = window.scrollY;
+            
 
-            if (scrollY >= 700 && scrollY <= 900) {
+            if (y >= 700 && y <= 900) {
               box.style.position = "fixed";
               box.style.top = "0";
               box.style.left = "0";
@@ -157,6 +158,9 @@
               box.style.width = "";
               box.style.zIndex = "";
             }
+            });
+
+            
 
           });
         }
