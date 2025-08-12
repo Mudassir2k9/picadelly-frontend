@@ -151,6 +151,14 @@
               box.style.width = "100%";
               box.style.zIndex = "999";
             } 
+             else if (scrollY > 900) {
+              // Lock in place where it stopped
+              box.style.position = "absolute";
+              box.style.top = "1000px"; // match your scroll stop position
+              box.style.left = "0";
+              box.style.width = "100%";
+              box.style.zIndex = "999";
+            } 
             else {
               box.style.position = "";
               box.style.top = "";
