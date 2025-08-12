@@ -129,7 +129,7 @@ window.addEventListener("load", function () {
     // Sticky logic for mobile
     if (!box) return; // safety check
 
-    if (scrollTop >= 500 && scrollTop <= 800) {
+    if (scrollTop >= 500 && scrollTop <= 900) {
       // Fixed range for mobile
       box.style.position = "fixed";
       box.style.top = "0";
@@ -138,14 +138,14 @@ window.addEventListener("load", function () {
       box.style.zIndex = "999";
       box.style.marginTop = "0";
     } 
-    else if (scrollTop > 800) {
+    else if (scrollTop > 900) {
       // After fixed range, add margin
       box.style.position = "";
       box.style.top = "";
       box.style.left = "";
       box.style.width = "";
       box.style.zIndex = "";
-      box.style.marginTop = "300px";
+      box.style.marginTop = "400px";
     } 
     else {
       // Before fixed range
