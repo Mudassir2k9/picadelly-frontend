@@ -112,8 +112,8 @@
             // Layered video scroll effect
             $(window).on("scroll", function () {
               var x = $(window).scrollTop();
-              if (x > 380) {
-                x = (x - 380) *0.8;
+              if (x > 400) {
+                x = (x - 400) *0.8;
                 let y = x + "px";
                 $(".second_video").css("clip-path", `circle(${y} at 50vw 50vh)`);
               } else {
