@@ -99,6 +99,9 @@
       margin: 0;
       padding: 0;
 }
+h1, h2, p, li {
+    max-width: 100% !important;
+}
 .sec_py{
     padding: 60px 0px;
 }
@@ -653,6 +656,10 @@ background-color: var(--peal-green) !important;
     padding: 0px;
     overflow: hidden;
 }
+.horizontal_parallax .right_content_col .btn_light{
+    color: #f2682a !important;
+}
+
 .heading_col{
     background-image: url("../images/half-concentric-img.jpg");
     background-size: cover;
@@ -853,7 +860,7 @@ position: relative;
     background-image: none;
 }
 .left_member_col img{
-   height: 80%;
+   height: 95%;
 }
 .right_member_col img{
 height: 100%;
@@ -867,7 +874,7 @@ object-position: top;
 .team_circle{
     height: 400px;
     width: 400px;
-    background: rgba(255, 255, 255, 0.7);
+        background: rgb(255 255 255 / 88%);
     border-radius: 100%;
         transition: all 0.3s;
 
@@ -898,7 +905,7 @@ object-position: top;
     background-image: url("../images/concentric-circle-img.jpg");
     background-color: #f2682acf;
     background-blend-mode: multiply;
-    min-height: 100vh;
+/*    min-height: 100vh;*/
 }
 
 .overflow_slider .owl-dots{
@@ -1304,7 +1311,8 @@ width: 350px !important;
 .team_section img{
     object-fit: cover;
 }
-@media only screen and (min-width: 1368px){
+
+@media only screen and (min-width: 1500px){
       .banner-col h2{
         font-size: 78px !important;
     }
@@ -1377,8 +1385,41 @@ width: 350px !important;
 .banner_section .banner-row{
     padding-bottom: 95px !important;
 }
+.about_section h4{
+   font-weight: 700; 
+} 
+.team_section .heading_col p{
+    font-size: 24px !important;
+}
+.team_section .heading_col h3{
+    font-size: 50px !important;
+}
+.left_member_col img{
+    height: 100% !important;
+}
+.team_circle{
+    height: 500px;
+    width: 500px;
+    padding: 40px;
+}
+.team_circle h3{
+    font-size: 60px;
+}
+.team_circle p{
+    font-size: 20px;
+}
+.owl-carousel .owl-nav{
+    display: block !important;
+}
+.executive_banner .large_heading_2 {
+    font-size: 115px;
+}
 }
 @media only screen and (min-width: 1024px){
+
+    .executive_banner .large_heading_2 {
+    font-size: 115px;
+}
     .mobile_slider .container{
     left:-2%;
  }
@@ -1390,6 +1431,15 @@ width: 350px !important;
  }
  .banner_section .inner-div{
         width: 690px !important;
+    }
+    .culture_section h3{
+           font-size: 35px !important;
+    }
+    .culture_section p{
+        font-size: 20px !important;
+    }
+    .culture_section{
+        padding-top: 40px !important;
     }
 }
 
