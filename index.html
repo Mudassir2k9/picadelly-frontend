@@ -106,10 +106,11 @@
       });
 
       document.addEventListener("DOMContentLoaded", function () {
+        var xxf = 1;
         if (window.matchMedia("(max-width: 768px)").matches) {
           // Mobile
 window.addEventListener("load", function () {
-  var xxf = 1;
+  
   const box = document.querySelector("#myBox"); // Change selector if needed
   if (box) {
     box.style.transition = "margin-top 0.3s ease"; // smooth margin animation
