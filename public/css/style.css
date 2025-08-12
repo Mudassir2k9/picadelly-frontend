@@ -1386,7 +1386,9 @@ width: 350px !important;
     padding-bottom: 95px !important;
 }
 .about_section h4{
-   font-weight: 700; 
+   font-weight: 600;
+   font-size: 64pt !important; 
+   line-height: 90px;
 } 
 .team_section .heading_col p{
     font-size: 24px !important;
@@ -1413,6 +1415,7 @@ width: 350px !important;
 }
 .executive_banner .large_heading_2 {
     font-size: 115px;
+    max-width: inherit !important;
 }
 }
 @media only screen and (min-width: 1024px){
