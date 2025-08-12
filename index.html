@@ -105,46 +105,32 @@
         }, 1200); // Check every 200ms
       });
 
-     window.addEventListener("load", function () {
-  const box = document.querySelector("#myBox");
-  if (!box) return;
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+          // Mobile
+window.addEventListener("load", function () {
+  const box = document.querySelector("#myBox"); // Change selector if needed
+  if (box) {
+    box.style.transition = "margin-top 0.3s ease"; // smooth margin animation
+  }
 
-  const endMargin = 300; // space after sticky stop
-
-  // Desktop + mobile scroll
   $(window).on("scroll", function () {
-    const scrollTop = $(window).scrollTop();
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    var scrollTop = $(window).scrollTop();
+    console.log("Scroll position:", scrollTop);
 
-    // ===== VIDEO SCROLL EFFECT =====
-    if (!isMobile) {
-      // Desktop video logic (unchanged)
-      var x = scrollTop;
-      if (x > 700) {
-        x = (x - 700) * 2.5;
-        let y = x + "px";
-        $(".second_video").css("clip-path", `circle(${y} at center)`);
-      } else {
-        $(".second_video").css("clip-path", "circle(0px at center)");
-      }
+    // Your layered video scroll effect
+    if (scrollTop > 500) {
+      let radius = (scrollTop - 500) * 0.8 + "px";
+      $(".second_video").css("clip-path", `circle(${radius} at 50vw 50vh)`);
     } else {
-      // Mobile video logic (unchanged except start=500)
-      var x = scrollTop;
-      if (x > 500) {
-        x = (x - 500) * 0.8;
-        let y = x + "px";
-        $(".second_video").css("clip-path", `circle(${y} at 50vw 50vh)`);
-      } else {
-        $(".second_video").css("clip-path", "circle(0px at 20%)");
-      }
+      $(".second_video").css("clip-path", "circle(0px at 20%)");
     }
 
-    // ===== SAFARI-PROOF STICKY BOX =====
-    let startSticky = isMobile ? 500 : 700; // match your zones
-    let endSticky = isMobile ? 850 : 1000;  // match your zones
+    // Sticky logic for mobile
+    if (!box) return; // safety check
 
-    if (scrollTop >= startSticky && scrollTop <= endSticky) {
-      // Stick to top
+    if (scrollTop >= 500 && scrollTop <= 950) {
+      // Fixed range for mobile
       box.style.position = "fixed";
       box.style.top = "0";
       box.style.left = "0";
@@ -152,23 +138,75 @@
       box.style.zIndex = "999";
       box.style.marginTop = "0";
     } 
-    else if (scrollTop > endSticky) {
-      // Unstick with extra space
-      box.style.position = "relative";
-      box.style.top = "auto";
-      box.style.left = "auto";
-      box.style.marginTop = `${endMargin}px`;
+    else if (scrollTop > 950) {
+      // After fixed range, add margin
+      box.style.position = "";
+      box.style.top = "";
+      box.style.left = "";
+      box.style.width = "";
+      box.style.zIndex = "";
+      box.style.marginTop = "400px";
     } 
     else {
-      // Reset before sticky zone
-      box.style.position = "relative";
-      box.style.top = "auto";
-      box.style.left = "auto";
+      // Before fixed range
+      box.style.position = "";
+      box.style.top = "";
+      box.style.left = "";
+      box.style.width = "";
+      box.style.zIndex = "";
       box.style.marginTop = "0";
     }
   });
 });
 
+        } else {
+          // Laptop/Desktop
+           window.addEventListener("load", function () {
+  const box = document.querySelector("#myBox"); // Change selector if needed
+
+  $(window).on("scroll", function () {
+    var scrollTop = $(window).scrollTop();
+    var scrollY = scrollTop;
+    console.log("Scroll position:", scrollTop);
+
+    // Your layered video scroll effect
+    if (scrollTop > 700) {
+      let radius = (scrollTop - 700) * 2.5 + "px";
+      $(".second_video").css("clip-path", `circle(${radius} at center)`);
+    } else {
+      $(".second_video").css("clip-path", "circle(0px at center)");
+    }
+
+    if (!box) return; // Safety check
+
+    if (scrollY >= 700 && scrollY <= 1000) {
+      box.style.position = "fixed";
+      box.style.top = "0";
+      box.style.left = "0";
+      box.style.width = "100%";
+      box.style.zIndex = "999";
+      box.style.marginTop = "0"; // reset margin when fixed
+    } 
+    else if (scrollY > 1000) {
+      box.style.position = "";
+      box.style.top = "";
+      box.style.left = "";
+      box.style.width = "";
+      box.style.zIndex = "";
+      box.style.marginTop = "300px"; // add space after fixed period
+    } 
+    else {
+      box.style.position = "";
+      box.style.top = "";
+      box.style.left = "";
+      box.style.width = "";
+      box.style.zIndex = "";
+      box.style.marginTop = "0"; // reset before sticky
+    }
+  });
+});
+        }
+      });
 
 const timestamp = Date.now();
 
