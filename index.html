@@ -124,53 +124,60 @@
         } else {
           // Laptop/Desktop
            window.addEventListener("load", function () {
-            // Layered video scroll effect
-            $(window).on("scroll", function () {
-              var x = $(window).scrollTop();
-              var y = x;
-              console.log("Scroll position:", x);
+  const box = document.querySelector("#myBox"); // Change selector if needed
+  let placeholder = null;
 
-              if (x > 700) {
-                x = (x - 700) * 2.5;
-                let y = x + "px";
-                $(".second_video").css("clip-path", `circle(${y} at center)`);
-              } else {
-                $(".second_video").css("clip-path", "circle(0px at center)");
-              }
+  if (box) {
+    // Create placeholder for preventing jump
+    placeholder = document.createElement("div");
+    placeholder.style.height = box.offsetHeight + "px";
+    placeholder.style.visibility = "hidden";
+    placeholder.style.display = "none";
+    box.parentNode.insertBefore(placeholder, box);
+  }
 
-              const box = document.querySelector("#myBox"); // Change selector to your element
-            console.log("Box element:", box);
-            if (!box) return; // Prevent errors if element doesn't exist
+  $(window).on("scroll", function () {
+    var x = $(window).scrollTop();
+    var y = x;
+    console.log("Scroll position:", x);
 
-            
+    // Your layered video scroll effect
+    if (x > 700) {
+      x = (x - 700) * 2.5;
+      let y = x + "px";
+      $(".second_video").css("clip-path", `circle(${y} at center)`);
+    } else {
+      $(".second_video").css("clip-path", "circle(0px at center)");
+    }
 
-            if (y >= 700 && y <= 1000) {
-              box.style.position = "fixed";
-              box.style.top = "0";
-              box.style.left = "0";
-              box.style.width = "100%";
-              box.style.zIndex = "999";
-            } 
-             else if (scrollY > 900) {
-              // Lock in place where it stopped
-              box.style.position = "absolute";
-              box.style.top = "1000px"; // match your scroll stop position
-              box.style.left = "0";
-              box.style.width = "100%";
-              box.style.zIndex = "999";
-            } 
-            else {
-              box.style.position = "";
-              box.style.top = "";
-              box.style.left = "";
-              box.style.width = "";
-              box.style.zIndex = "";
-            }
-            });
+    if (!box) return; // Safety check
 
-            
-
-          });
+    if (y >= 700 && y <= 1000) {
+      if (placeholder) placeholder.style.display = "block"; // keep layout space
+      box.style.position = "fixed";
+      box.style.top = "0";
+      box.style.left = "0";
+      box.style.width = "100%";
+      box.style.zIndex = "999";
+    } 
+    else if (y > 1000) {
+      if (placeholder) placeholder.style.display = "none";
+      box.style.position = "";
+      box.style.top = "";
+      box.style.left = "";
+      box.style.width = "";
+      box.style.zIndex = "";
+    } 
+    else {
+      if (placeholder) placeholder.style.display = "none";
+      box.style.position = "";
+      box.style.top = "";
+      box.style.left = "";
+      box.style.width = "";
+      box.style.zIndex = "";
+    }
+  });
+});
         }
       });
 
