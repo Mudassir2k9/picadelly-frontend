@@ -125,15 +125,15 @@
           // Laptop/Desktop
            window.addEventListener("load", function () {
   const box = document.querySelector("#myBox"); // Change selector if needed
-  let placeholder = null;
+  let spacer = null;
 
   if (box) {
-    // Create placeholder for preventing jump
-    placeholder = document.createElement("div");
-    placeholder.style.height = box.offsetHeight + "px";
-    placeholder.style.visibility = "hidden";
-    placeholder.style.display = "none";
-    box.parentNode.insertBefore(placeholder, box);
+    // Create a transparent spacer of 300px
+    spacer = document.createElement("div");
+    spacer.style.height = "300px";  // fixed height
+    spacer.style.visibility = "hidden";
+    spacer.style.display = "none";
+    box.parentNode.insertBefore(spacer, box.nextSibling); // insert AFTER myBox
   }
 
   $(window).on("scroll", function () {
@@ -153,26 +153,15 @@
     if (!box) return; // Safety check
 
     if (y >= 700 && y <= 1000) {
-      // Fixed at top
-      placeholder.style.display = "block";
+      if (spacer) spacer.style.display = "block"; // add space below
       box.style.position = "fixed";
       box.style.top = "0";
       box.style.left = "0";
       box.style.width = "100%";
       box.style.zIndex = "999";
     } 
-    else if (y > 1000) {
-      // Stay in last position using absolute
-      placeholder.style.display = "block";
-      box.style.position = "absolute";
-      box.style.top = "1000px"; // match scroll stop position
-      box.style.left = "0";
-      box.style.width = "100%";
-      box.style.zIndex = "999";
-    } 
     else {
-      // Before sticky range
-      placeholder.style.display = "none";
+      if (spacer) spacer.style.display = "none"; // remove extra space
       box.style.position = "";
       box.style.top = "";
       box.style.left = "";
