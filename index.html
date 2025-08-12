@@ -146,6 +146,7 @@ window.addEventListener("load", function () {
       box.style.width = "";
       box.style.zIndex = "";
       box.style.marginTop = "400px";
+      ScrollTrigger.refresh();
     } 
     else {
       // Before fixed range
@@ -167,7 +168,7 @@ window.addEventListener("load", function () {
   $(window).on("scroll", function () {
     var scrollTop = $(window).scrollTop();
     var scrollY = scrollTop;
-    console.log("Scroll position:", scrollTop);
+    // console.log("Scroll position:", scrollTop);
 
     // Your layered video scroll effect
     if (scrollTop > 700) {
@@ -194,6 +195,7 @@ window.addEventListener("load", function () {
       box.style.width = "";
       box.style.zIndex = "";
       box.style.marginTop = "300px"; // add space after fixed period
+      ScrollTrigger.refresh();
     } 
     else {
       box.style.position = "";
