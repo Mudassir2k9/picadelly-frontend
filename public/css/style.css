@@ -1312,7 +1312,7 @@ width: 350px !important;
     object-fit: cover;
 }
 
-@media only screen and (min-width: 1500px){
+@media only screen and (min-width: 1300px){
       .banner-col h2{
         font-size: 78px !important;
     }
