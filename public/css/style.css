@@ -787,7 +787,7 @@ background-color: var(--peal-green) !important;
  background-image: url("../images/single-concentric-bg.jpg");
 
 background-size: cover;
-background-position:  center 40%;
+background-position:  center ;
 overflow: hidden;
 position: relative;
 }
