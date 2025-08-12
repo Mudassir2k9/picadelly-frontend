@@ -108,20 +108,57 @@
       document.addEventListener("DOMContentLoaded", function () {
         if (window.matchMedia("(max-width: 768px)").matches) {
           // Mobile
-           window.addEventListener("load", function () {
-            // Layered video scroll effect
-            $(window).on("scroll", function () {
-              var x = $(window).scrollTop();
-              console.log("Scroll position:", x);
-              if (x > 380) {
-                x = (x - 380) *0.8;
-                let y = x + "px";
-                $(".second_video").css("clip-path", `circle(${y} at 50vw 50vh)`);
-              } else {
-                $(".second_video").css("clip-path", "circle(0px at 20%)");
-              }
-            });
-          });
+window.addEventListener("load", function () {
+  const box = document.querySelector("#myBox"); // Change selector if needed
+  if (box) {
+    box.style.transition = "margin-top 0.3s ease"; // smooth margin animation
+  }
+
+  $(window).on("scroll", function () {
+    var scrollTop = $(window).scrollTop();
+    console.log("Scroll position:", scrollTop);
+
+    // Your layered video scroll effect
+    if (scrollTop > 500) {
+      let radius = (scrollTop - 500) * 0.8 + "px";
+      $(".second_video").css("clip-path", `circle(${radius} at 50vw 50vh)`);
+    } else {
+      $(".second_video").css("clip-path", "circle(0px at 20%)");
+    }
+
+    // Sticky logic for mobile
+    if (!box) return; // safety check
+
+    if (scrollTop >= 500 && scrollTop <= 800) {
+      // Fixed range for mobile
+      box.style.position = "fixed";
+      box.style.top = "0";
+      box.style.left = "0";
+      box.style.width = "100%";
+      box.style.zIndex = "999";
+      box.style.marginTop = "0";
+    } 
+    else if (scrollTop > 800) {
+      // After fixed range, add margin
+      box.style.position = "";
+      box.style.top = "";
+      box.style.left = "";
+      box.style.width = "";
+      box.style.zIndex = "";
+      box.style.marginTop = "300px";
+    } 
+    else {
+      // Before fixed range
+      box.style.position = "";
+      box.style.top = "";
+      box.style.left = "";
+      box.style.width = "";
+      box.style.zIndex = "";
+      box.style.marginTop = "0";
+    }
+  });
+});
+
         } else {
           // Laptop/Desktop
            window.addEventListener("load", function () {
