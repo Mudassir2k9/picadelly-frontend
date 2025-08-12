@@ -105,110 +105,68 @@
         }, 1200); // Check every 200ms
       });
 
-     document.addEventListener("DOMContentLoaded", function () {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    // Mobile
-    window.addEventListener("load", function () {
-      const box = document.querySelector("#myBox");
-      if (box) {
-        box.style.transition = "margin-top 0.3s ease"; // smooth margin animation
+     window.addEventListener("load", function () {
+  const box = document.querySelector("#myBox");
+  if (!box) return;
+
+  const endMargin = 300; // space after sticky stop
+
+  // Desktop + mobile scroll
+  $(window).on("scroll", function () {
+    const scrollTop = $(window).scrollTop();
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    // ===== VIDEO SCROLL EFFECT =====
+    if (!isMobile) {
+      // Desktop video logic (unchanged)
+      var x = scrollTop;
+      if (x > 700) {
+        x = (x - 700) * 2.5;
+        let y = x + "px";
+        $(".second_video").css("clip-path", `circle(${y} at center)`);
+      } else {
+        $(".second_video").css("clip-path", "circle(0px at center)");
       }
+    } else {
+      // Mobile video logic (unchanged except start=500)
+      var x = scrollTop;
+      if (x > 500) {
+        x = (x - 500) * 0.8;
+        let y = x + "px";
+        $(".second_video").css("clip-path", `circle(${y} at 50vw 50vh)`);
+      } else {
+        $(".second_video").css("clip-path", "circle(0px at 20%)");
+      }
+    }
 
-      $(window).on("scroll", function () {
-        var scrollTop = $(window).scrollTop();
-        console.log("Scroll position:", scrollTop);
+    // ===== SAFARI-PROOF STICKY BOX =====
+    let startSticky = isMobile ? 500 : 700; // match your zones
+    let endSticky = isMobile ? 850 : 1000;  // match your zones
 
-        // Layered video scroll effect (unchanged)
-        if (scrollTop > 500) {
-          let radius = (scrollTop - 500) * 0.8 + "px";
-          $(".second_video").css("clip-path", `circle(${radius} at 50vw 50vh)`);
-        } else {
-          $(".second_video").css("clip-path", "circle(0px at 20%)");
-        }
-
-        // Sticky logic for mobile (Safari-safe)
-        if (!box) return;
-
-        if (scrollTop >= 500 && scrollTop <= 950) {
-          box.style.position = "fixed";
-          box.style.top = "0px";
-          box.style.left = "0px";
-          box.style.width = "100%";
-          box.style.zIndex = "999";
-          box.style.marginTop = "0px";
-        } 
-        else if (scrollTop > 950) {
-          box.style.position = "relative"; // avoid blank value for Safari
-          box.style.top = "auto";
-          box.style.left = "auto";
-          box.style.width = "100%";
-          box.style.zIndex = "1";
-          box.style.marginTop = "400px";
-
-          // Safari repaint trick
-          void box.offsetHeight;
-        } 
-        else {
-          box.style.position = "relative";
-          box.style.top = "auto";
-          box.style.left = "auto";
-          box.style.width = "100%";
-          box.style.zIndex = "1";
-          box.style.marginTop = "0px";
-
-          // Safari repaint trick
-          void box.offsetHeight;
-        }
-      });
-    });
-  } else {
-    // Laptop/Desktop
-    window.addEventListener("load", function () {
-      const box = document.querySelector("#myBox");
-
-      $(window).on("scroll", function () {
-        var scrollTop = $(window).scrollTop();
-        console.log("Scroll position:", scrollTop);
-
-        // Layered video scroll effect (unchanged)
-        if (scrollTop > 700) {
-          let radius = (scrollTop - 700) * 2.5 + "px";
-          $(".second_video").css("clip-path", `circle(${radius} at center)`);
-        } else {
-          $(".second_video").css("clip-path", "circle(0px at center)");
-        }
-
-        if (!box) return;
-
-        if (scrollTop >= 700 && scrollTop <= 1000) {
-          box.style.position = "fixed";
-          box.style.top = "0px";
-          box.style.left = "0px";
-          box.style.width = "100%";
-          box.style.zIndex = "999";
-          box.style.marginTop = "0px";
-        } 
-        else if (scrollTop > 1000) {
-          box.style.position = "relative";
-          box.style.top = "auto";
-          box.style.left = "auto";
-          box.style.width = "100%";
-          box.style.zIndex = "1";
-          box.style.marginTop = "300px";
-          void box.offsetHeight; // repaint fix
-        } 
-        else {
-          box.style.position = "relative";
-          box.style.top = "auto";
-          box.style.left = "auto";
-          box.style.width = "100%";
-          box.style.zIndex = "1";
-          box.style.marginTop = "0px";
-          void box.offsetHeight;
-        }
-      });
-    });
-  }
+    if (scrollTop >= startSticky && scrollTop <= endSticky) {
+      // Stick to top
+      box.style.position = "fixed";
+      box.style.top = "0";
+      box.style.left = "0";
+      box.style.width = "100%";
+      box.style.zIndex = "999";
+      box.style.marginTop = "0";
+    } 
+    else if (scrollTop > endSticky) {
+      // Unstick with extra space
+      box.style.position = "relative";
+      box.style.top = "auto";
+      box.style.left = "auto";
+      box.style.marginTop = `${endMargin}px`;
+    } 
+    else {
+      // Reset before sticky zone
+      box.style.position = "relative";
+      box.style.top = "auto";
+      box.style.left = "auto";
+      box.style.marginTop = "0";
+    }
+  });
 });
 
 
