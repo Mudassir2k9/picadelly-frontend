@@ -1300,7 +1300,9 @@ width: 350px !important;
 .team_section img{
     object-fit: cover;
 }
-
+@media only screen and (min-width: 1366px){
+    
+}
 @media (min-width: 768px) {
    .banner_section .inner-div{
         width: 650px;
