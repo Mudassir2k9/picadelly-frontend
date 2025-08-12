@@ -125,18 +125,6 @@
           // Laptop/Desktop
            window.addEventListener("load", function () {
             // Layered video scroll effect
-            const box = document.querySelector("#myBox"); // Change selector to your element
-            console.log("Box element:", box);
-            if (box) {
-                const placeholder = document.createElement("div");
-              placeholder.style.height = box.offsetHeight + "px";
-              placeholder.style.visibility = "hidden";
-              placeholder.style.display = "none"; // start hidden
-              box.parentNode.insertBefore(placeholder, box);
-            }
-              
-
-
             $(window).on("scroll", function () {
               var x = $(window).scrollTop();
               var y = x;
@@ -150,24 +138,34 @@
                 $(".second_video").css("clip-path", "circle(0px at center)");
               }
 
-              
+              const box = document.querySelector("#myBox"); // Change selector to your element
+            console.log("Box element:", box);
+            if (!box) return; // Prevent errors if element doesn't exist
+
             
 
-              if (y >= 700 && y <= 1000) {
-                placeholder.style.display = "block"; // reserve space
-                box.style.position = "fixed";
-                box.style.top = "0";
-                box.style.left = "0";
-                box.style.width = "100%";
-                box.style.zIndex = "999";
-              } else {
-                placeholder.style.display = "none"; // no space needed
-                box.style.position = "";
-                box.style.top = "";
-                box.style.left = "";
-                box.style.width = "";
-                box.style.zIndex = "";
-              }
+            if (y >= 700 && y <= 1000) {
+              box.style.position = "fixed";
+              box.style.top = "0";
+              box.style.left = "0";
+              box.style.width = "100%";
+              box.style.zIndex = "999";
+            } 
+             else if (scrollY > 900) {
+              // Lock in place where it stopped
+              box.style.position = "absolute";
+              box.style.top = "1000px"; // match your scroll stop position
+              box.style.left = "0";
+              box.style.width = "100%";
+              box.style.zIndex = "999";
+            } 
+            else {
+              box.style.position = "";
+              box.style.top = "";
+              box.style.left = "";
+              box.style.width = "";
+              box.style.zIndex = "";
+            }
             });
 
             
