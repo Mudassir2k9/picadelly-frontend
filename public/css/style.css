@@ -1397,7 +1397,7 @@ width: 350px !important;
     font-size: 50px !important;
 }
 .left_member_col img{
-    height: 100% !important;
+    height: 90% !important;
 }
 .team_circle{
     height: 500px;
@@ -1405,7 +1405,10 @@ width: 350px !important;
     padding: 40px;
 }
 .team_circle h3{
-    font-size: 60px;
+    font-size: 60pt;
+}
+.team_last_name{
+    font-size: 36pt;
 }
 .team_circle p{
     font-size: 20px;
@@ -1705,7 +1708,7 @@ width: 350px !important;
     font-size: 10px;
 }
     .about_section .item .large_heading{
-        font-size: 30px !important;
+        font-size: 37px !important;
     }
     .about_row .owl-carousel, .about_row .owl-carousel .owl-stage-outer .owl-stage{
         align-items: flex-start;
