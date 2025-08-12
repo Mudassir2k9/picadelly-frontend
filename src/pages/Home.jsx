@@ -67,7 +67,7 @@ $cSlider.owlCarousel({
 </div>
 
 {/* start layered video section */}
-<section className="section2 container-sticky">
+<section className="section2 container-sticky" id="myBox">
   <div className="video-sticky">
     <div className="video-container">
       <h1 className="fw-bold">
