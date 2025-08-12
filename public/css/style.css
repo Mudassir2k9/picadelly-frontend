@@ -1312,7 +1312,7 @@ width: 350px !important;
     object-fit: cover;
 }
 
-@media only screen and (min-width: 1500px){
+@media only screen and (min-width: 1300px){
       .banner-col h2{
         font-size: 78px !important;
     }
@@ -1344,7 +1344,7 @@ width: 350px !important;
     margin-top: -65px;
 }
 .parallax_container .right-column{
-    height: 2750px;
+    height: 3600px;
 }
 .panel .large_heading{
         font-size: 64pt !important;
