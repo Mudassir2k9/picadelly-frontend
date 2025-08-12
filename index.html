@@ -130,7 +130,7 @@
   if (box) {
     // Create a transparent spacer of 300px
     spacer = document.createElement("div");
-    spacer.style.height = "300px";  // fixed height
+    spacer.style.height = "250px";  // fixed height
     spacer.style.visibility = "hidden";
     spacer.style.display = "none";
     box.parentNode.insertBefore(spacer, box.nextSibling); // insert AFTER myBox
@@ -152,7 +152,7 @@
 
     if (!box) return; // Safety check
 
-    if (y >= 700 && y <= 1000) {
+    if (y >= 700 && y <= 950) {
       if (spacer) spacer.style.display = "block"; // add space below
       box.style.position = "fixed";
       box.style.top = "0";
