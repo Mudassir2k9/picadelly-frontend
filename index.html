@@ -109,6 +109,7 @@
         if (window.matchMedia("(max-width: 768px)").matches) {
           // Mobile
 window.addEventListener("load", function () {
+  var xxf = 1;
   const box = document.querySelector("#myBox"); // Change selector if needed
   if (box) {
     box.style.transition = "margin-top 0.3s ease"; // smooth margin animation
@@ -146,7 +147,11 @@ window.addEventListener("load", function () {
       box.style.width = "";
       box.style.zIndex = "";
       box.style.marginTop = "400px";
-      ScrollTrigger.refresh();
+      if(xxf === 1) {
+        xxf = 0;
+        ScrollTrigger.refresh();
+      }
+      
     } 
     else {
       // Before fixed range
@@ -195,7 +200,10 @@ window.addEventListener("load", function () {
       box.style.width = "";
       box.style.zIndex = "";
       box.style.marginTop = "300px"; // add space after fixed period
-      ScrollTrigger.refresh();
+      if(xxf === 1) {
+        xxf = 0;
+        ScrollTrigger.refresh();
+      }
     } 
     else {
       box.style.position = "";
