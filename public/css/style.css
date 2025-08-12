@@ -99,9 +99,9 @@
       margin: 0;
       padding: 0;
 }
-h1, h2, p, li {
+/*h1, h2, p, li {
     max-width: 100% !important;
-}
+}*/
 .sec_py{
     padding: 60px 0px;
 }
