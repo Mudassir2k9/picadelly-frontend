@@ -153,7 +153,8 @@
     if (!box) return; // Safety check
 
     if (y >= 700 && y <= 1000) {
-      if (placeholder) placeholder.style.display = "block"; // keep layout space
+      // Fixed at top
+      placeholder.style.display = "block";
       box.style.position = "fixed";
       box.style.top = "0";
       box.style.left = "0";
@@ -161,15 +162,17 @@
       box.style.zIndex = "999";
     } 
     else if (y > 1000) {
-      if (placeholder) placeholder.style.display = "none";
-      box.style.position = "";
-      box.style.top = "";
-      box.style.left = "";
-      box.style.width = "";
-      box.style.zIndex = "";
+      // Stay in last position using absolute
+      placeholder.style.display = "block";
+      box.style.position = "absolute";
+      box.style.top = "1000px"; // match scroll stop position
+      box.style.left = "0";
+      box.style.width = "100%";
+      box.style.zIndex = "999";
     } 
     else {
-      if (placeholder) placeholder.style.display = "none";
+      // Before sticky range
+      placeholder.style.display = "none";
       box.style.position = "";
       box.style.top = "";
       box.style.left = "";
