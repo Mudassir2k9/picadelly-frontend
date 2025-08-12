@@ -581,7 +581,7 @@ background-color: var(--peal-green) !important;
   color: white;
   flex-wrap: wrap;
 
- transform: translateY(100px) !important;
+ transform: translateY(250px) !important;
 
 }
 
@@ -1344,7 +1344,7 @@ width: 350px !important;
     margin-top: -65px;
 }
 .parallax_container .right-column{
-    height: 2750px;
+    height: 3600px;
 }
 .panel .large_heading{
         font-size: 64pt !important;
@@ -1515,6 +1515,9 @@ width: 350px !important;
 
 }
 @media only screen and (max-width: 576px){
+    .footer-section .footer-row-2 .col-md-12:nth-child(8) img {
+    margin-bottom: -106px !important;
+}
     .overlay{
         right: 0px;
         height: 100vh;
