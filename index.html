@@ -112,6 +112,7 @@
             // Layered video scroll effect
             $(window).on("scroll", function () {
               var x = $(window).scrollTop();
+              console.log("Scroll position:", x);
               if (x > 400) {
                 x = (x - 400) *0.8;
                 let y = x + "px";
