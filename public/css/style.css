@@ -175,7 +175,7 @@ background-color: var(--peal-green) !important;
     background-color: #51beccc9;
 }
 .large_heading{
-        font-size: 64pt !important;
+        font-size: 70px !important;
      }
      header{
         right: 0;
@@ -282,7 +282,7 @@ background-color: var(--peal-green) !important;
     
     .banner-col h2{
         font-weight: 400 !important;
-        font-size: 78px !important;
+        font-size: 60px !important;
     }
     .banner-col i{
         color: var(--primary_color);
@@ -468,6 +468,10 @@ background-color: var(--peal-green) !important;
     background-color:var(--teal-dark);
     position: relative;
     z-index: 11111;
+    overflow: hidden;
+}
+.footer-section .footer-row-2 .col-md-12:nth-child(8) img{
+    margin-bottom: -95px !important;
 }
 .footer-col ul{
     padding-left: 0px;
@@ -1284,7 +1288,7 @@ width: 350px !important;
 }
 .mobile_slider_left_heading, .mobile_slider_right_heading{
     position: absolute;
-    left: 11%;
+    left: 9%;
     top: 0;
     bottom: 0;
     display: flex;
@@ -1292,7 +1296,7 @@ width: 350px !important;
 }
 .mobile_slider_right_heading{
     left: auto;
-    right: 13%;
+    right: 11%;
 }
 .fix_width_content{
     max-width: 800px;
@@ -1300,12 +1304,98 @@ width: 350px !important;
 .team_section img{
     object-fit: cover;
 }
-@media only screen and (min-width: 1366px){
-    
+@media only screen and (min-width: 1368px){
+      .banner-col h2{
+        font-size: 78px !important;
+    }
+    .section2 h1{
+        top:33%;
+    }
+    .inner-part h5{
+        font-size: 30px;
+    }
+    .result-div-1 h2{
+        font-size: 58px;
+    }
+     .result-div-1{
+        width: 530px;
+        height: 530px;
+     }
+     .result-div-1 p{
+        font-size: 36px;
+     }
+     .result-div-2{
+        max-width: 165px;
+        height: 165px;
+     }
+     .result-div-2 h5{
+        font-size: 23px;
+     }
+     .result-div-2 {
+    margin-left: -158px;
+    margin-top: -65px;
 }
+.parallax_container .right-column{
+    height: 2750px;
+}
+.panel .large_heading{
+        font-size: 64pt !important;
+     }
+     .panel h1{
+        font-size: 55px !important;
+     } 
+     .mobile_slider_left_heading, .mobile_slider_right_heading{
+    position: absolute;
+    left: 13%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.mobile_slider_right_heading{
+    left: auto;
+    right: 15%;
+}
+ .mobile_slider .container{
+    left:-2%;
+ }
+ .happening_section h2{
+    font-size: 70px;
+ }
+ .happening_section{
+    padding-top: 80px;
+ }
+ .happening_section .inner-col h5 {
+    font-size: 35px;
+}
+.happening_section .inner-col p a, .happening_section .inner-col li a{
+    font-size: 18px;
+}
+.happening_section .inner-col ul{
+    padding-left: 0px !important;
+}
+.banner_section .banner-row{
+    padding-bottom: 95px !important;
+}
+}
+@media only screen and (min-width: 1024px){
+    .mobile_slider .container{
+    left:-2%;
+ }
+ .footer-col h5{
+    font-size: 19px;
+ }
+ .footer-col ul li a{
+    font-size: 14px;
+ }
+ .banner_section .inner-div{
+        width: 690px !important;
+    }
+}
+
 @media (min-width: 768px) {
    .banner_section .inner-div{
-        width: 650px;
+        width: 500px;
     }
     .testimonials-inner{
         height: 600px !important;
