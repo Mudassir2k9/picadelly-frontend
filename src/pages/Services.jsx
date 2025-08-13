@@ -21,7 +21,7 @@ setTimeout(() => {
             $cSlider.owlCarousel({
               loop: true,
               nav: false,
-              autoplay: false,
+              autoplay: true,
               // center: true,
               // autoWidth: true, // ❌ commented to match strategy_slider
               autoplayTimeout: 5000,
