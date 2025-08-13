@@ -133,17 +133,17 @@ window.addEventListener("load", function () {
 
     if (scrollTop >= 790 && scrollTop <= 1350) {
       // Fixed range for mobile
-      var xt = 0;
-      if(scrollTop > 1250){
-        xt = scrollTop - 1250;
-      }
+      // var xt = 0;
+      // if(scrollTop > 1250){
+      //   xt = scrollTop - 1250;
+      // }
       
       box.style.position = "fixed";
       box.style.top = "0";
       box.style.left = "0";
       box.style.width = "100%";
       box.style.zIndex = "999";
-      box.style.marginTop = xt+ "px"; // Adjust margin based on scroll position
+      box.style.marginTop = "0"; // Adjust margin based on scroll position
     } 
     else if (scrollTop > 1350) {
       // After fixed range, add margin
