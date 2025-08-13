@@ -121,8 +121,8 @@ window.addEventListener("load", function () {
     // console.log("Scroll position:", scrollTop);
 
     // Your layered video scroll effect
-    if (scrollTop > 800) {
-      let radius = (scrollTop - 800) * 0.8 + "px";
+    if (scrollTop > 790) {
+      let radius = (scrollTop - 790) * 0.8 + "px";
       $(".second_video").css("clip-path", `circle(${radius} at 50vw 50vh)`);
     } else {
       $(".second_video").css("clip-path", "circle(0px at 20%)");
@@ -131,7 +131,7 @@ window.addEventListener("load", function () {
     // Sticky logic for mobile
     if (!box) return; // safety check
 
-    if (scrollTop >= 800 && scrollTop <= 1300) {
+    if (scrollTop >= 790 && scrollTop <= 1350) {
       // Fixed range for mobile
       box.style.position = "fixed";
       box.style.top = "0";
@@ -140,14 +140,14 @@ window.addEventListener("load", function () {
       box.style.zIndex = "999";
       box.style.marginTop = "0";
     } 
-    else if (scrollTop > 1300) {
+    else if (scrollTop > 1350) {
       // After fixed range, add margin
       box.style.position = "";
       box.style.top = "";
       box.style.left = "";
       box.style.width = "";
       box.style.zIndex = "";
-      box.style.marginTop = "500px";
+      box.style.marginTop = "560px";
       if(xxf === 1) {
         xxf = 0;
         ScrollTrigger.refresh();
