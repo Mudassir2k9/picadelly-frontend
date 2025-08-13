@@ -1567,15 +1567,18 @@ position: absolute;
         height: 300px !important;
     }
         .inner_wrap {
-        height: 180px;
-        width: 180px;
+        height: 300px;
+        width: 300px;
         background-color: #fff;
         border-radius: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 30px 10%;
-        flex-wrap: wrap;
+        flex-direction: column;
         margin: auto;
     }
-     }
+    .inner_wrap p{
+      margin-bottom: 20px !important;
+     }    
+   }

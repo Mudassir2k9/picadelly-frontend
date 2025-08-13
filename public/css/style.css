@@ -1428,9 +1428,11 @@ width: 350px !important;
     display: block !important;
 }
 .executive_banner .large_heading_2 {
-    font-size: 115pt;
+    font-size: 98pt;
     max-width: inherit !important;
+       line-height: 98pt;
 }
+
 .about_heading_col h1 {
     font-size: 115pt !important;
     font-weight: 400;
@@ -1464,9 +1466,7 @@ width: 350px !important;
  .team_popup .modal-body .col-md-4{
     padding: 0px 0px 0px 50px !important;
  }
-     .executive_banner .large_heading_2 {
-        line-height: 106pt;
-    }
+  
     .executive_banner .large_heading_2 span{
         font-weight: 600 !important;
     }
@@ -1480,10 +1480,13 @@ width: 350px !important;
         line-height: 77pt;
 }
 .about_section .fix_width_content{
-    max-width: 78% !important;
+    max-width: 1300px !important;
 }
 .services_section .fix_width_content{
      max-width: 100% !important;
+}
+.fix_width_content h1{
+    max-width: 100% !important;
 }
 .services_section{
     padding-top: 100px !important;
@@ -1615,6 +1618,7 @@ width: 350px !important;
 
 }
 @media only screen and (max-width: 576px){
+
     .footer-section .footer-row-2 .col-md-12:nth-child(8) img {
     margin-bottom: -106px !important;
 }
@@ -1678,12 +1682,6 @@ width: 350px !important;
         top: auto !important;
         right: auto !important;
      }
-    .team_right_col::before, .financial_right_col::before {
-        left: 0;
-    right: 0;
-    margin: auto;
-    top: -35%;
-}
 
 .team_col::after {
     height: 400px;
@@ -1988,19 +1986,18 @@ transform: scale(0.8);
     margin: auto;
 }
  .inner_wrap p{
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 5px !important;
  }
  .inner_wrap .btn_primary{
-    font-size: 13px !important;
-    font-weight: 600;
-    font-family: 'Inter Tight' !important;
-    text-decoration: none;
-    color: #fff;
-    padding: 7px 20px !important;
-    background-color: var(--primary_color);
-    border-radius: 40px;
-    transition: all 0.3s;
+        font-size: 16px !important;
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+        padding: 7px 33px !important;
+        background-color: var(--primary_color);
+        border-radius: 40px;
+        transition: all 0.3s;
 }
 .img_heading{
     font-size: 15px !important;
@@ -2066,4 +2063,21 @@ body .team-item::after {
 .banner_section #myVideo {
 height: 100vh;
 }
+/*.about-mobile-slider .heading_col::before{
+content: "";
+position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -35%;
+    display: block !important;
+        height: 350px !important;
+    width: 350px !important;
+    border-radius: 100%;
+    background-color: #f2682ab5;
+    z-index: 111;
+    top: auto !important;
+
+}*/
+
 }
