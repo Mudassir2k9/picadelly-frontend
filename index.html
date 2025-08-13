@@ -134,7 +134,10 @@ window.addEventListener("load", function () {
     if (scrollTop >= 790 && scrollTop <= 1350) {
       // Fixed range for mobile
       var xt = 0;
-      xt = scrollTop - 790;
+      if(scrollTop > 1100){
+        xt = scrollTop - 1100;
+      }
+      
       box.style.position = "fixed";
       box.style.top = "0";
       box.style.left = "0";
