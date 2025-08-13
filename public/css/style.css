@@ -1400,32 +1400,72 @@ width: 350px !important;
     height: 90% !important;
 }
 .team_circle{
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
     padding: 40px;
 }
 .team_circle h3{
-    font-size: 60pt;
+    font-size: 64pt;
+    font-weight: 600 !important;
 }
 .team_last_name{
     font-size: 36pt;
+    font-weight: 600 !important;
 }
 .team_circle p{
-    font-size: 20px;
+    font-size: 20pt;
+    line-height: 24pt;
+}
+.team_circle .team_post{
+    margin-bottom:38px !important;
+}
+.team_circle i{
+    font-size: 30px !important;
 }
 .owl-carousel .owl-nav{
     display: block !important;
 }
 .executive_banner .large_heading_2 {
-    font-size: 115px;
+    font-size: 115pt;
     max-width: inherit !important;
 }
+.about_heading_col h1 {
+    font-size: 115pt !important;
+    font-weight: 400;
+    padding-right: 30px !important;
+}
+.team_section .heading_col h3 {
+        font-size: 48pt !important;
+        font-weight: 600 !important;
+}
+.team_section .heading_col p {
+        font-size: 24pt !important;
+        font-weight: 500 !important;
+    }
+ .heading_col>div{
+    padding: 0px !important;
+    margin-right: 0px !important;
+ }
+ .culture_section .container{
+    max-width: 90% !important;
+ }
+ .culture_section p{
+    font-size: 18pt !important;
+ }
+ .team_popup .modal-dialog{
+    --bs-modal-width: 60%;
+ }
+ .team_popup .modal-body .col-md-8 p{
+    white-space: normal !important;
+    font-size: 14pt !important;
+ }
+ .team_popup .modal-body .col-md-4{
+    padding: 0px 0px 0px 50px !important;
+ }
 }
 @media only screen and (min-width: 1024px){
 
-    .executive_banner .large_heading_2 {
-    font-size: 115px;
-}
+
     .mobile_slider .container{
     left:-2%;
  }
@@ -1441,9 +1481,7 @@ width: 350px !important;
     .culture_section h3{
            font-size: 35px !important;
     }
-    .culture_section p{
-        font-size: 20px !important;
-    }
+   
     .culture_section{
         padding-top: 40px !important;
     }
