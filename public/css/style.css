@@ -99,9 +99,9 @@
       margin: 0;
       padding: 0;
 }
-/*h1, h2, p, li {
+h1, h2, p, li {
     max-width: 100% !important;
-}*/
+}
 .sec_py{
     padding: 60px 0px;
 }
@@ -1439,10 +1439,10 @@ width: 350px !important;
         font-weight: 600 !important;
 }
 .team_section .heading_col p {
-        font-size: 24pt !important;
+        font-size: 20pt !important;
         font-weight: 500 !important;
     }
- .heading_col>div{
+ .team_section .heading_col>div{
     padding: 0px !important;
     margin-right: 0px !important;
  }
@@ -1450,7 +1450,7 @@ width: 350px !important;
     max-width: 90% !important;
  }
  .culture_section p{
-    font-size: 18pt !important;
+    font-size: 20pt !important;
  }
  .team_popup .modal-dialog{
     --bs-modal-width: 60%;
@@ -1462,6 +1462,62 @@ width: 350px !important;
  .team_popup .modal-body .col-md-4{
     padding: 0px 0px 0px 50px !important;
  }
+     .executive_banner .large_heading_2 {
+        line-height: 106pt;
+    }
+    .executive_banner .large_heading_2 span{
+        font-weight: 600 !important;
+    }
+    .large_heading {
+    font-size: 90pt !important;
+    font-weight: 400;
+    line-height: 106pt;
+}
+.about_section .fix_width_content{
+    max-width: 78% !important;
+}
+.services_section .fix_width_content{
+     max-width: 100% !important;
+}
+.services_section{
+    padding-top: 100px !important;
+}
+.services_section .item div:nth-child(2) p, .strategy_wrap p{
+    font-size: 18pt !important;
+    font-weight: 600 !important;
+}
+.inner_wrap p{
+    font-size: 15pt !important;
+    font-weight: 400 !important;
+}
+.strategy_slider img{
+    width: 240px !important;
+    height: 240px !important;
+}
+.strategy_wrap .inner_wrap{
+    height: 300px !important;
+    width: 300px !important;
+}
+.services_section .overflow_slider{
+    padding-top: 5rem !important;
+    padding-bottom: 30px !important;
+}
+/*.services_section .strategy_slider .owl-stage-outer {
+    padding-bottom: 20px !important;
+}*/
+.heading_inner_col h3{
+    font-size: 64pt !important;
+    font-weight: 600 !important;
+    line-height: 70pt;
+}
+.heading_inner_col p{
+    font-size: 20pt !important;
+    
+}
+.team-section .carousel .healthcare_col, .team-section .carousel .heading_col{
+    padding-bottom: 88px !important;
+}
+
 }
 @media only screen and (min-width: 1024px){
 
