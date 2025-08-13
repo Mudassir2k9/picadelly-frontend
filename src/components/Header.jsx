@@ -30,12 +30,12 @@ const Header = () => {
       <header>
         <nav className="navbar navbar-custom d-flex justify-content-between align-items-center flex-nowrap">
           <div className="navbar-brand">
-            <Link to={headerData?.logoLink} >
+            <a href={headerData?.logoLink} >
             <img src={`${baseUrl}${headerData?.logo.url}`} alt="Logo" />
-            </Link>
+            </a>
           </div>
           <div className="nav-btn">
-            <Link to={headerData?.buttonUrl}  className="btn_primary d-none d-md-inline-block">{headerData?.buttonLabel}</Link>
+            <a href={headerData?.buttonUrl}  className="btn_primary d-none d-md-inline-block">{headerData?.buttonLabel}</a>
             
             <button className="hamburger" onClick={navBar}>
               <i className="fa-regular fa-bars hamburger-icon text-dark"></i>
@@ -58,7 +58,7 @@ const Header = () => {
                   <ul className={index === 0 ? "visible" : ""}>
                     {menuItem.submenuItems.map((subItem) => (
                       <li key={subItem.id}>
-                        <Link to={subItem.url}>{subItem.title}</Link>
+                        <a href={subItem.url}>{subItem.title}</a>
                       </li>
                     ))}
                   </ul>
