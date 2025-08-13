@@ -131,7 +131,7 @@ window.addEventListener("load", function () {
     // Sticky logic for mobile
     if (!box) return; // safety check
 
-    if (scrollTop >= 600 && scrollTop <= 1050) {
+    if (scrollTop >= 700 && scrollTop <= 1150) {
       // Fixed range for mobile
       box.style.position = "fixed";
       box.style.top = "0";
@@ -140,7 +140,7 @@ window.addEventListener("load", function () {
       box.style.zIndex = "999";
       box.style.marginTop = "0";
     } 
-    else if (scrollTop > 1050) {
+    else if (scrollTop > 1150) {
       // After fixed range, add margin
       box.style.position = "";
       box.style.top = "";
