@@ -1346,15 +1346,16 @@ width: 350px !important;
 .parallax_container .right-column{
     height: 3600px;
 }
-.panel .large_heading{
+.panel .large_heading,  .mobile_slider h3{
         font-size: 64pt !important;
+        line-height: 70pt !important;
      }
      .panel h1{
         font-size: 55px !important;
      } 
      .mobile_slider_left_heading, .mobile_slider_right_heading{
     position: absolute;
-    left: 13%;
+    left: 7%;
     top: 0;
     bottom: 0;
     display: flex;
@@ -1362,11 +1363,12 @@ width: 350px !important;
 }
 .mobile_slider_right_heading{
     left: auto;
-    right: 15%;
+    right: 9%;
 }
  .mobile_slider .container{
     left:-2%;
  }
+
  .happening_section h2{
     font-size: 70px;
  }
@@ -2032,7 +2034,7 @@ body .mobile-creative-section .right_content_col .large_heading{
     text-align: center;
     right: 0;
     left: 0;
-    font-size: 37px !important;
+    font-size: 40px !important;
     max-width: 80% !important;
     margin: auto;
 }
