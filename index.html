@@ -179,7 +179,7 @@ window.addEventListener("load", function () {
   $(window).on("scroll", function () {
     var scrollTop = $(window).scrollTop();
     var boxTop = box.getBoundingClientRect().top;
-
+console.log("Scroll position:", scrollTop, "Box top:", boxTop);
     // Layered video scroll effect — start when myBox touches top
     if (boxTop <= 0) {
       let radius = Math.max(0, (scrollTop - box.offsetTop) * 2.5) + "px";
