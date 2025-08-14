@@ -1562,7 +1562,7 @@ width: 350px !important;
     font-size: 19px !important;
     margin-left: 20px;
 }
-.accordion-body p{
+.accordion-body{
         font-size: 18pt;
     line-height: 26pt !important; 
 }
@@ -1656,6 +1656,36 @@ width: 350px !important;
  .latest-news .container.tab-pane{
     max-width: 100% !important;
  }
+ .flexible_part .content>div>p{
+    font-size: 35px;
+    line-height: 38pt;
+    font-weight: 500 !important;
+ }
+ .flexible_part .content h3{
+    font-size: 38px !important;
+    font-weight: 600 !important;
+ }
+ .on_demand_services_section .col-xl-8{
+    width: 80% !important;
+ }
+ .on_demand_services_section .col-xl-8>h3{
+    font-weight: 600 !important;
+    font-size: 48pt !important;
+ }
+ .on_demand_services_section .col-xl-8 p{
+    font-size: 24pt !important;
+    line-height: 29pt;
+    max-width: 100% !important;
+ }
+ .faqs_section .heading_col h3 {
+    font-size: 48pt !important;
+    line-height: 53pt !important;
+}
+.faqs_section .heading_col .content p{
+    font-size: 18pt !important;
+    
+}
+
 }
 @media only screen and (min-width: 1024px){
 
