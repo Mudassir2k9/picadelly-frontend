@@ -97,16 +97,8 @@ setTimeout(() => {
               <div className="row">
                 <div className="col-md-4">
                   <img src="images/pop-up-vintage.png" />
-                  <h5 className="text-dark fw-bold pt-3">Vintage Foster</h5>
-                  <p>CEO</p>
-                  <p className="team_contacts">
-                    <a href="javascript:void(0)">
-                      <i className="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="javascript:void(0)">
-                      <i className="fa-solid fa-envelope"></i>
-                    </a>
-                  </p>
+                  <h5 className="text-dark fw-bold pt-3">Market Research</h5>
+                <a href="javascript:void(0)" className="btn btn_primary">Button Orange</a>
                 </div>
                 <div className="col-md-8">
                   <p className="font_14">
@@ -190,7 +182,7 @@ setTimeout(() => {
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
                   </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
+                  <a href="javascript:void(0)" className="btn btn_primary" data-bs-toggle="modal" data-bs-target="#team1">
                     Learn More
                   </a>
                 </div>
@@ -344,7 +336,7 @@ setTimeout(() => {
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
                   </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
+                  <a href="javascript:void(0)" className="btn btn_primary" >
                     Learn More
                   </a>
                 </div>
