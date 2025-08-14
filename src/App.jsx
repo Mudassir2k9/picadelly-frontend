@@ -10,7 +10,7 @@ import TalentExecutive from "./pages/TalentExecutive";
 import BlogDetail from "./pages/BlogDetail";
 import Buzz from "./pages/Buzz";
 import ContactUs from "./pages/ContactUs";
-import NewsItem from "./pages/newsItem";
+import NewsItem from "./pages/NewsItem";
 import NewsLanding from "./pages/NewsLanding";
 import Work from "./pages/Work";
 
