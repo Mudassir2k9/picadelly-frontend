@@ -4,11 +4,12 @@ const NewsLanding = () => {
   return (
     <>
       <div className="container-fluid executive_banner work_banner news_banner">
-        <div className="container"></div>
+        <div className="container">
         <div className="executive_col">
           <h2 className="large_heading_2 text-center fw_300 text-white wow animate__fadeInDownBig">
             What's <span className="fw-bold text-dark">Happening</span>
           </h2>
+        </div>
         </div>
       </div>
 
@@ -59,7 +60,7 @@ const NewsLanding = () => {
 
       {/* <!------Articles-section-------> */}
 
-      <div className="container-fluid px-0 pt-5 pb-5">
+      <div className="container-fluid px-0 pt-5 pb-5 latest-news">
         <div className="container px-0">
           <div className="row px-0 mx-0 pt-5 pb-5">
             <div className="col-md-12 px-0">
@@ -101,9 +102,10 @@ const NewsLanding = () => {
                 <div className="tab-content">
                   <div id="menu1" className="container tab-pane active">
                     <br />
+                    <a href="#">
                     <div className="Articles_intro">
                       <div className="info">
-                        <p>Category</p>
+                        <p className="text-dark">Category</p>
                         <h3 className="text-dark" style={{ maxWidth: "80%" }}>
                           Lorem ipsum dolor sit amet, consectetur adipisicing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -114,73 +116,334 @@ const NewsLanding = () => {
                         <img src="images/news_img.png" />
                       </div>
                     </div>
+                    </a>
+                    <a href="#">
                     <div className="Articles_intro">
-                      <p>Category</p>
-                      <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                      </h3>
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
                     </div>
+                    </a>
+                    <a href="#">
                     <div className="Articles_intro">
-                      <p>Category</p>
-                      <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                      </h3>
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
                     </div>
+                    </a>
+                    <a href="#">
                     <div className="Articles_intro">
-                      <p>Category</p>
-                      <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                      </h3>
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
                     </div>
+                    </a>
+                    <a href="#">
                     <div className="Articles_intro">
-                      <p>Category</p>
-                      <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                      </h3>
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
                     </div>
+                    </a>
                   </div>
                   <div id="menu2" className="container tab-pane fade">
                     <br />
-                    <h3>Menu 1</h3>
-                    <p>
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                      laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
                   </div>
                   <div id="menu3" className="container tab-pane fade">
                     <br />
-                    <h3>Menu 2</h3>
-                    <p>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam.
-                    </p>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
                   </div>
                   <div id="menu4" className="container tab-pane fade">
                     <br />
-                    <h3>Menu 2</h3>
-                    <p>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam.
-                    </p>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
                   </div>
                   <div id="menu5" className="container tab-pane fade">
                     <br />
-                    <h3>Menu 2</h3>
-                    <p>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam.
-                    </p>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div className="Articles_intro">
+                      <div className="info">
+                        <p className="text-dark">Category</p>
+                        <h3 className="text-dark" style={{ maxWidth: "80%" }}>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </h3>
+                      </div>
+                      <div className="on_hover-img">
+                        <img src="images/news_img.png" />
+                      </div>
+                    </div>
+                    </a>
                   </div>
                 </div>
               </div>

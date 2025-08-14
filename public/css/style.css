@@ -114,6 +114,7 @@ font-weight: 600;
 text-decoration: none;
 font-size: 16px;
 transition: all 0.3s;
+text-decoration: none;
 }
 .btn_light:hover, .btn_primary:hover{
         box-shadow: 0px 4px 4px #14141461;
@@ -1315,7 +1316,7 @@ width: 350px !important;
 @media only screen and (min-width: 1300px){
     .banner_section  .banner-col h2{
         font-size: 78px !important;
-        font-weight: 400 !important;
+        font-weight: 400 !important.content h3;
     }
     .section2 h1{
         top:33%;
@@ -1544,7 +1545,8 @@ width: 350px !important;
     padding: 170px 6% 0px 6% !important;
    
 }
-.content h3{
+
+.case-study-faqs .content h3{
     font-size: 34pt !important;
     line-height: 42pt !important;
 }
@@ -1630,6 +1632,30 @@ width: 350px !important;
 .overlay-div span{
     font-size: 45px !important;
 }
+.btn_light {
+   
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px !important;
+}
+.footer-col .btn_light{
+    padding: 10px 35px;
+    font-size: 16px;
+}
+.news_banner .container{
+    max-width: 90% !important;
+}
+.news_banner .large_heading_2 {
+    margin-left: 249px !important;
+}
+.latest-news>.container{
+    max-width: 90% !important;
+}
+ .latest-news .container.tab-pane{
+    max-width: 100% !important;
+ }
 }
 @media only screen and (min-width: 1024px){
 
@@ -1653,6 +1679,35 @@ width: 350px !important;
     .culture_section{
         padding-top: 40px !important;
     }
+    .blog-spotlight .content{
+        padding-right: 0px !important;
+    }
+    .blog-spotlight .content h3{
+        font-size: 34pt !important;
+        font-weight: 300 !important;
+    }
+    .blog-spotlight .content p{
+        font-size: 18pt !important;
+    }
+    .blog-right-col h3{
+        font-size: 64pt !important;
+    }
+    .pills-part .nav-pills .nav-link{
+        font-size: 28px !important;
+    }
+    .info p{
+        font-size: 18pt !important;
+    }
+    .info h3 {
+    font-weight: 600 !important;
+    font-size: 24pt !important;
+    text-decoration: none;
+}
+.on_hover-img {
+    width: 200px !important;
+    height: 200px !important;
+    
+}
 }
 
 @media (min-width: 768px) {
@@ -2165,6 +2220,21 @@ body .team-item::after {
 }
 .banner_section #myVideo {
 height: 100vh;
+}
+.blog-spotlight .col-md-6{
+    padding: 40px 25px !important;
+}
+.blog-spotlight .content h3{
+    font-size: 22px !important;
+}
+.blog-spotlight .content p{
+    font-size: 16px !important;
+}
+.blog-right-col h3{
+    padding: 0px !important;
+}
+.latest-news{
+    padding: 0px !important;
 }
 /*.about-mobile-slider .heading_col::before{
 content: "";
