@@ -173,54 +173,76 @@ window.addEventListener("load", function () {
 
         } else {
           // Laptop/Desktop
-           window.addEventListener("load", function () {
-  const box = document.querySelector("#myBox"); // Change selector if needed
+window.addEventListener("load", function () {
+  const box = document.querySelector("#myBox");
+  let state = "before"; // before | fixed | after
+  let boxOffset = box.offsetTop;
 
-  $(window).on("scroll", function () {
-    var scrollTop = $(window).scrollTop();
-    var scrollY = scrollTop;
-    // console.log("Scroll position:", scrollTop);
+  function update() {
+    const scrollTop = window.scrollY;
+    const boxTop = box.getBoundingClientRect().top;
 
-    // Your layered video scroll effect
-    if (scrollTop > 700) {
-      let radius = (scrollTop - 700) * 2.5 + "px";
+    // Clip-path effect
+    if (boxTop <= 0) {
+      let radius = (scrollTop - boxOffset) * 2.5 + "px";
       $(".second_video").css("clip-path", `circle(${radius} at center)`);
     } else {
       $(".second_video").css("clip-path", "circle(0px at center)");
     }
 
-    if (!box) return; // Safety check
-
-    if (scrollY >= 700 && scrollY <= 1000) {
-      box.style.position = "fixed";
-      box.style.top = "0";
-      box.style.left = "0";
-      box.style.width = "100%";
-      box.style.zIndex = "999";
-      box.style.marginTop = "0"; // reset margin when fixed
+    // State machine for smoother fix/release
+    if (scrollTop >= boxOffset && scrollTop <= boxOffset + 300) {
+      if (state !== "fixed") {
+        state = "fixed";
+        box.style.position = "fixed";
+        box.style.top = "0";
+        box.style.left = "0";
+        box.style.width = "100%";
+        box.style.zIndex = "999";
+        box.style.marginTop = "0";
+      }
     } 
-    else if (scrollY > 1000) {
-      box.style.position = "";
-      box.style.top = "";
-      box.style.left = "";
-      box.style.width = "";
-      box.style.zIndex = "";
-      box.style.marginTop = "300px"; // add space after fixed period
-      if(xxf === 1) {
-        xxf = 0;
-        ScrollTrigger.refresh();
+    else if (scrollTop > boxOffset + 300) {
+      if (state !== "after") {
+        state = "after";
+        box.style.position = "";
+        box.style.top = "";
+        box.style.left = "";
+        box.style.width = "";
+        box.style.zIndex = "";
+        box.style.marginTop = "300px";
+        if (typeof xxf !== "undefined" && xxf === 1) {
+          xxf = 0;
+          ScrollTrigger.refresh();
+        }
       }
     } 
     else {
-      box.style.position = "";
-      box.style.top = "";
-      box.style.left = "";
-      box.style.width = "";
-      box.style.zIndex = "";
-      box.style.marginTop = "0"; // reset before sticky
+      if (state !== "before") {
+        state = "before";
+        box.style.position = "";
+        box.style.top = "";
+        box.style.left = "";
+        box.style.width = "";
+        box.style.zIndex = "";
+        box.style.marginTop = "0";
+      }
+    }
+  }
+
+  // Throttle updates with requestAnimationFrame for smoothness
+  let ticking = false;
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        update();
+        ticking = false;
+      });
+      ticking = true;
     }
   });
 });
+
         }
       });
 
