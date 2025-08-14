@@ -1315,6 +1315,7 @@ width: 350px !important;
 @media only screen and (min-width: 1300px){
     .banner_section  .banner-col h2{
         font-size: 78px !important;
+        font-weight: 400 !important;
     }
     .section2 h1{
         top:33%;
