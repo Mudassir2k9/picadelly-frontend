@@ -173,40 +173,39 @@ window.addEventListener("load", function () {
 
         } else {
           // Laptop/Desktop
-           window.addEventListener("load", function () {
-  const box = document.querySelector("#myBox"); // Change selector if needed
+window.addEventListener("load", function () {
+  const box = document.querySelector("#myBox");
 
   $(window).on("scroll", function () {
     var scrollTop = $(window).scrollTop();
-    var scrollY = scrollTop;
-    // console.log("Scroll position:", scrollTop);
+    var boxTop = box.getBoundingClientRect().top;
 
-    // Your layered video scroll effect
-    if (scrollTop > 700) {
-      let radius = (scrollTop - 700) * 2.5 + "px";
+    // Layered video scroll effect — start when myBox touches top
+    if (boxTop <= 0) {
+      let radius = Math.max(0, (scrollTop - box.offsetTop) * 2.5) + "px";
       $(".second_video").css("clip-path", `circle(${radius} at center)`);
     } else {
       $(".second_video").css("clip-path", "circle(0px at center)");
     }
 
-    if (!box) return; // Safety check
-
-    if (scrollY >= 700 && scrollY <= 1000) {
+    // Fixed position when box is at top
+    if (boxTop <= 0 && scrollTop < box.offsetTop + 300) {
       box.style.position = "fixed";
       box.style.top = "0";
       box.style.left = "0";
       box.style.width = "100%";
       box.style.zIndex = "999";
-      box.style.marginTop = "0"; // reset margin when fixed
+      box.style.marginTop = "0";
     } 
-    else if (scrollY > 1000) {
+    else if (scrollTop >= box.offsetTop + 300) {
       box.style.position = "";
       box.style.top = "";
       box.style.left = "";
       box.style.width = "";
       box.style.zIndex = "";
-      box.style.marginTop = "300px"; // add space after fixed period
-      if(xxf === 1) {
+      box.style.marginTop = "300px";
+
+      if (typeof xxf !== "undefined" && xxf === 1) {
         xxf = 0;
         ScrollTrigger.refresh();
       }
@@ -217,10 +216,11 @@ window.addEventListener("load", function () {
       box.style.left = "";
       box.style.width = "";
       box.style.zIndex = "";
-      box.style.marginTop = "0"; // reset before sticky
+      box.style.marginTop = "0";
     }
   });
 });
+
         }
       });
 
