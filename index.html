@@ -173,51 +173,6 @@ window.addEventListener("load", function () {
 
         } else {
           // Laptop/Desktop
-window.addEventListener("load", function () {
-  const box = document.querySelector("#myBox");
-  let isFixed = false; // track fixed state
-  let fixedStart = 0;  // where fixed mode began
-
-  $(window).on("scroll", function () {
-    const scrollTop = $(window).scrollTop();
-    const boxTop = box.getBoundingClientRect().top;
-
-    // When myBox hits the top of the screen
-    if (!isFixed && boxTop <= 0) {
-      isFixed = true;
-      fixedStart = scrollTop;
-      box.style.position = "fixed";
-      box.style.top = "0";
-      box.style.left = "0";
-      box.style.width = "100%";
-      box.style.zIndex = "999";
-      box.style.marginTop = "0";
-    }
-
-    // When myBox has been fixed for 300px of scroll, release it
-    if (isFixed && scrollTop - fixedStart > 300) {
-      isFixed = false;
-      box.style.position = "";
-      box.style.top = "";
-      box.style.left = "";
-      box.style.width = "";
-      box.style.zIndex = "";
-      box.style.marginTop = "300px";
-      if (typeof xxf !== "undefined" && xxf === 1) {
-        xxf = 0;
-        ScrollTrigger.refresh();
-      }
-    }
-
-    // Layered video scroll effect (only when in fixed state)
-    if (isFixed) {
-      let radius = (scrollTop - fixedStart) * 2.5 + "px";
-      $(".second_video").css("clip-path", `circle(${radius} at center)`);
-    } else {
-      $(".second_video").css("clip-path", "circle(0px at center)");
-    }
-  });
-});
 
         }
       });
