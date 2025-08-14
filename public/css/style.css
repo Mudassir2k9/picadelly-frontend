@@ -1313,7 +1313,7 @@ width: 350px !important;
 }
 
 @media only screen and (min-width: 1300px){
-      .banner-col h2{
+    .banner_section  .banner-col h2{
         font-size: 78px !important;
     }
     .section2 h1{
@@ -2181,5 +2181,6 @@ position: absolute;
     top: auto !important;
 
 }*/
+
 
 }
