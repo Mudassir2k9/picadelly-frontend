@@ -346,8 +346,10 @@ const CaseStudy = () => {
       <div className="container-fluid px-0">
         <div className="row mx-0">
           <div className="col-md-6 project-col px-0">
+            
             <a href="#">
-              <div className="overlay-div text-end">
+              <div className="overlay-div overlay-div-left text-end">
+              <div className="project-inner-col">
                 <span
                   className="mb-5"
                   style={{
@@ -363,13 +365,16 @@ const CaseStudy = () => {
                   Previous Project :
                 </h5>
                 <h3 className="text-white font_40 fw_600">Cal Poly</h3>
+                </div>
               </div>
               <img src="images/previous-project.png" width="100%" />
             </a>
           </div>
           <div className="col-md-6 project-col px-0">
+         
             <a href="#">
               <div className="overlay-div text-start">
+              <div className="project-inner-col">
                 <span
                   className="mb-5"
                   style={{
@@ -387,6 +392,7 @@ const CaseStudy = () => {
                 <h3 className="text-white font_40 fw_600">
                   SELSOC Credit Union
                 </h3>
+                </div>
               </div>
               <img src="images/next-project.png" width="100%" />
             </a>

@@ -1313,18 +1313,18 @@ position: absolute;
 .inner-div{
   padding: 0px !important;
 }
-.case-study-col-2 .circle-one{
-      margin-top: 37px;
-    margin-left: 8px;
-}
-.case-study-col-2 .circle-two{
-      margin-top: -88px;
-    margin-left: 150px;
-}
-.case-study-col-2 .circle-three{
-     margin-left: 32px;
-    margin-top: -55px;
-}
+.case-study-col-2 .circle-one {
+        margin-top: 37px;
+        margin-left: 8px;
+    }
+.case-study-col-2 .circle-two {
+        margin-top: -57px;
+        margin-left: 111px !important;
+    }
+    .case-study-col-2 .circle-three {
+        margin-left: 24px;
+        margin-top: -46px;
+    }
 .case-study-col-2::after {
     position: absolute;
     content: "";
