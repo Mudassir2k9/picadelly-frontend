@@ -1314,6 +1314,8 @@ width: 350px !important;
 }
 
 @media only screen and (min-width: 1300px){
+
+
     .banner_section  .banner-col h2{
         font-size: 78px !important;
         font-weight: 400 !important.content h3;
@@ -1533,6 +1535,10 @@ width: 350px !important;
     line-height: 70pt;
     font-weight: 600 !important;
 }
+    .news_item_banner .inner-div h2, .blog_detail_banner .inner-div h2 {
+        font-size: 42pt !important;
+        line-height: 45pt;
+    }
 .inner-div p{
     font-size: 18pt !important;
 }
@@ -1607,7 +1613,7 @@ width: 350px !important;
     margin-right: 15px;
 }
 .project-col{
-    min-height: 400px !important;
+    min-height: 350px !important;
 }
 .project-col img {
     width: 100%;
@@ -1618,10 +1624,6 @@ width: 350px !important;
 }
 .overlay-div-left{
     justify-content: flex-end;
-}
-.overlay-div{
-    display: flex;
-    align-items: center;
 }
 .project-inner-col h5{
     font-size: 18pt !important;
