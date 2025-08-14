@@ -390,9 +390,9 @@ const TalentOnDemand = () => {
               {talentDemandData?.Stories?.Description}
             </p>
           </div>
-          <div className="row d-flex justify-content-between pt-5">
+          <div className="row d-flex justify-content-between pt-5 mx-0">
             {talentDemandData?.Stories?.All_Stories?.map((story) => (
-              <div key={story.id} className="circle-container">
+              <div key={story.id} className="circle-container my-3">
                 <img
                   src={`${baseUrl}${story?.image?.url}`} // Replace with story.image if available
                   alt={`Story ${story.id}`}

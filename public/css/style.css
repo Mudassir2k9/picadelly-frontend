@@ -98,6 +98,7 @@
   html {
       margin: 0;
       padding: 0;
+/*      overflow-x: hidden;*/
 }
 /*h1, h2, p, li {
     max-width: 100% !important;
@@ -1500,7 +1501,7 @@ width: 350px !important;
     font-weight: 600 !important;
 }
 .inner_wrap p{
-    font-size: 15pt !important;
+    font-size: 13pt !important;
     font-weight: 400 !important;
 }
 .strategy_slider img{
@@ -1620,7 +1621,7 @@ width: 350px !important;
     height: 100% !important;
 }
 .overlay-div h3{
-    font-size: 48pt !important;
+    font-size: 28pt !important;
 }
 .overlay-div-left{
     justify-content: flex-end;
@@ -1965,8 +1966,12 @@ width: 350px !important;
     .case-study-col-2 .circle-two{
         margin-left: 100px !important;
     }
-    .project-col h3{
-        font-size: 24px !important;
+    .project-col h3 {
+        font-size: 16px !important;
+    }
+    .project-col h5{
+        font-size: 16px;
+        font-weight: normal;
     }
     .links_col{
         width: 100%;
