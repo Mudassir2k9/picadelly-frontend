@@ -5,7 +5,7 @@ const CaseStudy = () => {
     <>
       <div className="container-fluid case_study_banner">
         <div className="row banner-row mx-0">
-          <div className="col-md-6 case_study-col-1 px-0 ">
+          <div className="col-md-6 case_study-col-1 px-0 blog_col-2 ">
             <div className="inner-div">
               <p className="font_20">Brand Refresh and Marketing Campaign</p>
               <h2
@@ -18,7 +18,7 @@ const CaseStudy = () => {
               </h2>
             </div>
           </div>
-          <div className="col-md-6 banner-col case_study-col-1">
+          <div className="col-md-6 banner-col blog_col-2 case_study-col-1">
             <div className="inner-div d-flex" style={{ width: "100%" }}>
               <div
                 className="list-col d-flex justify-content-center"

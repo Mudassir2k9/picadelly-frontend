@@ -263,6 +263,7 @@
     background-image: url(../images/office_bg.png);
     min-height: 100vh;
     position: relative;
+    background-position: top;
   }
 .join-section::after{
   position: absolute;
@@ -276,7 +277,7 @@
 .content-col-1::after{
   position: absolute;
   content: "";
-  background-color: rgb(178 201 53 / 95%);
+  background-color: rgb(178 201 53 / 85%);
   top: 0;
   left: 0;
   width: 100%;
@@ -285,16 +286,20 @@
   
 }
 .dif-col::after{
-  background-color: rgb(81 190 204 / 95%);
+  background-color: rgb(81 190 204 / 85%);
 }
 .content-col-1{
   position: relative;
   min-height: 100vh;
 }
-.join-section .content{
+/* .join-section .content{
   z-index: 1111;
   margin-top: 120px;
-}
+} */
+ .content-outer-div{
+   z-index: 11111 !important;
+ }
+ 
 .companies_section{
     background-image: url(../images/companies_bg.png);
     min-height: 100vh;
@@ -415,9 +420,13 @@
 }
 .accordion-button.collapsed, .accordion-item.collapsed{
   background-color: transparent;
+  border-bottom: 0px !important;
 }
 .accordion-button{
   padding:16px 20px 16px 0px;
+}
+.accordion-button p{
+  margin-bottom: 0px;
 }
 .accordion-body{
   padding: 16px 20px 16px 0px;
@@ -425,6 +434,7 @@
 .accordion-flush>.accordion-item:first-child, .accordion-item:not(:first-of-type){
    border-top: 1px solid gray !important;
    border-bottom:0px !important;
+   margin-bottom: 0px !important;
 }
 .stories-section .container{
   z-index: 111;
@@ -662,6 +672,9 @@
       bottom: 0;
       left: 0;
       right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
      }
      .blog_col-1 .inner-div h2{
       font-size: 42px;
@@ -1169,6 +1182,9 @@ position: absolute;
     right: 0%;
     bottom: -100%;
     margin: auto;
+    left: 0;
+    height: 350px;
+    width: 360px;
 
 }
     .impact_section::after {
@@ -1231,7 +1247,7 @@ position: absolute;
         flex-shrink: 0;
         overflow: hidden;
         position: relative;
-        left: 9%;
+        left: 21%;
 }
 .testimonials-heading h3{
   font-size: 30px !important;
@@ -1287,9 +1303,12 @@ position: absolute;
   min-height: 80vh;
 
 }
-.flexible_part::after{
-          top: 268px !important;
-}
+.flexible_part::after {
+        top: 345px !important;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
 .faqs_section .heading_col{
   height: auto !important;
     padding: 70px 25px !important;
@@ -1454,16 +1473,17 @@ position: absolute;
   padding-top: 0px !important;
 }
 .logo_col{
- width: 50%;
+ width: 47%;
  padding: 0px 16px !important;
+     margin: 3% 1%;
 }
 .log-last-col{
      flex-wrap: wrap;
 }
-.logo_col_inner{
-    width: 170px;
-    height: 170px;
-}
+.logo_col_inner {
+        width: 140px;
+        height: 140px;
+    }
 .logo_col_inner img{
   max-width: 110px;
   max-height: 110px; 

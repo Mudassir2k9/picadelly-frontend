@@ -98,6 +98,7 @@
   html {
       margin: 0;
       padding: 0;
+/*      overflow-x: hidden;*/
 }
 /*h1, h2, p, li {
     max-width: 100% !important;
@@ -1313,12 +1314,12 @@ width: 350px !important;
     object-fit: cover;
 }
 
-@media only screen and (min-width: 1300px){
+@media only screen and (min-width: 1300px){ 
 
 
     .banner_section  .banner-col h2{
         font-size: 78px !important;
-        font-weight: 400 !important.content h3;
+        font-weight: 400 !important;
     }
     .section2 h1{
         top:33%;
@@ -1500,7 +1501,9 @@ width: 350px !important;
     font-weight: 600 !important;
 }
 .inner_wrap p{
-    font-size: 15pt !important;
+
+    font-size: 13pt !important;
+
     font-weight: 400 !important;
 }
 .strategy_slider img{
@@ -1568,7 +1571,7 @@ width: 350px !important;
     font-size: 19px !important;
     margin-left: 20px;
 }
-.accordion-body p{
+.accordion-body{
         font-size: 18pt;
     line-height: 26pt !important; 
 }
@@ -1620,7 +1623,7 @@ width: 350px !important;
     height: 100% !important;
 }
 .overlay-div h3{
-    font-size: 48pt !important;
+    font-size: 28pt !important;
 }
 .overlay-div-left{
     justify-content: flex-end;
@@ -1658,6 +1661,43 @@ width: 350px !important;
  .latest-news .container.tab-pane{
     max-width: 100% !important;
  }
+ .flexible_part .content>div>p{
+    font-size: 35px;
+    line-height: 38pt;
+    font-weight: 500 !important;
+ }
+ .flexible_part .content h3{
+    font-size: 38px !important;
+    font-weight: 600 !important;
+ }
+ .on_demand_services_section .col-xl-8{
+    width: 80% !important;
+ }
+ .on_demand_services_section .col-xl-8>h3{
+    font-weight: 600 !important;
+    font-size: 48pt !important;
+ }
+ .on_demand_services_section .col-xl-8 p{
+    font-size: 24pt !important;
+    line-height: 29pt;
+    max-width: 100% !important;
+ }
+ .faqs_section .heading_col h3 {
+    font-size: 48pt !important;
+    line-height: 53pt !important;
+}
+.faqs_section .heading_col .content p{
+    font-size: 18pt !important;
+    
+}
+.content-outer-div .content>h3{
+    font-size: 36pt !important;
+}
+.content-outer-div .content div:nth-child(2) h3{
+    font-size: 29pt !important; 
+}
+
+
 }
 @media only screen and (min-width: 1024px){
 
@@ -1935,8 +1975,12 @@ width: 350px !important;
     .case-study-col-2 .circle-two{
         margin-left: 100px !important;
     }
-    .project-col h3{
-        font-size: 24px !important;
+    .project-col h3 {
+        font-size: 16px !important;
+    }
+    .project-col h5{
+        font-size: 16px;
+        font-weight: normal;
     }
     .links_col{
         width: 100%;
@@ -2107,6 +2151,14 @@ transform: scale(0.8);
 }
 .team-section .right_content_col::before, .financial_right_col::before{
     display: none !important;
+}
+.mobile-creative-section .right_content_col:before{
+    display: block !important;
+    height: 370px;
+    width: 370px;
+    border-radius: 100%;
+    left: 1%;
+    top: -48%;
 }
 .heading_inner_col{
     padding:0px !important;
