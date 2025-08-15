@@ -209,6 +209,10 @@
   z-index: 1;
   pointer-events: none; /* Allows clicks to pass through if needed */
 }
+.content_inner .btn_light{
+    display: inline-block;
+    margin-top: 20px !important;
+}
 .testimonials{
   z-index: 111;
 }
@@ -1110,6 +1114,10 @@
   .project-col img {
     height: 190px;
 }
+.join-section::after{
+  height: 360px !important;
+  width: 360px !important;
+}
 .stories-section .container .row:nth-child(2){
    justify-content: center !important;
 }
@@ -1198,8 +1206,8 @@ position: absolute;
         position: absolute;
         content: "";
         margin-left: auto;
-        right: 9%;
-        top: 410px;
+        right: 3%;
+        top: 40%;
     }
 .impact_section{
   align-items: flex-start !important;
@@ -1227,7 +1235,7 @@ position: absolute;
         position: absolute;
         content: "";
         margin-left: auto;
-        right: 9%;
+        right: 3%;
         top: 275px;
     }
     .only_content{
@@ -1243,7 +1251,7 @@ position: absolute;
     position: absolute;
     content: "";
     background-size: 100%;
-    right: -1%;
+    left:-27% !important;
     top: 102%;
     
 }
@@ -1326,7 +1334,8 @@ position: absolute;
 }
 
 .faqs_section .team_col::after{
-   right: 0% !important;
+           right: 0%;
+        left: -5%;
 }
 .btn_div{
   text-align: left !important;
@@ -1581,6 +1590,9 @@ position: absolute;
      @media (max-width: 576px){
        .service .modal-body{
                 padding: 0px 10px 30px 10px !important;
+          }
+          .impact_section .content h3{
+            font-size: 36px !important;
           }
           .content-part p{
             font-size: 14px !important;

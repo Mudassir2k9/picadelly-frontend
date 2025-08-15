@@ -83,7 +83,7 @@ const TalentOnDemand = () => {
                 }}
               ></div>
               <h3
-                className="font_40 fw-bold color_teal wow animate__slideInLeft text-start"
+                className="font_40 fw-bold color_teal wow multi_heading animate__slideInLeft text-start"
                 style={{ fontSize: "27px" }}
                 data-wow-duration="1s"
                 data-wow-delay="0.3s"

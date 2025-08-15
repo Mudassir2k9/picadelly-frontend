@@ -46,7 +46,7 @@ const TalentExecutive = () => {
           <div className="heading_col d-flex align-items-center px-5 team_col">
             <div className="px-5 content mx-5">
               <h3
-                className="font_40 fw-bold color_primary wow animate__slideInLeft text-start"
+                className="font_40 fw-bold color_primary impact_section_heading wow animate__slideInLeft text-start"
                 data-wow-duration="1s"
                 data-wow-delay="0.3s"
                 dangerouslySetInnerHTML={{
@@ -71,7 +71,7 @@ const TalentExecutive = () => {
           <div className="heading_col col-md-6 d-flex align-items-center px-5 team_col">
             <div className="px-5 content mx-5">
               <h3
-                className="font_40 fw-bold color_primary wow animate__slideInLeft text-start"
+                className="font_40 fw-bold color_primary impact_section_heading wow animate__slideInLeft text-start"
                 data-wow-duration="1s"
                 data-wow-delay="0.3s"
                 dangerouslySetInnerHTML={{
