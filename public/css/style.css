@@ -1314,7 +1314,7 @@ width: 350px !important;
     object-fit: cover;
 }
 
-@media only screen and (min-width: 1300px){
+@media only screen and (min-width: 1300px){ 
 
 
     .banner_section  .banner-col h2{
