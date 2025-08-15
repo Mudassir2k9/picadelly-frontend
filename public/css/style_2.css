@@ -291,10 +291,14 @@
   position: relative;
   min-height: 100vh;
 }
-.join-section .content{
+/* .join-section .content{
   z-index: 1111;
   margin-top: 120px;
-}
+} */
+ .content-outer-div{
+   z-index: 11111 !important;
+ }
+ 
 .companies_section{
     background-image: url(../images/companies_bg.png);
     min-height: 100vh;

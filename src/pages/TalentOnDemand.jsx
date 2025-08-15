@@ -209,7 +209,8 @@ const TalentOnDemand = () => {
 
       <div className="container-fluid bg_cover px-0 join-section justify-content-center d-flex align-items-center">
         <div className="row mx-0">
-          <div className="col-md-6 d-flex px-5 content-col-1 dif-col">
+          <div className="col-md-6 d-flex px-5 align-items-center content-col-1 dif-col">
+            <div className="content-outer-div">
             <div className="px-5 content mx-5">
               <h3
                 className="fw_600 text-white text-start"
@@ -231,8 +232,10 @@ const TalentOnDemand = () => {
                 </a>
               </div>
             </div>
+            </div>
           </div>
-          <div className="col-md-6 d-flex px-5 content-col-1">
+          <div className="col-md-6 d-flex px-5 align-items-center content-col-1">
+            <div className="content-outer-div">
             <div className="px-5 content mx-5">
               <h3
                 className="fw_600 text-white text-start"
@@ -254,6 +257,7 @@ const TalentOnDemand = () => {
                   {talentDemandData?.Section5?.Column2_Button_Label}
                 </a>
               </div>
+            </div>
             </div>
           </div>
         </div>

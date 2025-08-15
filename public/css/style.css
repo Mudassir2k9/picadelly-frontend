@@ -1316,7 +1316,7 @@ width: 350px !important;
 @media only screen and (min-width: 1300px){
     .banner_section  .banner-col h2{
         font-size: 78px !important;
-        font-weight: 400 !important.content h3;
+        font-weight: 400 !important;
     }
     .section2 h1{
         top:33%;
@@ -1498,7 +1498,7 @@ width: 350px !important;
     font-weight: 600 !important;
 }
 .inner_wrap p{
-    font-size: 15pt !important;
+    font-size: 14pt !important;
     font-weight: 400 !important;
 }
 .strategy_slider img{
@@ -1685,6 +1685,13 @@ width: 350px !important;
     font-size: 18pt !important;
     
 }
+.content-outer-div .content>h3{
+    font-size: 36pt !important;
+}
+.content-outer-div .content div:nth-child(2) h3{
+    font-size: 29pt !important; 
+}
+
 
 }
 @media only screen and (min-width: 1024px){
@@ -2135,6 +2142,14 @@ transform: scale(0.8);
 }
 .team-section .right_content_col::before, .financial_right_col::before{
     display: none !important;
+}
+.mobile-creative-section .right_content_col:before{
+    display: block !important;
+    height: 370px;
+    width: 370px;
+    border-radius: 100%;
+    left: 1%;
+    top: -48%;
 }
 .heading_inner_col{
     padding:0px !important;
