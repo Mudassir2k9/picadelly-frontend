@@ -1679,7 +1679,7 @@ width: 350px !important;
  }
  .on_demand_services_section .col-xl-8 p{
     font-size: 24pt !important;
-    line-height: 29pt;
+    line-height: 30pt;
     max-width: 100% !important;
  }
  .faqs_section .heading_col h3 {
@@ -1696,8 +1696,51 @@ width: 350px !important;
 .content-outer-div .content div:nth-child(2) h3{
     font-size: 29pt !important; 
 }
+.companies_section_heading, .stories-section-heading{
+    font-size: 48pt !important;
+    font-weight: 600 !important;
+}
+.companies_section_para, .stories-section-para{
+        font-size: 24pt  !important; 
+    line-height: 30pt !important;
+}
 
-
+body .testimonials-heading h3{
+    font-size: 36pt !important;
+}
+.testimonials-heading{
+    max-width: 620px !important;
+}
+.testimonials_part .carousel-item p:nth-child(1){
+    font-size: 20pt !important;
+}
+.testimonials_part .carousel-item p:nth-child(2){
+    font-size: 16pt !important;
+    font-weight: 600 !important;
+}
+.circle-container{
+    width: 400px !important;
+    height: 400px !important;
+}
+.circle-overlay p{
+    font-size: 16pt !important;
+    font-weight: 600;
+}
+.circle-overlay h3 {
+    font-size: 24pt !important;
+}
+.circle-hover h3{
+    font-size: 21pt !important;
+}
+.circle-hover a{
+    font-size: 16pt !important;
+}
+.flexible_part::after {
+        top: 284px !important;
+        right: 0;
+        left: 4px !important;
+        margin: auto;
+    }
 }
 @media only screen and (min-width: 1024px){
 

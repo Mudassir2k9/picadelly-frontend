@@ -361,7 +361,7 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
 
   {/* <!-- Indicators/dots --> */}
   <div className="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0"  className="active"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
    {/* <!--  <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button> */}

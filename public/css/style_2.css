@@ -1110,6 +1110,13 @@
   .project-col img {
     height: 190px;
 }
+.stories-section .container .row:nth-child(2){
+   justify-content: center !important;
+}
+.circle-container{
+  width: 300px !important;
+  height: 300px !important;
+}
   .empty-overlay::after{
     display: none;
   }
@@ -1304,9 +1311,9 @@ position: absolute;
 
 }
 .flexible_part::after {
-        top: 345px !important;
+        top: 284px !important;
         right: 0;
-        left: 0;
+        left: 4px;
         margin: auto;
     }
 .faqs_section .heading_col{

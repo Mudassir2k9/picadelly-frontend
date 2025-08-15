@@ -269,13 +269,13 @@ const TalentOnDemand = () => {
         <div className="container mt-4 mb-4">
           <div className="row">
             <h3
-              className="font_40 fw-bold text-white wow animate__slideInLeft text-start"
+              className="font_40 fw-bold companies_section_heading text-white wow animate__slideInLeft text-start"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
             >
               {talentDemandData?.Brand_Section_Heading}
             </h3>
-            <p className="font_28 text-dark">
+            <p className="font_28 text-dark companies_section_para">
               {talentDemandData?.Brand_Section_Description}
             </p>
           </div>
@@ -383,13 +383,13 @@ const TalentOnDemand = () => {
         <div className="container py-4">
           <div className="row mx-0 d-flex">
             <h3
-              className="font_40 fw-bold text-white wow animate__slideInLeft text-start"
+              className="font_40 fw-bold text-white stories-section-heading wow animate__slideInLeft text-start"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
             >
               {talentDemandData?.Stories?.Heading}
             </h3>
-            <p className="font_28 text-white">
+            <p className="font_28 text-white stories-section-para">
               Description
               {talentDemandData?.Stories?.Description}
             </p>
