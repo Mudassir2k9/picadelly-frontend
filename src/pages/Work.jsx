@@ -53,8 +53,8 @@ const Work = () => {
   return (
     <>
       <div className="container-fluid executive_banner work_banner">
-        <div className="container"></div>
-        <div className="executive_col">
+        <div className="container">
+           <div className="executive_col">
           <h2
             className="large_heading_2 text-center fw_300 text-white wow animate__fadeInDownBig"
             dangerouslySetInnerHTML={{
@@ -62,6 +62,8 @@ const Work = () => {
             }}
           ></h2>
         </div>
+        </div>
+       
       </div>
 
       <div className="portfolio_row">

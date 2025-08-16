@@ -1315,6 +1315,18 @@ width: 350px !important;
 }
 
 @media only screen and (min-width: 1300px){
+    .portfolio_row .links_col .item_link.default{
+        font-size: 36pt !important;
+    }
+    .links_col .item_link:nth-child(3), .links_col .item_link:nth-child(5){
+        font-size: 24pt !important;
+    }
+    .links_col .item_link:nth-child(2), .links_col .item_link:nth-child(6){
+        font-size: 18pt !important;
+    }
+    .links_col .item_link:nth-child(1), .links_col .item_link:nth-child(7){
+        font-size: 13pt !important;
+    }
     .right-sidebar p, .right-sidebar li, .team-item p {
         font-size: 14pt;
     }
