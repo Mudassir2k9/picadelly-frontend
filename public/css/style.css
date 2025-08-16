@@ -1315,6 +1315,9 @@ width: 350px !important;
 }
 
 @media only screen and (min-width: 1300px){
+    .right-sidebar p, .right-sidebar li, .team-item p {
+        font-size: 14pt;
+    }
     .impact_section_2 .team_col::after {
    
     right: 72% !important; 
@@ -1451,7 +1454,7 @@ width: 350px !important;
     font-weight: 400;
     padding-right: 30px !important;
 }
-.team_section .heading_col h3 {
+.team_section .heading_col h3, .team-item h2 {
         font-size: 48pt !important;
         font-weight: 600 !important;
 }

@@ -52,7 +52,7 @@ const Buzz = () => {
 
   return (
     <>
-      <div className="container-fluid buzz-banner bg-light pb-5 px-0 py-0">
+      <div className="container-fluid buzz-banner pt-5 px-0 ">
         <div
           className="container buzz_col mt-0 d-flex flex-column align-items-center justify-content-center position-relative"
           style={{ height: "400px" }}
@@ -65,7 +65,7 @@ const Buzz = () => {
             className="img-fluid"
           />
           <h1
-            className="large_heading text-center text-black position-absolute top-50 start-50 translate-middle"
+            className="large_heading text-center text-black position-absolute w-100"
             dangerouslySetInnerHTML={{
               __html: buzzData?.BannerHeading || "",
             }}
@@ -112,7 +112,7 @@ const Buzz = () => {
       <section className="team_section bg_cover py-0">
         <div className="row w-auto">
           <div className="col-lg-6 col-md-12 col-12 bg-light team-item">
-            <h2 className="color_primary ">{buzzData?.Team_Action?.Heading}</h2>
+            <h2 className="color_primary fw-bold pb-3 ">{buzzData?.Team_Action?.Heading}</h2>
             <div
               dangerouslySetInnerHTML={{
                 __html: buzzData?.Team_Action?.Description || "",
@@ -124,7 +124,6 @@ const Buzz = () => {
               src={`${baseUrl}${buzzData?.Team_Action?.Image.url}`}
               alt="team"
               width="100%"
-              height="700px"
             />
           </div>
         </div>

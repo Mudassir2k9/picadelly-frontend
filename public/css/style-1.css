@@ -1,3 +1,7 @@
+.buzz-banner{
+    height: 100vh;
+    background-color: #E9E9E9;
+}
  .tourism_col {
      background: rgb(245, 185, 20) !important;
      background-image: url("../images/half-ring.jpg") !important;
@@ -77,31 +81,30 @@
      padding-bottom: 20px;
 
  }
-
-
- .large_heading {
-     right: 50px;
-
- }
-
  .buzz_col {
-     height: 500px;
+     height: 100% !important;
      position: relative;
-     min-height: 500px;
      display: flex;
      justify-content: center;
      align-items: center;
      margin-top: 37px;
 
  }
-
+.buzz_col img{
+    height: 500px;
+    width: 500px;
+}
  .buzz_banner .hamburger {
      padding: 12px 20px;
  }
-
+.buzz_col h1, .buzz_col p{
+    max-width: 100%;
+}
 
  .announcement-section {
      background-color: #50b7c6 !important;
+     background-image: url("../images/concentric-circle-img.jpg") !important;
+     background-size: cover;
  }
 
 
@@ -127,9 +130,9 @@
      height: 400px;
      width: 400px;
      background-size: 100%;
-     right: -35%;
+     right: -25%;
      border-radius: 100%;
-     top: 10%;
+     top: 0%;
      bottom: 0;
      margin: auto;
  }
