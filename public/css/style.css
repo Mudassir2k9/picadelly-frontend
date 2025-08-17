@@ -1102,7 +1102,7 @@ body .education_col{
 }
     .links_col {
       width: 50%;
-      background: #F2682A;
+      background: #f2682ad4;
       color: white;
       padding: 3rem ;
       display: flex;
@@ -1456,7 +1456,7 @@ width: 350px !important;
 .owl-carousel .owl-nav{
     display: block !important;
 }
-.executive_banner .large_heading_2 {
+.executive_banner .large_heading_2 , .executive_banner .large_heading_2 p{
     font-size: 98pt;
     max-width: inherit !important;
        line-height: 98pt;
@@ -1706,11 +1706,11 @@ width: 350px !important;
     line-height: 30pt;
     max-width: 100% !important;
  }
- .faqs_section .heading_col h3 {
+ .faqs_section .heading_col h3, .locations-heading h3 {
     font-size: 48pt !important;
     line-height: 53pt !important;
 }
-.faqs_section .heading_col .content p{
+.faqs_section .heading_col .content p, .locations-heading p{
     font-size: 18pt !important;
     
 }
@@ -1913,6 +1913,10 @@ body .testimonials-heading h3{
 
 }
 @media only screen and (max-width: 576px){
+    .links_col {
+      background-image: url("../images/links-mobile-img.jpg");
+      background-position: 50% 10%;
+    }
 
     .footer-section .footer-row-2 .col-md-12:nth-child(8) img {
     margin-bottom: -106px !important;
