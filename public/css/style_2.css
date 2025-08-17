@@ -1111,6 +1111,9 @@
   height: 100%;
 }
 @media only screen and (max-width:576px) {
+  .impact_section .content .multi_heading{
+    font-size: 17pt !important;
+  }
   .project-col img {
     height: 190px;
 }
@@ -1207,7 +1210,7 @@ position: absolute;
         content: "";
         margin-left: auto;
         right: 3%;
-        top: 40%;
+        top: 46%;
     }
 .impact_section{
   align-items: flex-start !important;
@@ -1215,13 +1218,13 @@ position: absolute;
 .right-img {
          background-image: url(../images/impact_bg.png);
         background-size: cover;
-        height: 80vh;
+        min-height: 60vh;
         background-position: center;
 }
 .right-img-2{
          background-image: url(../images/flexible_bg.png);
         background-size: cover;
-        height: 80vh;
+        min-height: 60vh;
         background-position: center;
 }
    .impact_section_2.impact_section .team_col::after {
@@ -1236,10 +1239,10 @@ position: absolute;
         content: "";
         margin-left: auto;
         right: 3%;
-        top: 275px;
+        top: 17%;
     }
     .only_content{
-      padding:70px 0px;
+      padding:30px 0px;
     }
     .content_inner h3{
       font-size: 32px;
@@ -1265,7 +1268,7 @@ position: absolute;
         left: 21%;
 }
 .testimonials-heading h3{
-  font-size: 30px !important;
+  font-size: 26px !important;
 }
 .testimonials-heading{
   margin-top: 0px !important;
@@ -1319,7 +1322,7 @@ position: absolute;
 
 }
 .flexible_part::after {
-        top: 284px !important;
+        top: 35% !important;
         right: 0;
         left: 4px;
         margin: auto;
@@ -1335,7 +1338,7 @@ position: absolute;
 
 .faqs_section .team_col::after{
            right: 0%;
-        left: -5%;
+        left: -7%;
 }
 .btn_div{
   text-align: left !important;
@@ -1588,6 +1591,11 @@ position: absolute;
     }
 }
      @media (max-width: 576px){
+      .join-section .dif-col{
+        min-height: auto !important;
+        padding-top:60px !important;
+        padding-bottom: 60px !important;
+      }
        .service .modal-body{
                 padding: 0px 10px 30px 10px !important;
           }
