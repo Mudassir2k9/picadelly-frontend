@@ -1312,11 +1312,12 @@ width: 350px !important;
 }
 .team_section img{
     object-fit: cover;
+    height: 100%;
 }
 
 @media only screen and (min-width: 1300px){
     .right-sidebar p, .right-sidebar li, .team-item p {
-        font-size: 14pt;
+        font-size: 16pt;
     }
     .impact_section_2 .team_col::after {
    

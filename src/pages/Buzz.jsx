@@ -141,7 +141,7 @@ const Buzz = () => {
             {/* Column 1 */}
             {buzzData?.Awards?.All_Awards?.map((award) => (
               <div key={award.id} className="col-lg-3 col-md-6 col-12 mb-5">
-                <img
+                <div className="text-center text-md-start"><img
                   src={`${baseUrl}${award.Image?.url}`}
                   alt={
                     award.Image?.alternativeText || award.Title || "Award Image"
@@ -149,6 +149,7 @@ const Buzz = () => {
                   width="200px"
                   height="200px"
                 />
+                </div>
                 <h5 className="py-3 text-start">
                   <b>{award.Title}</b>
                 </h5>

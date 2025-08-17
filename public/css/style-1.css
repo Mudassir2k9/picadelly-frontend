@@ -49,11 +49,6 @@
      left: -25%;
      z-index: 1111;
  }
-
- .lists {
-     font-size: small;
- }
-
  .education_col {
      background: rgb(87, 185, 241) !important;
      background-image: url("../images/half-ring.jpg") !important;
