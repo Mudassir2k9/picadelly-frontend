@@ -1,4 +1,18 @@
 //script for slide on scroll
+
+window.addEventListener("load", function () {
+    setTimeout(function () {
+      const hash = window.location.hash; // e.g. "#We-are-Picadilly"
+      if (hash) {
+        const el = document.querySelector(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    }, 3000); // 3 seconds delay
+  });
+
+
 $(document).ready(function () {
   // var owl = $(".about_slider");
   // owl.owlCarousel({
