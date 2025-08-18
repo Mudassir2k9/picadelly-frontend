@@ -182,7 +182,7 @@ const About = () => {
 
       {/* <!-- start about section --> */}
 
-      <section className="about_section">
+      <section className="about_section" id="We-are-Picadilly">
         <div className="about_row row mx-0">
           <div className="about_heading_col d-flex align-items-end align-items-md-center justify-content-center justify-content-md-end overflow-hidden">
             <h1
