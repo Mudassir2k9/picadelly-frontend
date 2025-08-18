@@ -1118,6 +1118,8 @@ body .education_col{
       background-image: url("../images/half-ring.jpg");
       background-blend-mode: multiply;
       background-position: center;
+      /* background-size: cover;
+      background-repeat: no-repeat; */
     }
 
     .links_col .item_link {
@@ -1213,6 +1215,7 @@ opacity: 0.7;
   transition: all 0.3s;
   clip-path: polygon(0 0, 0% 100%, 100% 50%);
   margin-top: 10px;
+ 
 }
 .overlay_text p:nth-child(2){
     width: 100%;
@@ -1321,6 +1324,9 @@ width: 350px !important;
 }
 
 @media only screen and (min-width: 1300px){
+    .links_col .item_link.default::after{
+        top: 25px !important;
+    }
     .icon-col i{
         height: 40px !important;
         width: 40px !important;
@@ -1953,9 +1959,22 @@ body .testimonials-heading h3{
 
 }
 @media only screen and (max-width: 576px){
+    .culture-heading{
+        font-size: 24pt !important;
+        font-weight: 600 !important;
+    }
+    .case_study_banner .banner-row .case_study-col-1:nth-child(1) p{
+         font-size: 15px !important;
+    }
+     .case_study_banner .banner-row .case_study-col-1:nth-child(1) h2{
+        font-size: 40px !important;
+     }
+     .case_study_banner .banner-row .case_study-col-1:nth-child(1){
+        padding-bottom: 30px !important;
+     }
     .contact-col{
         background-image: url("../images/contact-banner_img.jpg") !important;
-        min-height: 80vh !important;
+        min-height: 70vh !important;
         justify-content: center !important;
         align-items: flex-end !important;
         padding-bottom: 20px !important;
@@ -2136,7 +2155,7 @@ body .testimonials-heading h3{
         margin-left: 100px !important;
     }
     .project-col h3 {
-        font-size: 16px !important;
+        font-size: 22px !important;
     }
     .project-col h5{
         font-size: 16px;

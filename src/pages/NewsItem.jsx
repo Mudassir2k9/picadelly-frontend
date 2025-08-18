@@ -276,6 +276,7 @@ const NewsItem = () => {
           <div className="col-md-6 project-col px-0">
             <a href="#">
               <div className="overlay-div text-end">
+                <div className="project-inner-col">
                 <span className="mb-5"> ⟵</span>
                 <br />
                 <h5 className="text-white mb-3 font_18 fw_600">ARTICLES :</h5>
@@ -283,6 +284,7 @@ const NewsItem = () => {
                   Mastering Omnichannel Communications: A Q&A with Seasoned
                   Marketing Leader, Luke Sinclair
                 </h3>
+                </div>
               </div>
               <img src="images/previous-blog.png" />
             </a>
@@ -290,6 +292,7 @@ const NewsItem = () => {
           <div className="col-md-6 project-col px-0">
             <a href="#">
               <div className="overlay-div text-start">
+                <div className="project-inner-col">
                 <span className="mb-5"> ⟶</span>
                 <br />
                 <h5 className="text-white mb-3 font_18 fw_600">
@@ -299,6 +302,7 @@ const NewsItem = () => {
                   Healthcare Labor Shortage Predicted By 2028, With Uneven State
                   Impacts: Report
                 </h3>
+                </div>
               </div>
               <img src="images/next-blog.png" />
             </a>
