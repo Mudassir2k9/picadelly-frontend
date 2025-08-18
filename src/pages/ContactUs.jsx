@@ -103,17 +103,17 @@ const ContactUs = () => {
             <div className="col-md-6 locations-heading">
               <h3 className="fw_600 text-white font_40">Our Locations</h3>
             </div>
-            <div className="col-md-6 locations-heading">
+            <div className="col-md-6 locations-heading locations-heading-2">
               <div className="connect">
                 <h3 className="fw_600 text-white font_40">Connect With Us</h3>
-                <p className="font_18 fw_500 text-white">
+                <p className="font_18 fw_500 text-dark">
                   hello@piccadilly.com
                 </p>
               </div>
             </div>
           </div>
           <div className="row footer-row-2 locations_row pt-5 pb-3 mx-0">
-            <div className="col-md-2 footer-col">
+            <div className="col-md-2 footer-col footer-col-1">
               <div className="mb-3">
                 <img src="images/location-1.png" />
               </div>
@@ -125,7 +125,7 @@ const ContactUs = () => {
                 <li>California 94583</li>
               </ul>
             </div>
-            <div className="col-md-2 footer-col">
+            <div className="col-md-2 footer-col footer-col-1">
               <div className="mb-3">
                 <img src="images/location-2.png" />
               </div>
@@ -137,7 +137,7 @@ const ContactUs = () => {
                 <li>California 94104</li>
               </ul>
             </div>
-            <div className="col-md-2 footer-col">
+            <div className="col-md-2 footer-col footer-col-1">
               <div className="mb-3">
                 <img src="images/location-3.png" />
               </div>
@@ -149,7 +149,7 @@ const ContactUs = () => {
                 <li>V6C 1M3</li>
               </ul>
             </div>
-            <div className="col-md-2 footer-col">
+            <div className="col-md-2 footer-col footer-col-1">
               <div className="mb-3">
                 <img src="images/location-4.png" />
               </div>
@@ -161,7 +161,7 @@ const ContactUs = () => {
                 <li>California 90025</li>
               </ul>
             </div>
-            <div className="col-md-2 footer-col">
+            <div className="col-md-2 footer-col footer-col-1">
               <div className="mb-3">
                 <img src="images/location-5.png" />
               </div>
@@ -173,7 +173,7 @@ const ContactUs = () => {
                 <li>Texas 75248</li>
               </ul>
             </div>
-            <div className="col-md-2 footer-col">
+            <div className="col-md-2 footer-col footer-col-1">
               <div className="mb-3">
                 <img src="images/location-6.png" />
               </div>

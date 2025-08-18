@@ -22,7 +22,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="container-fluid footer-section pt-5 pb-5">
+      <div className="container-fluid footer-section footer_light pt-5 pb-5">
         <div className="container">
           <div className="row footer-row-1">
             {footerData?.footerLinks?.map((linkGroup) => (
@@ -38,7 +38,7 @@ const Footer = () => {
               </div>
             ))}
             <div className="col-md-2 footer-col">
-              <a href={footerData?.buttonUrl} className="btn_light">
+              <a href={footerData?.buttonUrl} className="btn_primary">
                 {footerData?.buttonLabel}
               </a>
               <ul className="pt-3">

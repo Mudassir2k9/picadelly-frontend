@@ -76,7 +76,7 @@ const Buzz = () => {
       <section className="culture_section announcement-section">
         <div className="container">
           <div className="row pt-5 w-auto">
-            <h2>{buzzData?.Announcement?.Heading1}</h2>
+            <h2 className="culture-heading">{buzzData?.Announcement?.Heading1}</h2>
             <h2 className="text-white pt-2 pb-5">
               {buzzData?.Announcement?.Heading2}
             </h2>
@@ -133,14 +133,14 @@ const Buzz = () => {
         <div className="container">
           <div className="row pt-5 pb-5">
             <div className="col-12">
-              <h2 className="text-white py-5 text-start">
+              <h2 className="text-white culture-heading py-5 text-start">
                 {buzzData?.Awards?.Heading}
               </h2>
             </div>
 
             {/* Column 1 */}
             {buzzData?.Awards?.All_Awards?.map((award) => (
-              <div key={award.id} className="col-lg-3 col-md-6 col-12 mb-5">
+              <div key={award.id} className="col-lg-3 award-col col-md-6 col-12 mb-5">
                 <div className="text-center text-md-start"><img
                   src={`${baseUrl}${award.Image?.url}`}
                   alt={
