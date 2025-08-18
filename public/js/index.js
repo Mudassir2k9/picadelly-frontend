@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
           el.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
-    }, 3000); // 3 seconds delay
+    }, 1000); // 3 seconds delay
   });
 
 

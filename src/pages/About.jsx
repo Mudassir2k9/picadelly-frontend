@@ -212,7 +212,7 @@ const About = () => {
 
       {/* <!-- start team section --> */}
 
-      <section className="horizontal_parallax team_section d-none d-md-flex">
+      <section className="horizontal_parallax team_section d-none d-md-flex" id="team-leaders">
         <div className="panel">
           <div className="row">
             <div className="heading_col d-flex align-items-center px-5 team_col">
@@ -453,7 +453,7 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
 
 
       {/* <!-- start culture section --> */}
-      <section className="culture_section bg_cover">
+      <section className="culture_section bg_cover" id="our-culture">
         <div className="container">
           <div className="row pt-5">
             <div className="col-md-7">
