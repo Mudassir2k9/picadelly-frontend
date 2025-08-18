@@ -29,7 +29,7 @@ function App() {
         <Route path="/buzz" element={<Buzz />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/news-item" element={<NewsItem />} />
-        <Route path="/news-langing" element={<NewsLanding />} />
+        <Route path="/news-landing" element={<NewsLanding />} />
         <Route path="/work" element={<Work />} />
       </Routes>
       <Footer />

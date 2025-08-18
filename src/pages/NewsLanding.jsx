@@ -13,7 +13,7 @@ const NewsLanding = () => {
         </div>
       </div>
 
-      <div className="container-fluid px-0 blog-spotlight d-flex justify-content-center align-items-center">
+      <div className="container-fluid px-0 blog-spotlight d-flex justify-content-center align-items-center" id="blog-spotlights">
         <div className="row mx-0">
           <div className="col-md-6 px-5 d-flex  justify-content-center align-items-center bg-cover">
             <div className="content px-5">
@@ -60,7 +60,7 @@ const NewsLanding = () => {
 
       {/* <!------Articles-section-------> */}
 
-      <div className="container-fluid px-0 pt-5 pb-5 latest-news">
+      <div className="container-fluid px-0 pt-5 pb-5 latest-news" id="hot-news">
         <div className="container px-0">
           <div className="row px-0 mx-0 pt-5 pb-5">
             <div className="col-md-12 px-0">

@@ -66,7 +66,7 @@ const Work = () => {
        
       </div>
 
-      <div className="portfolio_row">
+      <div className="portfolio_row" id="client-results">
         <div className="links_col">
           {workData?.Work_History?.map((item, index) => (
             <div
@@ -142,7 +142,7 @@ const Work = () => {
       </div>
 
       {/* Testimonials Section */}
-      <div className="container-fluid bg_cover testimonials_part px-0">
+      <div className="container-fluid bg_cover testimonials_part px-0" id="testimonials">
         <div className="container">
           <div className="row mx-0">
             <div className="testimonials-heading mt-5 pt-3">

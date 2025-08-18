@@ -163,7 +163,7 @@ setTimeout(() => {
 
       {/* <!-- start services section --> */}
 
-      <section className="services_section bg_cover sec_py">
+      <section className="services_section bg_cover sec_py" id="marketing-services">
         <div className="container">
           <div className="row">
             <div className="fix_width_content mx-auto text-center">

@@ -379,7 +379,7 @@ const TalentOnDemand = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid faqs_section stories-section d-flex bg_cover px-0 sec_py">
+      <div className="container-fluid faqs_section stories-section d-flex bg_cover px-0 sec_py" id="fractional-contractors">
         <div className="container py-4">
           <div className="row mx-0 d-flex">
             <h3
