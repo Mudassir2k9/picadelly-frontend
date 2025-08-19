@@ -3,6 +3,13 @@ import React from "react";
 const ContactUs = () => {
   return (
     <>
+    <style>{`
+      @media only screen and (max-width: 576px) {
+       .hamburger i {
+    color: #fff !important;
+  }
+      }
+`}</style>
       {/* <!------contact-banner------> */}
 
       <div className="container-fluid px-0 bg_cover contact-banner">

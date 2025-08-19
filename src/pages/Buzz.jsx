@@ -52,6 +52,12 @@ const Buzz = () => {
 
   return (
     <>
+
+    <style>{`
+  .hamburger i {
+    color: #fff !important;
+  }
+`}</style>
       <div className="container-fluid buzz-banner pt-5 px-0 bg_cover">
         <div
           className="container buzz_col mt-0 d-flex flex-column align-items-center justify-content-center position-relative"
