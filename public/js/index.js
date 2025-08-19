@@ -92,7 +92,7 @@ $(document).ready(function () {
 
 window.addEventListener("scroll", function() {
   const header = document.querySelector("header");
-  if (window.scrollY > 50) { // stick after 50px scroll
+  if (window.scrollY > 100) { // stick after 50px scroll
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");

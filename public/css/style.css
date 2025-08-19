@@ -186,7 +186,7 @@ background-color: var(--peal-green) !important;
      }
      header{
      position: absolute !important; /* normal at first */
-  padding: 10px 6%;;
+  padding: 0px 6%;;
   border-bottom-right-radius: 0px !important;
   z-index: 100;
   background-color: transparent; /* or same as page background */
@@ -1342,6 +1342,9 @@ width: 350px !important;
 .team_section img{
     object-fit: cover;
     height: 100%;
+}
+.sticky .hamburger i{
+    color: #000 !important;
 }
 
 @media only screen and (min-width: 1300px){

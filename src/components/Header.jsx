@@ -27,7 +27,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="sticky">
+      <header>
         <nav className="navbar navbar-custom d-flex justify-content-between align-items-center flex-nowrap">
           <div className="navbar-brand">
             <a href={headerData?.logoLink} >
