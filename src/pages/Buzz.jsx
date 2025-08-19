@@ -54,9 +54,11 @@ const Buzz = () => {
     <>
 
     <style>{`
-  .hamburger i {
+     @media only screen and (min-width: 768px){
+     .hamburger i {
     color: #fff !important;
   }
+     } 
 `}</style>
       <div className="container-fluid buzz-banner pt-5 px-0 bg_cover">
         <div
