@@ -52,7 +52,7 @@ const Buzz = () => {
 
   return (
     <>
-      <div className="container-fluid buzz-banner pt-5 px-0 ">
+      <div className="container-fluid buzz-banner pt-5 px-0 bg_cover">
         <div
           className="container buzz_col mt-0 d-flex flex-column align-items-center justify-content-center position-relative"
           style={{ height: "400px" }}
@@ -65,30 +65,49 @@ const Buzz = () => {
             className="img-fluid"
           />
           <h1
-            className="large_heading text-center text-black position-absolute w-100"
+            className="large_heading text-center text-light position-absolute w-100"
             dangerouslySetInnerHTML={{
               __html: buzzData?.BannerHeading || "",
             }}
           ></h1>
         </div>
       </div>
+          <section className="team_section bg_cover py-0">
+        <div className="row w-auto mx-0 team_row">
+          <div className="col-lg-6 col-md-12 col-12 px-0 ">
+            <img
+              src={`${baseUrl}${buzzData?.Team_Action?.Image.url}`}
+              alt="team"
+              width="100%"
+            />
+          </div>
+           <div className="col-lg-6 col-md-12 col-12 bg-light team-item">
+            <h2 className="color_primary fw-bold pb-3 ">{buzzData?.Team_Action?.Heading}</h2>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: buzzData?.Team_Action?.Description || "",
+              }}
+            ></div>
+          </div>
+        </div>
+      </section>
 
-      <section className="culture_section announcement-section">
+      <section className="culture_section announcement-section bg_cover">
         <div className="container">
           <div className="row pt-5 w-auto mx-0">
-            <h2 className="culture-heading">{buzzData?.Announcement?.Heading1}</h2>
-            <h2 className="text-white pt-2 pb-5">
+            <h2 className="culture-heading color_primary">{buzzData?.Announcement?.Heading1}</h2>
+            <h2 className="text-dark pt-2 pb-5">
               {buzzData?.Announcement?.Heading2}
             </h2>
             <div
-              className="col-md-7 col-sm-12"
+              className="col-md-7 col-sm-12 text-dark announcement_para"
               dangerouslySetInnerHTML={{
                 __html:
                   buzzData?.Announcement?.Announcement_Description_1 || "",
               }}
             ></div>
             <div
-              className="col-md-5 col-sm-12"
+              className="col-md-5 col-sm-12 text-dark announcement_para"
               dangerouslySetInnerHTML={{
                 __html:
                   buzzData?.Announcement?.Announcement_Description_2 || "",
@@ -109,31 +128,13 @@ const Buzz = () => {
           </div>
         </div>
       </section>
-      <section className="team_section bg_cover py-0">
-        <div className="row w-auto mx-0">
-          <div className="col-lg-6 col-md-12 col-12 bg-light team-item">
-            <h2 className="color_primary fw-bold pb-3 ">{buzzData?.Team_Action?.Heading}</h2>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: buzzData?.Team_Action?.Description || "",
-              }}
-            ></div>
-          </div>
-          <div className="col-lg-6 col-md-12 col-12 px-0 ">
-            <img
-              src={`${baseUrl}${buzzData?.Team_Action?.Image.url}`}
-              alt="team"
-              width="100%"
-            />
-          </div>
-        </div>
-      </section>
+  
 
-      <section className="culture_section bg_cover px-0">
+      <section className="culture_section awards_section bg_cover px-0">
         <div className="container">
           <div className="row pt-5 pb-5 mx-0">
             <div className="col-12">
-              <h2 className="text-white culture-heading py-5 text-start">
+              <h2 className="color_primary culture-heading py-5 text-start">
                 {buzzData?.Awards?.Heading}
               </h2>
             </div>
@@ -141,13 +142,13 @@ const Buzz = () => {
             {/* Column 1 */}
             {buzzData?.Awards?.All_Awards?.map((award) => (
               <div key={award.id} className="col-lg-3 award-col col-md-6 col-12 mb-5">
-                <div className="text-center text-md-start"><img
+                <div className="text-center buzz_img text-md-start"><img
                   src={`${baseUrl}${award.Image?.url}`}
                   alt={
                     award.Image?.alternativeText || award.Title || "Award Image"
                   }
-                  width="200px"
-                  height="200px"
+                  width="250px"
+                  height="250px"
                 />
                 </div>
                 <h5 className="py-3 text-start">

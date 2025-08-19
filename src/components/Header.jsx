@@ -27,12 +27,13 @@ const Header = () => {
   };
   return (
     <>
-      <header>
+      <header className="sticky">
         <nav className="navbar navbar-custom d-flex justify-content-between align-items-center flex-nowrap">
           <div className="navbar-brand">
             <a href={headerData?.logoLink} >
             <img src={`${baseUrl}${headerData?.logo.url}`} alt="Logo" />
             </a>
+            <p className="mb-0">Formerly AMF Media Group</p>
           </div>
           <div className="nav-btn">
             <a href={headerData?.buttonUrl}  className="btn_primary d-none d-md-inline-block">{headerData?.buttonLabel}</a>

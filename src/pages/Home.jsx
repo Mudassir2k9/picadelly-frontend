@@ -76,7 +76,9 @@ $cSlider.owlCarousel({
         <span className="color_primary">Momentum</span> Intersect.
       </h1>
      
-      <img src="images/piccadilly-reel(high).gif" className="second_video"></img>
+      <video autoPlay muted loop className="second_video">
+        <source src="images/happening-video.mp4" type="video/mp4" />
+      </video>
 
       {/* SVG Mask */}
       <svg

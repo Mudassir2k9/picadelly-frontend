@@ -88,6 +88,17 @@ $(document).ready(function () {
   // });
 });
 
+// script for sticky nav
+
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) { // stick after 50px scroll
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+});
+
 // script for nav sidebar
 
 function openNav() {

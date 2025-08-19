@@ -85,6 +85,8 @@
      --yellow: #F5B816;
 
    }
+
+
    .banner_section .container, .banner_section .banner-col{
 
     padding:0px !important;
@@ -183,12 +185,26 @@ background-color: var(--peal-green) !important;
         font-size: 70px !important;
      }
      header{
-        right: 0;
-        background-color: transparent;
-        padding: 10px 6%;
-        position: absolute;
-        width: 100%;
+     position: absolute !important; /* normal at first */
+  padding: 10px 6%;;
+  border-bottom-right-radius: 0px !important;
+  z-index: 100;
+  background-color: transparent; /* or same as page background */
+   transition: all 0.3s ease;
+   width: 100% !important;
+ 
      }
+     header.sticky {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(233 233 233 / 95%); /* visible after scroll */
+  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 111111;
+ 
+}
     .navbar-custom {
       padding: 18px 0px;
       width: 100%;
@@ -198,10 +214,15 @@ background-color: var(--peal-green) !important;
       width:200px;
     }
     .navbar-brand{
-        width: 49%;
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar-brand p{
+        color: #7a6d6d;
     }
     .nav-btn{
-        width: 49%;
+        width: 65%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -1327,6 +1348,9 @@ width: 350px !important;
     .links_col .item_link.default::after{
         top: 25px !important;
     }
+    .buzz_img img{
+        text-align: center !important;
+    }
     .icon-col i{
         height: 40px !important;
         width: 40px !important;
@@ -1358,9 +1382,10 @@ width: 350px !important;
     .award-col h6{
         font-size: 18pt;
         font-weight: 600;
+        padding: 0px 20px !important;
     }
     .lists{
-        font-size: 14pt;
+        font-size: 13pt;
     }
     .portfolio_row .links_col .item_link.default{
         font-size: 36pt !important;
@@ -1959,6 +1984,13 @@ body .testimonials-heading h3{
 
 }
 @media only screen and (max-width: 576px){
+    .navbar-brand{
+        flex-direction: column;
+    }
+    .navbar-brand p{
+        font-size: 13px;
+        margin-top: 7px;
+    }
     .culture-heading{
         font-size: 24pt !important;
         font-weight: 600 !important;
