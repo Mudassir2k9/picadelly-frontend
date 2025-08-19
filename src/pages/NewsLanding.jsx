@@ -3,6 +3,13 @@ import React from "react";
 const NewsLanding = () => {
   return (
     <>
+    <style>{`
+     @media only screen and (max-width: 576px){
+     .hamburger i {
+    color: #fff !important;
+  }
+     } 
+`}</style>
       <div className="container-fluid executive_banner work_banner news_banner">
         <div className="container">
         <div className="executive_col">

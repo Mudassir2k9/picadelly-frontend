@@ -2155,6 +2155,11 @@ body .testimonials-heading h3{
 }
     .second_video{
         height: 100vh;
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
     .team-section .right_content_col{
     height: 400px;

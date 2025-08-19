@@ -77,7 +77,7 @@ $cSlider.owlCarousel({
       </h1>
      
       <video autoPlay muted loop className="second_video">
-        <source src="images/happening-video.mp4" type="video/mp4" />
+        <source src="images/new_compressed_reel.mp4" type="video/mp4" />
       </video>
 
       {/* SVG Mask */}
