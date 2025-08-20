@@ -940,7 +940,7 @@ object-position: top;
 }
 
 .overflow_slider .owl-dots{
-    display: flex;
+    display: flex !important;
     background-color: #fff;
     padding: 2px;
     margin: 20px auto 0px auto;
@@ -1358,6 +1358,7 @@ width: 350px !important;
     object-fit: cover;
     object-position: top;
 }
+
 @media only screen and (min-width: 1300px){
     .links_col .item_link.default::after{
         top: 25px !important;
