@@ -457,16 +457,16 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
         <div className="container">
           <div className="row pt-5">
             <div className="col-md-7">
-              <h3 className="text-dark fw-bold pb-2">
+              <h3 className="color_black fw-bold pb-2">
                 {aboutData?.InfoHeading1}
               </h3>
-              <p className="text-white">{aboutData?.InfoDescription1}</p>
+              <p className="color_black">{aboutData?.InfoDescription1}</p>
             </div>
             <div className="col-md-5">
-              <h3 className="text-dark fw-bold pb-2">
+              <h3 className="color_black fw-bold pb-2">
                 {aboutData?.InfoHeading2}
               </h3>
-              <p className="text-white">{aboutData?.InfoDescription2}</p>
+              <p className="color_black">{aboutData?.InfoDescription2}</p>
             </div>
           </div>
         </div>

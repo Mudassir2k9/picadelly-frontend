@@ -77,7 +77,7 @@ setTimeout(() => {
 `}</style>
 
       <div
-        className="modal fade team_popup "
+        className="modal fade team_popup service_modal"
         id="team1"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
@@ -94,35 +94,149 @@ setTimeout(() => {
               ></button>
             </div>
             <div className="modal-body px-5 pb-5">
-              <div className="row">
+              <div className="row px-0">
                 <div className="col-md-4">
-                  <img src="images/pop-up-vintage.png" />
-                  <h5 className="text-dark fw-bold pt-3">Market Research</h5>
-                <a href="javascript:void(0)" className="btn btn_primary">Button Orange</a>
+                  <img src="images/markte-strategy-img.jpg" />
+                  <h5 className="text-dark fw_600 font_28 pt-3">Market Research</h5>
+                {/* <a href="javascript:void(0)" className="btn btn_primary">Button Orange</a> */}
                 </div>
                 <div className="col-md-8">
                   <p className="font_14">
-                    Vintage founded Piccadilly in the Bay Area in 2007 and has
-                    since expanded it across multiple cities, including Los
-                    Angeles, Dallas, and Vancouver. Under his leadership,
-                    Piccadilly delivers integrated marketing, branding, digital,
-                    and public relations services to a slate of national brands
-                    as well as regional powerhouses. A committed philanthropist,
-                    Vintage has been honored as Citizen of the Year by the Bay
-                    Area Leadership Foundation and the East Bay Economic
-                    Development Alliance, and named a Scholarship Impact Award
-                    recipient by Bay Area Blacks in Philanthropy for his work
-                    helping disadvantaged youth attend college. He is also
-                    widely sought after for his expertise in crisis
-                    communications, leading Piccadilly to be named Crisis
-                    Communications Firm of the Year by Dow Jones and Ragan's PR
-                    Daily. Vintage has also served as an adjunct professor at
-                    the University of the Pacific and Middlebury College. A
-                    vintage car enthusiast in every sense, Vintage spends his
-                    weekends behind the wheel of a 1965 Corvette—a timeless
-                    classic that mirrors his appreciation for craftsmanship,
-                    performance, and enduring style.
+                   Our qualitative and quantitative research delivers valid, reliable and strategic insights — your compass for navigating market trends, consumer behavior and business opportunities with confidence. Unlock powerful market assessment analysis and consumer insights to drive smarter business decisions and fuel growth.<br></br>
+To truly understand what drives your audiences, the right research approach is essential. These are some of the market research tools we use to get to the core of target audience behavior and attitudes:
                   </p>
+                 
+              <div
+                className="accordion accordion-flush"
+                id="accordionFlushExample"
+              >
+                <div className="accordion-item  mb-2">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button font_20 color_teal collapsed fw-semibold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                    >
+                      Online Surveys
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseOne"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                       Piccadilly offers expertise in developing and deploying surveys across multiple platforms, including laptops, tablets, mobile devices and even social media. We collaborate closely with you to design questionnaires that align with project goals, develop the survey instrument, select the appropriate sample, and conduct statistical analysis. The result is a streamlined, data-driven approach to gathering primary data efficiently.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item mb-2">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button font_20 color_teal collapsed fw-semibold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseTwo"
+                    >
+                      In-Depth Interviews and Focus Groups
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseTwo"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        Piccadilly conducts both in-person and virtual focus groups to explore deeper insights through moderated discussions and open-ended questions. Our team manages all logistics — recruitment, facilitation and summary reporting — ensuring a smooth and insightful process. Piccadilly’s in-depth interviews provide confidential insights, particularly with niche or hard-to-reach populations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item  mb-2">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button font_18 collapsed color_teal fw-semibold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                    >
+                      Phone Surveys
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseThree"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        There are times when the nature of the research objectives or target demographics are better served by a phone survey. This is particularly true in the case where a small geography is being investigated. Piccadilly can provide the framework for phone surveys to be conducted in accordance with all national regulations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item  mb-2">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button font_20 collapsed color_teal fw-semibold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFour"
+                    >
+                      Mail Surveys
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseFour"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        Though deployed on a more limited basis, a mail survey can accomplish similar goals as online or phone surveys. With certain samples, such as digitally adverse respondents or a smaller set of targeted populations, it may be more efficient and economical to use a mail survey. We provide guidance for printing, incentives, distribution, data collection and analysis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item  mb-2">
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button font_20 collapsed color_teal fw-semibold"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFour"
+                    >
+                      Personas
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseFour"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        Piccadilly can provide segmentation analysis (personas), which can be appended to your database to learn more about audiences. Matching segments can be based on physical or email addresses. It is an effective technique to augment more traditional market research and understand which market segments offer the most growth potential.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
                 </div>
               </div>
             </div>
@@ -375,11 +489,11 @@ setTimeout(() => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary healthcare_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Healthcare</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Healthcare</h3>
+              <p className="font_18 color_black py-4">
                 Named one of America's top marketing agencies in healthcare, Piccadilly’s deep knowledge generates measurable results and impact for your organization.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col px-0 d-flex align-items-center team_right_col">
@@ -393,11 +507,11 @@ setTimeout(() => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary financial_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Financial Services</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Financial Services</h3>
+              <p className="font_18 color_black py-4">
                 Our strategic planning and results-driven marketing capabilities spark engagement and foster long-term customer growth, maximizing your ROI.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col financial_right_col position-relative">
@@ -411,11 +525,11 @@ setTimeout(() => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary tourism_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Tourism</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Tourism</h3>
+              <p className="font_18 color_black py-4">
                 Our award-winning travel and tourism experience grabs your audience's attention, increases visitor spending, and boosts transient occupancy tax revenue.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col tourism_right_col financial_right_col position-relative">
@@ -429,11 +543,11 @@ setTimeout(() => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary non-profit_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Non-Profit</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Non-Profit</h3>
+              <p className="font_18 color_black py-4">
                 Piccadilly has a proven track record of leveraging nonprofit marketing dollars to produce measurable impact and raise awareness of your mission.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col tourism_right_col financial_right_col non-stop_right_col position-relative">
@@ -447,11 +561,11 @@ setTimeout(() => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary education_col mx-0">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Education</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Education</h3>
+              <p className="font_18 color_black py-4">
                 Piccadilly's team of marketing experts craft campaigns and messaging designed to increase brand visibility and differentiation, and to catapult enrollment.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col financial_right_col education_right_col position-relative">

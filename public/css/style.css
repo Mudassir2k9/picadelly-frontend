@@ -929,13 +929,19 @@ object-position: top;
     height: 200px;
     width: 200px;
 }
+.service_modal img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 100%;
+}
 .btn-close{
     opacity: 1;
 }
 .culture_section{
     background-image: url("../images/concentric-circle-img.jpg");
-    background-color: #f2682acf;
-    background-blend-mode: multiply;
+    /* background-color: #f2682acf;
+    background-blend-mode: multiply; */
 /*    min-height: 100vh;*/
 }
 
@@ -997,8 +1003,8 @@ object-position: top;
     z-index: 1;
 }
 .strategy_slider img{
-    height: 220px;
-    width: 220px !important;
+    height: 200px;
+    width: 200px !important;
     border-radius: 100%;
     object-fit: cover;
     margin: auto;
@@ -1028,8 +1034,8 @@ transition: all 0.3s;
 transform: translateY(0);
 }
 .inner_wrap{
-    height: 280px;
-    width: 280px;
+    height: 240px;
+    width: 240px;
     background-color: #fff;
     border-radius: 100%;
    
@@ -1369,8 +1375,25 @@ width: 350px !important;
     .links_col .item_link.default::after{
         top: 25px !important;
     }
+    .service_modal .accordion-button{
+        font-size: 18pt !important;
+    }
+     .service_modal .accordion-button::after {
+        height: 25px !important;
+        width: 25px !important;
+        font-size: 15px !important;
+        margin-left: 20px;
+    }
+   
+    body .service_modal.team_popup .modal-body .col-md-4{
+        padding: 0px !important;
+        text-align: center !important;
+    }
     .buzz_img img{
         text-align: center !important;
+    }
+    .service_modal .modal-dialog{
+        max-width: 70% !important;
     }
     .icon-col i{
         height: 40px !important;
@@ -1627,8 +1650,8 @@ width: 350px !important;
     height: 240px !important;
 }
 .strategy_wrap .inner_wrap{
-    height: 300px !important;
-    width: 300px !important;
+    height: 300px ;
+    width: 300px ;
 }
 .services_section .overflow_slider{
     padding-top: 5rem !important;
@@ -1886,6 +1909,16 @@ body .testimonials-heading h3{
     font-size: 24pt !important;
 }
 }
+@media (min-width:1300px) and (max-width: 1440px) {
+     .strategy_slider img{
+           width: 200px !important;
+           height: 200px !important;
+     }
+     .inner_wrap{
+        width: 260px !important;
+        height: 260px !important;
+     }
+}
 @media only screen and (min-width: 1024px){
 
 
@@ -2005,6 +2038,14 @@ body .testimonials-heading h3{
 
 }
 @media only screen and (max-width: 576px){
+     .service_modal.team_popup .modal-body{
+        padding: 0px 0px 30px 25px !important;
+    }
+    .service_modal img {
+    height: 200px;
+    width: 200px;
+ 
+}
     .navbar-brand{
         flex-direction: column;
     }
