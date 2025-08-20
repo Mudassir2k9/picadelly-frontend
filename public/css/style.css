@@ -197,17 +197,17 @@ background-color: var(--peal-green) !important;
    width: 100% !important;
  
      }
-     header.sticky {
+/*     header.sticky {
   position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(233 233 233 / 95%); /* visible after scroll */
+  background-color: rgb(233 233 233 / 95%); 
   will-change: transform;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   z-index: 111111;
  
-}
+}*/
     .navbar-custom {
       padding: 18px 0px;
       width: 100%;
@@ -1349,7 +1349,15 @@ width: 350px !important;
 .sticky .hamburger i{
     color: #000 !important;
 }
-
+#team-leaders .left_member_col{
+    padding: 0px !important;
+}
+#team-leaders .left_member_col img{
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
 @media only screen and (min-width: 1300px){
     .links_col .item_link.default::after{
         top: 25px !important;
