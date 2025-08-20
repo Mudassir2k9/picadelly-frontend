@@ -487,19 +487,19 @@ $cSlider.owlCarousel({
           <h5>Piccadilly Buzz</h5>
           <ul>
             <li>
-              <a href="#">
+              <a href="#" className="color_black">
                 Team in action
                 <i className="fa-regular fa-arrow-right-long"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" className="color_black">
                 Award Wins
                 <i className="fa-regular fa-arrow-right-long"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" className="color_black">
                 Announcements
                 <i className="fa-regular fa-arrow-right-long"></i>
               </a>

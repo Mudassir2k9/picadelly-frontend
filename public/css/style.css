@@ -153,6 +153,9 @@ text-decoration: none;
     object-position: center;
 
 }
+.color_black{
+    color: #000 !important;
+}
 .bg_cover{
     background-size: cover;
     background-position: center;
