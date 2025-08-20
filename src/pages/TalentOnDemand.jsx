@@ -102,7 +102,7 @@ const TalentOnDemand = () => {
         <div className="container">
           <div className="row">
             <div className="col-xl-8">
-              <h3 className="text-white fw-bold">
+              <h3 className="color_black fw-bold">
                 {talentDemandData?.Services?.Heading}
               </h3>
               <p className="font_20">
@@ -131,7 +131,7 @@ const TalentOnDemand = () => {
                     src={`${baseUrl}${service.image.url}`}
                     alt={service.name}
                   />
-                  <p className="text-white fw-bold font_18 pt-3 fade_text">
+                  <p className=" fw-bold font_18 pt-3 fade_text">
                     {service.name}
                   </p>
                 </div>
@@ -213,12 +213,12 @@ const TalentOnDemand = () => {
             <div className="content-outer-div">
             <div className="px-5 content mx-5">
               <h3
-                className="fw_600 text-white text-start"
+                className="fw_600 text-start"
                 style={{ fontSize: "38px" }}
               >
                 {talentDemandData?.Section5?.Column1_Heading}
               </h3>
-              <div
+              <div className="pt-3"
                 dangerouslySetInnerHTML={{
                   __html: talentDemandData?.Section5?.Column1_Description || "",
                 }}
@@ -226,7 +226,7 @@ const TalentOnDemand = () => {
               <div className="text-center btn_div mt-5">
                 <a
                   href={talentDemandData?.Section5?.Column1_Button_URL}
-                  className="btn_light"
+                  className="btn_light color_black"
                 >
                   {talentDemandData?.Section5?.Column1_Button_Label}
                 </a>
@@ -238,13 +238,13 @@ const TalentOnDemand = () => {
             <div className="content-outer-div">
             <div className="px-5 content mx-5">
               <h3
-                className="fw_600 text-white text-start"
+                className="fw_600  text-start"
                 style={{ fontSize: "38px" }}
                 dangerouslySetInnerHTML={{
                   __html: talentDemandData?.Section5?.Column2_Heading || "",
                 }}
               ></h3>
-              <div
+              <div className="pt-3"
                 dangerouslySetInnerHTML={{
                   __html: talentDemandData?.Section5?.Column2_Description || "",
                 }}
@@ -252,7 +252,7 @@ const TalentOnDemand = () => {
               <div className="text-center btn_div mt-5">
                 <a
                   href={talentDemandData?.Section5?.Column2_Button_URL}
-                  className="btn_light"
+                  className="btn_light color_black"
                 >
                   {talentDemandData?.Section5?.Column2_Button_Label}
                 </a>
@@ -269,7 +269,7 @@ const TalentOnDemand = () => {
         <div className="container mt-4 mb-4">
           <div className="row">
             <h3
-              className="font_40 fw-bold companies_section_heading text-white wow animate__slideInLeft text-start"
+              className="font_40 fw-bold companies_section_heading  wow animate__slideInLeft text-start"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
             >
@@ -383,13 +383,13 @@ const TalentOnDemand = () => {
         <div className="container py-4">
           <div className="row mx-0 d-flex">
             <h3
-              className="font_40 fw-bold text-white stories-section-heading wow animate__slideInLeft text-start"
+              className="font_40 fw-bold  stories-section-heading wow animate__slideInLeft text-start"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
             >
               {talentDemandData?.Stories?.Heading}
             </h3>
-            <p className="font_28 text-white stories-section-para">
+            <p className="font_28  stories-section-para">
               Description
               {talentDemandData?.Stories?.Description}
             </p>

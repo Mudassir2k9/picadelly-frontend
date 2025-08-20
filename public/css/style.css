@@ -1358,7 +1358,9 @@ width: 350px !important;
     object-fit: cover;
     object-position: top;
 }
-
+.multi_heading p, .multi_heading span, .strategy_slider p{
+    color: #000 !important;
+}
 @media only screen and (min-width: 1300px){
     .links_col .item_link.default::after{
         top: 25px !important;
