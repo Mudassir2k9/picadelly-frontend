@@ -885,7 +885,7 @@ position: relative;
     background-color: transparent;
     position: relative;
 }
-.team_right_col::before, .financial_right_col::before{
+.team_right_col::before{
     position: absolute;
     content: "";
     height: 350px;
@@ -1083,7 +1083,7 @@ transform: translateY(0);
 .services_parallax .carousel-indicators button.active{
     background-color: #000;
 }
-body .financial_col{
+body .healthcare_col{
     background: rgba(178, 201, 53, 1) !important;
      background-image: url("../images/half-ring.jpg") !important;
          background-position: center right !important;
@@ -1092,7 +1092,7 @@ body .financial_col{
     background-size: 70% !important;
     background-repeat: no-repeat !important;
 }
-.financial_right_col::before{
+.team_right_col::before{
  background: rgba(178, 201, 53, 0.6) !important;
  z-index: 111;
 }
@@ -1111,7 +1111,7 @@ body .tourism_col{
     background: rgba(245, 184, 22, 0.8) !important;
     z-index: 111;
 }
-body .non-profit_col{
+body .financial_col{
        background-color: #F28452 !important;
     background-image: url("../images/half-ring.jpg") !important;
          background-position: center right !important;
@@ -1122,7 +1122,7 @@ body .non-profit_col{
 .right_content_col{
     overflow: hidden;
 }
-.non-stop_right_col::before{
+.financial_right_col::before, .non-stop_right_col::before{
       background-color: rgb(242 132 82 / 80%) !important;
 }
 body .education_col{
@@ -1312,6 +1312,7 @@ opacity: 0.7;
 .team-section .carousel{
     width: 100%;
     height: 700px;
+    min-height: 100vh;
 }
 .team-section .carousel .carousel-inner{
     height: 100%;
@@ -1379,6 +1380,12 @@ width: 350px !important;
 #team-leaders.horizontal_parallax{
     max-width: inherit !important;
     width: 900% !important;
+}
+body .services_team_slider .heading_col.healthcare_col, body .services_team_slider .right_content_col, body .services_team_slider, body .services_team_slider .carousel-item{
+    min-height: 100vh !important;
+}
+body .services_team_slider .right_content_col img{
+    object-position: top !important;
 }
 @media only screen and (min-width: 1300px){
     .links_col .item_link.default::after{

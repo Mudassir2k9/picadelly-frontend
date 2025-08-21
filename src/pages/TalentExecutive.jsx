@@ -97,19 +97,7 @@ const TalentExecutive = () => {
           </div>
         </div>
       </div>
-      {/* <!-- Content-section --> */}
-      <div className="container-fluid only_content bg_cover d-flex align-items-center px-0">
-        <div className="container">
-          <div className="row d-flex align-items-center justify-content-center mx-0">
-            <div
-              className="col-md-10 content_inner"
-              dangerouslySetInnerHTML={{
-                __html: talentExectiveData?.Section4 || "",
-              }}
-            ></div>
-          </div>
-        </div>
-      </div>
+
       {/* <!-- Leader-section --> */}
 
       <div className="container-fluid leader_section bg_cover only_content px-0">
@@ -155,6 +143,21 @@ const TalentExecutive = () => {
                 {talentExectiveData?.Section5?.Column2_Button_Label}
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+
+
+            {/* <!-- Content-section --> */}
+      <div className="container-fluid only_content bg_cover d-flex align-items-center px-0">
+        <div className="container">
+          <div className="row d-flex align-items-center justify-content-center mx-0">
+            <div
+              className="col-md-10 content_inner"
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section4 || "",
+              }}
+            ></div>
           </div>
         </div>
       </div>

@@ -541,7 +541,7 @@ const Services = () => {
       </section>
 
       {/* <!-- start team section --> */}
-      <div className="container-fluid px-0 team-section d-flex justify-content-center align-items-center">
+      <div className="container-fluid px-0 team-section services_team_slider d-flex justify-content-center align-items-center">
         {/* Carousel */}
         <div id="demo" className="carousel slide" data-bs-ride="carousel">
           {/* Indicators/dots */}
