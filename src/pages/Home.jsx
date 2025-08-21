@@ -136,7 +136,7 @@ const Home = () => {
                 </div>
                 <div className="result-div-2 circle o_bg_green">
                   <h5>View The Case Study</h5>
-                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
 
@@ -154,7 +154,7 @@ const Home = () => {
                 </div>
                 <div className="result-div-2 circle o_bg_primary">
                   <h5>View The Case Study</h5>
-                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
 
@@ -172,7 +172,7 @@ const Home = () => {
                 </div>
                 <div className="result-div-2 circle o_bg_yellow">
                   <h5>View The Case Study</h5>
-                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
 
@@ -190,7 +190,7 @@ const Home = () => {
                 </div>
                 <div className="result-div-2 circle o_bg_primary">
                   <h5>View The Case Study</h5>
-                  <i className="fa-regular fa-arrow-right-long"></i>
+                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
 
@@ -208,7 +208,7 @@ const Home = () => {
                 </div>
                 <div className="result-div-2 circle o_bg_teal">
                   <h5>View The Case Study</h5>
-                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
             </section>
