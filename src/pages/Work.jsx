@@ -50,10 +50,16 @@ const Work = () => {
 
   const generateOverlayHTML = (lines = []) =>
     lines.map((line, i) =>
-  i === 4
-    ? <p key={i}><a href="https://example.com">{line}</a></p>
-    : <p key={i}>{line}</p>
+  i === 3
+    ? (
+      <p key={i}>
+        {line}
+        {/* <a href={lines[4]}>{line}</a> */}
+      </p>
+    )
+    : i !== 4 && <p key={i}>{line}</p>
 );
+
 
 
   return (
