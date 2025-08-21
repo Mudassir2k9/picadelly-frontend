@@ -59,6 +59,13 @@ const TalentOnDemand = () => {
   .hamburger i {
     color: #fff !important;
   }
+    .navbar-brand p{
+      color:#fff !important;
+    }
+      .nav-btn .btn_primary{
+      color:#000;
+      background-color:#fff;
+      }
 `}</style>
       <div className="container-fluid executive_banner On-Demand-banner">
         <div className="container">
@@ -172,7 +179,7 @@ const TalentOnDemand = () => {
                     <div className="accordion-item mb-2" key={faq.id || index}>
                       <h2 className="accordion-header" id={headingId}>
                         <button
-                          className={`accordion-button font_20 border-bottom color_teal fw-semibold ${
+                          className={`accordion-button font_20 color_teal fw-semibold ${
                             index !== 0 ? "collapsed" : ""
                           }`}
                           type="button"
@@ -406,7 +413,7 @@ const TalentOnDemand = () => {
                   className="circle-overlay"
                   dangerouslySetInnerHTML={{ __html: story.Description_1 }}
                 />
-                <div className="circle-hover">
+                <div className="circle-hover text-white">
                   <div
                     dangerouslySetInnerHTML={{ __html: story.Description_2 }}
                   />

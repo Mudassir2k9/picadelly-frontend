@@ -53,11 +53,14 @@ const Work = () => {
   return (
     <>
     <style>{`
+    .navbar-brand p{
+      color:#fff !important;
+    }
       @media only screen and (max-width: 576px) {
        .hamburger i {
     color: #fff !important;
   }
-      }
+  }
 `}</style>
       <div className="container-fluid executive_banner work_banner">
         <div className="container">
@@ -168,11 +171,11 @@ const Work = () => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary healthcare_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Healthcare</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Healthcare</h3>
+              <p className="font_18 color_black py-4">
                 Named one of America's top marketing agencies in healthcare, Piccadilly’s deep knowledge generates measurable results and impact for your organization.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col px-0 d-flex align-items-center team_right_col">
@@ -186,11 +189,11 @@ const Work = () => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary financial_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Financial Services</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Financial Services</h3>
+              <p className="font_18 color_black py-4">
                 Our strategic planning and results-driven marketing capabilities spark engagement and foster long-term customer growth, maximizing your ROI.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col financial_right_col position-relative">
@@ -204,11 +207,11 @@ const Work = () => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary tourism_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Tourism</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Tourism</h3>
+              <p className="font_18 color_black py-4">
                 Our award-winning travel and tourism experience grabs your audience's attention, increases visitor spending, and boosts transient occupancy tax revenue.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col tourism_right_col financial_right_col position-relative">
@@ -222,11 +225,11 @@ const Work = () => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary non-profit_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Non-Profit</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Non-Profit</h3>
+              <p className="font_18 color_black py-4">
                 Piccadilly has a proven track record of leveraging nonprofit marketing dollars to produce measurable impact and raise awareness of your mission.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col tourism_right_col financial_right_col non-stop_right_col position-relative">
@@ -240,11 +243,11 @@ const Work = () => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary education_col mx-0">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold text-white">Education</h3>
-              <p className="font_18 text-white py-4">
+              <h3 className="font_40 fw-bold color_black">Education</h3>
+              <p className="font_18 color_black py-4">
                 Piccadilly's team of marketing experts craft campaigns and messaging designed to increase brand visibility and differentiation, and to catapult enrollment.
               </p>
-              <a href="#" className="btn btn_light">View the Work</a>
+              <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col financial_right_col education_right_col position-relative">

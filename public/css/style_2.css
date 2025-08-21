@@ -1250,8 +1250,14 @@ position: absolute;
     .only_content{
       padding:30px 0px;
     }
-    .content_inner h3{
+   .only_content .content_inner h3{
       font-size: 32px;
+    }
+    .leader_section .content>h3{
+      font-size: 36px !important;
+    }
+    .leader_section.only_content h3{
+       font-size: 28px ;
     }
     .leader_section{
       padding: 0px !important;

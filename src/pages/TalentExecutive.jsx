@@ -23,9 +23,19 @@ const TalentExecutive = () => {
   return (
     <>
         <style>{`
-  .hamburger i {
+   .hamburger i {
     color: #fff !important;
   }
+    .navbar-brand p{
+      color:#fff !important;
+    }
+      .nav-btn .btn_primary{
+      color:#000;
+      background-color:#fff;
+      }
+      .unordered li span{
+       color:#000 !important;
+      }
 `}</style>
       <div className="container-fluid executive_banner">
         <div className="container">
@@ -140,7 +150,7 @@ const TalentExecutive = () => {
               ></div>
               <a
                 href={talentExectiveData?.Section5?.Column2_Button_URL}
-                className="btn_light mt-4"
+                className="btn_light mt-4 color_black"
               >
                 {talentExectiveData?.Section5?.Column2_Button_Label}
               </a>

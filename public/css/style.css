@@ -329,6 +329,13 @@ background-color: var(--peal-green) !important;
     max-width: 100%;
     padding: 0px 6% !important;
 }
+.on_demand_services_section .inner_wrap p{
+    font-size: 11pt !important;
+}
+.on_demand_services_section .inner_wrap .btn_primary{
+    padding: 7px 30px !important;
+    font-size: 12px !important;
+}
 .banner_section .banner-row{
     padding-bottom: 40px;
 }
@@ -453,6 +460,7 @@ background-color: var(--peal-green) !important;
     font-size: 18px;
     margin-left: 17px;
 }
+
 .sky-div{
     max-width: 410px;
     height: 410px;
@@ -1262,12 +1270,13 @@ opacity: 0.7;
  background-color: #fff;
  padding: 10px;
  margin-bottom: 0px;
- color: var(--primary_color);
+ color: #000;
  border-radius: 30px;
  width: 150px;
  text-align: center;
  margin-left: auto;
  margin-top: 30px;
+ font-weight: 600;
     
 }
     .img-hidden {
@@ -1375,6 +1384,12 @@ width: 350px !important;
     .links_col .item_link.default::after{
         top: 25px !important;
     }
+    .on_demand_services_section .inner_wrap p{
+    font-size: 12pt !important;
+}
+.on_demand_services_section .inner_wrap .btn_primary{
+    padding: 7px 30px !important;
+}
     .service_modal .accordion-button{
         font-size: 18pt !important;
     }
