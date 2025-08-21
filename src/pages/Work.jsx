@@ -202,7 +202,7 @@ const Work = () => {
               <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
-          <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col financial_right_col position-relative">
+          <div className="right_content_col px-0 d-flex align-items-center team_right_col financial_right_col">
             <img src="images/financial-img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Financial Services" />
           </div>
         </div>
@@ -220,7 +220,7 @@ const Work = () => {
               <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
-          <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col tourism_right_col financial_right_col position-relative">
+          <div className="right_content_col px-0 d-flex align-items-center team_right_col tourism_right_col">
             <img src="images/tourism_img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Tourism" />
           </div>
         </div>
@@ -238,7 +238,7 @@ const Work = () => {
               <a href="#" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
-          <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col tourism_right_col financial_right_col non-stop_right_col position-relative">
+          <div className="right_content_col px-0 d-flex align-items-center team_right_col non-stop_right_col">
             <img src="images/non-profit_img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Non-Profit" />
           </div>
         </div>
