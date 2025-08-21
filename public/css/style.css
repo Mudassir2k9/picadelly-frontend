@@ -1240,6 +1240,7 @@ opacity: 0.7;
     }
 .overlay_text p:nth-child(1){
     width: 100%;
+    font-size: 18px;
 
 }
 .links_col .item_link.default::after{
@@ -1257,13 +1258,13 @@ opacity: 0.7;
 }
 .overlay_text p:nth-child(2){
     width: 100%;
-    font-size: 26px;
+    font-size: 36px;
     font-weight: bold;
     
 }
 .overlay_text p:nth-child(3){
     width: 100%;
-    font-size: 20px;
+    font-size: 24px;
     
 }
 .overlay_text p:nth-child(4){
