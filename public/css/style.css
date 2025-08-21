@@ -1323,7 +1323,7 @@ opacity: 0.7;
     height: 700px;
     min-height: 100vh;
 }
-.team-section .carousel .carousel-inner{
+.team-section .carousel .carousel-inner, .team-section .carousel .carousel-inner .carousel-item, .team-section .carousel .carousel-inner .carousel-item .row, .team-section .carousel .carousel-inner .carousel-item .row .right_content_col{
     height: 100%;
 }
 .team-section .carousel .healthcare_col, .team-section .carousel .heading_col{
@@ -2069,6 +2069,9 @@ body .testimonials-heading h3{
 
 }
 @media only screen and (max-width: 576px){
+    body .services_team_slider .heading_col.healthcare_col, body .services_team_slider .right_content_col, body .services_team_slider, body .services_team_slider .carousel-item{
+        min-height: auto !important;
+    }
      .service_modal.team_popup .modal-body{
         padding: 0px 0px 30px 25px !important;
     }
