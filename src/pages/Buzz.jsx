@@ -80,7 +80,7 @@ const Buzz = () => {
           ></h1>
         </div>
       </div>
-          <section className="team_section bg_cover py-0">
+          <section className="team_section bg_cover py-0 buzz_team_section">
         <div className="row w-auto mx-0 team_row">
           <div className="col-lg-6 col-md-12 col-12 px-0 ">
             <img

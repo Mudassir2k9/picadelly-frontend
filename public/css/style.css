@@ -1396,6 +1396,9 @@ body .services_team_slider .heading_col.healthcare_col, body .services_team_slid
 body .services_team_slider .right_content_col img{
     object-position: top !important;
 }
+.buzz_team_section img{
+    height: 100%;
+}
 @media only screen and (min-width: 1300px){
     .links_col .item_link.default::after{
         top: 25px !important;
