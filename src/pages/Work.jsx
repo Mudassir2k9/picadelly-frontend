@@ -53,8 +53,7 @@ const Work = () => {
   i === 3
     ? (
       <p key={i}>
-        {line}
-        {/* <a href={lines[4]}>{line}</a> */}
+        <a href={lines[4]}>{line}</a>
       </p>
     )
     : i !== 4 && <p key={i}>{line}</p>
