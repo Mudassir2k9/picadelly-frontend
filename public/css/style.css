@@ -253,9 +253,10 @@ background-color: var(--peal-green) !important;
       overflow: hidden;
       transition: 0.5s;
       z-index: 9999;
-      min-height: 450px;
+    
+      
     }
-
+    
     .nav-items a {
       padding:5px 10px;
       color: #fff !important;
