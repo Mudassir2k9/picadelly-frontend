@@ -56,8 +56,9 @@ const Work = () => {
         <a href={lines[4]}>{line}</a>
       </p>
     )
-    : i != 4 ?? <p key={i}>{line}</p> 
+    : i !== 4 && <p key={i}>{line}</p>
 );
+
 
 
   return (
