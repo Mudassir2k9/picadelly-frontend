@@ -153,6 +153,7 @@ const BlogDetail = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   setCurrentIndex(currentIndex - 1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <div className="overlay-div text-end">
@@ -169,15 +170,14 @@ const BlogDetail = () => {
                 />
               </a>
             ) : (
-            <>
-              <div className="overlay-div text-end">
-                <span className=""> ⟵</span>
-                <br />
-                <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
-                <h3 className="text-white fw_600">No Previous Blog</h3>
-                
-              </div>
-              <img src="images/previous-blog.png" alt="No previous blog" />
+              <>
+                <div className="overlay-div text-end">
+                  <span className=""> ⟵</span>
+                  <br />
+                  <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
+                  <h3 className="text-white fw_600">No Previous Blog</h3>
+                </div>
+                <img src="images/previous-blog.png" alt="No previous blog" />
               </>
             )}
           </div>
@@ -190,6 +190,7 @@ const BlogDetail = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   setCurrentIndex(currentIndex + 1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <div className="overlay-div text-start">
@@ -208,15 +209,15 @@ const BlogDetail = () => {
                 />
               </a>
             ) : (
-            <>
-              <div className="overlay-div text-start">
-                <span className=""> ⟶</span>
-                <br />
-                <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
-                <h3 className="text-white font_40 fw_600">No Next Blog</h3>
-              </div>
+              <>
+                <div className="overlay-div text-start">
+                  <span className=""> ⟶</span>
+                  <br />
+                  <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
+                  <h3 className="text-white font_40 fw_600">No Next Blog</h3>
+                </div>
                 <img src="images/next-blog.png" alt="No next blog" />
-                </>
+              </>
             )}
           </div>
         </div>
