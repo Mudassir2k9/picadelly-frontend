@@ -9,12 +9,12 @@ const CaseStudy = () => {
             <div className="inner-div">
               <p className="font_20">Brand Refresh and Marketing Campaign</p>
               <h2
-                className="color_primary fw-bold"
+                className="color_black fw-bold"
                 data-wow-duration="1s"
                 data-wow-delay="0.2s"
                 style={{ fontSize: "50px" }}
               >
-                <span className="text-dark">California</span> Bank of Commerce
+                <span className="color_black">California</span> Bank of Commerce
               </h2>
             </div>
           </div>

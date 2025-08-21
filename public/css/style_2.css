@@ -1049,6 +1049,7 @@
     .sticky-sidebar {
       position: sticky;
       top: 1rem;
+      display: none;
   
     }
     .left-sidebar{
@@ -1057,7 +1058,7 @@
 
     }
     .right-sidebar  h2{
-      display: none;
+      color: var(--primary_color);
     }
 
 /*  teams mobile section  */
