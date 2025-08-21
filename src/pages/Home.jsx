@@ -19,7 +19,6 @@ const Home = () => {
         console.error("Error fetching header data:", error);
       });
   }, []);
-  console.log("-----", homeData);
 
   setTimeout(() => {
     if (window.$) {
