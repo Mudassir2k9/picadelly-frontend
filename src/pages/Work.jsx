@@ -29,6 +29,7 @@ const Work = () => {
           item.Title || "",
           item.Company_Tagline || "",
           item.ButtonLabel || "",
+          item.ButtonUrl || "",
         ],
       })) || []
     );
@@ -48,7 +49,12 @@ const Work = () => {
     currentIndex < imageData.length - 1 ? currentIndex + 1 : null;
 
   const generateOverlayHTML = (lines = []) =>
-    lines.map((line, i) => <p key={i}>{line}</p>);
+    lines.map((line, i) =>
+  i === 4
+    ? <p key={i}><a href="https://example.com">{line}</a></p>
+    : <p key={i}>{line}</p>
+);
+
 
   return (
     <>
