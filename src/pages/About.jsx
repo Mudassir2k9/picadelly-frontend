@@ -86,6 +86,14 @@ const About = () => {
 
 
   console.log(aboutData);
+  window.addEventListener("load", function() {
+  setTimeout(function() {
+    document.querySelectorAll('.culture_section .col-md-7 p.color_black').forEach(p => {
+      p.innerHTML = p.innerHTML.replace("measurable results.", "measurable results.<br>");
+    });
+  }, 2000); // 2000 ms = 2 seconds
+});
+
   return (
     <>
       {/* <!-- team modals --> */}
