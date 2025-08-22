@@ -3,9 +3,15 @@ import React from "react";
 const CaseStudy = () => {
   return (
     <>
-      <div className="container-fluid case_study_banner">
+      <style>{`
+    body header{
+     position:relative !important;
+    }
+      }
+`}</style>
+      <div className="container-fluid case_study_banner separate px-0">
         <div className="row banner-row mx-0">
-          <div className="col-md-6 case_study-col-1 px-0 blog_col-2 ">
+          <div className="col-md-6 case_study-col-1 heading_part separate_col_1 px-0 blog_col-2">
             <div className="inner-div">
               <p className="font_20">Brand Refresh and Marketing Campaign</p>
               <h2
@@ -18,7 +24,7 @@ const CaseStudy = () => {
               </h2>
             </div>
           </div>
-          <div className="col-md-6 banner-col blog_col-2 case_study-col-1">
+          <div className="col-md-6 banner-col blog_col-2 separate_col_1 case_study-col-1">
             <div className="inner-div d-flex" style={{ width: "100%" }}>
               <div
                 className="list-col d-flex justify-content-center"
@@ -89,7 +95,7 @@ const CaseStudy = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseOne"
                     >
-                      Not Enough Bandwidth or Know-How
+                      Situation
                     </button>
                   </h2>
                   <div
@@ -99,9 +105,7 @@ const CaseStudy = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                        Your workforce is maxed out or you’re missing key
-                        capabilities. We’ll recruit someone who not only can
-                        fill the gap but accelerate impact.
+                        California Bank of Commerce (CBC) is a highly accomplished business bank that funds growth and solves complex problems for B2B clients. However, its brand presence in the marketplace was inconsistent with its true financial service value. The bank needed a forward-thinking, sophisticated brand identity and marketing campaign that would reflect its position as a leading expert in commercial banking. CBC partnered with Piccadilly to develop its new brand positioning.
                       </p>
                     </div>
                   </div>
@@ -116,7 +120,7 @@ const CaseStudy = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseTwo"
                     >
-                      Need Flexible Options Fast
+                      Approach
                     </button>
                   </h2>
                   <div
@@ -126,10 +130,8 @@ const CaseStudy = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                        A part-time CMO? A demand-gen expert? Have a stellar
-                        employee out on leave? We’ve got flexible options to fit
-                        your needs — no long-term commitment required and
-                        expertise guaranteed.
+                    Piccadilly partnered with CalMHSA to produce a mental health awareness event at Santa Monica Pier, featuring high-value giveaways designed to encourage attendee engagement with vendors promoting mental health education. The giveaway strategy served as a public relations opportunity to break through the competitive media market and secure earned coverage that drove over 1,800 event attendees and 1,200 resource connections made through attendees’ interaction with vendors.
+ The PR team also successfully secured feature interviews with all major broadcast outlets across Los Angeles County, including FOX, ABC, NBC, and CBS. These interviews highlighted key CalMHSA subject matter experts who promoted essential mental health resources available throughout the county. The campaign's pitch angles were developed through comprehensive subject matter expert intake calls and covered diverse mental health topics including self-care strategies, effective responses to distressing news, understanding the difference between intrusive and impulsive thoughts, managing social anxiety in networking situations, addressing mental health stigma, and analyzing relevant mental health data trends.
                       </p>
                     </div>
                   </div>
@@ -144,7 +146,7 @@ const CaseStudy = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseThree"
                     >
-                      Interim Support While Hiring
+                      Outcome
                     </button>
                   </h2>
                   <div
@@ -161,34 +163,7 @@ const CaseStudy = () => {
                     </div>
                   </div>
                 </div>
-                <div className="accordion-item  mb-2">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button font_20 collapsed color_teal fw-semibold"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFour"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseFour"
-                    >
-                      Adaptive Solutions
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseFour"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        No cookie-cutter approaches. Whether you require the
-                        expertise of individual specialists or the collaborative
-                        power of integrated teams, our solutions are tailored to
-                        your unique requirements.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

@@ -4,6 +4,9 @@ const ContactUs = () => {
   return (
     <>
     <style>{`
+    .navbar-brand p{
+      color:#fff !important;
+    }
       @media only screen and (max-width: 576px) {
        .hamburger i {
     color: #fff !important;

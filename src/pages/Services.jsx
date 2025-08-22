@@ -101,6 +101,10 @@ const Services = () => {
   .hamburger i {
     color: #fff !important;
   }
+    .navbar-brand p{
+      color:#fff !important;
+    }
+
 `}</style>
 
       <div
@@ -358,6 +362,7 @@ const Services = () => {
             <div className="item">
               <div className="strategy_wrap">
                 <div className="inner_wrap">
+                  <div className="inner">
                   <p className="text-dark">
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
@@ -370,6 +375,7 @@ const Services = () => {
                   >
                     Learn More
                   </a>
+                  </div>
                 </div>
                 <p className="text-dark fw-bold pt-3 font_18 px-4">
                   Market Research
@@ -385,13 +391,16 @@ const Services = () => {
             <div className="item">
               <div className="strategy_wrap">
                 <div className="inner_wrap">
+                  <div className="inner">
                   <p className="text-dark">
+                
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
                   </p>
                   <a href="javascript:void(0)" className="btn btn_primary">
                     Learn More
                   </a>
+                  </div>
                 </div>
                 <p className="text-dark fw-bold pt-3 font_18 px-4">
                   Market Research
@@ -407,6 +416,7 @@ const Services = () => {
             <div className="item">
               <div className="strategy_wrap">
                 <div className="inner_wrap">
+                  <div className="inner">
                   <p className="text-dark">
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
@@ -414,6 +424,7 @@ const Services = () => {
                   <a href="javascript:void(0)" className="btn btn_primary">
                     Learn More
                   </a>
+                  </div>
                 </div>
                 <p className="text-dark fw-bold pt-3 font_18 px-4">
                   Brand Strategy & Identity
@@ -429,6 +440,7 @@ const Services = () => {
             <div className="item">
               <div className="strategy_wrap">
                 <div className="inner_wrap">
+                  <div className="inner">
                   <p className="text-dark">
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
@@ -436,6 +448,7 @@ const Services = () => {
                   <a href="javascript:void(0)" className="btn btn_primary">
                     Learn More
                   </a>
+                  </div>
                 </div>
                 <p className="text-dark fw-bold pt-3 font_18 px-4">
                   Campaign Strategy & Development
@@ -451,6 +464,7 @@ const Services = () => {
             <div className="item">
               <div className="strategy_wrap">
                 <div className="inner_wrap">
+                  <div className="inner">
                   <p className="text-dark">
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
@@ -458,6 +472,7 @@ const Services = () => {
                   <a href="javascript:void(0)" className="btn btn_primary">
                     Learn More
                   </a>
+                  </div>
                 </div>
                 <p className="text-dark fw-bold pt-3 font_18 px-4">
                   Video, TV, Radio & Podcast Production Services
@@ -473,6 +488,7 @@ const Services = () => {
             <div className="item">
               <div className="strategy_wrap">
                 <div className="inner_wrap">
+                  <div className="inner">
                   <p className="text-dark">
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
@@ -480,6 +496,7 @@ const Services = () => {
                   <a href="javascript:void(0)" className="btn btn_primary">
                     Learn More
                   </a>
+                  </div>
                 </div>
                 <p className="text-dark fw-bold pt-3 font_18 px-4">
                   Digital & Traditional Media
@@ -495,6 +512,7 @@ const Services = () => {
             <div className="item">
               <div className="strategy_wrap">
                 <div className="inner_wrap">
+                  <div className="inner">
                   <p className="text-dark">
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
@@ -502,6 +520,7 @@ const Services = () => {
                   <a href="javascript:void(0)" className="btn btn_primary">
                     Learn More
                   </a>
+                  </div>
                 </div>
                 <p className="text-dark fw-bold pt-3 font_18 px-4">
                   Website Audit, SEO & Design
@@ -517,6 +536,7 @@ const Services = () => {
             <div className="item">
               <div className="strategy_wrap">
                 <div className="inner_wrap">
+                  <div className="inner">
                   <p className="text-dark">
                     Marketing Strategy and Planning that Delivers Results and
                     Market Growth
@@ -524,6 +544,7 @@ const Services = () => {
                   <a href="javascript:void(0)" className="btn btn_primary">
                     Learn More
                   </a>
+                  </div>
                 </div>
                 <p className="text-dark fw-bold pt-3 font_18 px-4">
                   Public & Media Relations

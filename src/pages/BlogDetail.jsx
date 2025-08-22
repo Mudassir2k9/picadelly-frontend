@@ -34,9 +34,15 @@ const BlogDetail = () => {
 
   return (
     <>
-      <div className="container-fluid  blog_detail_banner">
+    <style>{`
+    body header{
+     position:relative !important;
+    }
+      }
+`}</style>
+      <div className="container-fluid  blog_detail_banner separate px-0">
         <div className="row banner-row mx-0">
-          <div className="col-md-8 case_study-col-1 px-0 blog_col-1  pb-5">
+          <div className="col-md-8 case_study-col-1 heading_part separate_col_1 px-0 blog_col-1  pb-5">
             <div className="inner-div ">
               <p className="font_20">BLOG POST</p>
               <h2
@@ -51,7 +57,7 @@ const BlogDetail = () => {
               </h2>
             </div>
           </div>
-          <div className="col-md-4 banner-col blog_col-1 blog_col_2 case_study-col-1 px-0 px-md-5 pb-5">
+          <div className="col-md-4 banner-col blog_col-1 blog_col_2 separate_col_1 case_study-col-1 px-0 px-md-5 pb-5">
             <div className="inner-div d-flex" style={{ width: "100%" }}>
               <div className=" d-flex justify-content-center">
                 <div className="list-inner">
@@ -114,9 +120,16 @@ const BlogDetail = () => {
         <div className="row mx-0">
           {/* Sticky Left Sidebar */}
           <div className="col-md-4 left-sidebar px-5 pt-5 pb-5">
-            <div className="sticky-sidebar" id="sidebar">
+
+            <div class="search-box">
+              <i class="fa fa-search search-icon"></i>
+              <input type="text" placeholder="Search" />
+              <i class="fa fa-times clear-icon"></i>
+           </div>
+
+            {/* <div className="sticky-sidebar" id="sidebar"> */}
               {/* Dynamically generate links based on Blog_Content Titles */}
-              {currentBlog?.Blog_Content?.map((section, idx) => (
+              {/* {currentBlog?.Blog_Content?.map((section, idx) => (
                 <a
                   key={section.id}
                   href={`#section-${idx}`}
@@ -124,8 +137,8 @@ const BlogDetail = () => {
                 >
                   {section.Title || `Section ${idx + 1}`}
                 </a>
-              ))}
-            </div>
+              ))} */}
+            {/* </div> */}
           </div>
 
           {/* Scrollable Content Right Column */}

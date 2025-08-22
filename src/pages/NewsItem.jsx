@@ -3,9 +3,15 @@ import React from "react";
 const NewsItem = () => {
   return (
     <>
-      <div className="container-fluid news_item_banner blog_detail_banner">
+    <style>{`
+    body header{
+     position:relative !important;
+    }
+      }
+`}</style>
+      <div className="container-fluid news_item_banner separate px-0 blog_detail_banner">
         <div className="row banner-row mx-0">
-          <div className="col-md-8 case_study-col-1 blog_col-1 px-0 pb-5">
+          <div className="col-md-8 case_study-col-1 heading_part separate_col_1 blog_col-1 px-0 pb-5">
             <div className="inner-div">
               <p className="font_20">ARTICLE</p>
               <h2
@@ -20,7 +26,7 @@ const NewsItem = () => {
               </h2>
             </div>
           </div>
-          <div className="col-md-4 banner-col blog_col-1 blog_col_2 case_study-col-1 px-0 px-md-5 pb-5">
+          <div className="col-md-4 banner-col blog_col-1 blog_col_2 separate_col_1 case_study-col-1 px-0 px-md-5 pb-5">
             <div className="inner-div d-flex">
               <div className=" d-flex justify-content-center">
                 <div className="list-inner">
@@ -78,21 +84,17 @@ const NewsItem = () => {
         <div className="row mx-0">
           {/* <!-- Sticky Left Column --> */}
           <div className="col-md-4 left-sidebar px-5 pt-5 pb-5">
-            <div className="sticky-sidebar" id="sidebar">
-              {/* <!-- <a href="#last" className="heading-link"></a> --> */}
-              <a href="#approach" className="heading-link">
-                A Smart Business Strategy
-              </a>
-              {/* <!--     <a href="#execution" className="heading-link">Phase 2: Execution</a>
-        <a href="#why" className="heading-link">Why It Works</a>
-        <a href="#bottom" className="heading-link">The Bottom Line</a> --> */}
-            </div>
+            <div class="search-box">
+              <i class="fa fa-search search-icon"></i>
+              <input type="text" placeholder="Search" />
+              <i class="fa fa-times clear-icon"></i>
+           </div>
           </div>
 
           {/* <!-- Scrollable Content Right Column --> */}
           <div className="col-md-8 px-5 pt-5 right-sidebar pb-5">
             <section id="approach">
-              {/* <!-- <h2>Our Approach</h2> --> */}
+               <h2>A Smart Business Strategy</h2>
               <p>
                 In today’s fast-paced, information-overloaded world, the
                 importance of marketing and communications is greater than ever.
