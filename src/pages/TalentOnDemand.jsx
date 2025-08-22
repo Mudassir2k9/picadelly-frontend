@@ -55,7 +55,7 @@ const TalentOnDemand = () => {
 
   return (
     <>
-        <style>{`
+      <style>{`
   .hamburger i {
     color: #fff !important;
   }
@@ -218,53 +218,55 @@ const TalentOnDemand = () => {
         <div className="row mx-0">
           <div className="col-md-6 d-flex px-5 align-items-center content-col-1 dif-col">
             <div className="content-outer-div">
-            <div className="px-5 content mx-5">
-              <h3
-                className="fw_600 text-start"
-                style={{ fontSize: "38px" }}
-              >
-                {talentDemandData?.Section5?.Column1_Heading}
-              </h3>
-              <div className="pt-3"
-                dangerouslySetInnerHTML={{
-                  __html: talentDemandData?.Section5?.Column1_Description || "",
-                }}
-              ></div>
-              <div className="text-center btn_div mt-5">
-                <a
-                  href={talentDemandData?.Section5?.Column1_Button_URL}
-                  className="btn_light color_black"
-                >
-                  {talentDemandData?.Section5?.Column1_Button_Label}
-                </a>
+              <div className="px-5 content mx-5">
+                <h3 className="fw_600 text-start" style={{ fontSize: "38px" }}>
+                  {talentDemandData?.Section5?.Column1_Heading}
+                </h3>
+                <div
+                  className="pt-3"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      talentDemandData?.Section5?.Column1_Description || "",
+                  }}
+                ></div>
+                <div className="text-center btn_div mt-5">
+                  <a
+                    href={talentDemandData?.Section5?.Column1_Button_URL}
+                    className="btn_light color_black"
+                  >
+                    {talentDemandData?.Section5?.Column1_Button_Label}
+                  </a>
+                </div>
               </div>
-            </div>
             </div>
           </div>
           <div className="col-md-6 d-flex px-5 align-items-center content-col-1">
             <div className="content-outer-div">
-            <div className="px-5 content mx-5">
-              <h3
-                className="fw_600  text-start"
-                style={{ fontSize: "38px" }}
-                dangerouslySetInnerHTML={{
-                  __html: talentDemandData?.Section5?.Column2_Heading || "",
-                }}
-              ></h3>
-              <div className="pt-3"
-                dangerouslySetInnerHTML={{
-                  __html: talentDemandData?.Section5?.Column2_Description || "",
-                }}
-              ></div>
-              <div className="text-center btn_div mt-5">
-                <a
-                  href={talentDemandData?.Section5?.Column2_Button_URL}
-                  className="btn_light color_black"
-                >
-                  {talentDemandData?.Section5?.Column2_Button_Label}
-                </a>
+              <div className="px-5 content mx-5">
+                <h3
+                  className="fw_600  text-start"
+                  style={{ fontSize: "38px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: talentDemandData?.Section5?.Column2_Heading || "",
+                  }}
+                ></h3>
+                <div
+                  className="pt-3"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      talentDemandData?.Section5?.Column2_Description || "",
+                  }}
+                ></div>
+                <div className="text-center btn_div mt-5">
+                  <a
+                    href={talentDemandData?.Section5?.Column2_Button_URL}
+                    className="btn_light color_black"
+                    target="_blank"
+                  >
+                    {talentDemandData?.Section5?.Column2_Button_Label}
+                  </a>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -287,20 +289,14 @@ const TalentOnDemand = () => {
             </p>
           </div>
           <div className="row d-flex justify-content-center mt-4 first-logo-row">
-            {talentDemandData?.Brands_Images?.map(
-              (brand, index) => (
-                <div className="logo_col" key={`brand1-${index}`}>
-                  <div className="logo_col_inner">
-                    <img
-                      src={`${baseUrl}${brand?.url}`}
-                      alt={`brand-${index}`}
-                    />
-                  </div>
+            {talentDemandData?.Brands_Images?.map((brand, index) => (
+              <div className="logo_col" key={`brand1-${index}`}>
+                <div className="logo_col_inner">
+                  <img src={`${baseUrl}${brand?.url}`} alt={`brand-${index}`} />
                 </div>
-              )
-            )}
+              </div>
+            ))}
           </div>
-          
         </div>
       </div>
 
@@ -386,7 +382,10 @@ const TalentOnDemand = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid faqs_section stories-section d-flex bg_cover px-0 sec_py" id="fractional-contractors">
+      <div
+        className="container-fluid faqs_section stories-section d-flex bg_cover px-0 sec_py"
+        id="fractional-contractors"
+      >
         <div className="container py-4">
           <div className="row mx-0 d-flex">
             <h3
