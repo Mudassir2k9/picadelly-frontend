@@ -10,6 +10,9 @@
      color: #fff;
      font-size: 30px;
 }
+.join-section .content div:nth-child(2) p{
+  display: none !important;
+}
 .executive_col{
     min-height: 500px;
     display: flex;
@@ -1135,6 +1138,9 @@
  body .separate_col_1{
   padding: 30px 25px !important;
  }
+ .join-section::after{
+  top: 24% !important;
+ }
   .impact_section .content .multi_heading{
     font-size: 17pt !important;
   }
@@ -1214,7 +1220,10 @@
   height: auto !important;
   padding:40px 25px !important;
   align-items: center !important;
-  min-height: 100vh;
+  min-height: 80vh;
+}
+body .case-study-faqs .heading_col, .only_content{
+  min-height: 80vh !important;
 }
 .impact_section .content, .leader_section .content, .join-section .content, .blog-spotlight .content, .case-study-faqs .content, .case-study-faqs .accordion-part{
   margin: 0px!important;
@@ -1236,7 +1245,7 @@ position: absolute;
         content: "";
         margin-left: auto;
         right: 3%;
-        top: 46%;
+        top: 42%;
     }
 .impact_section{
   align-items: flex-start !important;
@@ -1265,7 +1274,7 @@ position: absolute;
         content: "";
         margin-left: auto;
         right: 3%;
-        top: 17%;
+        top: 25%;
     }
     .only_content{
       padding:30px 0px;
@@ -1354,7 +1363,7 @@ position: absolute;
 
 }
 .flexible_part::after {
-        top: 35% !important;
+        top: 41% !important;
         right: 0;
         left: 4px;
         margin: auto;
@@ -1426,7 +1435,7 @@ position: absolute;
     }
     .case-study-faqs h3{
       font-size: 28px !important;
-    min-height: 150px !important;
+    min-height: 0px !important;
     }
     .image-container .hover-text{
       padding: 25px !important;
