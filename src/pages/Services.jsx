@@ -20,6 +20,8 @@ const Services = () => {
       });
   }, []);
 
+  console.log("serviceData", serviceData);
+
   setTimeout(() => {
     if (window.$) {
       const $cSlider = window.$(".strategy_slider");
