@@ -9,7 +9,7 @@ const Services = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/service?populate[AllServices][populate]=*&populate[Slider][populate]=*`
+        `${apiUrl}/service?populate[AllServices][populate][Services][populate][FAQs][populate]=*&populate[Slider][populate]=*&populate[AllServices][populate][Services][populate][image][populate]=*`
       )
       .then((res) => {
         // console.log("-----", res);
@@ -105,208 +105,64 @@ const Services = () => {
   }
 `}</style>
 
-      <div
-        className="modal fade team_popup service_modal"
-        id="team1"
-        tabIndex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable shadow radius-0">
-          <div className="modal-content">
-            <div className="modal-header border-0">
-              <button
-                type="button"
-                className="btn-close text-dark"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body px-5 pb-5">
-              <div className="row px-0">
-                <div className="col-md-4">
-                  <img src="images/markte-strategy-img.jpg" />
-                  <h5 className="text-dark fw_600 font_28 pt-3">
-                    Market Research
-                  </h5>
-                  {/* <a href="javascript:void(0)" className="btn btn_primary">Button Orange</a> */}
-                </div>
-                <div className="col-md-8">
-                  <p className="font_14">
-                    Our qualitative and quantitative research delivers valid,
-                    reliable and strategic insights — your compass for
-                    navigating market trends, consumer behavior and business
-                    opportunities with confidence. Unlock powerful market
-                    assessment analysis and consumer insights to drive smarter
-                    business decisions and fuel growth.<br></br>
-                    To truly understand what drives your audiences, the right
-                    research approach is essential. These are some of the market
-                    research tools we use to get to the core of target audience
-                    behavior and attitudes:
-                  </p>
+      {/* Popups Loop */}
+      {serviceData?.AllServices?.Services?.map((service) => (
+        <div
+          key={service.id}
+          className="modal fade team_popup service_modal"
+          id={`team${service.id}`}
+          tabIndex="-1"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable shadow radius-0">
+            <div className="modal-content">
+              <div className="modal-header border-0">
+                <button
+                  type="button"
+                  className="btn-close text-dark"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body px-5 pb-5">
+                <div className="row px-0">
+                  <div className="col-md-4">
+                    <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
+                    <h5 className="text-dark fw_600 font_28 pt-3">{service.name}</h5>
+                  </div>
+                  <div className="col-md-8">
+                    <div
+                      className="font_14"
+                      dangerouslySetInnerHTML={{ __html: service.DetailDescription }}
+                    />
 
-                  <div
-                    className="accordion accordion-flush"
-                    id="accordionFlushExample"
-                  >
-                    <div className="accordion-item  mb-2">
-                      <h2 className="accordion-header">
-                        <button
-                          className="accordion-button font_20 color_teal collapsed fw-semibold"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseOne"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseOne"
-                        >
-                          Online Surveys
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseOne"
-                        className="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div className="accordion-body">
-                          <p>
-                            Piccadilly offers expertise in developing and
-                            deploying surveys across multiple platforms,
-                            including laptops, tablets, mobile devices and even
-                            social media. We collaborate closely with you to
-                            design questionnaires that align with project goals,
-                            develop the survey instrument, select the
-                            appropriate sample, and conduct statistical
-                            analysis. The result is a streamlined, data-driven
-                            approach to gathering primary data efficiently.
-                          </p>
+                    {/* Accordion for FAQs */}
+                    <div className="accordion accordion-flush" id={`accordion${service.id}`}>
+                      {service.FAQs?.map((faq, i) => (
+                        <div className="accordion-item mb-2" key={i}>
+                          <h2 className="accordion-header">
+                            <button
+                              className="accordion-button font_20 color_teal collapsed fw-semibold"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target={`#flush-collapse${service.id}-${i}`}
+                              aria-expanded="false"
+                              aria-controls={`flush-collapse${service.id}-${i}`}
+                            >
+                              {faq.Title}
+                            </button>
+                          </h2>
+                          <div
+                            id={`flush-collapse${service.id}-${i}`}
+                            className="accordion-collapse collapse"
+                            data-bs-parent={`#accordion${service.id}`}
+                          >
+                            <div className="accordion-body">
+                              <div dangerouslySetInnerHTML={{ __html: faq.Description }} />
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div className="accordion-item mb-2">
-                      <h2 className="accordion-header">
-                        <button
-                          className="accordion-button font_20 color_teal collapsed fw-semibold"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseTwo"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseTwo"
-                        >
-                          In-Depth Interviews and Focus Groups
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseTwo"
-                        className="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div className="accordion-body">
-                          <p>
-                            Piccadilly conducts both in-person and virtual focus
-                            groups to explore deeper insights through moderated
-                            discussions and open-ended questions. Our team
-                            manages all logistics — recruitment, facilitation
-                            and summary reporting — ensuring a smooth and
-                            insightful process. Piccadilly’s in-depth interviews
-                            provide confidential insights, particularly with
-                            niche or hard-to-reach populations.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="accordion-item  mb-2">
-                      <h2 className="accordion-header">
-                        <button
-                          className="accordion-button font_18 collapsed color_teal fw-semibold"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseThree"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseThree"
-                        >
-                          Phone Surveys
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseThree"
-                        className="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div className="accordion-body">
-                          <p>
-                            There are times when the nature of the research
-                            objectives or target demographics are better served
-                            by a phone survey. This is particularly true in the
-                            case where a small geography is being investigated.
-                            Piccadilly can provide the framework for phone
-                            surveys to be conducted in accordance with all
-                            national regulations.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="accordion-item  mb-2">
-                      <h2 className="accordion-header">
-                        <button
-                          className="accordion-button font_20 collapsed color_teal fw-semibold"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseFour"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseFour"
-                        >
-                          Mail Surveys
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseFour"
-                        className="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div className="accordion-body">
-                          <p>
-                            Though deployed on a more limited basis, a mail
-                            survey can accomplish similar goals as online or
-                            phone surveys. With certain samples, such as
-                            digitally adverse respondents or a smaller set of
-                            targeted populations, it may be more efficient and
-                            economical to use a mail survey. We provide guidance
-                            for printing, incentives, distribution, data
-                            collection and analysis.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="accordion-item  mb-2">
-                      <h2 className="accordion-header">
-                        <button
-                          className="accordion-button font_20 collapsed color_teal fw-semibold"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseFour"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseFour"
-                        >
-                          Personas
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseFour"
-                        className="accordion-collapse collapse"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div className="accordion-body">
-                          <p>
-                            Piccadilly can provide segmentation analysis
-                            (personas), which can be appended to your database
-                            to learn more about audiences. Matching segments can
-                            be based on physical or email addresses. It is an
-                            effective technique to augment more traditional
-                            market research and understand which market segments
-                            offer the most growth potential.
-                          </p>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -314,7 +170,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
+      ))}
 
       <section className="container-fluid executive_banner services_banner">
         <div className="container">
@@ -350,194 +206,39 @@ const Services = () => {
           <div className="row">
             <div className="fix_width_content mx-auto text-center">
               <h3 className="large_heading">
-                Authentically Integrated <strong>– All in House</strong>
+                {serviceData?.AllServices?.Heading1} <strong>{serviceData?.AllServices?.Heading2}</strong>
               </h3>
             </div>
           </div>
         </div>
         <div className="overflow_slider py-5">
           <div className="owl-carousel owl-theme strategy_slider">
-            <div className="item">
-              <div className="strategy_wrap">
-                <div className="inner_wrap">
-                  <p className="text-dark">
-                    Marketing Strategy and Planning that Delivers Results and
-                    Market Growth
+            {serviceData?.AllServices?.Services?.map((service) => (
+              <div key={service.id} className="item">
+                <div className="strategy_wrap">
+                  <div className="inner_wrap">
+                    <p className="text-dark">{service.description}</p>
+                    <a
+                      href="javascript:void(0)"
+                      className="btn btn_primary"
+                      data-bs-toggle="modal"
+                      data-bs-target={`#team${service.id}`}
+                    >
+                      {service.buttonLabel || "Learn More"}
+                    </a>
+                  </div>
+                  <p className="text-dark fw-bold pt-3 font_18 px-4">
+                    {service.name}
                   </p>
-                  <a
-                    href="javascript:void(0)"
-                    className="btn btn_primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#team1"
-                  >
-                    Learn More
-                  </a>
                 </div>
-                <p className="text-dark fw-bold pt-3 font_18 px-4">
-                  Market Research
-                </p>
-              </div>
-              <div>
-                <img src="images/markte-strategy-img.jpg" />
-                <p className="text-white fw-bold font_18 pt-3 fade_text">
-                  Market Research
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="strategy_wrap">
-                <div className="inner_wrap">
-                  <p className="text-dark">
-                    Marketing Strategy and Planning that Delivers Results and
-                    Market Growth
+                <div>
+                  <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
+                  <p className="text-white fw-bold font_18 pt-3 fade_text">
+                    {service.name}
                   </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
-                    Learn More
-                  </a>
                 </div>
-                <p className="text-dark fw-bold pt-3 font_18 px-4">
-                  Market Research
-                </p>
               </div>
-              <div>
-                <img src="images/strat.jpg" />
-                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
-                  Strategic Planning
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="strategy_wrap">
-                <div className="inner_wrap">
-                  <p className="text-dark">
-                    Marketing Strategy and Planning that Delivers Results and
-                    Market Growth
-                  </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
-                    Learn More
-                  </a>
-                </div>
-                <p className="text-dark fw-bold pt-3 font_18 px-4">
-                  Brand Strategy & Identity
-                </p>
-              </div>
-              <div>
-                <img src="images/brand-strategy-img.jpg" />
-                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
-                  Brand Strategy & Identity
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="strategy_wrap">
-                <div className="inner_wrap">
-                  <p className="text-dark">
-                    Marketing Strategy and Planning that Delivers Results and
-                    Market Growth
-                  </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
-                    Learn More
-                  </a>
-                </div>
-                <p className="text-dark fw-bold pt-3 font_18 px-4">
-                  Campaign Strategy & Development
-                </p>
-              </div>
-              <div>
-                <img src="images/compaign-strategy-img.jpg" />
-                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
-                  Campaign Strategy & Development
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="strategy_wrap">
-                <div className="inner_wrap">
-                  <p className="text-dark">
-                    Marketing Strategy and Planning that Delivers Results and
-                    Market Growth
-                  </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
-                    Learn More
-                  </a>
-                </div>
-                <p className="text-dark fw-bold pt-3 font_18 px-4">
-                  Video, TV, Radio & Podcast Production Services
-                </p>
-              </div>
-              <div>
-                <img src="images/digital-img.jpg" />
-                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
-                  Video, TV, Radio & Podcast Production Services
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="strategy_wrap">
-                <div className="inner_wrap">
-                  <p className="text-dark">
-                    Marketing Strategy and Planning that Delivers Results and
-                    Market Growth
-                  </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
-                    Learn More
-                  </a>
-                </div>
-                <p className="text-dark fw-bold pt-3 font_18 px-4">
-                  Digital & Traditional Media
-                </p>
-              </div>
-              <div>
-                <img src="images/website-img.jpg" />
-                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
-                  Digital & Traditional Media
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="strategy_wrap">
-                <div className="inner_wrap">
-                  <p className="text-dark">
-                    Marketing Strategy and Planning that Delivers Results and
-                    Market Growth
-                  </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
-                    Learn More
-                  </a>
-                </div>
-                <p className="text-dark fw-bold pt-3 font_18 px-4">
-                  Website Audit, SEO & Design
-                </p>
-              </div>
-              <div>
-                <img src="images/public-media-img.jpg" />
-                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
-                  Website Audit, SEO & Design
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <div className="strategy_wrap">
-                <div className="inner_wrap">
-                  <p className="text-dark">
-                    Marketing Strategy and Planning that Delivers Results and
-                    Market Growth
-                  </p>
-                  <a href="javascript:void(0)" className="btn btn_primary">
-                    Learn More
-                  </a>
-                </div>
-                <p className="text-dark fw-bold pt-3 font_18 px-4">
-                  Public & Media Relations
-                </p>
-              </div>
-              <div>
-                <img src="images/social-media-img.jpg" />
-                <p className="text-white fw-bold pt-3 font_18 fade_text px-4">
-                  Public & Media Relations
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
