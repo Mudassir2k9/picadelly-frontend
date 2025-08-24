@@ -206,25 +206,27 @@ const CaseStudy = () => {
       {/* <!-----case-study-posts-----> */}
 
       <div className="container-fluid px-0">
-        <div className="row mx-0">
-          <div className="col-md-6 image-container px-0">
-            <a href="#">
-              <div>
-                <img src="images/project-1.png" />
-                <div className="hover-text">
-                  <i className="fa-solid fa-play"></i>
-                  <p>
-                    <span className="fw_600" style={{ fontSize: "28px" }}>
-                      CALIFORNIA
-                    </span>
-                    <br />
-                    BANK OF COMMERCE
-                  </p>
+        <div className="row mx-0" key={currentCase?.id}>
+          {currentCase?.Projects?.map((project) => (
+            <div key={project.id} className="col-md-6 image-container px-0">
+              <a href="#">
+                <div>
+                  <img 
+                    src={`${baseUrl}${project?.Image?.url}`} 
+                    alt={project?.Image?.alternativeText || "Project Image"} 
+                  />
+                  <div className="hover-text">
+                    <i className="fa-solid fa-play"></i>
+                    <div 
+                      dangerouslySetInnerHTML={{ __html: project?.Title }} 
+                    />
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div className="col-md-6 image-container px-0">
+              </a>
+            </div>
+          ))}
+
+          {/* <div className="col-md-6 image-container px-0">
             <a href="#">
               <div>
                 <img src="images/project-2.png" />
@@ -308,7 +310,7 @@ const CaseStudy = () => {
                 </div>
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
