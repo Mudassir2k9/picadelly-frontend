@@ -1,6 +1,41 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const CaseStudy = () => {
+  const [caseStudies, setCaseStudies] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    axios
+      .get(`${apiUrl}/case-studies?populate[CaseStudy][populate]=*`)
+      .then((res) => {
+        setCaseStudies(res.data.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching caseStudies:", error);
+      });
+  }, []);
+  console.log(caseStudies);
+  if (caseStudies.length === 0) {
+    return <div>Loading...</div>;
+  }
+
+  const currentCase = caseStudies[currentIndex]?.CaseStudy;
+  const prevCase =
+    currentIndex > 0 ? caseStudies[currentIndex - 1].CaseStudy : null;
+  const nextCase =
+    currentIndex < caseStudies.length - 1
+      ? caseStudies[currentIndex + 1].CaseStudy
+      : null;
+
+  // Helper to get full image URL for Strapi images
+  const getImageUrl = (image) => {
+    if (!image || !image.url) return "";
+    return apiUrl.replace("/api", "") + image.url;
+  };
+
+  console.log("0-00-0-", currentCase);
   return (
     <>
       <style>{`
@@ -105,7 +140,15 @@ const CaseStudy = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                        California Bank of Commerce (CBC) is a highly accomplished business bank that funds growth and solves complex problems for B2B clients. However, its brand presence in the marketplace was inconsistent with its true financial service value. The bank needed a forward-thinking, sophisticated brand identity and marketing campaign that would reflect its position as a leading expert in commercial banking. CBC partnered with Piccadilly to develop its new brand positioning.
+                        California Bank of Commerce (CBC) is a highly
+                        accomplished business bank that funds growth and solves
+                        complex problems for B2B clients. However, its brand
+                        presence in the marketplace was inconsistent with its
+                        true financial service value. The bank needed a
+                        forward-thinking, sophisticated brand identity and
+                        marketing campaign that would reflect its position as a
+                        leading expert in commercial banking. CBC partnered with
+                        Piccadilly to develop its new brand positioning.
                       </p>
                     </div>
                   </div>
@@ -130,8 +173,29 @@ const CaseStudy = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                    Piccadilly partnered with CalMHSA to produce a mental health awareness event at Santa Monica Pier, featuring high-value giveaways designed to encourage attendee engagement with vendors promoting mental health education. The giveaway strategy served as a public relations opportunity to break through the competitive media market and secure earned coverage that drove over 1,800 event attendees and 1,200 resource connections made through attendees’ interaction with vendors.
- The PR team also successfully secured feature interviews with all major broadcast outlets across Los Angeles County, including FOX, ABC, NBC, and CBS. These interviews highlighted key CalMHSA subject matter experts who promoted essential mental health resources available throughout the county. The campaign's pitch angles were developed through comprehensive subject matter expert intake calls and covered diverse mental health topics including self-care strategies, effective responses to distressing news, understanding the difference between intrusive and impulsive thoughts, managing social anxiety in networking situations, addressing mental health stigma, and analyzing relevant mental health data trends.
+                        Piccadilly partnered with CalMHSA to produce a mental
+                        health awareness event at Santa Monica Pier, featuring
+                        high-value giveaways designed to encourage attendee
+                        engagement with vendors promoting mental health
+                        education. The giveaway strategy served as a public
+                        relations opportunity to break through the competitive
+                        media market and secure earned coverage that drove over
+                        1,800 event attendees and 1,200 resource connections
+                        made through attendees’ interaction with vendors.  The
+                        PR team also successfully secured feature interviews
+                        with all major broadcast outlets across Los Angeles
+                        County, including FOX, ABC, NBC, and CBS. These
+                        interviews highlighted key CalMHSA subject matter
+                        experts who promoted essential mental health resources
+                        available throughout the county. The campaign's pitch
+                        angles were developed through comprehensive subject
+                        matter expert intake calls and covered diverse mental
+                        health topics including self-care strategies, effective
+                        responses to distressing news, understanding the
+                        difference between intrusive and impulsive thoughts,
+                        managing social anxiety in networking situations,
+                        addressing mental health stigma, and analyzing relevant
+                        mental health data trends.
                       </p>
                     </div>
                   </div>
@@ -163,7 +227,6 @@ const CaseStudy = () => {
                     </div>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -321,52 +384,50 @@ const CaseStudy = () => {
       <div className="container-fluid px-0">
         <div className="row mx-0">
           <div className="col-md-6 project-col px-0">
-            
             <a href="#">
               <div className="overlay-div overlay-div-left text-end">
-              <div className="project-inner-col">
-                <span
-                  className="mb-5"
-                  style={{
-                    fontSize: "32px",
-                    color: "#ffffffad",
-                    display: "inline-block",
-                  }}
-                >
-                  ⟵
-                </span>
-                <br />
-                <h5 className="text-white mb-3 font_18 fw_600">
-                  Previous Project :
-                </h5>
-                <h3 className="text-white font_40 fw_600">Cal Poly</h3>
+                <div className="project-inner-col">
+                  <span
+                    className="mb-5"
+                    style={{
+                      fontSize: "32px",
+                      color: "#ffffffad",
+                      display: "inline-block",
+                    }}
+                  >
+                    ⟵
+                  </span>
+                  <br />
+                  <h5 className="text-white mb-3 font_18 fw_600">
+                    Previous Project :
+                  </h5>
+                  <h3 className="text-white font_40 fw_600">Cal Poly</h3>
                 </div>
               </div>
               <img src="images/previous-project.png" width="100%" />
             </a>
           </div>
           <div className="col-md-6 project-col px-0">
-         
             <a href="#">
               <div className="overlay-div text-start">
-              <div className="project-inner-col">
-                <span
-                  className="mb-5"
-                  style={{
-                    fontSize: "32px",
-                    color: "#ffffffad",
-                    display: "inline-block",
-                  }}
-                >
-                  ⟶
-                </span>
-                <br />
-                <h5 className="text-white mb-3 font_18 fw_600">
-                  Next Project :
-                </h5>
-                <h3 className="text-white font_40 fw_600">
-                  SELSOC Credit Union
-                </h3>
+                <div className="project-inner-col">
+                  <span
+                    className="mb-5"
+                    style={{
+                      fontSize: "32px",
+                      color: "#ffffffad",
+                      display: "inline-block",
+                    }}
+                  >
+                    ⟶
+                  </span>
+                  <br />
+                  <h5 className="text-white mb-3 font_18 fw_600">
+                    Next Project :
+                  </h5>
+                  <h3 className="text-white font_40 fw_600">
+                    SELSOC Credit Union
+                  </h3>
                 </div>
               </div>
               <img src="images/next-project.png" width="100%" />
