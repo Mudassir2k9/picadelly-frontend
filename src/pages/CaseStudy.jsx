@@ -318,7 +318,7 @@ const CaseStudy = () => {
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center mx-0">
             <div className="col-md-8">
-              <video controls muted loop>
+              <video controls autoPlay muted loop playsInline key={currentCase?.Case_Study_Media?.Media?.url}>
                   <source 
                     src={`${baseUrl}${currentCase?.Case_Study_Media?.Media?.url}`} 
                     type={currentCase?.Case_Study_Media?.Media?.mime || "video/mp4"} 
