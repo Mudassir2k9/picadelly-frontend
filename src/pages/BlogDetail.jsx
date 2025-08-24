@@ -16,15 +16,15 @@ const BlogDetail = () => {
         console.error("Error fetching blogs:", error);
       });
   }, []);
-
+console.log(blogs);
   if (blogs.length === 0) {
     return <div>Loading...</div>;
   }
 
-  const currentBlog = blogs[currentIndex]?.Blogs?.[0];
-  const prevBlog = currentIndex > 0 ? blogs[currentIndex - 1].Blogs?.[0] : null;
+  const currentBlog = blogs[currentIndex]?.Blogs;
+  const prevBlog = currentIndex > 0 ? blogs[currentIndex - 1].Blogs : null;
   const nextBlog =
-    currentIndex < blogs.length - 1 ? blogs[currentIndex + 1].Blogs?.[0] : null;
+    currentIndex < blogs.length - 1 ? blogs[currentIndex + 1].Blogs : null;
 
   // Helper to get full image URL for Strapi images
   const getImageUrl = (image) => {
