@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 const apiUrl = import.meta.env.VITE_API_URL;
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
 const CaseStudy = () => {
   const [caseStudies, setCaseStudies] = useState([]);
@@ -8,7 +9,8 @@ const CaseStudy = () => {
 
   useEffect(() => {
     axios
-      .get(`${apiUrl}/case-studies?populate[CaseStudy][populate]=*`)
+      .get(`${apiUrl}/case-studies?populate[CaseStudy][populate][Channels][populate]=*&populate[CaseStudy][populate][Integrated_Services][populate]=*&populate[CaseStudy][populate][Projects][populate]=*&populate[CaseStudy][populate][Content][populate]=*&populate[CaseStudy][populate][Case_Study_Media][populate]=Media&populate[CaseStudy][populate]=BannerImage
+`)
       .then((res) => {
         setCaseStudies(res.data.data);
       })
@@ -48,15 +50,10 @@ const CaseStudy = () => {
         <div className="row banner-row mx-0">
           <div className="col-md-6 case_study-col-1 heading_part separate_col_1 px-0 blog_col-2">
             <div className="inner-div">
-              <p className="font_20">Brand Refresh and Marketing Campaign</p>
-              <h2
-                className="color_black fw-bold"
-                data-wow-duration="1s"
-                data-wow-delay="0.2s"
-                style={{ fontSize: "50px" }}
-              >
-                <span className="color_black">California</span> Bank of Commerce
-              </h2>
+              <p className="font_20">{currentCase?.Heading1}</p>
+              <div
+                  dangerouslySetInnerHTML={{ __html: currentCase?.Heading2 }}
+                />
             </div>
           </div>
           <div className="col-md-6 banner-col blog_col-2 separate_col_1 case_study-col-1">
@@ -68,10 +65,12 @@ const CaseStudy = () => {
                 <div className="list-inner">
                   <h5 className="fw_600">Channels</h5>
                   <ul style={{ paddingLeft: "26px" }}>
-                    <li className="font_18 mb-1">Digital Ads</li>
-                    <li className="font_18 mb-1">Print</li>
-                    <li className="font_18 mb-1">Outdoor</li>
-                    <li className="font_18 mb-1">Public Relations</li>
+                    {currentCase?.Channels.map((channel, index) => (
+                      <li key={index} className="font_18 mb-1">
+                        {channel.Channel}
+                      </li>
+                    ))}
+                    
                   </ul>
                 </div>
               </div>
@@ -82,17 +81,11 @@ const CaseStudy = () => {
                 <div className="list-inner">
                   <h5 className="fw_600">Integrated Services</h5>
                   <ul style={{ paddingLeft: "26px" }}>
-                    <li className="font_18 mb-1">Brand Strategy & Identity</li>
-                    <li className="font_18 mb-1">
-                      Campaign Strategy & Development
-                    </li>
-                    <li className="font_18 mb-1">
-                      TV/Radio Creative & Production
-                    </li>
-                    <li className="font_18 mb-1">
-                      Digital & Traditional Media
-                    </li>
-                    <li className="font_18 mb-1">Public Relations</li>
+                    {currentCase?.Integrated_Services.map((channel, index) => (
+                      <li key={index} className="font_18 mb-1">
+                        {channel.Service}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -106,13 +99,9 @@ const CaseStudy = () => {
       <div className="container-fluid case-study-faqs bg-cover px-0">
         <div className="row mx-0 d-flex">
           <div className="heading_col d-flex align-items-center px-5 team_col pt-5 pb-5">
-            <div className="px-5 content">
-              <h3
-                className="fw_600 color_primary text-start d-flex justify-content-center align-items-center"
-                style={{ fontSize: "35px", minHeight: "200px" }}
-              >
-                Piccadilly Positions a Premier B2B Bank for Growth
-              </h3>
+            <div className="px-5 content"
+                  dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Title }}
+                >
             </div>
 
             <div className="accordion-part px-5 ">
@@ -130,7 +119,7 @@ const CaseStudy = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseOne"
                     >
-                      Situation
+                      {currentCase?.Content?.situationTitle}
                     </button>
                   </h2>
                   <div
@@ -138,18 +127,11 @@ const CaseStudy = () => {
                     className="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample"
                   >
-                    <div className="accordion-body">
-                      <p>
-                        California Bank of Commerce (CBC) is a highly
-                        accomplished business bank that funds growth and solves
-                        complex problems for B2B clients. However, its brand
-                        presence in the marketplace was inconsistent with its
-                        true financial service value. The bank needed a
-                        forward-thinking, sophisticated brand identity and
-                        marketing campaign that would reflect its position as a
-                        leading expert in commercial banking. CBC partnered with
-                        Piccadilly to develop its new brand positioning.
-                      </p>
+                    <div className="accordion-body"
+                  dangerouslySetInnerHTML={{ __html: currentCase?.Content?.situationText }}
+               
+                    >
+                      
                     </div>
                   </div>
                 </div>
@@ -163,7 +145,7 @@ const CaseStudy = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseTwo"
                     >
-                      Approach
+                      {currentCase?.Content?.approachTitle}
                     </button>
                   </h2>
                   <div
@@ -171,32 +153,9 @@ const CaseStudy = () => {
                     className="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample"
                   >
-                    <div className="accordion-body">
-                      <p>
-                        Piccadilly partnered with CalMHSA to produce a mental
-                        health awareness event at Santa Monica Pier, featuring
-                        high-value giveaways designed to encourage attendee
-                        engagement with vendors promoting mental health
-                        education. The giveaway strategy served as a public
-                        relations opportunity to break through the competitive
-                        media market and secure earned coverage that drove over
-                        1,800 event attendees and 1,200 resource connections
-                        made through attendees’ interaction with vendors.  The
-                        PR team also successfully secured feature interviews
-                        with all major broadcast outlets across Los Angeles
-                        County, including FOX, ABC, NBC, and CBS. These
-                        interviews highlighted key CalMHSA subject matter
-                        experts who promoted essential mental health resources
-                        available throughout the county. The campaign's pitch
-                        angles were developed through comprehensive subject
-                        matter expert intake calls and covered diverse mental
-                        health topics including self-care strategies, effective
-                        responses to distressing news, understanding the
-                        difference between intrusive and impulsive thoughts,
-                        managing social anxiety in networking situations,
-                        addressing mental health stigma, and analyzing relevant
-                        mental health data trends.
-                      </p>
+                    <div className="accordion-body"
+                    dangerouslySetInnerHTML={{ __html: currentCase?.Content?.approachText }}>
+                     
                     </div>
                   </div>
                 </div>
@@ -210,7 +169,7 @@ const CaseStudy = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseThree"
                     >
-                      Outcome
+                      {currentCase?.Content?.outcomeTitle}
                     </button>
                   </h2>
                   <div
@@ -218,12 +177,10 @@ const CaseStudy = () => {
                     className="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample"
                   >
-                    <div className="accordion-body">
-                      <p>
-                        Hiring and onboarding takes time but your projects can’t
-                        wait. Our contractor will step in and keep your
-                        productivity on track until a team member is in place.
-                      </p>
+                    <div className="accordion-body"
+                    
+                    dangerouslySetInnerHTML={{ __html: currentCase?.Content?.outcomeText }}>
+                      
                     </div>
                   </div>
                 </div>
@@ -232,25 +189,15 @@ const CaseStudy = () => {
           </div>
 
           <div className="col-md-6 case-study-col-2 pb-5">
-            <div className="circle-1 circle-one">
-              <h2>4.5M</h2>
-              <p className="fw_600 font_18">New impressions</p>
+            <div className="circle-1 circle-one"
+                  dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[0].value }}>
+              
             </div>
-            <div className="circle-1 circle-two">
-              <h2>18K</h2>
-              <p className="fw_600 font_18">
-                Site visits,
-                <br />
-                /first 4-months
-              </p>
+            <div className="circle-1 circle-two"
+            dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[1].value }}>
             </div>
-            <div className="circle-1 circle-three">
-              <h2>162%</h2>
-              <p className="fw_600 font_18">
-                increase in
-                <br />
-                contact us form
-              </p>
+            <div className="circle-1 circle-three"
+            dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[2].value }}>
             </div>
           </div>
         </div>
@@ -371,10 +318,16 @@ const CaseStudy = () => {
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center mx-0">
             <div className="col-md-8">
-              <video controls muted="" loop="">
+              <video controls muted loop>
+                  <source 
+                    src={`${baseUrl}${currentCase?.Case_Study_Media?.Media?.url}`} 
+                    type={currentCase?.Case_Study_Media?.Media?.mime || "video/mp4"} 
+                  />
+                </video>
+              {/* <video controls muted="" loop="">
                 <source src="images/home-banner-video.mp4" type="video/mp4" />
-              </video>
-              <h5 className="Video-title text-white mt-2">TV Spot</h5>
+              </video> */}
+              <h5 className="Video-title text-white mt-2">{currentCase?.Case_Study_Media?.Title}</h5>
             </div>
           </div>
         </div>
@@ -382,59 +335,133 @@ const CaseStudy = () => {
       {/* <!-----project-section-----> */}
 
       <div className="container-fluid px-0">
-        <div className="row mx-0">
-          <div className="col-md-6 project-col px-0">
-            <a href="#">
-              <div className="overlay-div overlay-div-left text-end">
-                <div className="project-inner-col">
-                  <span
-                    className="mb-5"
-                    style={{
-                      fontSize: "32px",
-                      color: "#ffffffad",
-                      display: "inline-block",
-                    }}
-                  >
-                    ⟵
-                  </span>
-                  <br />
-                  <h5 className="text-white mb-3 font_18 fw_600">
-                    Previous Project :
-                  </h5>
-                  <h3 className="text-white font_40 fw_600">Cal Poly</h3>
-                </div>
-              </div>
-              <img src="images/previous-project.png" width="100%" />
-            </a>
+  <div className="row mx-0">
+    {/* Previous Project */}
+    <div className="col-md-6 project-col px-0">
+      {prevCase ? (
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentIndex(currentIndex - 1);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <div className="overlay-div overlay-div-left text-end">
+            <div className="project-inner-col">
+              <span
+                className="mb-5"
+                style={{
+                  fontSize: "32px",
+                  color: "#ffffffad",
+                  display: "inline-block",
+                }}
+              >
+                ⟵
+              </span>
+              <br />
+              <h5 className="text-white mb-3 font_18 fw_600">
+                Previous Project :
+              </h5>
+              <h3 className="text-white font_40 fw_600">
+                {prevCase?.Heading1}
+              </h3>
+            </div>
           </div>
-          <div className="col-md-6 project-col px-0">
-            <a href="#">
-              <div className="overlay-div text-start">
-                <div className="project-inner-col">
-                  <span
-                    className="mb-5"
-                    style={{
-                      fontSize: "32px",
-                      color: "#ffffffad",
-                      display: "inline-block",
-                    }}
-                  >
-                    ⟶
-                  </span>
-                  <br />
-                  <h5 className="text-white mb-3 font_18 fw_600">
-                    Next Project :
-                  </h5>
-                  <h3 className="text-white font_40 fw_600">
-                    SELSOC Credit Union
-                  </h3>
-                </div>
-              </div>
-              <img src="images/next-project.png" width="100%" />
-            </a>
+          <img
+            src={getImageUrl(prevCase?.BannerImage)}
+            width="100%"
+            alt={prevCase?.Heading1}
+          />
+        </a>
+      ) : (
+        <a href="#">
+          <div className="overlay-div overlay-div-left text-end">
+            <div className="project-inner-col">
+              <span
+                className="mb-5"
+                style={{
+                  fontSize: "32px",
+                  color: "#ffffffad",
+                  display: "inline-block",
+                }}
+              >
+                ⟵
+              </span>
+              <br />
+              <h5 className="text-white mb-3 font_18 fw_600">
+                Previous Project :
+              </h5>
+              <h3 className="text-white font_40 fw_600">No Previous Project</h3>
+            </div>
           </div>
-        </div>
-      </div>
+          <img src="images/previous-project.png" width="100%" alt="No Previous Project" />
+        </a>
+      )}
+    </div>
+
+    {/* Next Project */}
+    <div className="col-md-6 project-col px-0">
+      {nextCase ? (
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentIndex(currentIndex + 1);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <div className="overlay-div text-start">
+            <div className="project-inner-col">
+              <span
+                className="mb-5"
+                style={{
+                  fontSize: "32px",
+                  color: "#ffffffad",
+                  display: "inline-block",
+                }}
+              >
+                ⟶
+              </span>
+              <br />
+              <h5 className="text-white mb-3 font_18 fw_600">Next Project :</h5>
+              <h3 className="text-white font_40 fw_600">
+                {nextCase?.Heading1}
+              </h3>
+            </div>
+          </div>
+          <img
+            src={getImageUrl(nextCase?.BannerImage)}
+            width="100%"
+            alt={nextCase?.Heading1}
+          />
+        </a>
+      ) : (
+        <a href="#">
+          <div className="overlay-div text-start">
+            <div className="project-inner-col">
+              <span
+                className="mb-5"
+                style={{
+                  fontSize: "32px",
+                  color: "#ffffffad",
+                  display: "inline-block",
+                }}
+              >
+                ⟶
+              </span>
+              <br />
+              <h5 className="text-white mb-3 font_18 fw_600">Next Project :</h5>
+              <h3 className="text-white font_40 fw_600">No Next Project</h3>
+            </div>
+          </div>
+          <img src="images/next-project.png" width="100%" alt="No Next Project" />
+        </a>
+      )}
+    </div>
+  </div>
+</div>
+
     </>
   );
 };
