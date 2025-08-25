@@ -187,7 +187,7 @@ background-color: var(--peal-green) !important;
      }
      header{
      position: absolute !important; /* normal at first */
-  padding: 0px 6%;;
+  padding: 0px 6%;
   border-bottom-right-radius: 0px !important;
   z-index: 100;
   background-color: transparent; /* or same as page background */
@@ -195,22 +195,27 @@ background-color: var(--peal-green) !important;
    width: 100% !important;
  
      }
-/*     header.sticky {
+     header.sticky {
   position: fixed !important;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: rgb(233 233 233 / 95%); 
+right: 0;
+  background-color: rgb(233 233 233 / 45%); 
   will-change: transform;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   z-index: 111111;
+  backdrop-filter: blur(10px);
  
-}*/
+}
+
     .navbar-custom {
       padding: 18px 0px;
       width: 100%;
     }
-
+     header.sticky .navbar-custom{
+        padding: 0px !important;
+        min-height: auto;
+     }
     .navbar-brand img{
       width:200px;
     }
@@ -289,6 +294,8 @@ background-color: var(--peal-green) !important;
     .banner_section{
         height: 700px;
         min-height: 100vh;
+        position: sticky;
+        top: 0;
     }
     .banner_section h1{
         z-index: 111111;
@@ -605,17 +612,22 @@ background-color: var(--peal-green) !important;
 
 .right-column {
   width: 50%;
-  position: relative;
-  overflow: hidden;
+
+/*    height: 2700px;*//*
+    padding-bottom: 200px;*/
+}
+.right-column section{
+    position: sticky;
      background-image: url("../images/bubbles-img.jpg");
        justify-content: center;
-  background-attachment: fixed;
+/*  background-attachment: fixed;*/
   background-size: cover;
-  background-position: center;
-    height: 2700px;
-    padding-bottom: 200px;
-}
+  background-position: center; 
+  min-height: 100vh; 
+  height: 600px;
+  top: 0;
 
+}
 .parallax-section {
 
   display: flex;
@@ -676,7 +688,7 @@ background-color: var(--peal-green) !important;
     justify-content: center;
     gap: 0; 
     position: relative;
-    margin-bottom: 150px;
+/*    margin-bottom: 150px;*/
     text-align: center;
     width: 100%;
      }
@@ -735,6 +747,7 @@ background-color: var(--peal-green) !important;
 }
 .banner_section #myVideo{
     height: 700px; 
+    object-position: center;
 }
 .left_video{
     right: auto;
@@ -751,8 +764,12 @@ background-color: var(--peal-green) !important;
     background-color: #f2682ab5;
     z-index: 1;
     margin-left: auto;
-    right: 36%;
+    left: -225px;
     border-radius: 100%;
+}
+.video_col::after{
+    left: auto;
+    right: -225px;
 }
 .video_col{
     width: 50%;
@@ -866,18 +883,32 @@ position: relative;
     position: relative;
     overflow: hidden;
 }
-.team_col::after{
+.services_team_slider .heading_col{
+    position: relative;
+}
+.team_col::after, .services_team_slider .heading_col::after{
     position: absolute;
     content: "";
     background-image: url("../images/ring.png");
     height: 450px;
     width: 450px;
     background-size: 100%;
-    right: -25%;
+    right: -225px;
     top: 0;
     bottom: 0;
     margin: auto;
+    display: block !important;
+  
 
+}
+.services_team_slider .team_col::after, .services_team_slider .heading_col::after{
+      opacity: 0.15;
+}
+.home_parallax .right_content_col, .video_col{
+    position: relative;
+}
+.home_parallax .right_content_col video{
+    width: 100% !important;
 }
 .team_right_col{
     background-image: url("../images/about-background-1.jpg");
@@ -889,11 +920,11 @@ position: relative;
 .team_right_col::before, .financial_right_col::before, .team_right_col::before{
     position: absolute;
     content: "";
-    height: 350px;
-    width: 350px;
+    height: 358px;
+    width: 358px;
     border-radius: 100%;
         background-color: #f2682ab5;
-        left: -25%;
+        left: -175px;
         z-index: 1111;
 }
 .left_member_col{
@@ -1086,7 +1117,7 @@ transform: translateY(0);
 }
 body .healthcare_col{
     background: rgba(178, 201, 53, 1) !important;
-     background-image: url("../images/half-ring.jpg") !important;
+/*     background-image: url("../images/half-ring.jpg") !important;*/
          background-position: center right !important;
     background: var(--primary_color);
     background-blend-mode: multiply;
@@ -1102,11 +1133,6 @@ body .healthcare_col{
 }
 body .tourism_col{
     background-color: rgb(245 184 22) !important;
-    background-image: url("../images/half-ring.jpg") !important;
-         background-position: center right !important;
-    background-blend-mode: multiply;
-    background-size: 70% !important;
-    background-repeat: no-repeat !important;
 }
 .tourism_right_col::before{
     background: rgba(245, 184, 22, 0.8) !important;
@@ -1114,7 +1140,7 @@ body .tourism_col{
 }
 body .financial_col{
        background-color: #F28452 !important;
-    background-image: url("../images/half-ring.jpg") !important;
+/*    background-image: url("../images/half-ring.jpg") !important;*/
          background-position: center right !important;
     background-blend-mode: multiply;
     background-size: 70% !important;
@@ -1128,7 +1154,7 @@ body .financial_col{
 }
 body .education_col{
      background-color: #72C9D4 !important;
-    background-image: url("../images/half-ring.jpg") !important;
+/*    background-image: url("../images/half-ring.jpg") !important;*/
          background-position: center right !important;
     background-blend-mode: multiply;
     background-size: 70% !important;
@@ -1598,7 +1624,7 @@ body .services_team_slider .right_content_col img{
     margin-top: -65px;
 }
 .parallax_container .right-column{
-    height: 3600px;
+    height: auto !important;
 }
 .panel .large_heading,  .mobile_slider h3{
         font-size: 64pt !important;
@@ -2152,6 +2178,9 @@ body .testimonials-heading h3{
 
 }
 @media only screen and (max-width: 576px){
+    .team_col::after, .services_team_slider .heading_col::after{
+        display: none !important;
+    }
         body .services_team_slider .heading_col.healthcare_col, body .services_team_slider .right_content_col, body .services_team_slider, body .services_team_slider .carousel-item{
         min-height: auto !important;
     }
@@ -2466,7 +2495,7 @@ body .testimonials-heading h3{
 .heading_col, .right_content_col{
         width: 100%;
         min-height: 50vh;
-        height: 400px;
+        height: 400px !important;
         padding: 40px 15px !important; 
         text-align: center;
 }

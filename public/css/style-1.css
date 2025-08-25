@@ -10,7 +10,7 @@
 }
  .tourism_col {
      background: rgb(245, 185, 20) !important;
-     background-image: url("../images/half-ring.jpg") !important;
+/*     background-image: url("../images/half-ring.jpg") !important;*/
      background-position: center right !important;
      background: var(--primary_color);
      background-blend-mode: multiply;
@@ -18,17 +18,17 @@
      background-repeat: no-repeat !important;
  }
 
- .tourism_right_col::before {
+/* .tourism_right_col::before {
      position: absolute;
      content: "";
-     height: 350px;
-     width: 350px;
+     height: 358px;
+     width: 358px;
      border-radius: 100%;
      background-color: #f7bd02b5;
      left: -25%;
      z-index: 1111;
  }
-
+*/
  .tourism_col::after,
  .non-profit_col::after,
  .education_col::after {
@@ -37,7 +37,7 @@
 
  .non-profit_col {
      background: rgb(241, 136, 87) !important;
-     background-image: url("../images/half-ring.jpg") !important;
+/*     background-image: url("../images/half-ring.jpg") !important;*/
      background-position: center right !important;
      background: var(--primary_color);
      background-blend-mode: multiply;
@@ -57,7 +57,7 @@
  }
  .education_col {
      background: rgb(87, 185, 241) !important;
-     background-image: url("../images/half-ring.jpg") !important;
+/*     background-image: url("../images/half-ring.jpg") !important;*/
      background-position: center right !important;
      background: var(--primary_color);
      background-blend-mode: multiply;
@@ -65,7 +65,7 @@
      background-repeat: no-repeat !important;
  }
 
- .education_right_col::before {
+/* .education_right_col::before {
      position: absolute;
      content: "";
      height: 350px;
@@ -74,7 +74,7 @@
      background-color: #4fcbfcb2;
      left: -25%;
      z-index: 1111;
- }
+ }*/
 
  /* buzz section */
  .buzz_banner {

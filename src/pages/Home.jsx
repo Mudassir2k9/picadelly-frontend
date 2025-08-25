@@ -71,7 +71,7 @@ const Home = () => {
         </div>
         <div className="banner_video">
           <video autoPlay muted loop id="myVideo">
-            <source src="images/home-banner-video.mp4" type="video/mp4" />
+            <source src="images/home-video-cropped.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
@@ -86,7 +86,7 @@ const Home = () => {
               }}
             ></span>
 
-            <video autoPlay muted loop className="second_video">
+            <video autoPlay muted controls loop className="second_video">
               <source src="images/new_compressed_reel.mp4" type="video/mp4" />
             </video>
 
@@ -121,7 +121,7 @@ const Home = () => {
             }}
           ></div>
           <div className="right-column">
-            <section className="parallax-section">
+            <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.2s"
@@ -139,7 +139,8 @@ const Home = () => {
                   <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
-
+</section>
+ <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.3s"
@@ -157,7 +158,8 @@ const Home = () => {
                   <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
-
+</section>
+ <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.4s"
@@ -175,7 +177,8 @@ const Home = () => {
                   <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
-
+</section>
+ <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.5s"
@@ -193,7 +196,8 @@ const Home = () => {
                   <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
                 </div>
               </div>
-
+</section>
+ <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.6s"
@@ -218,7 +222,7 @@ const Home = () => {
 
       {/* start creative section */}
       <section className="d-none d-md-block">
-        <div className="horizontal_parallax">
+        <div className="horizontal_parallax home_parallax">
           <div className="panel">
             <div className="row">
               <div
