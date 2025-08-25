@@ -167,7 +167,7 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_yellow">Tourism</h5>
+                    <h5 className="color_yellow">Tourism:</h5>
                     <h2>12% Jump</h2>
                     <p>in Occupancy Tax</p>
                   </div>
@@ -186,7 +186,7 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_primary">Non Profit:</h5>
+                    <h5 className="color_primary">Non-Profit:</h5>
                     <h2>0.73% Increase</h2>
                     <p>Average click-Through Rate</p>
                   </div>
