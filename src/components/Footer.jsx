@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="container">
           <div className="row footer-row-1">
             {footerData?.footerLinks?.map((linkGroup) => (
-              <div key={linkGroup.id} className="col-md-2 footer-col">
+              <div key={linkGroup.id} className="footer-col">
                 <h5>{linkGroup.title}</h5>
                 <ul>
                   {linkGroup.subTitle?.map((item) => (
@@ -37,7 +37,7 @@ const Footer = () => {
                 </ul>
               </div>
             ))}
-            <div className="col-md-2 footer-col">
+            <div className="footer-col">
               <a href={footerData?.buttonUrl} className="btn_primary">
                 {footerData?.buttonLabel}
               </a>

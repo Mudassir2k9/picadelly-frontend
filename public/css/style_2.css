@@ -20,6 +20,9 @@
     align-items: center;
     margin-top: 17px;
 }
+.executive_banner.news_banner .large_heading_2 span{
+  font-weight: 600 !important;
+}
 .large_heading_2{
   font-size: 90px;
 }
@@ -623,9 +626,10 @@
 
 .circle-1 h2 {
   margin: 0;
-  font-size: 70px;
+  font-size: 55px;
   color: #f16522; 
-  font-weight: bold;
+  font-weight: 600 !important;
+  font-family: 'Inter Tight';
 }
     .image-container {
       position: relative;
@@ -997,8 +1001,8 @@
   font-size: 16px;
 }
 .form-inner-div .btn_primary:hover{
-  background-color: var(--primary_color);
-  color: #fff !important;
+  background-color: #fff;
+  color: var(--primary_color) !important;
 }
 .form-control:focus {
   
@@ -1624,6 +1628,12 @@ position: absolute;
         min-height: auto !important;
         padding-top:60px !important;
         padding-bottom: 60px !important;
+      }
+      .footer-row-1 .footer-col:nth-child(odd){
+        width: 46% !important;
+      }
+      .footer-row-1 .footer-col:nth-child(even){
+        width: 54% !important;
       }
        .service .modal-body{
                 padding: 0px 10px 30px 10px !important;

@@ -66,12 +66,17 @@ const TalentOnDemand = () => {
       color:#000;
       background-color:#fff;
       }
+      .nav-btn .btn_primary:hover{
+        background-color:var(--primary_color) !important;
+        color:#fff !important;
+
+      }
 `}</style>
       <div className="container-fluid executive_banner On-Demand-banner">
         <div className="container">
           <div className="executive_col">
             <h2
-              className="large_heading_2 fw-bold text-center text-white"
+              className="large_heading_2 fw-semibold text-center text-white"
               dangerouslySetInnerHTML={{
                 __html: talentDemandData?.BannerHeading || "",
               }}
@@ -124,10 +129,12 @@ const TalentOnDemand = () => {
               <div className="item" key={service.id || index}>
                 <div className="strategy_wrap">
                   <div className="inner_wrap">
+                    <div>
                     <p className="text-dark">{service.description}</p>
-                    <a href={service.buttonUrl} className="btn btn_primary">
+                    <a href={service.buttonUrl} className="btn btn_primary btn_dark">
                       {service.buttonLabel}
                     </a>
+                    </div>
                   </div>
                   <p className="text-dark fw-bold pt-3 font_18 px-4">
                     {service.name}
@@ -150,7 +157,7 @@ const TalentOnDemand = () => {
 
       {/* <!------FAQ's Section------> */}
 
-      <div className="container-fluid faqs_section d-flex justbg_cover px-0">
+      <div className="container-fluid faqs_section d-flex bg_cover px-0">
         <div className="row mx-0 d-flex">
           <div className="heading_col d-flex align-items-center px-5 team_col pt-5 pb-5">
             <div className="px-5 content">

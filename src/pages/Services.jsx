@@ -192,7 +192,7 @@ const Services = () => {
       <section className="about_section d-flex align-items-center justify-content-center text-center">
         <div className="row w-100">
           <div
-            className="mx-auto d-flex justify-content-center fix_width_content"
+            className="mx-auto d-flex fw-semibold justify-content-center fix_width_content"
             dangerouslySetInnerHTML={{
               __html: serviceData?.Section2_Heading || "",
             }}
@@ -221,15 +221,17 @@ const Services = () => {
               <div key={service.id} className="item">
                 <div className="strategy_wrap">
                   <div className="inner_wrap">
+                    <div>
                     <p className="text-dark">{service.description}</p>
                     <a
                       href="javascript:void(0)"
-                      className="btn btn_primary"
+                      className="btn btn_primary btn_dark"
                       data-bs-toggle="modal"
                       data-bs-target={`#team${service.id}`}
                     >
                       {service.buttonLabel || "Learn More"}
                     </a>
+                    </div>
                   </div>
                   <p className="text-dark fw-bold pt-3 font_18 px-4">
                     {service.name}
@@ -298,7 +300,7 @@ const Services = () => {
                     }`}
                   >
                     <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-                      <h3 className="font_40 fw-bold color_black">
+                      <h3 className="font_40 fw-semibold color_black">
                         {item.Heading}
                       </h3>
                       <p className="font_18 color_black py-4">

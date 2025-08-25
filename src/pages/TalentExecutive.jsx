@@ -36,12 +36,17 @@ const TalentExecutive = () => {
       .unordered li span{
        color:#000 !important;
       }
+       .nav-btn .btn_primary:hover{
+        background-color:var(--primary_color) !important;
+        color:#fff !important;
+
+      }
 `}</style>
       <div className="container-fluid executive_banner">
         <div className="container">
           <div className="executive_col">
             <h2
-              className="large_heading_2 fw-bold text-center text-white wow animate__fadeInDownBig"
+              className="large_heading_2 fw-semibold text-center text-white wow animate__fadeInDownBig"
               dangerouslySetInnerHTML={{
                 __html: talentExectiveData?.BannerHeading || "",
               }}
@@ -56,7 +61,7 @@ const TalentExecutive = () => {
           <div className="heading_col d-flex align-items-center px-5 team_col">
             <div className="px-5 content mx-5">
               <h3
-                className="font_40 fw-bold color_primary impact_section_heading wow animate__slideInLeft text-start"
+                className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
                 data-wow-duration="1s"
                 data-wow-delay="0.3s"
                 dangerouslySetInnerHTML={{
@@ -81,7 +86,7 @@ const TalentExecutive = () => {
           <div className="heading_col col-md-6 d-flex align-items-center px-5 team_col">
             <div className="px-5 content mx-5">
               <h3
-                className="font_40 fw-bold color_primary impact_section_heading wow animate__slideInLeft text-start"
+                className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
                 data-wow-duration="1s"
                 data-wow-delay="0.3s"
                 dangerouslySetInnerHTML={{
@@ -105,7 +110,7 @@ const TalentExecutive = () => {
           <div className="col-md-6 left_content_col team_col heading_col px-5 d-flex align-items-center">
             <div className="px-5 content mx-5">
               <h3
-                className="font_40 fw-bold color_primary wow animate__slideInLeft text-start"
+                className="font_40 fw-semibold color_primary wow animate__slideInLeft text-start"
                 data-wow-duration="1s"
                 data-wow-delay="0.3s"
                 dangerouslySetInnerHTML={{
@@ -123,7 +128,7 @@ const TalentExecutive = () => {
           <div className="col-md-6 px-5 d-flex align-items-center content_inner">
             <div className="px-5 content mx-5">
               <h3
-                className="font_40 fw-bold text-dark wow animate__slideInLeft text-start"
+                className="font_40 fw-semibold text-dark wow animate__slideInLeft text-start"
                 data-wow-duration="1s"
                 data-wow-delay="0.3s"
                 dangerouslySetInnerHTML={{

@@ -38,6 +38,12 @@ console.log(blogs);
     body header{
      position:relative !important;
     }
+     .nav-btn .btn_primary:hover{
+        background-color:#000 !important;
+        color:#fff !important;
+        transition:all 0.3s !important;
+
+      }
       }
 `}</style>
       <div className="container-fluid  blog_detail_banner separate px-0">

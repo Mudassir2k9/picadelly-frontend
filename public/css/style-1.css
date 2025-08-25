@@ -3,10 +3,11 @@
     background-image: url("../images/buzz-banner.png");
 }
 .buzz_col h1{
-    padding-right: 290px;
+    padding-right: 260px;
 }
 .buzz_col h1 strong{
     color: #000 !important;
+    font-weight: 600 !important;
 }
  .tourism_col {
      background: rgb(245, 185, 20) !important;
