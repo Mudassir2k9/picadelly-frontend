@@ -289,7 +289,7 @@ const Home = () => {
                   ></span>
                   <a
                     href={`${baseUrl}${homeData?.Slider[2]?.Right_Column_Button_Link}`}
-                    className="btn_light color_teal"
+                    className="btn_light"
                   >
                     {homeData?.Slider[2]?.Right_Column_Button_Label}
                   </a>

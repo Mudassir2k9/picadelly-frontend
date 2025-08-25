@@ -33,7 +33,7 @@ const Header = () => {
             <a href={headerData?.logoLink} >
             <img src={`${baseUrl}${headerData?.logo.url}`} alt="Logo" />
             </a>
-            <p className="mb-0 ms-3">Formerly AMF Media Group</p>
+            {/* <p className="mb-0 ms-3">Formerly AMF Media Group</p> */}
           </div>
           <div className="nav-btn">
             <a href={headerData?.buttonUrl}  className="btn_primary d-none d-md-inline-block">{headerData?.buttonLabel}</a>
