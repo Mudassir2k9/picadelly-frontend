@@ -692,8 +692,10 @@ body .footer-col .icon-col i:hover{
   background-size: cover;
   background-position: center; 
   min-height: 100vh; 
-  height: 600px;
+  height: 800px;
   top: 0;
+  display: flex;
+  align-items: center;
 
 }
 .parallax-section {
