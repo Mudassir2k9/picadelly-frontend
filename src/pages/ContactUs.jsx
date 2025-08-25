@@ -25,7 +25,7 @@ const ContactUs = () => {
           </div>
           <div className="col-md-6 d-flex justify-content-center align-items-center px-5 form-col pt-5 pb-5">
             <div className="form-inner-div pt-5 pb-5 px-3 mt-5">
-              <h5 className="text-dark fw-bold font_18">
+              <h5 className="text-dark fw-semibold font_18">
                 Time to Make an impact
               </h5>
               <p>

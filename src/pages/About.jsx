@@ -382,7 +382,7 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
          <div className="row mx-0">
                <div className="heading_col d-flex align-items-center px-5 team_col">
         <div className="px-3 px-md-5 mx-0 mx-md-5 content_div">
-        <h3 className="font_40 fw-bold color_primary wow animate__slideInLeft text-start" data-wow-duration="1s" data-wow-delay="0.3s">Meet the Team</h3>
+        <h3 className="font_40 fw-semibold color_primary wow animate__slideInLeft text-start" data-wow-duration="1s" data-wow-delay="0.3s">Meet the Team</h3>
         <p className="font_18 text-dark">Our leadership team unites strategic expertise, creative vision and data-driven insights with an unwavering commitment to delivering exceptional client outcomes. This client-centric philosophy drives every decision we make — from carefully selecting the ideal talent for each project to implementing data-driven technologies and methodologies that position our clients ahead of the competition.</p>
       </div>
       </div>
@@ -397,8 +397,8 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
           
         <div>
        
-        <h3 className="text-dark fw-bold team_name font_40">Vintage</h3>
-        <h4 className="text-dark fw-bold team_last_name">Foster</h4>
+        <h3 className="text-dark fw-semibold team_name font_40">Vintage</h3>
+        <h4 className="text-dark fw-semibold team_last_name">Foster</h4>
         <p className="team_post text-dark text-center">CEO</p>
         <p className=" text-dark text-center">A visionary leader and expert in building organizations into profitable, high-growth enterprises.</p>
         <i className="fa-solid fa-circle-user text-dark"></i>
@@ -428,8 +428,8 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
           
         <div>
        
-        <h3 className="text-dark fw-bold team_name font_40">Craig</h3>
-        <h4 className="text-dark fw-bold team_last_name">Brown</h4>
+        <h3 className="text-dark fw-semibold team_name font_40">Craig</h3>
+        <h4 className="text-dark fw-semibold team_last_name">Brown</h4>
         <p className="team_post text-dark text-center">Chief Digital Officer</p>
         <p className=" text-dark text-center">Innovative digital advertising technologies to deliver highly effective ROI.</p>
         <i className="fa-solid fa-circle-user text-dark"></i>
