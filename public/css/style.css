@@ -561,10 +561,18 @@ right: 0;
     list-style: none;
     line-height: 32px;
 }
+.team_circle i::before:hover{
+    background-color: var(--teal-dark);
+}
 .inner-col li a, .inner-col p a{
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+    transition: all 0.3s;
+}
+.orange-div a:hover{
+    color: #000;
+    transition: all 0.3s;
 }
 .white-div .inner-col p a{
      text-decoration: none;
@@ -898,7 +906,10 @@ body .footer-col .icon-col i:hover{
   height: 100px;
   padding: 10px 0;
 }
-
+.sky-div a:hover, .white-div a:hover{
+    color: #fff !important;
+    transition: all 0.3s;
+}
 .logo img {
   max-height: 60px;
   max-width: 80%;

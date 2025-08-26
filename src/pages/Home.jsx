@@ -362,7 +362,7 @@ const Home = () => {
                     data-wow-delay="0.3s"
                   >
                     <h1 className="fw-bold text-white text-start font_40">
-                      Valley Childern's
+                      Valley Children's
                     </h1>
                     <h2 className="fw_300 text-white text-start py-4">
                       Specialized Care that
