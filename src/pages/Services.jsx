@@ -188,6 +188,18 @@ const Services = () => {
       </section>
 
 
+      {/* <!-- start about section -->
+      <section className="about_section d-flex align-items-center justify-content-center text-center">
+        <div className="row w-100">
+          <div
+            className="mx-auto d-flex fw-semibold justify-content-center fix_width_content"
+            dangerouslySetInnerHTML={{
+              __html: serviceData?.Section2_Heading || "",
+            }}
+          ></div>
+        </div>
+      </section> */}
+
       {/* <!-- start services section --> */}
 
       <section

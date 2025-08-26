@@ -1,9 +1,63 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+const apiUrl = import.meta.env.VITE_API_URL;
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+  const [contactData, setContactData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(
+        `${apiUrl}/contact-us?populate[Locations][populate][all_locations][populate]=*`
+      )
+      .then((res) => {
+        // console.log("-----", res);
+        setContactData(res.data.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching header data:", error);
+      });
+  }, []);
+  console.log(contactData);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post(`${apiUrl}/contact-forms`, {
+        data: {
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+      });
+      setStatus("Form submitted successfully!");
+      setFormData({ name: "", company: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      setStatus("Something went wrong. Please try again.");
+    }
+  };
   return (
     <>
-    <style>{`
+      <style>{`
     .navbar-brand p{
       color:#fff !important;
     }
@@ -18,21 +72,22 @@ const ContactUs = () => {
       <div className="container-fluid px-0 bg_cover contact-banner">
         <div className="row mx-0">
           <div className="col-md-6 contact-col bg_cover d-flex align-items-center justify-content-end px-4">
-            <h3 className="text-white fw_500 text-end">
-              Let's Shake
-              <br /> Things Up
-            </h3>
+            <span
+              dangerouslySetInnerHTML={{ __html: contactData?.Heading }}
+            ></span>
           </div>
           <div className="col-md-6 d-flex justify-content-center align-items-center px-5 form-col pt-5 pb-5">
             <div className="form-inner-div pt-5 pb-5 px-3 mt-5">
-              <h5 className="text-dark fw-semibold font_18">
-                Time to Make an impact
-              </h5>
-              <p>
-                We want to know more — your goals, aspirations and what makes
-                you great. Contact us using the following form.
-              </p>
-              <form>
+              <span
+                dangerouslySetInnerHTML={{ __html: contactData?.Form_Heading }}
+              ></span>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: contactData?.Form_Description,
+                }}
+              ></span>
+
+              <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label for="name" className="form-label">
                     WHAT'S YOUR NAME?
@@ -42,6 +97,8 @@ const ContactUs = () => {
                     className="form-control"
                     id="name"
                     placeholder="Full Name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -54,6 +111,8 @@ const ContactUs = () => {
                     className="form-control"
                     id="company"
                     placeholder="Company Name"
+                    value={formData.company}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -66,6 +125,8 @@ const ContactUs = () => {
                     className="form-control"
                     id="email"
                     placeholder="Email Address"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -78,6 +139,8 @@ const ContactUs = () => {
                     className="form-control"
                     id="phone"
                     placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -90,6 +153,8 @@ const ContactUs = () => {
                     id="message"
                     rows="4"
                     placeholder="Message"
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
 
@@ -99,6 +164,7 @@ const ContactUs = () => {
                 >
                   Submit
                 </button>
+                {status && <p className="mt-2">{status}</p>}
               </form>
             </div>
           </div>
@@ -111,90 +177,37 @@ const ContactUs = () => {
         <div className="container">
           <div className="row pt-5 mx-0 contact-row">
             <div className="col-md-6 locations-heading">
-              <h3 className="fw_600 text-white font_40">Our Locations</h3>
+              <h3 className="fw_600 text-white font_40">
+                {contactData?.Locations.Heading}
+              </h3>
             </div>
             <div className="col-md-6 locations-heading locations-heading-2">
               <div className="connect">
-                <h3 className="fw_600 text-white font_40">Connect With Us</h3>
-                <p className="font_18 fw_500 text-dark">
-                  hello@piccadilly.com
-                </p>
+                <h3 className="fw_600 text-white font_40">
+                  {contactData?.Contact_Heading}
+                </h3>
+                <p className="font_18 fw_500 text-dark">{contactData?.Email}</p>
               </div>
             </div>
           </div>
           <div className="row footer-row-2 locations_row pt-5 pb-3 mx-0">
-            <div className="col-md-2 footer-col footer-col-1">
-              <div className="mb-3">
-                <img src="images/location-1.png" />
+            {contactData?.Locations?.all_locations?.map((location, index) => (
+              <div key={index} className="col-md-2 footer-col footer-col-1">
+                <div className="mb-3">
+                  <img
+                    src={`${baseUrl}${location?.image?.url}`}
+                    alt={location?.name}
+                  />
+                </div>
+                <h5>{location?.name}</h5>
+                <ul>
+                  <li>{location?.address?.[0]?.street}</li>
+                  <li>{location?.address?.[0]?.officeLocation}</li>
+                  <li>{location?.address?.[0]?.city}</li>
+                  <li>{location?.address?.[0]?.state}</li>
+                </ul>
               </div>
-              <h5>Piccadilly HQ</h5>
-              <ul>
-                <li>2700 Camino Ramon</li>
-                <li>Suite 350</li>
-                <li>San Ramon</li>
-                <li>California 94583</li>
-              </ul>
-            </div>
-            <div className="col-md-2 footer-col footer-col-1">
-              <div className="mb-3">
-                <img src="images/location-2.png" />
-              </div>
-              <h5>San Francisco</h5>
-              <ul>
-                <li>44 Montgomery Street</li>
-                <li>Suite 3000</li>
-                <li>San Francisco</li>
-                <li>California 94104</li>
-              </ul>
-            </div>
-            <div className="col-md-2 footer-col footer-col-1">
-              <div className="mb-3">
-                <img src="images/location-3.png" />
-              </div>
-              <h5>Vancouver</h5>
-              <ul>
-                <li>999 W Hastings Street</li>
-                <li>Suite 1250</li>
-                <li>Vancouver, BC,</li>
-                <li>V6C 1M3</li>
-              </ul>
-            </div>
-            <div className="col-md-2 footer-col footer-col-1">
-              <div className="mb-3">
-                <img src="images/location-4.png" />
-              </div>
-              <h5>Los Angeles</h5>
-              <ul>
-                <li>11766 Wilshire Blvd.</li>
-                <li>9th Floor</li>
-                <li>Los Angeles</li>
-                <li>California 90025</li>
-              </ul>
-            </div>
-            <div className="col-md-2 footer-col footer-col-1">
-              <div className="mb-3">
-                <img src="images/location-5.png" />
-              </div>
-              <h5>Dallas</h5>
-              <ul>
-                <li>15950 Dallas Parkway</li>
-                <li>Suite 600</li>
-                <li>Dallas</li>
-                <li>Texas 75248</li>
-              </ul>
-            </div>
-            <div className="col-md-2 footer-col footer-col-1">
-              <div className="mb-3">
-                <img src="images/location-6.png" />
-              </div>
-              <h5>Denver</h5>
-              <ul>
-                <li>999 18th Street</li>
-                <li>Suite 3300</li>
-                <li>Denver</li>
-                <li>Colorado 80202</li>
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </div>
