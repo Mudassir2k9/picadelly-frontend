@@ -207,6 +207,7 @@ const Services = () => {
           <div className="owl-carousel owl-theme strategy_slider">
             {serviceData?.AllServices?.Services?.map((service) => (
               <div key={service.id} className="item">
+              <div className="item_inner">
                 <div className="strategy_wrap">
                   <div className="inner_wrap">
                     <div>
@@ -225,11 +226,12 @@ const Services = () => {
                     {service.name}
                   </p>
                 </div>
-                <div>
+                <div className="before_hover_content">
                   <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
                   <p className="text-white fw-bold font_18 pt-3 fade_text">
                     {service.name}
                   </p>
+                </div>
                 </div>
               </div>
             ))}

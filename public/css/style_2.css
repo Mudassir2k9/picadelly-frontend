@@ -126,6 +126,7 @@
 }
 .content_inner{
   z-index: 11;
+  overflow: hidden;
 }
 .leader_section .team_col::after {
     position: absolute;
