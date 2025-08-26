@@ -13,6 +13,8 @@ import ContactUs from "./pages/ContactUs";
 import NewsItem from "./pages/NewsItem";
 import NewsLanding from "./pages/NewsLanding";
 import Work from "./pages/Work";
+import Legal from "./pages/Legal";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         <Route path="/news-item" element={<NewsItem />} />
         <Route path="/news-landing" element={<NewsLanding />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/legal" element={<Legal />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </Router>
