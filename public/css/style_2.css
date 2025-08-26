@@ -373,10 +373,11 @@ top: 0;
     height: 430px;
     width: 430px;
     background-size: 100%;
-    right: -29%;
+    right: -215px;
     top: 0%;
     bottom: 0;
     margin: auto;
+    opacity: 1;
   }
   .faqs_section .heading_col, .case-study-faqs .heading_col{
     flex-wrap: wrap;

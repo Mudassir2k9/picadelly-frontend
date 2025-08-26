@@ -310,6 +310,7 @@ background-color: #fff !important;
 }
 .menu-line-3 {
   bottom: 0;
+   height: 2.5px;
 }
 .menu-line-1{
     height: 2.5px;
@@ -1137,6 +1138,7 @@ position: relative;
 .executive_impact_section .team_col::after{
     opacity: 1;
     z-index: -1;
+    display: block !important;
 }
 .services_team_slider .team_col::after, .services_team_slider .heading_col::after{
       opacity: 0.15;
@@ -2314,9 +2316,7 @@ body .testimonials-heading h3{
     font-size: 16pt !important;
     transition: all 0.3s !important;
 }
-.faqs_section .team_col::after{
-    right: -25% !important;
-}
+
 .impact_section .content .impact_section_heading p{
     font-size:36pt !important;
 }
@@ -2495,6 +2495,12 @@ body .testimonials-heading h3{
 
 }
 @media only screen and (max-width: 576px){
+    .right-img {
+        display: none !important;
+    }
+    #header.open .overlay {
+    width: 100% !important;
+}
     .flexible_part{
         position: relative !important;
     }
