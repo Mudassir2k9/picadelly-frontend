@@ -4,8 +4,8 @@ const NewsItem = () => {
   return (
     <>
     <style>{`
-    body header{
-     position:relative !important;
+     body header{
+     background-color: #fff;
     }
       .menu-line{
       background-color: #000 !important;
