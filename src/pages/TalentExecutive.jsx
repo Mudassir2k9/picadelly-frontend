@@ -36,7 +36,7 @@ const TalentExecutive = () => {
       .unordered li span{
        color:#000 !important;
       }
-       .nav-btn .btn_primary:hover{
+     .nav-btn .btn_primary:hover{
         background-color:var(--primary_color) !important;
         color:#fff !important;
 

@@ -143,11 +143,12 @@ text-decoration: none;
 .services_section .large_heading strong, .about_section .large_heading strong{
     font-weight: 600 !important;
 }
-.executive_banner .large_heading_2 span{
+.On-Demand-banner .large_heading_2 span, body .services_banner .large_heading_2{
     font-weight: 400 !important;
 }
+
 body .executive_banner .large_heading_2 p span:nth-child(3){
-    font-weight: 600 !important;
+    font-weight: 400 !important;
 }
 .executive_banner.work_banner .large_heading_2 span{
     font-weight: 600 !important;
@@ -1213,6 +1214,14 @@ object-position: top;
     background-attachment: fixed;
    
 }
+body .footer-col-1 img{
+            max-width: 160px;
+        max-height: 160px;
+        width: auto  !important;
+        min-height: 160px;
+        object-fit: cover !important;
+        border-radius: 100%;
+}
 .services_section::after{
     position: absolute;
     content: "";
@@ -1704,6 +1713,9 @@ body .services_team_slider .right_content_col img{
     max-width: 200px;
     max-height: 200px;
     width: auto;
+    min-height: 200px;
+    object-fit: cover;
+    
 }
     .form-inner-div p{
         font-size: 16pt !important;
@@ -1930,6 +1942,7 @@ body .services_team_slider .right_content_col img{
     font-size: 98pt;
     max-width: inherit !important;
        line-height: 98pt;
+       font-weight: 600 !important;
 }
 
 .about_heading_col h1 {
@@ -1966,9 +1979,9 @@ body .services_team_slider .right_content_col img{
     padding: 0px 0px 0px 50px !important;
  }
   
-    .executive_banner .large_heading_2 span{
-        font-weight: 400 !important;
-    }
+    /* .executive_banner .large_heading_2 span{
+        font-weight: 600 !important;
+    } */
     .large_heading {
     font-size: 90pt !important;
     font-weight: 400;
@@ -2279,6 +2292,21 @@ body .testimonials-heading h3{
         width: 260px !important;
         height: 260px !important;
      }
+     body .footer-col-1 img{
+                max-width: 160px !important;
+        max-height: 160px !important;
+        width: auto;
+        min-height: 160px;
+        object-fit: cover;
+        border-radius: 100%;
+     }
+         body .footer-col-1 ul li {
+        font-size: 15px !important;
+    }
+        body .footer-col-1 h5 {
+        font-size: 18pt !important;
+        margin-bottom: 10px !important;
+    }
 }
 @media only screen and (min-width: 1024px){
 
@@ -2391,6 +2419,7 @@ body .testimonials-heading h3{
     display: block;
     width: 100%;
     height: 100vh;
+
     margin: 0 auto;
     overflow: visible;
     object-fit: cover;
@@ -2403,6 +2432,10 @@ body .testimonials-heading h3{
         height: 500px;
         min-height: auto;
     }
+    .inner-col li {
+    list-style: none;
+    line-height: 23px !important;
+}
     .right-column{
         padding-top: 70px;
 
@@ -2914,6 +2947,8 @@ body .mobile-creative-section .right_content_col .large_heading{
     .footer-col-1 img{
         max-width: 200px !important;
         max-height: 200px !important;
+        min-height: 200px !important;
+
     }
     .footer-col-1 h5{
         font-size: 18px !important;
