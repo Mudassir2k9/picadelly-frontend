@@ -36,7 +36,7 @@ console.log(blogs);
     <>
     <style>{`
     body header{
-     position:relative !important;
+     background-color: #fff;
     }
       .menu-line{
       background-color: #000 !important;
