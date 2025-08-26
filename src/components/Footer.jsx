@@ -19,7 +19,7 @@ const Footer = () => {
         console.error("Error fetching footer data:", error);
       });
   }, []);
-
+console.log("footer",footerData);
   return (
     <>
       <div className="container-fluid footer-section footer_light pt-5 pb-5">
@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="row footer-row-1">
             {footerData?.footerLinks?.map((linkGroup) => (
               <div key={linkGroup.id} className="footer-col">
-                <h5>{linkGroup.title}</h5>
+                <h5><a href={linkGroup.url} className="nav-link">{linkGroup.title}</a></h5>
                 <ul>
                   {linkGroup.subTitle?.map((item) => (
                     <li key={item.id}>
