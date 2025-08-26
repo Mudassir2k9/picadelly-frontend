@@ -72,6 +72,73 @@ const TalentOnDemand = () => {
 
       }
 `}</style>
+
+{/* Popups Loop */}
+      {talentDemandData?.Services?.ServicesName?.map((service) => (
+        <div
+          key={service.id}
+          className="modal fade team_popup service_modal"
+          id={`team${service.id}`}
+          tabIndex="-1"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable shadow radius-0">
+            <div className="modal-content">
+              <div className="modal-header border-0">
+                <button
+                  type="button"
+                  className="btn-close text-dark"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body px-5 pb-5">
+                <div className="row px-0">
+                  <div className="col-md-4">
+                    <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
+                    <h5 className="text-dark fw_600 font_28 pt-3">{service.name}</h5>
+                  </div>
+                  <div className="col-md-8">
+                    <div
+                      className="font_14"
+                      dangerouslySetInnerHTML={{ __html: service.DetailDescription }}
+                    />
+
+                    {/* Accordion for FAQs */}
+                    <div className="accordion accordion-flush" id={`accordion${service.id}`}>
+                      {service.FAQs?.map((faq, i) => (
+                        <div className="accordion-item mb-2" key={i}>
+                          <h2 className="accordion-header">
+                            <button
+                              className="accordion-button font_20 color_teal collapsed fw-semibold"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target={`#flush-collapse${service.id}-${i}`}
+                              aria-expanded="false"
+                              aria-controls={`flush-collapse${service.id}-${i}`}
+                            >
+                              {faq.Title}
+                            </button>
+                          </h2>
+                          <div
+                            id={`flush-collapse${service.id}-${i}`}
+                            className="accordion-collapse collapse"
+                            data-bs-parent={`#accordion${service.id}`}
+                          >
+                            <div className="accordion-body">
+                              <div dangerouslySetInnerHTML={{ __html: faq.Description }} />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
       <div className="container-fluid executive_banner On-Demand-banner">
         <div className="container">
           <div className="executive_col">
@@ -125,14 +192,20 @@ const TalentOnDemand = () => {
         </div>
         <div className="overflow_slider py-5">
           <div className="owl-carousel owl-theme strategy_slider">
-            {talentDemandData?.Services?.ServicesName?.map((service, index) => (
-              <div className="item" key={service.id || index}>
+            {talentDemandData?.Services?.ServicesName?.map((service) => (
+              <div key={service.id} className="item">
+              <div className="item_inner">
                 <div className="strategy_wrap">
                   <div className="inner_wrap">
                     <div>
                     <p className="text-dark">{service.description}</p>
-                    <a href={service.buttonUrl} className="btn btn_primary btn_dark">
-                      {service.buttonLabel}
+                    <a
+                      href="javascript:void(0)"
+                      className="btn btn_primary btn_dark"
+                      data-bs-toggle="modal"
+                      data-bs-target={`#team${service.id}`}
+                    >
+                      {service.buttonLabel || "Learn More"}
                     </a>
                     </div>
                   </div>
@@ -140,14 +213,12 @@ const TalentOnDemand = () => {
                     {service.name}
                   </p>
                 </div>
-                <div>
-                  <img
-                    src={`${baseUrl}${service.image.url}`}
-                    alt={service.name}
-                  />
-                  <p className=" fw-bold font_18 pt-3 fade_text">
+                <div className="before_hover_content">
+                  <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
+                  <p className="text-white fw-bold font_18 pt-3 fade_text">
                     {service.name}
                   </p>
+                </div>
                 </div>
               </div>
             ))}
