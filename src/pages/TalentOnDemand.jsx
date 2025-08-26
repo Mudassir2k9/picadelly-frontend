@@ -76,7 +76,7 @@ const TalentOnDemand = () => {
         <div className="container">
           <div className="executive_col">
             <h2
-              className="large_heading_2 fw-semibold text-center text-white"
+              className="large_heading_2  text-center text-white"
               dangerouslySetInnerHTML={{
                 __html: talentDemandData?.BannerHeading || "",
               }}

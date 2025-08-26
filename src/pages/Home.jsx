@@ -436,22 +436,22 @@ const Home = () => {
         <div className="container marquee-container">
           <div className="owl-carousel owl-theme companies_logos_slider marquee-content " direction="up" loop="1">
             <div className="item marquee-item">
-              <img src="images/logo1.svg" alt="Logo 1" />
-              <img src="images/logo2.svg" alt="Logo 2" />
-              <img src="images/logo3.svg" alt="Logo 3" />
-              <img src="images/logo4.svg" alt="Logo 4" />
+              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
+              <img src="images/Travis.svg" alt="Logo 2" />
+              <img src="images/Abbot.svg" alt="Logo 3" />
+              <img src="images/Harbour.svg" alt="Logo 4" />
             </div>
             <div className="item marquee-item">
-              <img src="images/logo5.svg" alt="Logo 5" />
-              <img src="images/logo6.svg" alt="Logo 6" />
-              <img src="images/logo7.svg" alt="Logo 7" />
-              <img src="images/logo-8.svg" alt="Logo 8" />
+              <img src="images/Monterey-college.svg" alt="Logo 5" />
+              <img src="images/Intuit.svg" alt="Logo 6" />
+              <img src="images/Monterra.svg" alt="Logo 7" />
+              <img src="images/Workday.svg" alt="Logo 8" />
             </div>
             <div className="item marquee-item">
-              <img src="images/logo-9.svg" alt="Logo 9" />
-              <img src="images/logo-10.svg" alt="Logo 10" />
-              <img src="images/logo1.svg" alt="Logo 1" />
-              <img src="images/logo2.svg" alt="Logo 2" />
+              <img src="images/Seneca.svg" alt="Logo 9" />
+              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
+              {/* <img src="images/logo1.svg" alt="Logo 1" />
+              <img src="images/logo2.svg" alt="Logo 2" /> */}
             </div>
           </div>
         </div>
