@@ -2207,6 +2207,7 @@ body .services_team_slider .right_content_col img{
     bottom: 0;
     right: 0;
     left: 0;
+    display: block !important;
 }
 .project-col img {
     width: 100%;

@@ -563,6 +563,7 @@ top: 0;
  .separate_col_1{
   background: linear-gradient(to right, #eeeeee8f, #f3f3f3 10%, #ffffff);
   min-height: 400px;
+  padding-top: 170px;
  }
  .heading_part{
   padding-left:6% !important;
@@ -1159,6 +1160,9 @@ top: 0;
  body .separate_col_1{
   padding: 30px 25px !important;
  }
+body .separate_col_1.case_study-col-1.heading_part{
+  padding-top: 170px !important;
+}
  .join-section::after{
   top: 24% !important;
  }
