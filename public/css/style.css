@@ -1399,6 +1399,10 @@ body .tourism_col{
     background: rgba(245, 184, 22, 0.8) !important;
     z-index: 111;
 }
+.culture_section .container{
+    position: relative;
+    z-index: 111;
+}
 body .financial_col{
        background-color: #F28452 !important;
 /*    background-image: url("../images/half-ring.jpg") !important;*/
