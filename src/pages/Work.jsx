@@ -165,7 +165,7 @@ const Work = () => {
       {/* <!-- start team section --> */}
 <div className="container-fluid px-0 team-section d-flex justify-content-center align-items-center">
   {/* Carousel */}
-  <div id="demo" className="carousel slide" data-bs-ride="carousel">
+  <div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
     {/* Indicators/dots */}
     <div className="carousel-indicators">
       <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
@@ -178,7 +178,7 @@ const Work = () => {
     {/* The slideshow/carousel */}
     <div className="carousel-inner">
       {/* Healthcare */}
-      <div className="carousel-item active">
+      <div className="carousel-item active" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary healthcare_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -196,7 +196,7 @@ const Work = () => {
       </div>
 
       {/* Financial Services */}
-      <div className="carousel-item">
+      <div className="carousel-item" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary financial_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -214,7 +214,7 @@ const Work = () => {
       </div>
 
       {/* Tourism */}
-      <div className="carousel-item">
+      <div className="carousel-item" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary tourism_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -232,7 +232,7 @@ const Work = () => {
       </div>
 
       {/* Non-Profit */}
-      <div className="carousel-item">
+      <div className="carousel-item" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary non-profit_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -250,7 +250,7 @@ const Work = () => {
       </div>
 
       {/* Education */}
-      <div className="carousel-item">
+      <div className="carousel-item" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary education_col mx-0">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -299,7 +299,7 @@ const Work = () => {
               <div className="testimonials-inner">
                 {/* Carousel */}
                 <div
-                  id="demo"
+                  id="testimonial_slider"
                   className="carousel slide"
                   data-bs-ride="carousel"
                 >
@@ -307,13 +307,13 @@ const Work = () => {
                   <div className="carousel-indicators">
                     <button
                       type="button"
-                      data-bs-target="#demo"
+                      data-bs-target="#testimonial_slider"
                       data-bs-slide-to="0"
                       className="active"
                     ></button>
                     <button
                       type="button"
-                      data-bs-target="#demo"
+                      data-bs-target="#testimonial_slider"
                       data-bs-slide-to="1"
                     ></button>
                   </div>

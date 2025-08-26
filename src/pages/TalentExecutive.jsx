@@ -56,7 +56,7 @@ const TalentExecutive = () => {
       </div>
       {/* <!-- Impact-section --> */}
 
-      <div className="container-fluid impact_section d-flex align-items-center px-0">
+      <div className="container-fluid impact_section d-flex align-items-center px-0 executive_impact_section">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col">
             <div className="px-5 content mx-5">
