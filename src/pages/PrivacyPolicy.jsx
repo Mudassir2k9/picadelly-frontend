@@ -19,8 +19,14 @@ const PrivacyPolicy = () => {
   }, []);
   return (
     <>
+      <style>{`
+
+      .menu-line{
+      background-color: #000 !important;
+  }
+`}</style>
       <div
-        className="container"
+        className="container privacy_container"
         dangerouslySetInnerHTML={{ __html: privacyPolicyData?.privacy_policy }}
       ></div>
     </>
