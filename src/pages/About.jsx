@@ -249,7 +249,7 @@ const About = () => {
   <div className="row mx-0"><div className="heading_col d-flex align-items-center px-5 team_col"><div className="px-3 px-md-5 mx-0 mx-md-5"><h3 className="font_40 fw-bold color_primary wow animate__slideInLeft text-start" data-wow-duration="1s" data-wow-delay="0.3s" >Meet the Team</h3><p className="font_18 text-dark">Our leadership team unites strategic expertise, creative vision and data-driven insights with an unwavering commitment to delivering exceptional client outcomes. This client-centric philosophy drives every decision we make — from carefully selecting the ideal talent for each project to implementing data-driven technologies and methodologies that position our clients ahead of the competition.</p></div></div><div className="right_content_col px-5 d-flex align-items-center team_right_col"></div></div>
 </section>
       <section className="horizontal_parallax team_section d-none d-md-flex" id="team-leaders">
-        <div className="panel">
+        {/* <div className="panel">
           <div className="row">
             <div className="heading_col d-flex align-items-center px-5 team_col">
               <div className="px-3 px-md-5 mx-0 mx-md-5">
@@ -267,7 +267,7 @@ const About = () => {
             </div>
             <div className="right_content_col px-5 d-flex align-items-center team_right_col"></div>
           </div>
-        </div>
+        </div> */}
         {aboutData?.PicadellyTeam?.map((member, index) => {
           const {
             FirstName,
