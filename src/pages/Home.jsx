@@ -22,7 +22,7 @@ const Home = () => {
 
   setTimeout(() => {
     if (window.$) {
-      const $cSlider = window.$(".companies_logos_slider");
+      const $cSlider = window.$(".companies_logos_sliders");
 
       // If already loaded, destroy it first
       if ($cSlider.hasClass("owl-loaded")) {
@@ -231,7 +231,7 @@ const Home = () => {
       </section>
 
       {/* start creative section */}
-      <section className="d-none d-md-block">
+      <section className="d-none ">
         <div className="horizontal_parallax home_parallax">
           <div className="panel">
             <div className="row">
@@ -315,7 +315,7 @@ const Home = () => {
       </section>
 
       {/* start mobile creative section */}
-      <div className="container-fluid px-0 team-section mobile-creative-section d-flex justify-content-center align-items-center d-block d-md-none">
+      <div className="container-fluid px-0 team-section mobile-creative-section d-flex justify-content-center align-items-center d-none">
         {/* Carousel */}
         <div id="demo" className="carousel slide" data-bs-ride="carousel">
           {/* Indicators/dots */}
@@ -433,21 +433,21 @@ const Home = () => {
             We Keep<span className="color_primary">.</span>
           </h3>
         </div>
-        <div className="container">
-          <div className="owl-carousel owl-theme companies_logos_slider">
-            <div className="item">
+        <div className="container marquee-container">
+          <div className="owl-carousel owl-theme companies_logos_slider marquee-content">
+            <div className="item marquee-item">
               <img src="images/logo1.svg" alt="Logo 1" />
               <img src="images/logo2.svg" alt="Logo 2" />
               <img src="images/logo3.svg" alt="Logo 3" />
               <img src="images/logo4.svg" alt="Logo 4" />
             </div>
-            <div className="item">
+            <div className="item marquee-item">
               <img src="images/logo5.svg" alt="Logo 5" />
               <img src="images/logo6.svg" alt="Logo 6" />
               <img src="images/logo7.svg" alt="Logo 7" />
               <img src="images/logo-8.svg" alt="Logo 8" />
             </div>
-            <div className="item">
+            <div className="item marquee-item">
               <img src="images/logo-9.svg" alt="Logo 9" />
               <img src="images/logo-10.svg" alt="Logo 10" />
               <img src="images/logo1.svg" alt="Logo 1" />

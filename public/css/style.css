@@ -688,6 +688,8 @@ body .footer-col .icon-col i:hover{
 
 .right-column {
   width: 50%;
+ height:3600px;
+background-image: url("../images/bubbles-img.jpg");
 
 /*    height: 2700px;*//*
     padding-bottom: 200px;*/
@@ -706,12 +708,24 @@ body .footer-col .icon-col i:hover{
 /*  background-attachment: fixed;*/
   background-size: cover;
   background-position: center; 
-  min-height: 100vh; 
+  padding-top: 200px;
+  z-index: 111;
+  position: sticky;
+}
+.right-column section{
+    position: sticky;
+      top: 0;
+        min-height: 100vh; 
   height: 800px;
-  top: 0;
   display: flex;
   align-items: center;
+/*     background-image: url("../images/bubbles-img.jpg");
+       justify-content: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; 
 
+*/
 }
 .parallax-section {
 
@@ -730,7 +744,7 @@ body .footer-col .icon-col i:hover{
     width: 390px;
     height: 390px;
     border-radius: 100%;
-    background-color: #ffffffcc;
+    background-color: #fff;
    display: flex;
     justify-content: center;
     align-items: center;
@@ -793,7 +807,7 @@ body .footer-col .icon-col i:hover{
     justify-content: center;
     gap: 0; 
     position: relative;
-/*    margin-bottom: 150px;*/
+    margin-bottom: 150px;
     text-align: center;
     width: 100%;
      }
@@ -1589,6 +1603,33 @@ body .services_team_slider .heading_col.healthcare_col, body .services_team_slid
 body .services_team_slider .right_content_col img{
     object-position: top !important;
 }
+   .marquee-container {
+      position: relative;
+      width: 300px;       /* adjust width */
+      height: 100%;       /* takes parent height */
+      overflow: hidden;
+            height: 570px;
+            padding-top: 50px;
+            margin: 250px auto 0px auto !important;
+    }
+
+    .marquee-content {
+      display: flex;
+      flex-direction: column;
+      animation: scroll-up 30s linear infinite;
+
+    }
+
+    /* Duplicate items to make seamless loop */
+    .marquee-content > * {
+      padding: 10px;
+      text-align: center;
+    }
+
+    @keyframes scroll-up {
+      0%   { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
 @media only screen and (min-width: 1300px){
     .form-inner-div h5{
         font-size: 24pt !important;
@@ -1751,9 +1792,9 @@ body .services_team_slider .right_content_col img{
     margin-left: -158px;
     margin-top: -65px;
 }
-.parallax_container .right-column{
+/*.parallax_container .right-column{
     height: auto !important;
-}
+}*/
 .panel .large_heading,  .mobile_slider h3{
         font-size: 64pt !important;
         line-height: 70pt !important;
