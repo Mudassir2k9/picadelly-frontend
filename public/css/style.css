@@ -267,12 +267,52 @@ right: 0;
 
     .hamburger {
       font-size: 1.5rem;
-      color: #fff36c;
       cursor: pointer;
       border: none;
       background: none;
       padding-right: 0px !important;
+      z-index: 99999999;
+      height: 32px;
+      width: 40px;
+      padding: 0px;
     }
+    .menu-icon{
+          height: 20px;
+      width: 20px;
+      position: relative;    
+      display: inline-block;
+    }
+    .menu-line {
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: all 0.25s ease-in-out;
+}
+#myNav .inner-nav-btn{
+font-size: 15px !important;
+        padding: 9px 35px;
+        margin-top: 10px;
+}
+.menu-line-2 {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.menu-line-3 {
+  bottom: 0;
+}
+.menu.open .menu-line-1 {
+  transform: translateY(7px) translateY(-50%) rotate(-45deg);
+}
+.menu.open .menu-line-2 {
+  opacity: 0;
+}
+.menu.open .menu-line-3 {
+  transform: translateY(-7px) translateY(50%) rotate(45deg);
+}
 
     .overlay {
       height: 100%;

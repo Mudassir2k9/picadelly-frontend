@@ -39,7 +39,12 @@ const Header = () => {
             <a href={headerData?.buttonUrl}  className="btn_primary d-none d-md-inline-block">{headerData?.buttonLabel}</a>
             
             <button className="hamburger" onClick={navBar}>
-              <i className="fa-regular fa-bars hamburger-icon text-dark"></i>
+              {/*<i className="fa-regular fa-bars hamburger-icon text-dark"></i>*/}
+               <span class="menu-icon">
+      <span class="menu-line menu-line-1"></span>
+      <span class="menu-line menu-line-2"></span>
+      <span class="menu-line menu-line-3"></span>
+    </span>
             </button>
           </div>
         </nav>
@@ -47,9 +52,9 @@ const Header = () => {
           <a href="/contact-us" className="btn_light inner-nav-btn">
             Let's Connect
           </a>
-          <button className="closebtn" onClick={navBarClose}>
+        {/*  <button className="closebtn" onClick={navBarClose}>
             &times;
-          </button>
+          </button>*/}
           <ul className="nav-items">
             {headerData?.menuItems?.map((menuItem, index) => (
               <li key={menuItem.id}>
