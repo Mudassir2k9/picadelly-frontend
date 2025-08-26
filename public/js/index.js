@@ -94,22 +94,26 @@ $(document).ready(function () {
 
 // script for sticky nav
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   let scrollTimeout;
-   window.addEventListener("scroll", () => {
-        // Always make header sticky while scrolling
-        header.classList.add("sticky");
 
-        // Clear previous timer
-        clearTimeout(scrollTimeout);
+  window.addEventListener("scroll", () => {
+    // Always make header sticky while scrolling
+    header.classList.add("sticky");
 
-        // After 2s of no scroll, remove sticky
-        scrollTimeout = setTimeout(() => {
-          header.classList.remove("sticky");
-        }, 2000);
-      });
+    // Clear previous timer
+    clearTimeout(scrollTimeout);
+
+    // After 2s of no scroll, remove sticky (only if not hovered)
+    scrollTimeout = setTimeout(() => {
+      if (!header.matches(":hover")) {
+        header.classList.remove("sticky");
+      }
+    }, 2000);
+  });
 });
+
 
 // window.addEventListener("scroll", function() {
 //   const header = document.querySelector("header");
