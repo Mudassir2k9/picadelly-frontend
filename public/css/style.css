@@ -665,7 +665,7 @@ background-color: #fff !important;
     transition: all 0.3s;
     font-weight: 500;
 }
-.footer-col ul li a:hover{
+.footer-col ul li a:hover, .footer-section h5 a:hover{
     color: var(--teal-dark);
     transition: all 0.3s;
 }
@@ -1478,7 +1478,8 @@ body .education_col{
       background: #000;
       position: relative;
       flex-direction: column;
-      height: 100vh;
+      min-height: 100vh;
+      height: 800px;
     }
 .img_wrapper .img_thumbnail{
 opacity: 0.7;
@@ -1587,7 +1588,7 @@ opacity: 0.7;
 .portfolio_row{
     display: flex;
     min-height: 100vh;
-    height: 100vh;
+    height: 800px;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
@@ -2010,7 +2011,7 @@ body .services_team_slider .right_content_col img{
     font-size: 98pt;
     max-width: inherit !important;
        line-height: 98pt;
-       font-weight: 600 !important;
+/*       font-weight: 600 !important;*/
 }
 
 .about_heading_col h1 {
