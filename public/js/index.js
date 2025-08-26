@@ -130,7 +130,7 @@ window.addEventListener("scroll", function () {
 function openNav() {
   const nav = document.getElementById("myNav");
   const overlay = document.getElementById("overlay");
-
+    $("#header").toggleClass("open"); 
   // Check if nav is open
   if (nav.style.width !== "0" && nav.style.width !== "") {
     // Close
