@@ -123,7 +123,13 @@ const Work = () => {
                 </div>
               </>
             ) : (
-              <div className="img_thumbnail img-hidden"></div>
+              // <div className="img_thumbnail img-hidden"></div>
+              <img
+                  id="prevThumb"
+                  className="img_thumbnail"
+                  src="http://82.25.95.212:1337/uploads/p_img7_859e623fc9.jpg"
+                  alt="Previous Thumbnail"
+                />
             )}
           </div>
 
@@ -159,7 +165,14 @@ const Work = () => {
                 </div>
               </>
             ) : (
-              <div className="img_thumbnail img-hidden"></div>
+              // <div className="img_thumbnail img-hidden"></div>
+              <img
+                  id="nextThumb"
+                  className="img_thumbnail"
+                  src="http://82.25.95.212:1337/uploads/Placeholder_Image_7_9970dda408.png"
+                  alt="Next Thumbnail"
+                />
+                
             )}
           </div>
         </div>
