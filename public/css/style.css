@@ -2196,11 +2196,25 @@ body .services_team_slider .right_content_col img{
     margin-right: 15px;
 }
 .project-col{
-    min-height: 350px !important;
+   height: 350px !important;
+    position: relative;
+}
+.project-col::after{
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 .project-col img {
     width: 100%;
     height: 100% !important;
+}
+.overlay-div{
+    position: relative;
+    z-index: 11;
 }
 .overlay-div h3{
     font-size: 28pt !important;

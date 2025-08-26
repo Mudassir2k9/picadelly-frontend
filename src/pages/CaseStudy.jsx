@@ -42,8 +42,11 @@ const CaseStudy = () => {
     <>
       <style>{`
     body header{
-     position:relative !important;
+     background-color: #fff
     }
+              .menu-line{
+      background-color: #000 !important;
+}
      .nav-btn .btn_primary:hover{
         background-color:#000 !important;
         color:#fff !important;

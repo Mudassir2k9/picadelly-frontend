@@ -96,6 +96,17 @@ const About = () => {
 
   return (
     <>
+        <style>{`
+
+      .menu-line{
+      background-color: #000 !important;
+}
+      @media only screen and (max-width: 576px) {
+       .hamburger i {
+    color: #fff !important;
+  }
+  }
+`}</style>
       {/* <!-- team modals --> */}
       {aboutData?.PicadellyTeam?.map((member) => {
         const {
