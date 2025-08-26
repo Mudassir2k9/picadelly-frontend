@@ -61,6 +61,9 @@ const ContactUs = () => {
     .navbar-brand p{
       color:#fff !important;
     }
+        .menu-line{
+      background-color: #000 !important;
+}
       @media only screen and (max-width: 576px) {
        .hamburger i {
     color: #fff !important;

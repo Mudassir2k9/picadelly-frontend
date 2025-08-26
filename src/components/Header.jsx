@@ -49,9 +49,9 @@ const Header = () => {
           </div>
         </nav>
         <div id="myNav" className="overlay">
-          <a href="/contact-us" className="btn_light inner-nav-btn">
+    {/*      <a href="/contact-us" className="btn_light inner-nav-btn">
             Let's Connect
-          </a>
+          </a>*/}
         {/*  <button className="closebtn" onClick={navBarClose}>
             &times;
           </button>*/}

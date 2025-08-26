@@ -7,6 +7,9 @@ const NewsItem = () => {
     body header{
      position:relative !important;
     }
+      .menu-line{
+      background-color: #000 !important;
+}
      .nav-btn .btn_primary:hover{
         background-color:#000 !important;
         color:#fff !important;

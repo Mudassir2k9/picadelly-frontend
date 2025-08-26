@@ -56,6 +56,13 @@ const Home = () => {
 
   return (
     <>
+
+     <style>{`
+.menu-line{
+      background-color: #000 !important;
+}
+
+`}</style>
       <div className="container-fluid banner_section">
         <div className="container">
           <div className="row banner-row">
