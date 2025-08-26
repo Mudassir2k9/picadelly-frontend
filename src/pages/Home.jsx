@@ -424,7 +424,7 @@ const Home = () => {
           </h3>
         </div>
         <div className="container marquee-container">
-          <div className="owl-carousel owl-theme companies_logos_slider marquee-content">
+          <div className="owl-carousel owl-theme companies_logos_slider marquee-content " direction="up" loop="1">
             <div className="item marquee-item">
               <img src="images/logo1.svg" alt="Logo 1" />
               <img src="images/logo2.svg" alt="Logo 2" />

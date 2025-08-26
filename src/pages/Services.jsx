@@ -187,17 +187,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* <!-- start about section --> */}
-      <section className="about_section d-flex align-items-center justify-content-center text-center">
-        <div className="row w-100">
-          <div
-            className="mx-auto d-flex fw-semibold justify-content-center fix_width_content"
-            dangerouslySetInnerHTML={{
-              __html: serviceData?.Section2_Heading || "",
-            }}
-          ></div>
-        </div>
-      </section>
 
       {/* <!-- start services section --> */}
 
@@ -251,7 +240,7 @@ const Services = () => {
       {/* <!-- start team section --> */}
       <div className="container-fluid px-0 team-section services_team_slider d-flex justify-content-center align-items-center">
         {/* Carousel */}
-        <div id="demo" className="carousel slide" data-bs-ride="carousel">
+        <div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
           {/* Indicators/dots */}
           <div className="carousel-indicators">
             <button
@@ -290,7 +279,7 @@ const Services = () => {
               <div
                 key={item.id}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}
-              >
+               data-bs-interval="10000">
                 <div className="row mx-0">
                   {/* Left Column */}
                   <div

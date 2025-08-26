@@ -38,15 +38,18 @@
       min-height: 100vh;
       position: relative;
 }
-.impact_section::after{
+.impact_section .right-img-2{
+  position: relative;
+}
+.impact_section .right-img-2::after{
       position: absolute;
     content: "";
     height: 350px;
     width: 350px;
-    background-color: #f2682ab5;
+    background-color: rgba(178, 201, 53, 0.6);
     z-index: 1;
     margin-left: auto;
-    right: 38%;
+    left: -175px;
     border-radius: 100%;
 }
 .font_18{
@@ -75,7 +78,7 @@
     height: 430px;
     width: 430px;
     background-size: 100%;
-    right: -25%;
+    right: -215px;
     top: -1%;
     bottom: 0;
     margin: auto;
@@ -259,12 +262,16 @@
 
   .On-Demand-banner{
     background-image: url(../images/on-demand_bg.png);
+    position: sticky;
+    top: 0;
 
   }
   .flexible_part{
     background-image: url(../images/flexible_bg.png);
       min-height: 100vh;
-
+background-attachment: fixed;
+position: sticky;
+top: 0;
   }
   .flexible_part::after{
     background-color: rgb(178 201 53 / 80%);
@@ -313,6 +320,8 @@
 .companies_section{
     background-image: url(../images/companies_bg.png);
     min-height: 100vh;
+    position: relative;
+    z-index: 111;
   }
   .logo_col{
     width: 18%;
@@ -349,8 +358,11 @@
   }
   .faqs_section{
     background-image: url(../images/flexible_bg.png);
-    position: relative;
+    position: sticky;
     min-height: 100vh;
+    background-attachment: fixed;
+    top: 0;
+
   }
   .faqs_section .team_col::after{
      position: absolute;
@@ -1624,6 +1636,12 @@ position: absolute;
     }
 }
      @media (max-width: 576px){
+      .impact_section .right-img-2::after {
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -175px;
+}
       .join-section .dif-col{
         min-height: auto !important;
         padding-top:60px !important;

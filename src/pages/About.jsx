@@ -202,7 +202,22 @@ const About = () => {
             </h1>
           </div>
           <div className="about_right_content_col">
-            <div
+          <div className="about_text">
+             <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
+              A Refreshing Alternative
+                  </h4>
+          </div>
+           <div className="about_text">
+             <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
+              A Refreshing Alternative
+                  </h4>
+          </div>
+           <div className="about_text">
+             <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
+              A Refreshing Alternative
+                  </h4>
+          </div>
+{/*            <div
               className="owl-carousel owl-theme about_slider"
               ref={sliderRef}
             >
@@ -213,13 +228,15 @@ const About = () => {
                   </h4>
                 </div>
               ))}
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>
 
       {/* <!-- start team section --> */}
-
+<section className="team_section">
+  <div className="row mx-0"><div className="heading_col d-flex align-items-center px-5 team_col"><div className="px-3 px-md-5 mx-0 mx-md-5"><h3 className="font_40 fw-bold color_primary wow animate__slideInLeft text-start" data-wow-duration="1s" data-wow-delay="0.3s" >Meet the Team</h3><p className="font_18 text-dark">Our leadership team unites strategic expertise, creative vision and data-driven insights with an unwavering commitment to delivering exceptional client outcomes. This client-centric philosophy drives every decision we make — from carefully selecting the ideal talent for each project to implementing data-driven technologies and methodologies that position our clients ahead of the competition.</p></div></div><div className="right_content_col px-5 d-flex align-items-center team_right_col"></div></div>
+</section>
       <section className="horizontal_parallax team_section d-none d-md-flex" id="team-leaders">
         <div className="panel">
           <div className="row">
@@ -365,7 +382,7 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
 
        <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center align-items-center d-block d-md-none">
       {/* <!-- Carousel --> */}
-<div id="demo" className="carousel slide" data-bs-ride="carousel">
+<div id="demo" className="carousel slide " data-bs-ride="carousel">
 
   {/* <!-- Indicators/dots --> */}
   <div className="carousel-indicators">
