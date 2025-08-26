@@ -128,22 +128,43 @@ window.addEventListener("scroll", function () {
 // script for nav sidebar
 
 function openNav() {
-  
-        if (window.matchMedia("(max-width: 768px)").matches) {
-          // Mobile
-           document.getElementById("myNav").style.width = "100%";
-        } else {
-          // Laptop/Desktop
-           document.getElementById("myNav").style.width = "50%";
-        }
-         document.getElementById("overlay").style.display = "block";
-  
+  const nav = document.getElementById("myNav");
+  const overlay = document.getElementById("overlay");
+
+  // Check if nav is open
+  if (nav.style.width !== "0" && nav.style.width !== "") {
+    // Close
+    nav.style.width = "0";
+    overlay.style.display = "none";
+  } else {
+    // Open
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      nav.style.width = "100%"; // Mobile
+    } else {
+      nav.style.width = "50%";  // Desktop
+    }
+    overlay.style.display = "block";
+  }
 }
 
-function closeNav() {
-  document.getElementById("myNav").style.width = "0";
-   document.getElementById("overlay").style.display = "none";
-}
+
+// function openNav() {
+  
+//         if (window.matchMedia("(max-width: 768px)").matches) {
+//           // Mobile
+//            document.getElementById("myNav").style.width = "100%";
+//         } else {
+//           // Laptop/Desktop
+//            document.getElementById("myNav").style.width = "50%";
+//         }
+//          document.getElementById("overlay").style.display = "block";
+  
+// }
+
+// function closeNav() {
+//   document.getElementById("myNav").style.width = "0";
+//    document.getElementById("overlay").style.display = "none";
+// }
 
 // script for wow JS activation
 wow = new WOW({
