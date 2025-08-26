@@ -309,7 +309,7 @@ right: 0;
     position: absolute;
     top: 20px;
     right: 35px;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff;
     background: none;
     border: none;
@@ -797,6 +797,9 @@ body .footer-col .icon-col i:hover{
     text-align: center;
     width: 100%;
      }
+     .inner-row a{
+        text-decoration: none !important;
+     }
 .parallax-section .inner-row:nth-child(even){
     margin-left: -120px;
 }
@@ -1176,17 +1179,17 @@ object-position: top;
      right: 0;
      left: 0;
      margin: auto;
-/*     opacity: 0;*/
-     transition: all 0.3s;
-     transform: translateY(412px);
+    /* opacity: 0; */
+     transition: all 0.5s;
+     transform: translateY(418px) !important;
 }
 .strategy_slider .owl-stage-outer{
     padding-bottom: 70px;
 }
 .strategy_slider .item:hover .strategy_wrap{
-/*    opacity: 1;*/
-transition: all 0.3s;
-transform: translateY(0);
+   /* opacity: 1; */
+transition: all 0.5s;
+transform: translateY(0) !important;
 }
 .inner_wrap{
     height: 240px;
@@ -1283,7 +1286,7 @@ body .education_col{
 
 /*start work page styling*/
 .work_banner{
-    background-image: url("../images/work-banner.jpg") !important;
+    background-image: url("../images/news_landind-banner.png") !important;
 }
     .links_col {
       width: 50%;
@@ -1591,6 +1594,9 @@ body .services_team_slider .right_content_col img{
         font-size: 24pt !important;
 
     }
+    .work_banner .large_heading_2{
+        padding-right: 38px !important;
+    }
        body .footer-col-1 h5 {
         font-size: 20pt !important;
         margin-bottom:20px !important;
@@ -1736,7 +1742,7 @@ body .services_team_slider .right_content_col img{
      }
      .result-div-2{
         max-width: 165px;
-        height: 165px;
+        height: 165px !important;
      }
      .result-div-2 h5{
         font-size: 23px;
@@ -2515,7 +2521,7 @@ body .testimonials-heading h3{
     min-height: auto;
 }
     body .work_banner{
-        background-image: url("../images/work-mobile-bg.jpg") !important;
+        background-image: url("../images/news_landing-mobile-banner.png") !important;
     }
         .executive_col h2 {
         font-size: 55px !important;
@@ -2686,7 +2692,7 @@ transform: scale(0.8);
 }
 .parallax-section .circle.result-div-2{
     width: 130px;
-    height: 130px;
+    height: 130px !important;
     padding: 10px;
 }
 .team-section .heading_col{

@@ -134,10 +134,12 @@ const Home = () => {
                     <p>in New Members</p>
                   </div>
                 </div>
+                <a href="/case-study">
                 <div className="result-div-2 circle o_bg_green">
                   <h5>View The Case Study</h5>
-                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
+                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
                 </div>
+                </a>
               </div>
 </section>
  <section className="">
@@ -153,10 +155,12 @@ const Home = () => {
                     <p>in Web Traffic</p>
                   </div>
                 </div>
+                <a href="/case-study">
                 <div className="result-div-2 circle o_bg_primary">
                   <h5>View The Case Study</h5>
-                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
+                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
                 </div>
+                </a>
               </div>
 </section>
  <section className="">
@@ -172,10 +176,12 @@ const Home = () => {
                     <p>in Occupancy Tax</p>
                   </div>
                 </div>
+                <a href="/case-study">
                 <div className="result-div-2 circle o_bg_yellow">
                   <h5>View The Case Study</h5>
-                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
+                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
                 </div>
+                </a>
               </div>
 </section>
  <section className="">
@@ -186,15 +192,17 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_primary">Non-Profit:</h5>
+                    <h5 className="color_primary">NonProfit:</h5>
                     <h2>0.73% Increase</h2>
                     <p>Average click-Through Rate</p>
                   </div>
                 </div>
+                 <a href="/case-study">
                 <div className="result-div-2 circle o_bg_primary">
                   <h5>View The Case Study</h5>
-                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
+                 <i className="fa-regular fa-arrow-right-long text-dark"></i>
                 </div>
+                </a>
               </div>
 </section>
  <section className="">
@@ -210,10 +218,12 @@ const Home = () => {
                     <p>in Student Re-enrollment</p>
                   </div>
                 </div>
+                 <a href="/case-study">
                 <div className="result-div-2 circle o_bg_teal">
                   <h5>View The Case Study</h5>
-                  <a href="/case-study"><i className="fa-regular fa-arrow-right-long text-dark"></i></a>
+                 <i className="fa-regular fa-arrow-right-long text-dark"></i>
                 </div>
+                </a>
               </div>
             </section>
           </div>

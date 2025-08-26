@@ -187,7 +187,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* <!-- start about section --> */}
+      {/* <!-- start about section -->
       <section className="about_section d-flex align-items-center justify-content-center text-center">
         <div className="row w-100">
           <div
@@ -197,7 +197,7 @@ const Services = () => {
             }}
           ></div>
         </div>
-      </section>
+      </section> */}
 
       {/* <!-- start services section --> */}
 
