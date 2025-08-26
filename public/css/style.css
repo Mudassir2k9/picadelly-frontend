@@ -561,10 +561,18 @@ right: 0;
     list-style: none;
     line-height: 32px;
 }
+.team_circle i::before:hover{
+    background-color: var(--teal-dark);
+}
 .inner-col li a, .inner-col p a{
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+    transition: all 0.3s;
+}
+.orange-div a:hover{
+    color: #000;
+    transition: all 0.3s;
 }
 .white-div .inner-col p a{
      text-decoration: none;
@@ -681,7 +689,21 @@ body .footer-col .icon-col i:hover{
 .right-column {
   width: 50%;
  height:3600px;
-         background-image: url("../images/bubbles-img.jpg");
+background-image: url("../images/bubbles-img.jpg");
+
+/*    height: 2700px;*//*
+    padding-bottom: 200px;*/
+}
+.team_contacts a:hover{
+    background-color: var(--teal-dark);
+    transition: all 0.3s;
+}
+.team_last_name{
+    margin-top: -20px !important;
+}
+.right-column section{
+    position: sticky;
+     background-image: url("../images/bubbles-img.jpg");
        justify-content: center;
 /*  background-attachment: fixed;*/
   background-size: cover;
@@ -729,6 +751,21 @@ body .footer-col .icon-col i:hover{
     padding: 0px 30px 0px 30px;
    
   }
+  .culture_section:after{
+    position: absolute;
+    content: "";
+    background-color: rgba(255 255 255 / 30%);
+    background-blend-mode: multiply;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+
+  }
+  .culture_section{
+    position: relative;
+  }
   .result-div-2{
     max-width: 150px;
     height: 150px;
@@ -741,6 +778,11 @@ body .footer-col .icon-col i:hover{
     color: #fff;
         margin-left: -126px;
     margin-top: -75px;
+    transition: all 0.5s;
+  }
+  .result-div-2:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
   }
    .result-div-2 h5{
     font-size: 18px;
@@ -878,7 +920,10 @@ body .footer-col .icon-col i:hover{
   height: 100px;
   padding: 10px 0;
 }
-
+.sky-div a:hover, .white-div a:hover{
+    color: #fff !important;
+    transition: all 0.3s;
+}
 .logo img {
   max-height: 60px;
   max-width: 80%;
@@ -1047,6 +1092,7 @@ object-position: top;
     justify-content: center;
     color: #fff;
     text-decoration: none;
+    transition: all 0.3s;
 }
 .team_popup img{
     height: 200px;

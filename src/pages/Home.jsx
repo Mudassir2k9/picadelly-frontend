@@ -167,7 +167,7 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_yellow">Tourism</h5>
+                    <h5 className="color_yellow">Tourism:</h5>
                     <h2>12% Jump</h2>
                     <p>in Occupancy Tax</p>
                   </div>
@@ -186,7 +186,7 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_primary">Non Profit:</h5>
+                    <h5 className="color_primary">Non-Profit:</h5>
                     <h2>0.73% Increase</h2>
                     <p>Average click-Through Rate</p>
                   </div>
@@ -362,7 +362,7 @@ const Home = () => {
                     data-wow-delay="0.3s"
                   >
                     <h1 className="fw-bold text-white text-start font_40">
-                      Valley Childern's
+                      Valley Children's
                     </h1>
                     <h2 className="fw_300 text-white text-start py-4">
                       Specialized Care that
