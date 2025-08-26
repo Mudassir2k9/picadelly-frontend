@@ -774,6 +774,8 @@ top: 0;
 /*-------news-landing-page-----*/
      .blog-spotlight{
       min-height: 100vh;
+      position: relative;
+      z-index: 11;
      }
      .blog-right-col{
       background-image: url(../images/spotlight-img.png);
