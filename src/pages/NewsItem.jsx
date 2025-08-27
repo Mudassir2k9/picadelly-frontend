@@ -1,9 +1,18 @@
-import React from "react";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const NewsItem = () => {
+  const [newsItemData, setNewsItemData] = useState(null);
+  const { id } = useParams();
+  console.log("ajfajk", id);
+
+  console.log("newsItemData", newsItemData);
   return (
     <>
-    <style>{`
+      <style>{`
      body header{
      background-color: #fff;
     }
@@ -97,13 +106,13 @@ const NewsItem = () => {
               <i class="fa fa-search search-icon"></i>
               <input type="text" placeholder="Search" />
               <i class="fa fa-times clear-icon"></i>
-           </div>
+            </div>
           </div>
 
           {/* <!-- Scrollable Content Right Column --> */}
           <div className="col-md-8 px-5 pt-5 right-sidebar pb-5">
             <section id="approach">
-               <h2>A Smart Business Strategy</h2>
+              <h2>A Smart Business Strategy</h2>
               <p>
                 In today’s fast-paced, information-overloaded world, the
                 importance of marketing and communications is greater than ever.
@@ -288,13 +297,13 @@ const NewsItem = () => {
             <a href="#">
               <div className="overlay-div text-end">
                 <div className="project-inner-col">
-                <span className="mb-5"> ⟵</span>
-                <br />
-                <h5 className="text-white mb-3 font_18 fw_600">ARTICLES :</h5>
-                <h3 className="text-white font_40 fw_600">
-                  Mastering Omnichannel Communications: A Q&A with Seasoned
-                  Marketing Leader, Luke Sinclair
-                </h3>
+                  <span className="mb-5"> ⟵</span>
+                  <br />
+                  <h5 className="text-white mb-3 font_18 fw_600">ARTICLES :</h5>
+                  <h3 className="text-white font_40 fw_600">
+                    Mastering Omnichannel Communications: A Q&A with Seasoned
+                    Marketing Leader, Luke Sinclair
+                  </h3>
                 </div>
               </div>
               <img src="images/previous-blog.png" />
@@ -304,15 +313,15 @@ const NewsItem = () => {
             <a href="#">
               <div className="overlay-div text-start">
                 <div className="project-inner-col">
-                <span className="mb-5"> ⟶</span>
-                <br />
-                <h5 className="text-white mb-3 font_18 fw_600">
-                  HEALTHCARE ARTICLES :
-                </h5>
-                <h3 className="text-white fw_600">
-                  Healthcare Labor Shortage Predicted By 2028, With Uneven State
-                  Impacts: Report
-                </h3>
+                  <span className="mb-5"> ⟶</span>
+                  <br />
+                  <h5 className="text-white mb-3 font_18 fw_600">
+                    HEALTHCARE ARTICLES :
+                  </h5>
+                  <h3 className="text-white fw_600">
+                    Healthcare Labor Shortage Predicted By 2028, With Uneven
+                    State Impacts: Report
+                  </h3>
                 </div>
               </div>
               <img src="images/next-blog.png" />
