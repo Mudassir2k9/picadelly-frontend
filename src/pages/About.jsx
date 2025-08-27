@@ -95,7 +95,7 @@ const About = () => {
         },
       });
     }
-  }, 10000);
+  }, 5000);
 
   console.log(aboutData);
   window.addEventListener("load", function () {
