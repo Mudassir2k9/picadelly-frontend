@@ -2063,6 +2063,9 @@ body .testimonials-inner .carousel-indicators{
     font-size: 64pt !important;
     line-height: 90px;
   }
+  .about_section h4.piccadilly-style {
+    font-size: 98pt !important;
+  }
   .team_section .heading_col p {
     font-size: 24px !important;
   }

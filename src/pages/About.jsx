@@ -40,6 +40,25 @@ const About = () => {
                 1200: { items: 1 },
               },
             });
+
+             // Background toggle using class
+              $slider.on("changed.owl.carousel", function (event) {
+                const current = $(event.target)
+                  .find(".owl-item")
+                  .eq(event.item.index)
+                  .find(".item");
+
+                if (current.hasClass("Piccadilly")) {
+                  $(".about_row .about_right_content_col")
+                    .removeClass("default-bg")
+                    .addClass("transparent-bg");
+                } else {
+                  $(".about_row .about_right_content_col")
+                    .removeClass("transparent-bg")
+                    .addClass("default-bg");
+                }
+              });
+
           }
         }, 1000);
       })
@@ -90,13 +109,20 @@ const About = () => {
           );
         });
     }, 2000); // 2000 ms = 2 seconds
-    
+
   });
 
   return (
     <>
       <style>{`
-
+      .about_row .about_right_content_col.transparent-bg {
+        background: transparent !important;
+      }
+        .piccadilly-style {
+  font-size: 98pt !important;
+  font-weight: 700 !important;
+  color: black !important;
+}
       .menu-line{
       background-color: #000 !important;
 }
@@ -238,8 +264,10 @@ const About = () => {
               ref={sliderRef}
             >
               {aboutData?.Section2?.slidingText?.map((item) => (
-                <div className="item" key={item.id}>
-                  <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
+               <div className={`item ${item.Text}  `} key={item.id}>
+                  <h4 className={`large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0 ${item.Text === "Piccadilly" ? "piccadilly-style" : ""} `}
+                   
+                  >
                     {item.Text}
                   </h4>
                 </div>
