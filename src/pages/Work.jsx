@@ -313,41 +313,40 @@ const Work = () => {
             </div>
             <div className="testimonials d-flex justify-content-end">
               <div className="testimonials-inner">
-                {/* Carousel */}
-                <div
-                  id="testimonial_slider"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  {/* Indicators/dots */}
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#testimonial_slider"
-                      data-bs-slide-to="0"
-                      className="active"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#testimonial_slider"
-                      data-bs-slide-to="1"
-                    ></button>
-                  </div>
+  {/* Carousel */}
+  <div
+    id="testimonial_slider"
+    className="carousel slide"
+    data-bs-ride="carousel"
+  >
+    {/* Indicators/dots */}
+    <div className="carousel-indicators">
+      {workData?.Testimonials?.Testimonial?.map((item, index) => (
+        <button
+          key={item.id || index}
+          type="button"
+          data-bs-target="#testimonial_slider"
+          data-bs-slide-to={index}
+          className={index === 0 ? "active" : ""}
+          aria-current={index === 0 ? "true" : undefined}
+          aria-label={`Slide ${index + 1}`}
+        ></button>
+      ))}
+    </div>
 
-                  {/* Slideshow */}
-                  <div className="carousel-inner">
-                    {workData?.Testimonials?.Testimonial?.map((item, index) => (
-                      <div
-                        key={item.id || index}
-                        className={`carousel-item ${
-                          index === 0 ? "active" : ""
-                        }`}
-                        dangerouslySetInnerHTML={{ __html: item.Review }}
-                      ></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+    {/* Slideshow */}
+    <div className="carousel-inner">
+      {workData?.Testimonials?.Testimonial?.map((item, index) => (
+        <div
+          key={item.id || index}
+          className={`carousel-item ${index === 0 ? "active" : ""}`}
+          dangerouslySetInnerHTML={{ __html: item.Review }}
+        ></div>
+      ))}
+    </div>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
