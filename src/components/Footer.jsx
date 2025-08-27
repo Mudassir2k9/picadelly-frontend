@@ -19,7 +19,7 @@ const Footer = () => {
         console.error("Error fetching footer data:", error);
       });
   }, []);
-console.log("footer",footerData);
+  console.log("footer", footerData);
   return (
     <>
       <div className="container-fluid footer-section footer_light pt-5 pb-5">
@@ -27,7 +27,11 @@ console.log("footer",footerData);
           <div className="row footer-row-1">
             {footerData?.footerLinks?.map((linkGroup) => (
               <div key={linkGroup.id} className="footer-col">
-                <h5><a href={linkGroup.url} className="nav-link">{linkGroup.title}</a></h5>
+                <h5>
+                  <a href={linkGroup.url} className="nav-link">
+                    {linkGroup.title}
+                  </a>
+                </h5>
                 <ul>
                   {linkGroup.subTitle?.map((item) => (
                     <li key={item.id}>
@@ -42,8 +46,14 @@ console.log("footer",footerData);
                 {footerData?.buttonLabel}
               </a>
               <ul className="pt-3">
-                <li>{footerData?.email}</li>
-                <li>{footerData?.phone}</li>
+                <li>
+                  <a href={`mailto:${footerData?.email}`}>
+                    {footerData?.email}
+                  </a>
+                </li>
+                <li>
+                  <a href={`tel:${footerData?.phone}`}>{footerData?.phone}</a>
+                </li>
               </ul>
               <ul className="pt-3 icon-col">
                 <li>

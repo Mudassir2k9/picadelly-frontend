@@ -42,61 +42,59 @@ const About = () => {
             });
           }
         }, 1000);
-
-       
-
-        
-
-
       })
-        
+
       .catch((error) => {
         console.error("Error fetching about data:", error);
       });
   }, []);
 
   setTimeout(() => {
-          if (window.$) {
-            const $cSlider = window.$(".c_slider");
+    if (window.$) {
+      const $cSlider = window.$(".c_slider");
 
-            if ($cSlider.hasClass("owl-loaded")) {
-              $cSlider.trigger("destroy.owl.carousel");
-              $cSlider.removeClass("owl-loaded");
-              $cSlider.find(".owl-stage-outer").children().unwrap();
-              $cSlider.find(".owl-item").children().unwrap();
-              // $cSlider.find(".owl-dots.disabled").removeClass("disabled");
-            }
+      if ($cSlider.hasClass("owl-loaded")) {
+        $cSlider.trigger("destroy.owl.carousel");
+        $cSlider.removeClass("owl-loaded");
+        $cSlider.find(".owl-stage-outer").children().unwrap();
+        $cSlider.find(".owl-item").children().unwrap();
+        // $cSlider.find(".owl-dots.disabled").removeClass("disabled");
+      }
 
-            $cSlider.owlCarousel({
-              loop: true,
-              nav: false,
-              dots: true,
-              autoplay: true,
-              autoWidth: true,
-              autoplayTimeout: 5000,
-              autoplaySpeed: 800,
-              margin: 10,
-              responsive: {
-                0: { items: 2 },
-                1200: { items: 4 },
-              },
-            });
-          }
-        }, 10000);
-
+      $cSlider.owlCarousel({
+        loop: true,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoWidth: true,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 800,
+        margin: 10,
+        responsive: {
+          0: { items: 2 },
+          1200: { items: 4 },
+        },
+      });
+    }
+  }, 10000);
 
   console.log(aboutData);
-  window.addEventListener("load", function() {
-  setTimeout(function() {
-    document.querySelectorAll('.culture_section .col-md-7 p.color_black').forEach(p => {
-      p.innerHTML = p.innerHTML.replace("measurable results.", "measurable results.<br>");
-    });
-  }, 2000); // 2000 ms = 2 seconds
-});
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      document
+        .querySelectorAll(".culture_section .col-md-7 p.color_black")
+        .forEach((p) => {
+          p.innerHTML = p.innerHTML.replace(
+            "measurable results.",
+            "measurable results.<br>"
+          );
+        });
+    }, 2000); // 2000 ms = 2 seconds
+  });
 
   return (
     <>
-        <style>{`
+      <style>{`
 
       .menu-line{
       background-color: #000 !important;
@@ -153,7 +151,13 @@ const About = () => {
                         {Contact?.map((contact, i) => (
                           <a
                             key={i}
-                            href={contact.url}
+                            href={
+                              contact.platform === "Email"
+                                ? `mailto:${contact.url}`
+                                : contact.platform === "Phone"
+                                ? `tel:${contact.url}`
+                                : contact.url
+                            }
                             className="me-2"
                             target="_blank"
                             rel="noreferrer"
@@ -213,8 +217,7 @@ const About = () => {
             </h1>
           </div>
           <div className="about_right_content_col px-0">
-           
-          {/* <div className="about_text">
+            {/* <div className="about_text">
              <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
               A Refreshing Alternative
                   </h4>
@@ -229,7 +232,7 @@ const About = () => {
               A Refreshing Alternative
                   </h4>
           </div> */}
-           <div
+            <div
               className="owl-carousel owl-theme about_slider px-0 mx-0"
               ref={sliderRef}
             >
@@ -241,16 +244,40 @@ const About = () => {
                 </div>
               ))}
             </div>
-           
           </div>
         </div>
       </section>
 
       {/* <!-- start team section --> */}
-<section className="team_section">
-  <div className="row mx-0"><div className="heading_col d-flex align-items-center px-5 team_col"><div className="px-3 px-md-5 mx-0 mx-md-5"><h3 className="font_40 fw-bold color_primary wow animate__slideInLeft text-start" data-wow-duration="1s" data-wow-delay="0.3s" >Meet the Team</h3><p className="font_18 text-dark">Our leadership team unites strategic expertise, creative vision and data-driven insights with an unwavering commitment to delivering exceptional client outcomes. This client-centric philosophy drives every decision we make — from carefully selecting the ideal talent for each project to implementing data-driven technologies and methodologies that position our clients ahead of the competition.</p></div></div><div className="right_content_col px-5 d-flex align-items-center team_right_col"></div></div>
-</section>
-      <section className="horizontal_parallax team_section d-none d-md-flex" id="team-leaders">
+      <section className="team_section">
+        <div className="row mx-0">
+          <div className="heading_col d-flex align-items-center px-5 team_col">
+            <div className="px-3 px-md-5 mx-0 mx-md-5">
+              <h3
+                className="font_40 fw-bold color_primary wow animate__slideInLeft text-start"
+                data-wow-duration="1s"
+                data-wow-delay="0.3s"
+              >
+                Meet the Team
+              </h3>
+              <p className="font_18 text-dark">
+                Our leadership team unites strategic expertise, creative vision
+                and data-driven insights with an unwavering commitment to
+                delivering exceptional client outcomes. This client-centric
+                philosophy drives every decision we make — from carefully
+                selecting the ideal talent for each project to implementing
+                data-driven technologies and methodologies that position our
+                clients ahead of the competition.
+              </p>
+            </div>
+          </div>
+          <div className="right_content_col px-5 d-flex align-items-center team_right_col"></div>
+        </div>
+      </section>
+      <section
+        className="horizontal_parallax team_section d-none d-md-flex"
+        id="team-leaders"
+      >
         {/* <div className="panel">
           <div className="row">
             <div className="heading_col d-flex align-items-center px-5 team_col">
@@ -331,84 +358,158 @@ const About = () => {
         })}
       </section>
 
+      {/* //for mobile view */}
 
-    {/* //for mobile view */}
-    
-     {/* <!-- team modals for mobile --> */}
-	<div className="modal fade team_popup " id="m-team2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable shadow radius-0">
-    <div className="modal-content">
-      <div className="modal-header border-0">
-        <button type="button" className="btn-close text-dark"  data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body px-5 pb-5">
-        <div className="row">
-          <div className="col-md-4">
-            <img src="images/pop-up-craig.png"/>
-            <h5 className="text-dark fw-bold pt-3">Craig Brown</h5>
-            <p>Chief Digital Officer</p>
-            <p className="team_contacts">
-              <a href="javascript:void(0)"><i className="fa-brands fa-linkedin-in"></i></a>
-              <a href="javascript:void(0)"><i className="fa-solid fa-envelope"></i></a>
-            </p>
-          </div>
-          <div className="col-md-8">
-            
-            <p className="font_14">Craig is a seasoned advertising and marketing leader with over 30 years of experience working with C-level executives and brand specialists to deliver performance-driven digital advertising. Widely recognized for his innovative thinking and strong technical acumen, Craig has spent the past decade at the forefront of digital transformation, helping brands harness data, driving programmatic platforms and employing the latest advances in artificial intelligence to drive measurable growth. Craig leads Piccadilly’s digital marketing team, applying emerging technologies to deliver highly efficient, ROI-focused campaigns. Outside of work, Craig is a passionate cyclist who brings the same focus, endurance and drive from the road into his leadership and strategic thinking.</p>
+      {/* <!-- team modals for mobile --> */}
+      <div
+        className="modal fade team_popup "
+        id="m-team2"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable shadow radius-0">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                type="button"
+                className="btn-close text-dark"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body px-5 pb-5">
+              <div className="row">
+                <div className="col-md-4">
+                  <img src="images/pop-up-craig.png" />
+                  <h5 className="text-dark fw-bold pt-3">Craig Brown</h5>
+                  <p>Chief Digital Officer</p>
+                  <p className="team_contacts">
+                    <a href="javascript:void(0)">
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <i className="fa-solid fa-envelope"></i>
+                    </a>
+                  </p>
+                </div>
+                <div className="col-md-8">
+                  <p className="font_14">
+                    Craig is a seasoned advertising and marketing leader with
+                    over 30 years of experience working with C-level executives
+                    and brand specialists to deliver performance-driven digital
+                    advertising. Widely recognized for his innovative thinking
+                    and strong technical acumen, Craig has spent the past decade
+                    at the forefront of digital transformation, helping brands
+                    harness data, driving programmatic platforms and employing
+                    the latest advances in artificial intelligence to drive
+                    measurable growth. Craig leads Piccadilly’s digital
+                    marketing team, applying emerging technologies to deliver
+                    highly efficient, ROI-focused campaigns. Outside of work,
+                    Craig is a passionate cyclist who brings the same focus,
+                    endurance and drive from the road into his leadership and
+                    strategic thinking.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-    {/* <!-- team modals for mobile --> */}
-<div className="modal fade team_popup " id="m-team1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable shadow radius-0">
-    <div className="modal-content">
-      <div className="modal-header border-0">
-        <button type="button" className="btn-close text-dark"  data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body px-5 pb-5">
-        <div className="row">
-          <div className="col-md-4">
-            <img src="images/pop-up-vintage.png"/>
-            <h5 className="text-dark fw-bold pt-3">Vintage Foster</h5>
-            <p>CEO</p>
-            <p className="team_contacts">
-              <a href="javascript:void(0)"><i className="fa-brands fa-linkedin-in"></i></a>
-              <a href="javascript:void(0)"><i className="fa-solid fa-envelope"></i></a>
-            </p>
-          </div>
-          <div className="col-md-8">
-            
-            <p className="font_14">Vintage founded Piccadilly in the Bay Area in 2007 and has since expanded it across multiple cities, including Los Angeles, Dallas, and Vancouver. Under his leadership, Piccadilly delivers integrated marketing, branding, digital, and public relations services to a slate of national brands as well as regional powerhouses. A committed philanthropist, Vintage has been honored as Citizen of the Year by the Bay Area Leadership Foundation and the East Bay Economic Development Alliance, and named a Scholarship Impact Award recipient by Bay Area Blacks in Philanthropy for his work helping disadvantaged youth attend college. He is also widely sought after for his expertise in crisis communications, leading Piccadilly to be named Crisis Communications Firm of the Year by Dow Jones and Ragan's PR Daily. Vintage has also served as an adjunct professor at the University of the Pacific and Middlebury College.
-A vintage car enthusiast in every sense, Vintage spends his weekends behind the wheel of a 1965 Corvette—a timeless classic that mirrors his appreciation for craftsmanship, performance, and enduring style.</p>
+      {/* <!-- team modals for mobile --> */}
+      <div
+        className="modal fade team_popup "
+        id="m-team1"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable shadow radius-0">
+          <div className="modal-content">
+            <div className="modal-header border-0">
+              <button
+                type="button"
+                className="btn-close text-dark"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body px-5 pb-5">
+              <div className="row">
+                <div className="col-md-4">
+                  <img src="images/pop-up-vintage.png" />
+                  <h5 className="text-dark fw-bold pt-3">Vintage Foster</h5>
+                  <p>CEO</p>
+                  <p className="team_contacts">
+                    <a href="javascript:void(0)">
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <i className="fa-solid fa-envelope"></i>
+                    </a>
+                  </p>
+                </div>
+                <div className="col-md-8">
+                  <p className="font_14">
+                    Vintage founded Piccadilly in the Bay Area in 2007 and has
+                    since expanded it across multiple cities, including Los
+                    Angeles, Dallas, and Vancouver. Under his leadership,
+                    Piccadilly delivers integrated marketing, branding, digital,
+                    and public relations services to a slate of national brands
+                    as well as regional powerhouses. A committed philanthropist,
+                    Vintage has been honored as Citizen of the Year by the Bay
+                    Area Leadership Foundation and the East Bay Economic
+                    Development Alliance, and named a Scholarship Impact Award
+                    recipient by Bay Area Blacks in Philanthropy for his work
+                    helping disadvantaged youth attend college. He is also
+                    widely sought after for his expertise in crisis
+                    communications, leading Piccadilly to be named Crisis
+                    Communications Firm of the Year by Dow Jones and Ragan's PR
+                    Daily. Vintage has also served as an adjunct professor at
+                    the University of the Pacific and Middlebury College. A
+                    vintage car enthusiast in every sense, Vintage spends his
+                    weekends behind the wheel of a 1965 Corvette—a timeless
+                    classic that mirrors his appreciation for craftsmanship,
+                    performance, and enduring style.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-	{/* <!----about-mobile-slider-section----> */}
+      {/* <!----about-mobile-slider-section----> */}
 
-       <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex d-md-none align-items-center">
-      {/* <!-- Carousel --> */}
-<div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex d-md-none align-items-center">
+        {/* <!-- Carousel --> */}
+        <div
+          id="demo"
+          className="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          {/* <!-- Indicators/dots --> */}
+          <div className="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="0"
+              className="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="1"
+            ></button>
 
-  {/* <!-- Indicators/dots --> */}
-  <div className="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-  
-    {/* <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            {/* <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>  */}
-  </div>
+          </div>
 
-  {/* <!-- The slideshow/carousel --> */}
-  <div className="carousel-inner">
-    {/* <div className="carousel-item active">
+          {/* <!-- The slideshow/carousel --> */}
+          <div className="carousel-inner">
+            {/* <div className="carousel-item active">
          <div className="row mx-0">
                <div className="heading_col d-flex align-items-center px-5 team_col">
         <div className="px-3 px-md-5 mx-0 mx-md-5 content_div">
@@ -419,76 +520,95 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
       <div className="right_content_col px-5 d-flex align-items-center team_right_col"></div>
          </div>
     </div> */}
-    <div className="carousel-item active" data-bs-interval="10000">
-    	<div className="carousel-inner-div">
-          <div className="team_overlay">
-       <a href="javascript:void(0)" className="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#m-team1">
-      <div className="team_circle text-center d-flex align-items-center justify-content-center">
-          
-        <div>
-       
-        <h3 className="text-dark fw-semibold team_name font_40">Vintage</h3>
-        <h4 className="text-dark fw-semibold team_last_name">Foster</h4>
-        <p className="team_post text-dark text-center">CEO</p>
-        <p className=" text-dark text-center">A visionary leader and expert in building organizations into profitable, high-growth enterprises.</p>
-        <i className="fa-solid fa-circle-user text-dark"></i>
-      
+            <div className="carousel-item active" data-bs-interval="10000">
+              <div className="carousel-inner-div">
+                <div className="team_overlay">
+                  <a
+                    href="javascript:void(0)"
+                    className="text-decoration-none"
+                    data-bs-toggle="modal"
+                    data-bs-target="#m-team1"
+                  >
+                    <div className="team_circle text-center d-flex align-items-center justify-content-center">
+                      <div>
+                        <h3 className="text-dark fw-semibold team_name font_40">
+                          Vintage
+                        </h3>
+                        <h4 className="text-dark fw-semibold team_last_name">
+                          Foster
+                        </h4>
+                        <p className="team_post text-dark text-center">CEO</p>
+                        <p className=" text-dark text-center">
+                          A visionary leader and expert in building
+                          organizations into profitable, high-growth
+                          enterprises.
+                        </p>
+                        <i className="fa-solid fa-circle-user text-dark"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="row mx-0">
+                  <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_teal ">
+                    <img src="images/vintage-portrait-color.png" />
+                  </div>
+                  <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
+                    <img
+                      src="images/vintage-personal.png"
+                      className="img-fluid w-100"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="carousel-item" data-bs-interval="10000">
+              <div className="carousel-inner-div">
+                <div className="team_overlay ">
+                  <a
+                    href="javascript:void(0)"
+                    className="text-decoration-none"
+                    data-bs-toggle="modal"
+                    data-bs-target="#m-team2"
+                  >
+                    <div className="team_circle text-center d-flex align-items-center justify-content-center">
+                      <div>
+                        <h3 className="text-dark fw-semibold team_name font_40">
+                          Craig
+                        </h3>
+                        <h4 className="text-dark fw-semibold team_last_name">
+                          Brown
+                        </h4>
+                        <p className="team_post text-dark text-center">
+                          Chief Digital Officer
+                        </p>
+                        <p className=" text-dark text-center">
+                          Innovative digital advertising technologies to deliver
+                          highly effective ROI.
+                        </p>
+                        <i className="fa-solid fa-circle-user text-dark"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="row mx-0">
+                  <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_yellow ">
+                    <img src="images/Craig-Brown-Portrait.png" />
+                  </div>
+                  <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
+                    <img
+                      src="images/Craig-Brown-Personal.jpg"
+                      className="img-fluid w-100"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      </div>
-       </a>
-    </div>
-     <div className="row mx-0">
-      <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_teal " >
-        <img src="images/vintage-portrait-color.png"/>
-      </div>
-      <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
-       <img src="images/vintage-personal.png" className="img-fluid w-100"/>
-
-      </div>
-    </div>
-</div>
-    </div>
-
-    <div className="carousel-item" data-bs-interval="10000">
-    	<div className="carousel-inner-div">
-     <div className="team_overlay ">
-       <a href="javascript:void(0)" className="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#m-team2">
-      <div className="team_circle text-center d-flex align-items-center justify-content-center">
-          
-        <div>
-       
-        <h3 className="text-dark fw-semibold team_name font_40">Craig</h3>
-        <h4 className="text-dark fw-semibold team_last_name">Brown</h4>
-        <p className="team_post text-dark text-center">Chief Digital Officer</p>
-        <p className=" text-dark text-center">Innovative digital advertising technologies to deliver highly effective ROI.</p>
-        <i className="fa-solid fa-circle-user text-dark"></i>
-      
-      </div>
-
-      </div>
-       </a>
-    </div>
-     <div className="row mx-0">
-      <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_yellow " >
-        <img src="images/Craig-Brown-Portrait.png"/>
-      </div>
-      <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
-       <img src="images/Craig-Brown-Personal.jpg" className="img-fluid w-100"/>
-
-      </div>
-    </div>
-</div>
-    </div>
-           
-  </div>
-</div>
-      
-    </div>
-    
-    {/* //for mobile view */}
-
-
+      {/* //for mobile view */}
 
       {/* <!-- start culture section --> */}
       <section className="culture_section bg_cover" id="our-culture">
