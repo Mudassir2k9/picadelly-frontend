@@ -32,7 +32,7 @@ const About = () => {
               loop: true,
               nav: false,
               autoplay: true,
-              autoplayTimeout: 3000,
+              autoplayTimeout: 7000,
               autoplaySpeed: 800,
               margin: 10,
               responsive: {
@@ -215,7 +215,7 @@ const About = () => {
         );
       })}
 
-      <section className="container-fluid executive_banner about_banner">
+{/*      <section className="container-fluid executive_banner about_banner">
         <div className="container">
           <div className="executive_col">
             <h2
@@ -228,15 +228,15 @@ const About = () => {
             </h2>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* <!-- start about section --> */}
 
-      <section className="about_section" id="We-are-Picadilly">
+      <section className="about_section container-fluid executive_banner about_banner px-0" id="We-are-Picadilly">
         <div className="about_row row mx-0">
           <div className="about_heading_col d-flex align-items-end align-items-md-center justify-content-center justify-content-md-end overflow-hidden">
             <h1
-              className="large_heading pe-0 pe-md-5 text-center text-md-start wow animate__fadeInRight"
+              className="large_heading px-0 text-center text-md-start wow animate__fadeInRight"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
             >
@@ -658,6 +658,16 @@ const About = () => {
           </div>
         </div>
         <div className="overflow_slider py-5">
+   {/*     <div>
+           <img src="images/c-img1.jpg"></img>
+           <img src="images/c-img2.jpg"></img>
+           <img src="images/c-img3.jpg"></img>
+           <img src="images/c-img4.jpg"></img>
+            <img src="images/c-img1.jpg"></img>
+           <img src="images/c-img2.jpg"></img>
+           <img src="images/c-img3.jpg"></img>
+           <img src="images/c-img4.jpg"></img>
+        </div>*/}
           <div className="owl-carousel owl-theme c_slider">
             {aboutData?.ImagesSlider?.Images?.map((item, index) => (
               <div className="item" key={index}>

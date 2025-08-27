@@ -736,12 +736,12 @@ body .footer-col .icon-col i:hover {
 .parallax_container {
   display: flex;
   flex-wrap: nowrap;
-  background-image: url(../images/bubbles-img.jpg);
+  background-image: url(../images/bubbles-img-old.jpg);
   position: relative;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 50%;
-  background-position: right 53%;
+  background-position: right 53.2%;
 }
 .growth_heading {
   font-size: 50px;
@@ -1201,7 +1201,7 @@ position: absolute;
   width: 358px;
   border-radius: 100%;
   background-color: #f2682ab5;
-  left: -175px;
+  left: -190px;
   z-index: 1111;
 }
 .left_member_col {
@@ -1564,9 +1564,14 @@ body .education_col {
   line-height: 1.4;
   padding: 7% 10%;
   opacity: 0;
+  transition: all 0.3s;
+  transform: scale(0);
 }
 .overlay_text p:has(a) {
-  padding: 0px !important;
+padding: 0px !important;
+    position: absolute;
+    right: 10%;
+    bottom: 20%;  
 }
 .overlay_text p a {
   display: block;
@@ -1583,6 +1588,8 @@ body .education_col {
 }
 .img_wrapper.main:hover .overlay_text {
   opacity: 1;
+    transition: all 0.3s;
+     transform: scale(1);
 }
 .overlay_text p {
   margin-bottom: 10px;
@@ -1831,7 +1838,46 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
 .privacy_container li {
   font-size: 18px;
 }
-
+.meet_team, .team_section, .culture_section{
+  position: relative;
+  z-index: 11;
+}
+.img_wrapper:has(#nextText), .img_wrapper:has(#prevText){
+  position: relative;
+}
+.img_wrapper:has(#prevText)::after, .img_wrapper:has(#nextText)::after{
+  position: absolute;
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.Piccadilly{
+  font-size: 115pt !important;
+        font-weight: 600 !important;
+        padding-right: 30px !important;
+}
+.Piccadilly h4{
+  padding-left: 0px !important;
+}
+.parallax_container .right-column{
+  position: relative;
+}
+/*.parallax_container .left-column::after{
+position: absolute;
+    content: "";
+    height: 360px;
+    width: 360px;
+    background-color: #f2682ab5;
+    z-index: 1;
+    border-radius: 100%;
+    right: -175px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}*/
 @media only screen and (min-width: 1300px) {
   .form-inner-div h5 {
     font-size: 24pt !important;
