@@ -5,8 +5,6 @@
         background-position: center;
         background-repealt: no-repealt;
         min-height: 100vh;
-        position: sticky;
-        top: 0;
 }
 .executive_banner .hamburger i::before{
      color: #fff;
@@ -40,18 +38,15 @@
       min-height: 100vh;
       position: relative;
 }
-.impact_section .right-img-2{
-  position: relative;
-}
-.impact_section .right-img-2::after{
+.impact_section::after{
       position: absolute;
     content: "";
     height: 350px;
     width: 350px;
-    background-color: rgba(178, 201, 53, 0.6);
+    background-color: #f2682ab5;
     z-index: 1;
     margin-left: auto;
-    left: -175px;
+    right: 38%;
     border-radius: 100%;
 }
 .font_18{
@@ -80,7 +75,7 @@
     height: 430px;
     width: 430px;
     background-size: 100%;
-    right: -215px;
+    right: -25%;
     top: -1%;
     bottom: 0;
     margin: auto;
@@ -126,7 +121,6 @@
 }
 .content_inner{
   z-index: 11;
-  overflow: hidden;
 }
 .leader_section .team_col::after {
     position: absolute;
@@ -265,16 +259,12 @@
 
   .On-Demand-banner{
     background-image: url(../images/on-demand_bg.png);
-    position: sticky;
-    top: 0;
 
   }
   .flexible_part{
     background-image: url(../images/flexible_bg.png);
       min-height: 100vh;
-background-attachment: fixed;
-position: sticky;
-top: 0;
+
   }
   .flexible_part::after{
     background-color: rgb(178 201 53 / 80%);
@@ -323,8 +313,6 @@ top: 0;
 .companies_section{
     background-image: url(../images/companies_bg.png);
     min-height: 100vh;
-    position: relative;
-    z-index: 111;
   }
   .logo_col{
     width: 18%;
@@ -361,10 +349,8 @@ top: 0;
   }
   .faqs_section{
     background-image: url(../images/flexible_bg.png);
-    min-height: 100vh;
     position: relative;
-
-
+    min-height: 100vh;
   }
   .faqs_section .team_col::after{
      position: absolute;
@@ -373,11 +359,10 @@ top: 0;
     height: 430px;
     width: 430px;
     background-size: 100%;
-    right: -215px;
+    right: -29%;
     top: 0%;
     bottom: 0;
     margin: auto;
-    opacity: 1;
   }
   .faqs_section .heading_col, .case-study-faqs .heading_col{
     flex-wrap: wrap;
@@ -563,7 +548,6 @@ top: 0;
  .separate_col_1{
   background: linear-gradient(to right, #eeeeee8f, #f3f3f3 10%, #ffffff);
   min-height: 400px;
-  padding-top: 170px;
  }
  .heading_part{
   padding-left:6% !important;
@@ -775,8 +759,6 @@ top: 0;
 /*-------news-landing-page-----*/
      .blog-spotlight{
       min-height: 100vh;
-      position: relative;
-      z-index: 11;
      }
      .blog-right-col{
       background-image: url(../images/spotlight-img.png);
@@ -1125,26 +1107,12 @@ top: 0;
       justify-content: center;
       align-items: center;
     }
-   .about-mobile-slider .team_circle {
-    height: 300px;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 100%;
-    transition: all 0.3s;
-}
+
  body .carousel-inner-div .heading_col{
   padding: 40px 25px 0px 25px !important;
 }
-.carousel-inner-div .left_member_col img{
-  height: auto !important;
-  width: 300px !important;
-}
-.carousel-inner-div .team_circle h3{
-  font-size: 36px !important;
-}
-.carousel-inner-div .team_circle{
-  padding:15px !important;
-}
+
+
 #m-team2 .modal-body, #m-team1 .modal-body{
   padding:0px 25px 30px 25px !important;
 }
@@ -1160,8 +1128,9 @@ top: 0;
  body .separate_col_1{
   padding: 30px 25px !important;
  }
-body .separate_col_1.case_study-col-1.heading_part{
-  padding-top: 170px !important;
+ .carousel-inner-div .left_member_col img{
+  height: auto !important;
+  width: 300px !important;
 }
  .join-section::after{
   top: 24% !important;
@@ -1169,6 +1138,13 @@ body .separate_col_1.case_study-col-1.heading_part{
   .impact_section .content .multi_heading{
     font-size: 17pt !important;
   }
+     .about-mobile-slider .team_circle {
+    height: 300px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+    transition: all 0.3s;
+}
   .separate_col_1 {
    
     min-height: 200px !important;
@@ -1624,7 +1600,7 @@ position: absolute;
     position: relative;
 }
 
-/* .strategy_wrap {
+ /* .strategy_wrap {
     position: absolute;
     top: 0;
     left: 0;
@@ -1632,8 +1608,8 @@ position: absolute;
     height: 100%;
     display: none; Hide by default
     z-index: 2;
-    transform: translateY(412px); */
-}
+    transform: translateY(412px); 
+}  */
 
 /* .item:hover .strategy_wrap {
     display: block; Show only when hovering over .item
@@ -1645,12 +1621,6 @@ position: absolute;
     }
 }
      @media (max-width: 576px){
-      .impact_section .right-img-2::after {
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: -175px;
-}
       .join-section .dif-col{
         min-height: auto !important;
         padding-top:60px !important;
@@ -1659,6 +1629,12 @@ position: absolute;
       .footer-row-1 .footer-col:nth-child(odd){
         width: 46% !important;
       }
+      .carousel-inner-div .team_circle h3{
+  font-size: 36px !important;
+}
+.carousel-inner-div .team_circle{
+  padding:15px !important;
+}
       .footer-row-1 .footer-col:nth-child(even){
         width: 54% !important;
       }
