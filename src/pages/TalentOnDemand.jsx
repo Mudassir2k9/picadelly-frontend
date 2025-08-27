@@ -446,7 +446,6 @@ const TalentOnDemand = () => {
               {talentDemandData?.Stories?.Heading}
             </h3>
             <p className="font_28  stories-section-para">
-              Description
               {talentDemandData?.Stories?.Description}
             </p>
           </div>

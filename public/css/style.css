@@ -2456,6 +2456,9 @@ body .testimonials-inner .carousel-indicators{
   .leader_section .content {
     padding: 0px !important;
   }
+  .leader_section .left_content_col .content ul{
+    padding: 0px 22% 0px 25px !important;
+  }
   .leader_section .left_content_col .content div:nth-child(2) > p,
   .leader_section .left_content_col .content li {
     font-size: 18pt !important;
