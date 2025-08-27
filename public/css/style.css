@@ -800,7 +800,17 @@ background-image: url("../images/bubbles-img.jpg");
   width: 100%;
   height: 100%;
 }
-.culture_section {
+.announcement-section:after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255 255 255 / 70%) !important;
+  background-blend-mode: multiply;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.culture_section, .announcement-section{
   position: relative;
 }
 .result-div-2:hover {
