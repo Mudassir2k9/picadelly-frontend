@@ -180,48 +180,45 @@ const TalentExecutive = () => {
             </div>
             <div className="testimonials d-flex justify-content-end">
               <div className="testimonials-inner">
-                {/* <!-- Carousel --> */}
-                <div
-                  id="demo"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  {/* <!-- Indicators/dots --> */}
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="0"
-                      className="active"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="1"
-                    ></button>
-                  </div>
+  {/* <!-- Carousel --> */}
+  <div
+    id="demo"
+    className="carousel slide"
+    data-bs-ride="carousel"
+  >
+    {/* <!-- Indicators/dots --> */}
+    <div className="carousel-indicators">
+      {talentExectiveData?.Testimonial?.Testimonial?.map((item, index) => (
+        <button
+          key={index}
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to={index}
+          className={index === 0 ? "active" : ""}
+          aria-current={index === 0 ? "true" : undefined}
+          aria-label={`Slide ${index + 1}`}
+        ></button>
+      ))}
+    </div>
 
-                  {/* <!-- The slideshow/carousel --> */}
-                  <div className="carousel-inner">
-                    {talentExectiveData?.Testimonial?.Testimonial?.map(
-                      (item, index) => (
-                        <div
-                          key={index}
-                          className={`carousel-item ${
-                            index === 0 ? "active" : ""
-                          }`}
-                        >
-                          <div
-                            dangerouslySetInnerHTML={{
-                              __html: item.Review || "",
-                            }}
-                          ></div>
-                        </div>
-                      )
-                    )}
-                  </div>
-                </div>
-              </div>
+    {/* <!-- The slideshow/carousel --> */}
+    <div className="carousel-inner">
+      {talentExectiveData?.Testimonial?.Testimonial?.map((item, index) => (
+        <div
+          key={index}
+          className={`carousel-item ${index === 0 ? "active" : ""}`}
+        >
+          <div
+            dangerouslySetInnerHTML={{
+              __html: item.Review || "",
+            }}
+          ></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
             </div>
           </div>
         </div>

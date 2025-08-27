@@ -391,71 +391,43 @@ const TalentOnDemand = () => {
             </div>
             <div className="testimonials d-flex justify-content-end">
               <div className="testimonials-inner">
-                {/* <!-- Carousel --> */}
-                <div
-                  id="demo"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  {/* <!-- Indicators/dots --> */}
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="0"
-                      className="active"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="2"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="3"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="4"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="5"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#demo"
-                      data-bs-slide-to="6"
-                    ></button>
-                  </div>
+  {/* <!-- Carousel --> */}
+  <div
+    id="demo"
+    className="carousel slide"
+    data-bs-ride="carousel"
+  >
+    {/* <!-- Indicators/dots --> */}
+    <div className="carousel-indicators">
+      {talentDemandData?.Testimonials?.Testimonial?.map((_, index) => (
+        <button
+          key={index}
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to={index}
+          className={index === 0 ? "active" : ""}
+          aria-current={index === 0 ? "true" : undefined}
+          aria-label={`Slide ${index + 1}`}
+        ></button>
+      ))}
+    </div>
 
-                  {/* <!-- The slideshow/carousel --> */}
-                  <div className="carousel-inner">
-                    {talentDemandData?.Testimonials?.Testimonial?.map(
-                      (item, index) => (
-                        <div
-                          key={item.id}
-                          className={`carousel-item ${
-                            index === 0 ? "active" : ""
-                          }`}
-                        >
-                          <div
-                            dangerouslySetInnerHTML={{ __html: item.Review }}
-                          />
-                        </div>
-                      )
-                    )}
-                  </div>
-                </div>
-              </div>
+    {/* <!-- The slideshow/carousel --> */}
+    <div className="carousel-inner">
+      {talentDemandData?.Testimonials?.Testimonial?.map((item, index) => (
+        <div
+          key={item.id || index}
+          className={`carousel-item ${index === 0 ? "active" : ""}`}
+        >
+          <div
+            dangerouslySetInnerHTML={{ __html: item.Review }}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
