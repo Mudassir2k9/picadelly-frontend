@@ -127,7 +127,7 @@ const Work = () => {
               <img
                   id="prevThumb"
                   className="img_thumbnail"
-                  src="http://82.25.95.212:1337/uploads/p_img7_859e623fc9.jpg"
+                  src="http://picadelly.site/uploads/p_img7_859e623fc9.jpg"
                   alt="Previous Thumbnail"
                 />
             )}
@@ -169,7 +169,7 @@ const Work = () => {
               <img
                   id="nextThumb"
                   className="img_thumbnail"
-                  src="http://82.25.95.212:1337/uploads/Placeholder_Image_7_9970dda408.png"
+                  src="https://picadelly.site/uploads/Placeholder_Image_7_9970dda408.png"
                   alt="Next Thumbnail"
                 />
                 
@@ -252,7 +252,7 @@ const Work = () => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary non-profit_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold color_black">Non-Profit</h3>
+              <h3 className="font_40 fw-bold color_black">Nonprofit</h3>
               <p className="font_18 color_black py-4">
                 Piccadilly has a proven track record of leveraging nonprofit marketing dollars to produce measurable impact and raise awareness of your mission.
               </p>
