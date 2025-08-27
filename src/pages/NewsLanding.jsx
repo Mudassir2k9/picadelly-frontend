@@ -1,6 +1,53 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const NewsLanding = () => {
+
+    const [landingData, setLandingData] = useState(null);
+    const [catData, setCatData] = useState(null);
+    const [newsData, setNewsData] = useState(null);
+  
+    useEffect(() => {
+      axios
+        .get(
+          `${apiUrl}/news-landing`
+        )
+        .then((res) => {
+          setLandingData(res.data.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching landing data:", error);
+        });
+
+      axios
+        .get(
+          `${apiUrl}/categories`
+        )
+        .then((res) => {
+          setCatData(res.data.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching landing data:", error);
+        });
+
+        axios
+        .get(
+          `${apiUrl}/news?populate[News][populate][Feature_Image][populate]=*&populate[News][populate]=category`
+        )
+        .then((res) => {
+          setNewsData(res.data.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching landing data:", error);
+        });
+
+    }, []);
+    console.log("newsData", newsData);
+    console.log("catData", catData);
+    console.log("landingData", landingData);
+
   return (
     <>
       <style>{`
@@ -18,10 +65,9 @@ const NewsLanding = () => {
 `}</style>
       <div className="container-fluid executive_banner work_banner news_banner">
         <div className="container">
-          <div className="executive_col">
-            <h2 className="large_heading_2 text-center fw_300 text-white wow animate__fadeInDownBig">
-              What's <span className="fw-bold text-dark">Happening</span>
-            </h2>
+          <div className="executive_col" 
+          dangerouslySetInnerHTML={{ __html: landingData?.BannerHeading }}>
+           
           </div>
         </div>
       </div>
@@ -33,43 +79,28 @@ const NewsLanding = () => {
         <div className="row mx-0">
           <div className="col-md-6 px-5 d-flex  justify-content-center align-items-center bg-cover bg-white">
             <div className="content px-5">
-              <h3
-                className="color_teal fw-300 mb-2"
-                style={{ fontSize: "33px" }}
-              >
-                <span className="fw_600">
-                  Navigating Leadership Change:
-                  <br />
-                </span>{" "}
-                Why Every CEO Transition Needs a Communications Strategy?
-              </h3>
-              <p className="font_20 text-dark">
-                Leadership transitions are inevitable, but how they're
-                communicated can define a brand's future. We've seen firsthand
-                how a well-executed CEO transition communications plan can
-                preserve trust, protect morale, and position a brand for
-                long-term success. On the flip side, a poorly executed plan can
-                damage a company's reputation, cause confusion, and even
-                decrease shareholder value.
-              </p>
+              <div 
+                dangerouslySetInnerHTML={{ __html: landingData?.Section2_Left_Column_Heading }}
+               ></div>
+              <div
+                dangerouslySetInnerHTML={{ __html: landingData?.Section2_Left_Column_Description }}
+               >
+
+              </div>
 
               <a
-                href="https://picadelly.site/blog-detail"
+                href={landingData?.Section2_Left_Column_Button_URL}
                 className="btn_light bg_teal text-white mt-3"
                 style={{ display: "inline-block" }}
               >
-                Read Blog
+                {landingData?.Section2_Left_Column_Button_Label}
               </a>
             </div>
           </div>
-          <div className="col-md-6 blog-right-col d-flex align-items-center px-5">
-            <h3
-              className="font_40 fw-semibold text-white px-5"
-              style={{ fontSize: "60px" }}
-            >
-              Hot <br />
-              News
-            </h3>
+          <div className="col-md-6 blog-right-col d-flex align-items-center px-5"
+            dangerouslySetInnerHTML={{ __html: landingData?.Section2_Right_Column_Heading }}
+          >
+            
           </div>
         </div>
       </div>
@@ -83,180 +114,52 @@ const NewsLanding = () => {
               <div className="pills-part">
                 {/* <!-- Nav pills --> */}
                 <ul className="nav nav-pills" role="tablist">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link active"
-                      data-bs-toggle="pill"
-                      href="#menu1"
-                    >
-                      Blogs
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" data-bs-toggle="pill" href="#menu2">
-                      Announcements
-                    </a>
-                  </li>
+                  {catData?.map((cat, i) => (
+                    <li className="nav-item" key={cat.id}>
+                      <a
+                        className={`nav-link ${i === 0 ? "active" : ""}`} // first one active
+                        data-bs-toggle="pill"
+                        href={`#${cat.slug}`}
+                      >
+                        {cat.name}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
 
                 {/* <!-- Tab panes --> */}
                 <div className="tab-content">
-                  <div id="menu1" className="container tab-pane active">
-                    <br />
-                    <a href="https://picadelly.site/news-item">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div id="menu2" className="container tab-pane fade">
-                    <br />
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div className="Articles_intro">
-                        <div className="info">
-                          <p className="text-dark">Category</p>
-                          <h3 className="text-dark" style={{ maxWidth: "80%" }}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </h3>
-                        </div>
-                        <div className="on_hover-img">
-                          <img src="images/news_img.png" />
-                        </div>
-                      </div>
-                    </a>
-                  </div>
+                  {catData?.map((cat, i) => (
+                    <div
+                      key={cat.id}
+                      id={cat.slug}
+                      className={`tab-pane fade ${i === 0 ? "show active" : ""}`}
+                    >
+                      {newsData
+                        ?.filter((news) => news.News.category?.id === cat.id)
+                        .map((news, j) => (
+                          <a key={j} href={`/news-item/${news.News.id}`}>
+                            <div className="Articles_intro">
+                              <div className="info">
+                                <p className="text-dark">{cat.name}</p>
+                                <h3
+                                  className="text-dark"
+                                  style={{ maxWidth: "80%" }}
+                                  dangerouslySetInnerHTML={{ __html: news.News.Title }}
+                                />
+                              </div>
+                              <div className="on_hover-img">
+                                <img
+                                  src={`${baseUrl}${news.News.Feature_Image?.url}`}
+                                  alt={news.News.Feature_Image?.alternativeText || ""}
+                                />
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                    </div>
+                  ))}
+                  
                 </div>
               </div>
             </div>
