@@ -97,12 +97,13 @@ $(document).ready(function () {
 let lastScrollTop = 0; // store previous scroll position
 let scrollTimeout;
 
+
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   const currentScroll = window.scrollY;
 
-  if (currentScroll > lastScrollTop) {
-    // ✅ scrolling down
+  if (currentScroll < lastScrollTop) {
+    // ✅ scrolling UP → show header
     header.classList.add("sticky");
 
     clearTimeout(scrollTimeout);
@@ -112,10 +113,14 @@ window.addEventListener("scroll", function () {
         header.classList.remove("sticky");
       }
     }, 2000);
+  } else {
+    // ⬇️ scrolling DOWN → hide header immediately
+    header.classList.remove("sticky");
   }
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // avoid negative on mobile
 });
+
 
 
 
