@@ -86,10 +86,11 @@ const About = () => {
         .forEach((p) => {
           p.innerHTML = p.innerHTML.replace(
             "measurable results.",
-            "measurable results.</br>"
+            "measurable results.</br>" 
           );
         });
     }, 2000); // 2000 ms = 2 seconds
+    
   });
 
   return (
