@@ -65,11 +65,11 @@ const CaseStudy = () => {
                 />
             </div>
           </div>
-          <div className="col-md-6 banner-col blog_col-2 separate_col_1 case_study-col-1">
+          <div className="col-md-6 banner-col blog_col-2 separate_col_1 separate_col_2 case_study-col-1">
             <div className="inner-div d-flex" style={{ width: "100%" }}>
               <div
                 className="list-col d-flex justify-content-center"
-                style={{ width: "40%" }}
+                style={{ width: "50%" }}
               >
                 <div className="list-inner">
                   <h5 className="fw_600">Channels</h5>
@@ -85,7 +85,7 @@ const CaseStudy = () => {
               </div>
               <div
                 className="list-col d-flex justify-content-center"
-                style={{ width: "60%" }}
+                style={{ width: "50%" }}
               >
                 <div className="list-inner">
                   <h5 className="fw_600">Integrated Services</h5>

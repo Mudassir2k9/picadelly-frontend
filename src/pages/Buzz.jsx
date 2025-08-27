@@ -54,9 +54,9 @@ const Buzz = () => {
     <>
 
     <style>{`
-     @media only screen and (min-width: 768px){
-     .hamburger i {
-    color: #fff !important;
+     @media only screen and (max-width :576px) {
+     .hamburger .menu-line{
+    background-color: #000 !important;
   }
      } 
 `}</style>

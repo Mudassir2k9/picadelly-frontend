@@ -142,6 +142,20 @@ html {
   transition: all 0.3s;
   text-decoration: none;
 }
+    .project-col::after {
+        position: absolute;
+        content: "";
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 0px;
+        display: block !important;
+        background: rgba(0, 0, 0, 0.6);
+    }
+        .overlay-div {
+       
+        z-index: 11;
+    }
 .btn_light:hover {
   background-color: var(--primary_color);
   transition: all 0.3s;
@@ -1827,6 +1841,9 @@ body .testimonials-inner {
 body .testimonials-inner .carousel-indicators{
     bottom: -26px !important;
   }
+  .separate_col_2{
+    padding-left: 4% !important;
+  }
   .testimonials-inner .carousel{
     margin-top: 130px !important;
   }
@@ -2610,6 +2627,13 @@ body .testimonials-inner .carousel-indicators{
 @media only screen and (max-width: 576px) {
   .right-img {
     display: none !important;
+  }
+  .work_banner .executive_col h2 {
+        font-size: 55px !important;
+        margin-top: 12px;
+    }
+  .case_study_banner .list-inner ul{
+    padding-left:16px !important;
   }
   #header.open .overlay {
     width: 100% !important;
