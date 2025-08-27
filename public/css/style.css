@@ -1974,9 +1974,7 @@ body .testimonials-inner .carousel-indicators{
   .team-item p {
     font-size: 16pt;
   }
-  .impact_section_2 .team_col::after {
-    right: 72% !important;
-  }
+
   .banner_section .banner-col h2 {
     font-size: 78px !important;
     font-weight: 400 !important;
