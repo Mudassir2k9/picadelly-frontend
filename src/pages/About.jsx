@@ -249,7 +249,7 @@ const About = () => {
       </section>
 
       {/* <!-- start team section --> */}
-      <section className="team_section">
+      <section className="team_section meet_team">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col">
             <div className="px-3 px-md-5 mx-0 mx-md-5">

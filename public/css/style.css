@@ -793,7 +793,7 @@ background-image: url("../images/bubbles-img.jpg");
 .culture_section:after {
   position: absolute;
   content: "";
-  background-color: rgba(255 255 255 / 30%);
+  background-color: rgba(255 255 255 / 70%) !important;
   background-blend-mode: multiply;
   left: 0;
   top: 0;
@@ -1410,6 +1410,9 @@ body .tourism_col {
 .culture_section .container {
   position: relative;
   z-index: 111;
+}
+.meet_team .team_right_col::before{
+  background-color: #f2682ab5 !important;
 }
 body .financial_col {
   background-color: #f28452 !important;
