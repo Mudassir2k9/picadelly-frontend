@@ -1833,6 +1833,9 @@ body .testimonials-inner .carousel-indicators{
   .work_banner .large_heading_2 {
     padding-right: 38px !important;
   }
+   .work_banner.news_banner .large_heading_2{
+    padding-right: 0px !important;
+  }
   body .footer-col-1 h5 {
     font-size: 20pt !important;
     margin-bottom: 20px !important;
