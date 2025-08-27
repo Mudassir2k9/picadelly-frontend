@@ -741,7 +741,7 @@ body .footer-col .icon-col i:hover {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 50%;
-  background-position: right;
+  background-position: right 53%;
 }
 .growth_heading {
   font-size: 50px;
@@ -975,9 +975,9 @@ background-image: url("../images/bubbles-img.jpg");
   right: auto;
   left: 0;
 }
-.mobile-creative-section.team-section .carousel .heading_col{
+/*.mobile-creative-section.team-section .carousel .heading_col{
   min-height: 100vh !important;
-}
+}*/
 .banner_video video {
   width: 100% !important;
 }
@@ -1152,17 +1152,17 @@ background-image: url("../images/bubbles-img.jpg");
 }
 .team_col::after,
 .services_team_slider .heading_col::after {
-  position: absolute;
-  content: "";
-  background-image: url("../images/ring.png");
-  height: 450px;
-  width: 450px;
-  background-size: 100%;
-  right: -225px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  display: block !important;
+position: absolute;
+    content: "";
+    background-image: url(../images/ring.png);
+    height: 530px;
+    width: 530px;
+    background-size: 100%;
+    right: -302px;
+    top: 82px;
+    bottom: 0;
+    margin: auto;
+    display: block !important;
   opacity: 0.15;
 }
 .meet_team .team_col::after{
@@ -1388,12 +1388,13 @@ body .footer-col-1 img {
   background-size: 70%;
   background-repeat: no-repeat;
 }
-.healthcare_col::after,
-.financial_col::after,
-.tourism_col::after,
-.non-profit_col::after,
-.education_col::after {
-  display: none;
+body .services_team_slider .healthcare_col::after,
+body .services_team_slider .financial_col::after,
+body .services_team_slider .tourism_col::after,
+body .services_team_slider .non-profit_col::after,
+body .services_team_slider .education_col::after,  body .work_slider .tourism_col::after, body .work_slider .non-profit_col::after,
+ body .work_slider .education_col::after,  body .work_slider .financial_col::after, body .work_slider .healthcare_col::after {
+  display: none !important;
 }
 
 .services_parallax .carousel-indicators button {
@@ -1414,11 +1415,11 @@ body .footer-col-1 img {
 }
 body .healthcare_col {
   background: rgba(178, 201, 53, 1) !important;
-  /*     background-image: url("../images/half-ring.jpg") !important;*/
+       background-image: url("../images/half-ring.jpg") !important;
   background-position: center right !important;
   background: var(--primary_color);
   background-blend-mode: multiply;
-  background-size: 70% !important;
+  background-size: 575px !important;
   background-repeat: no-repeat !important;
 }
 .team_right_col::before {
@@ -1444,10 +1445,10 @@ body .tourism_col {
 }
 body .financial_col {
   background-color: #f28452 !important;
-  /*    background-image: url("../images/half-ring.jpg") !important;*/
+      background-image: url("../images/half-ring.jpg") !important;
   background-position: center right !important;
   background-blend-mode: multiply;
-  background-size: 70% !important;
+  background-size: 575px !important;
   background-repeat: no-repeat !important;
 }
 .right_content_col {
@@ -1459,10 +1460,10 @@ body .financial_col {
 }
 body .education_col {
   background-color: #72c9d4 !important;
-  /*    background-image: url("../images/half-ring.jpg") !important;*/
+      background-image: url("../images/half-ring.jpg") !important;
   background-position: center right !important;
   background-blend-mode: multiply;
-  background-size: 70% !important;
+  background-size: 575px !important;
   background-repeat: no-repeat !important;
 }
 .education_right_col::before {
@@ -1771,7 +1772,7 @@ body .education_col {
 }
 #team-leaders.horizontal_parallax {
   max-width: inherit !important;
-  width: 900% !important;
+  width: 800% !important;
 }
 .services_team_slider .right_content_col img {
   object-position: top;
@@ -2636,6 +2637,20 @@ body .testimonials-inner .carousel-indicators{
   }
 }
 @media only screen and (max-width: 576px) {
+  body .services_team_slider .healthcare_col::after,
+body .services_team_slider .financial_col::after,
+body .services_team_slider .tourism_col::after,
+body .services_team_slider .non-profit_col::after,
+body .services_team_slider .education_col::after,  body .work_slider .tourism_col::after, body .work_slider .non-profit_col::after,
+ body .work_slider .education_col::after,  body .work_slider .financial_col::after, body .work_slider .healthcare_col::after {
+  display: block !important;
+}
+.team_right_col::before, .financial_right_col::before, .team_right_col::before{
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: -170px;
+}
   .right-img {
     display: none !important;
   }
@@ -2673,7 +2688,7 @@ body .testimonials-inner .carousel-indicators{
     height: 434px;
     margin: 360px auto 0px auto !important;
   }
-  .team_col::after,
+ 
   .services_team_slider .heading_col::after {
     display: none !important;
   }
@@ -3245,20 +3260,6 @@ body .testimonials-inner .carousel-indicators{
   .latest-news {
     padding: 0px !important;
   }
-  /*.about-mobile-slider .heading_col::before{
-content: "";
-position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    bottom: -35%;
-    display: block !important;
-        height: 350px !important;
-    width: 350px !important;
-    border-radius: 100%;
-    background-color: #f2682ab5;
-    z-index: 111;
-    top: auto !important;
 
-}*/
+
 }
