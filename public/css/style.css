@@ -1444,7 +1444,7 @@ body .education_col {
 }
 .links_col {
   width: 50%;
-  background: #f2682ad4;
+  background: #f26828;
   color: white;
   padding: 3rem;
   display: flex;
@@ -1454,9 +1454,9 @@ body .education_col {
   text-align: right;
   background-image: url("../images/half-ring.jpg");
   background-blend-mode: multiply;
-  background-position: center;
-  /* background-size: cover;
-      background-repeat: no-repeat; */
+  background-position: right;
+  /* background-size: cover; */
+      background-repeat: no-repeat;
 }
 
 .links_col .item_link {
@@ -1607,6 +1607,7 @@ body .education_col {
   min-height: auto !important;
   padding-bottom: 50px;
 }
+ 
 .executive_col {
   margin-top: 0px !important;
   height: 100vh;
@@ -1753,7 +1754,7 @@ body .services_team_slider,
 body .services_team_slider .carousel-item {
   min-height: 100vh !important;
 }
-body .services_team_slider .right_content_col img {
+body .services_team_slider .right_content_col img, body .work_slider .right_content_col img {
   object-position: top !important;
 }
 .marquee-container {
@@ -1801,6 +1802,20 @@ body .services_team_slider .right_content_col img {
 @media only screen and (min-width: 1300px) {
   .form-inner-div h5 {
     font-size: 24pt !important;
+  }
+  .testimonials_part .container{
+    max-width: 1480px !important;
+  }
+body .testimonials-inner {
+    height: 1100px !important;
+    width: 1100px !important;
+    margin-bottom: -588px !important;
+  }
+body .testimonials-inner .carousel-indicators{
+    bottom: -26px !important;
+  }
+  .testimonials-inner .carousel{
+    margin-top: 130px !important;
   }
   .work_banner .large_heading_2 {
     padding-right: 38px !important;
@@ -2426,6 +2441,20 @@ body .services_team_slider .right_content_col img {
   .inner_wrap {
     width: 260px !important;
     height: 260px !important;
+  }
+    .testimonials_part .container{
+    max-width: 1140px !important;
+  }
+body .testimonials-inner {
+    height: 950px !important;
+    width: 950px !important;
+    margin-bottom: -510px !important;
+  }
+body .testimonials-inner .carousel-indicators{
+    bottom: -10px !important;
+  }
+  .testimonials-inner .carousel{
+    margin-top: 90px !important;
   }
   body .footer-col-1 img {
     max-width: 160px !important;
