@@ -278,7 +278,7 @@ const NewsItem = () => {
       </div>
       {/* <!-----project-section-----> */}
 
-      <div className="container-fluid px-0">
+      {/* <div className="container-fluid px-0">
         <div className="row mx-0">
           <div className="col-md-6 project-col px-0">
             <a href="#">
@@ -315,7 +315,7 @@ const NewsItem = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
