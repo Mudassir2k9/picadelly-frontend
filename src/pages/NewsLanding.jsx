@@ -138,7 +138,7 @@ const NewsLanding = () => {
                       {newsData
                         ?.filter((news) => news.News.category?.id === cat.id)
                         .map((news, j) => (
-                          <a key={j} href={`/news-item/${news.News.id}`}>
+                          <a key={j} href={`/news-item/${news.documentId}`}>
                             <div className="Articles_intro">
                               <div className="info">
                                 <p className="text-dark">{cat.name}</p>

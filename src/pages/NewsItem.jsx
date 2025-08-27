@@ -9,6 +9,21 @@ const NewsItem = () => {
   const { id } = useParams();
   console.log("ajfajk", id);
 
+  useEffect(() => {
+    if (!id) return;
+
+    axios
+      .get(
+        `${apiUrl}/news/${id}?populate[News][populate][Feature_Image][populate]=*&populate[News][populate]=category`
+      )
+      .then((res) => {
+        setNewsItemData(res.data.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching news item:", error);
+      });
+  }, [id]);
+
   console.log("newsItemData", newsItemData);
   return (
     <>
