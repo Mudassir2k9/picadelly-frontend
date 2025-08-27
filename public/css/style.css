@@ -94,11 +94,18 @@ body .team_section .heading_col h3,
 body .team-item h2 {
   font-weight: 600 !important;
 }
+/* body .carousel-inner-div .left_member_col img{
+  height: auto !important;
+  width: 600px !important;
 
+} */
 body {
   font-family: "Inter Tight";
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+.left_member_col img{
+  height: 100% !important;
 }
 /*----nav-style-----*/
 html {
@@ -106,6 +113,7 @@ html {
   padding: 0;
   /*      overflow-x: hidden;*/
 }
+
 
 /*h1, h2, p, li {
     max-width: 100% !important;
@@ -943,6 +951,9 @@ background-image: url("../images/bubbles-img.jpg");
   right: auto;
   left: 0;
 }
+.mobile-creative-section.team-section .carousel .heading_col{
+  min-height: 100vh !important;
+}
 .banner_video video {
   width: 100% !important;
 }
@@ -1066,23 +1077,29 @@ background-image: url("../images/bubbles-img.jpg");
   position: relative;
   z-index: 11;
 }
-.about_row .about_text {
-  background-color: rgb(242 104 42 / 70%);
-  position: sticky;
-  top: 0;
+.about_row .item{
+  
+  /* position: sticky; */
+  /* top: 0; */
   min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 0px;
+ 
+}
+.about_row .about_right_content_col{
+  background-color: rgb(242 104 42 / 70%) !important;
 }
 .about_right_content_col,
 .about_heading_col {
   width: 50%;
   height: 100vh;
+  
 }
-.about_heading_col {
+/* .about_heading_col {
   position: sticky;
   top: 0;
-}
+} */
 /*slide on scroll slider */
 .about_row .item {
   height: 100%;
@@ -1713,7 +1730,7 @@ body .education_col {
   height: 100% !important;
   width: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: top !important;
 }
 .multi_heading p,
 .multi_heading span,
@@ -2002,7 +2019,7 @@ body .services_team_slider .right_content_col img {
     font-size: 50px !important;
   }
   .left_member_col img {
-    height: 90% !important;
+    height: 100% !important;
   }
   .team_circle {
     height: 600px;
@@ -2134,6 +2151,13 @@ body .services_team_slider .right_content_col img {
   .team-section .carousel .healthcare_col,
   .team-section .carousel .heading_col {
     padding-bottom: 88px !important;
+  }
+  .mobile-creative-section.team-section .carousel .heading_col{
+    padding: 0px !important;
+    min-height: 100vh !important;
+  }
+  body .about-mobile-slider .right_content_col{
+    min-height: 100vh !important;
   }
   .inner-div h2 {
     font-size: 64pt !important;
@@ -2558,6 +2582,12 @@ body .services_team_slider .right_content_col img {
   }
   .right-column {
     padding-top: 70px;
+  }
+  .about_row .item{
+    height: 350px !important;
+    min-height: auto !important;
+    justify-content: flex-start !important;
+    align-items: flex-start;
   }
   .marquee-container {
     height: 434px;

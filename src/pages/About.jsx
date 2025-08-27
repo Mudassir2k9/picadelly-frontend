@@ -212,8 +212,9 @@ const About = () => {
               {aboutData?.Section2.Text}
             </h1>
           </div>
-          <div className="about_right_content_col">
-          <div className="about_text">
+          <div className="about_right_content_col px-0">
+           
+          {/* <div className="about_text">
              <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
               A Refreshing Alternative
                   </h4>
@@ -227,9 +228,9 @@ const About = () => {
              <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
               A Refreshing Alternative
                   </h4>
-          </div>
-{/*            <div
-              className="owl-carousel owl-theme about_slider"
+          </div> */}
+           <div
+              className="owl-carousel owl-theme about_slider px-0 mx-0"
               ref={sliderRef}
             >
               {aboutData?.Section2?.slidingText?.map((item) => (
@@ -239,7 +240,8 @@ const About = () => {
                   </h4>
                 </div>
               ))}
-            </div>*/}
+            </div>
+           
           </div>
         </div>
       </section>
@@ -391,22 +393,22 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
 
 	{/* <!----about-mobile-slider-section----> */}
 
-       <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center align-items-center d-block d-md-none">
+       <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex d-md-none align-items-center">
       {/* <!-- Carousel --> */}
-<div id="demo" className="carousel slide " data-bs-ride="carousel">
+<div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel">
 
   {/* <!-- Indicators/dots --> */}
   <div className="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0"  className="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-   {/* <!--  <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button> */}
-    {/* <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button> --> */}
+  
+    {/* <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+     <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>  */}
   </div>
 
   {/* <!-- The slideshow/carousel --> */}
   <div className="carousel-inner">
-    <div className="carousel-item active">
+    {/* <div className="carousel-item active">
          <div className="row mx-0">
                <div className="heading_col d-flex align-items-center px-5 team_col">
         <div className="px-3 px-md-5 mx-0 mx-md-5 content_div">
@@ -416,8 +418,8 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
       </div>
       <div className="right_content_col px-5 d-flex align-items-center team_right_col"></div>
          </div>
-    </div>
-    <div className="carousel-item">
+    </div> */}
+    <div className="carousel-item active" data-bs-interval="10000">
     	<div className="carousel-inner-div">
           <div className="team_overlay">
        <a href="javascript:void(0)" className="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#m-team1">
@@ -448,7 +450,7 @@ A vintage car enthusiast in every sense, Vintage spends his weekends behind the 
 </div>
     </div>
 
-    <div className="carousel-item">
+    <div className="carousel-item" data-bs-interval="10000">
     	<div className="carousel-inner-div">
      <div className="team_overlay ">
        <a href="javascript:void(0)" className="text-decoration-none"  data-bs-toggle="modal" data-bs-target="#m-team2">
