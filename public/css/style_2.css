@@ -369,13 +369,14 @@
      position: absolute;
     content: "";
     background-image: url(../images/ring.png);
-    height: 430px;
-    width: 430px;
+    height: 450px;
+    width: 450px;
     background-size: 100%;
-    right: -29%;
+    right: -225px;
     top: 0%;
     bottom: 0;
     margin: auto;
+    opacity: 1;
   }
   .faqs_section .heading_col, .case-study-faqs .heading_col{
     flex-wrap: wrap;

@@ -328,7 +328,7 @@ header.sticky .navbar-custom {
   opacity: 0;
 }
 #header.open .menu-line-3 {
-  transform: translateY(-10px) translateY(50%) rotate(45deg);
+  transform: translateY(-11px) translateY(50%) rotate(45deg);
 }
 #header.open .overlay {
   width: 50% !important;
@@ -1151,6 +1151,10 @@ background-image: url("../images/bubbles-img.jpg");
   display: block !important;
   opacity: 0.15;
 }
+.meet_team .team_col::after{
+  opacity: 1;
+  z-index: -1;
+}
 .executive_impact_section .team_col::after {
   opacity: 1;
   z-index: -1;
@@ -1812,6 +1816,7 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
 .privacy_container li {
   font-size: 18px;
 }
+
 @media only screen and (min-width: 1300px) {
   .form-inner-div h5 {
     font-size: 24pt !important;
@@ -2081,9 +2086,11 @@ body .testimonials-inner .carousel-indicators{
     font-size: 98pt;
     max-width: inherit !important;
     line-height: 98pt;
-    /*       font-weight: 600 !important;*/
+           font-weight: 600 !important;
   }
-
+  .executive_banner .large_heading_2.fw_300{
+    font-weight: 300 !important;
+  }
   .about_heading_col h1 {
     font-size: 115pt !important;
     font-weight: 400;
