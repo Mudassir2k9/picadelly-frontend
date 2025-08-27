@@ -6,6 +6,9 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 const NewsItem = () => {
   const [newsItemData, setNewsItemData] = useState(null);
+  const [newsData, setNewsData] = useState(null);
+   const [query, setQuery] = useState("");
+  const [matches, setMatches] = useState([]);
   const { id } = useParams();
   console.log("ajfajk", id);
 
@@ -24,24 +27,108 @@ const NewsItem = () => {
       });
   }, [id]);
 
+  useEffect(() => {
+      axios
+        .get(
+          `${apiUrl}/news?populate[News][populate]=*`
+        )
+        .then((res) => {
+          setNewsData(res.data.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching landing data:", error);
+        });
+    }, []);
+  console.log("newsData", newsData);
   console.log("newsItemData", newsItemData);
+  console.log("matches", matches);
+
+   const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+    setQuery(value);
+
+    if (value) {
+      const results = newsData.filter((item) => {
+        return (
+          item.News.Title.toLowerCase().includes(value) ||
+          item.News.Tag_Line.toLowerCase().includes(value)
+        );
+      });
+      setMatches(results);
+    } else {
+      setMatches([]);
+    }
+  };
+
+  const clearSearch = () => {
+    setQuery("");
+    setMatches([]);
+  };
+
+
   return (
     <>
       <style>{`
-     body header{
-     background-color: #fff;
-    }
+        body header{
+        background-color: #fff;
+      }
       .menu-line{
-      background-color: #000 !important;
-}
-     .nav-btn .btn_primary:hover{
-        background-color:#000 !important;
-        color:#fff !important;
-        transition:all 0.3s !important;
+        background-color: #000 !important;
+      }
+      .nav-btn .btn_primary:hover{
+          background-color:#000 !important;
+          color:#fff !important;
+          transition:all 0.3s !important;
 
+        }
+      .search-box {
+        position: relative;
+        width: 250px;
       }
-      }
-`}</style>
+
+        .search-box input {
+          width: 100%;
+          padding: 6px 30px;
+        }
+
+        .search-icon,
+        .clear-icon {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+        }
+
+        .search-icon {
+          left: 8px;
+        }
+
+        .clear-icon {
+          right: 8px;
+          display: none;
+        }
+
+        .suggestions {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: #fff;
+          border: 1px solid #ddd;
+          max-height: 200px;
+          overflow-y: auto;
+          z-index: 10;
+        }
+
+        .suggestions li {
+          padding: 6px 10px;
+          cursor: pointer;
+        }
+
+        .suggestions li:hover {
+          background: #f0f0f0;
+        }
+    `}</style>
       <div className="container-fluid news_item_banner separate px-0 blog_detail_banner">
         <div className="row banner-row mx-0">
           <div className="col-md-8 case_study-col-1 heading_part separate_col_1 blog_col-1 px-0 pb-5">
@@ -117,10 +204,37 @@ const NewsItem = () => {
         <div className="row mx-0">
           {/* <!-- Sticky Left Column --> */}
           <div className="col-md-4 left-sidebar px-5 pt-5 pb-5">
-            <div class="search-box">
-              <i class="fa fa-search search-icon"></i>
-              <input type="text" placeholder="Search" />
-              <i class="fa fa-times clear-icon"></i>
+            <div className="search-box">
+              <i className="fa fa-search search-icon"></i>
+              <input
+                type="text"
+                placeholder="Search"
+                value={query}
+                onChange={handleSearch}
+              />
+              {query && (
+                <i
+                  className="fa fa-times clear-icon"
+                  onClick={clearSearch}
+                  style={{ cursor: "pointer" }}
+                ></i>
+              )}
+
+              {matches.length > 0 && (
+                <ul id="suggestions">
+                  {matches.map((item) => (
+                    <li
+                      key={item.News.id}
+                      onClick={() => (window.location.href = `/news-item/${item.documentId}`)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <strong>{item.News.Title}</strong>
+                      <br />
+                      <small>{item.News.Tag_Line}</small>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
 
