@@ -179,7 +179,7 @@ const Work = () => {
       </div>
 
       {/* <!-- start team section --> */}
-<div className="container-fluid px-0 team-section d-flex justify-content-center align-items-center">
+<div className="container-fluid px-0 team-section work_slider d-flex justify-content-center align-items-center">
   {/* Carousel */}
   <div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
     {/* Indicators/dots */}

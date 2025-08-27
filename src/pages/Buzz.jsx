@@ -90,12 +90,14 @@ const Buzz = () => {
             />
           </div>
            <div className="col-lg-6 col-md-12 col-12 bg-light team-item">
+            <div className="team-inner-div">
             <h2 className="color_primary fw-bold pb-3 ">{buzzData?.Team_Action?.Heading}</h2>
             <div
               dangerouslySetInnerHTML={{
                 __html: buzzData?.Team_Action?.Description || "",
               }}
             ></div>
+            </div>
           </div>
         </div>
       </section>

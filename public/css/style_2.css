@@ -557,6 +557,7 @@
  body .separate{
     padding:0px !important;
     min-height: auto; 
+    padding-top: 110px !important;
  }
  .separate_col_1{
   background: linear-gradient(to right, #eeeeee8f, #f3f3f3 10%, #ffffff);
