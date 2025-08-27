@@ -1030,7 +1030,7 @@
 }
 .testimonials_part .carousel-item p:nth-child(1){
     font-size: 23px;
-    line-height: 30px;
+    line-height: 32px;
 }
 .circle-hover h3{
   font-size: 23px;
@@ -1377,8 +1377,13 @@ position: absolute;
          margin-top: 17px !important; 
     }
   .testimonials-inner .carousel-item p:nth-child(1){
-      font-size: 20px !important;
-      line-height: 25px !important;
+      font-size: 16px !important;
+      line-height: 23px !important;
+    }
+    .testimonials-inner .carousel-item p:nth-child(2){
+      font-size: 14px !important;
+      line-height: 23px !important;
+      font-weight: 600;
     }
    .testimonials{
       margin-top:40px;
@@ -1389,7 +1394,7 @@ position: absolute;
    .testimonials-inner .carousel-indicators{
     position: absolute;
     right: 0;
-    bottom: 20px !important;
+    bottom: 6px !important;
     display: flex;
     justify-content: flex-start;
     margin: 0px;

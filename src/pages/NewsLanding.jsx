@@ -57,11 +57,11 @@ const NewsLanding = () => {
         .menu-line{
       background-color: #000 !important;
 }
-     @media only screen and (max-width: 576px){
-     .hamburger i {
-    color: #fff !important;
+      @media only screen and (max-width: 576px) {
+       .hamburger .menu-line{
+    background-color: #fff !important;
   }
-     } 
+      }
 `}</style>
       <div className="container-fluid executive_banner work_banner news_banner">
         <div className="container">
