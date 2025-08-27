@@ -81,14 +81,40 @@ const NewsItem = () => {
           transition:all 0.3s !important;
 
         }
+        .search-box .search-icon{
+        left: auto !important;
+        right: 0px !important;
+        margin-right: 10px;
+        }
       .search-box {
         position: relative;
         width: 250px;
       }
+        #suggestions{
 
+    background-color: #ffffff99;
+    border-radius: 8px;
+    margin-top: 5px;
+    padding: 10px 20px;
+
+        }
+#suggestions li{
+        list-style: none;
+        margin: 10px 0px;
+        transition: all 0.3s
+}
+        #suggestions li:hover{
+        color: #f2682a !important;
+        transition: all 0.3s
+        }
         .search-box input {
           width: 100%;
-          padding: 6px 30px;
+          padding: 6px 15px !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        border: 0px !important;
+        height: 50px;
+
         }
 
         .search-icon,
@@ -205,13 +231,15 @@ const NewsItem = () => {
           {/* <!-- Sticky Left Column --> */}
           <div className="col-md-4 left-sidebar px-5 pt-5 pb-5">
             <div className="search-box">
-              <i className="fa fa-search search-icon"></i>
+            <div className="search_input input-group">
+              
               <input
                 type="text"
                 placeholder="Search"
                 value={query}
                 onChange={handleSearch}
               />
+              <i className="fa fa-search search-icon input-group-text bg-transparent border-0"></i>
               {query && (
                 <i
                   className="fa fa-times clear-icon"
@@ -219,7 +247,7 @@ const NewsItem = () => {
                   style={{ cursor: "pointer" }}
                 ></i>
               )}
-
+              </div>
               {matches.length > 0 && (
                 <ul id="suggestions">
                   {matches.map((item) => (
