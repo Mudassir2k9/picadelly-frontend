@@ -1859,7 +1859,7 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
   width: 300px; /* adjust width */
   height: 100%; /* takes parent height */
   overflow: hidden;
-  height: 585px;
+  height: 590px;
   padding-top: 50px;
   margin: 250px auto 0px auto !important;
 }
