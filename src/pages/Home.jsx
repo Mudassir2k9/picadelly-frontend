@@ -479,14 +479,13 @@ const Home = () => {
               data-wow-delay="0.5s"
             >
               <div className="inner-col">
-                <h5>{homeData?.Whats_Happening?.Happening_List[0].Title}</h5>
+                <h5>{homeData?.Whats_Happening?.Happening_List[0]?.Title}</h5>
                 <p>
                   <a
-                    href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[0].Happening_List[0].link}`}
+                    href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[0]?.Happening_List[0]?.link}`}
                   >
                     {
-                      homeData?.Whats_Happening?.Happening_List[0]
-                        .Happening_List[0].text
+                      homeData?.Whats_Happening?.Happening_List[0]?.Happening_List[0]?.text
                     }
                     <i className="fa-regular fa-arrow-right-long"></i>
                     <br />
@@ -503,22 +502,20 @@ const Home = () => {
                 <h5>{homeData?.Whats_Happening?.Happening_List[1].Title}</h5>
                 <p>
                   <a
-                    href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[1].Happening_List[0].link}`}
+                    href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[0]?.link}`}
                   >
                     {
-                      homeData?.Whats_Happening?.Happening_List[1]
-                        .Happening_List[0].text
+                      homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[0]?.text
                     }
                     <i className="fa-regular fa-arrow-right-long"></i>
                   </a>
                 </p>
                 <p>
                   <a
-                    href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[1].Happening_List[1].link}`}
+                    href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[1]?.link}`}
                   >
                     {
-                      homeData?.Whats_Happening?.Happening_List[1]
-                        .Happening_List[1].text
+                      homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[1]?.text
                     }
                     <i className="fa-regular fa-arrow-right-long"></i>
                   </a>
@@ -535,36 +532,33 @@ const Home = () => {
                 <ul>
                   <li>
                     <a
-                      href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[2].Happening_List[0].link}`}
+                      href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[0]?.link}`}
                       className="color_black"
                     >
                       {
-                        homeData?.Whats_Happening?.Happening_List[2]
-                          .Happening_List[0].text
+                        homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[0]?.text
                       }
                       <i className="fa-regular fa-arrow-right-long"></i>
                     </a>
                   </li>
                   <li>
                     <a
-                      href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[2].Happening_List[1].link}`}
+                      href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[1]?.link}`}
                       className="color_black"
                     >
                       {
-                        homeData?.Whats_Happening?.Happening_List[2]
-                          .Happening_List[2].text
+                        homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[2]?.text
                       }
                       <i className="fa-regular fa-arrow-right-long"></i>
                     </a>
                   </li>
                   <li>
                     <a
-                      href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[2].Happening_List[2].link}`}
+                      href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[2]?.link}`}
                       className="color_black"
                     >
                       {
-                        homeData?.Whats_Happening?.Happening_List[2]
-                          .Happening_List[2].text
+                        homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[2].text
                       }
                       <i className="fa-regular fa-arrow-right-long"></i>
                     </a>
