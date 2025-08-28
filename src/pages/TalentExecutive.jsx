@@ -22,7 +22,7 @@ const TalentExecutive = () => {
   console.log(talentExectiveData);
   return (
     <>
-        <style>{`
+      <style>{`
 .executive_banner{
           margin-bottom: 80vh; 
 }
@@ -112,102 +112,105 @@ const TalentExecutive = () => {
 
       <div className="container-fluid impact_section  px-0 executive_impact_section position-relative">
         {/*<div className="row mx-0">*/}
-          <div className=" cc-text split_col cc-text-1">
-            <div className="px-5 content">
-              <h3
-                className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
-                data-wow-duration="1s"
-                data-wow-delay="0.3s"
-                dangerouslySetInnerHTML={{
-                  __html: talentExectiveData?.Section2Heading || "",
-                }}
-              ></h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: talentExectiveData?.Section2Description || "",
-                }}
-              ></div>
-            </div>
-          </div>
-          <div className=" cc-image split_col img_1"></div>
-   {/*     </div>
-      </div>*/}
-
-      {/* <!-- Impact-section-2 --> */}
-     {/* <div className="container-fluid impact_section impact_section_2 d-flex align-items-center px-0">
-        <div className="row mx-0">*/}
-          <div className="cc-image split_col img_2"></div>
-          <div className="heading_col col-md-6 d-flex align-items-center px-5 team_col cc-text split_col img_2">
-            <div className="px-5 content">
-              <h3
-                className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
-                data-wow-duration="1s"
-                data-wow-delay="0.3s"
-                dangerouslySetInnerHTML={{
-                  __html: talentExectiveData?.Section3Heading || "",
-                }}
-              ></h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: talentExectiveData?.Section3Description || "",
-                }}
-              ></div>
-            </div>
-          </div>
-     {/*   </div>
-      </div>*/}
-
-      {/* <!-- Leader-section --> */}
-
-     {/* <div className="container-fluid leader_section bg_cover only_content px-0">
-        <div className="row mx-0">*/}
-          <div className=" cc-text split_col cc-text-3">
-            <div className="px-5 content">
-              <h3
-                className="font_40 fw-semibold color_primary wow animate__slideInLeft text-start"
-                data-wow-duration="1s"
-                data-wow-delay="0.3s"
-                dangerouslySetInnerHTML={{
-                  __html: talentExectiveData?.Section5?.Column1_Heading || "",
-                }}
-              ></h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html:
-                    talentExectiveData?.Section5?.Column1_Description || "",
-                }}
-              ></div>
-            </div>
-          </div>
-          <div className="col-md-6 px-5 d-flex align-items-center content_inner cc-image split_col img_3 o_bg_primary">
-            <div className="px-5 content ">
-              <h3
-                className="font_40 fw-semibold text-dark wow animate__slideInLeft text-start"
-                data-wow-duration="1s"
-                data-wow-delay="0.3s"
-                dangerouslySetInnerHTML={{
-                  __html: talentExectiveData?.Section5?.Column2_Heading || "",
-                }}
-              ></h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html:
-                    talentExectiveData?.Section5?.Column2_Description || "",
-                }}
-              ></div>
-              <a
-                href={talentExectiveData?.Section5?.Column2_Button_URL}
-                className="btn_light mt-4 color_black"
-              >
-                {talentExectiveData?.Section5?.Column2_Button_Label}
-              </a>
-            </div>
+        <div className=" cc-text split_col cc-text-1">
+          <div className="px-5 content">
+            <h3
+              className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
+              data-wow-duration="1s"
+              data-wow-delay="0.3s"
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section2Heading || "",
+              }}
+            ></h3>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section2Description || "",
+              }}
+            ></div>
           </div>
         </div>
+        <div className=" cc-image split_col img_1 d-none"></div>
+        {/*     </div>
+      </div>*/}
+
+        {/* <!-- Impact-section-2 --> */}
+        {/* <div className="container-fluid impact_section impact_section_2 d-flex align-items-center px-0">
+        <div className="row mx-0">*/}
+        <div className="cc-image split_col img_2">
+          <img src="images/impact_bg.png" className="img-fluid"></img>
+        </div>
+        <div className="heading_col col-md-6 d-flex align-items-center px-5 team_col cc-text split_col img_2">
+          <div className="px-5 content">
+            <h3
+              className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
+              data-wow-duration="1s"
+              data-wow-delay="0.3s"
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section3Heading || "",
+              }}
+            ></h3>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section3Description || "",
+              }}
+            ></div>
+          </div>
+        </div>
+        {/*   </div>
+      </div>*/}
+
+        {/* <!-- Leader-section --> */}
+
+        {/* <div className="container-fluid leader_section bg_cover only_content px-0">
+        <div className="row mx-0">*/}
+        <div className=" cc-text split_col cc-text-3">
+          <div className="px-5 content">
+            <h3
+              className="font_40 fw-semibold color_primary wow animate__slideInLeft text-start"
+              data-wow-duration="1s"
+              data-wow-delay="0.3s"
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section5?.Column1_Heading || "",
+              }}
+            ></h3>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section5?.Column1_Description || "",
+              }}
+            ></div>
+          </div>
+        </div>
+
+        {/* <div className=" cc-image split_col img_2">
+          <img src="images/impact_bg.png" className="img-fluid"></img>
+        </div> */}
+        <div className="col-md-6 px-5 d-flex align-items-center content_inner cc-image split_col img_3 o_bg_primary">
+          <div className="px-5 content ">
+            <h3
+              className="font_40 fw-semibold text-dark wow animate__slideInLeft text-start"
+              data-wow-duration="1s"
+              data-wow-delay="0.3s"
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section5?.Column2_Heading || "",
+              }}
+            ></h3>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: talentExectiveData?.Section5?.Column2_Description || "",
+              }}
+            ></div>
+            <a
+              href={talentExectiveData?.Section5?.Column2_Button_URL}
+              className="btn_light mt-4 color_black"
+            >
+              {talentExectiveData?.Section5?.Column2_Button_Label}
+            </a>
+          </div>
+        </div>
+      </div>
       {/*</div>*/}
 
-
-            {/* <!-- Content-section --> */}
+      {/* <!-- Content-section --> */}
       <div className="container-fluid only_content bg_cover d-flex align-items-center px-0">
         <div className="container">
           <div className="row d-flex align-items-center justify-content-center mx-0">
@@ -234,45 +237,50 @@ const TalentExecutive = () => {
             </div>
             <div className="testimonials d-flex justify-content-end">
               <div className="testimonials-inner">
-  {/* <!-- Carousel --> */}
-  <div
-    id="demo"
-    className="carousel slide"
-    data-bs-ride="carousel"
-  >
-    {/* <!-- Indicators/dots --> */}
-    <div className="carousel-indicators">
-      {talentExectiveData?.Testimonial?.Testimonial?.map((item, index) => (
-        <button
-          key={index}
-          type="button"
-          data-bs-target="#demo"
-          data-bs-slide-to={index}
-          className={index === 0 ? "active" : ""}
-          aria-current={index === 0 ? "true" : undefined}
-          aria-label={`Slide ${index + 1}`}
-        ></button>
-      ))}
-    </div>
+                {/* <!-- Carousel --> */}
+                <div
+                  id="demo"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  {/* <!-- Indicators/dots --> */}
+                  <div className="carousel-indicators">
+                    {talentExectiveData?.Testimonial?.Testimonial?.map(
+                      (item, index) => (
+                        <button
+                          key={index}
+                          type="button"
+                          data-bs-target="#demo"
+                          data-bs-slide-to={index}
+                          className={index === 0 ? "active" : ""}
+                          aria-current={index === 0 ? "true" : undefined}
+                          aria-label={`Slide ${index + 1}`}
+                        ></button>
+                      )
+                    )}
+                  </div>
 
-    {/* <!-- The slideshow/carousel --> */}
-    <div className="carousel-inner">
-      {talentExectiveData?.Testimonial?.Testimonial?.map((item, index) => (
-        <div
-          key={index}
-          className={`carousel-item ${index === 0 ? "active" : ""}`}
-        >
-          <div
-            dangerouslySetInnerHTML={{
-              __html: item.Review || "",
-            }}
-          ></div>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
-
+                  {/* <!-- The slideshow/carousel --> */}
+                  <div className="carousel-inner">
+                    {talentExectiveData?.Testimonial?.Testimonial?.map(
+                      (item, index) => (
+                        <div
+                          key={index}
+                          className={`carousel-item ${
+                            index === 0 ? "active" : ""
+                          }`}
+                        >
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: item.Review || "",
+                            }}
+                          ></div>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
