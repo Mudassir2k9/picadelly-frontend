@@ -518,23 +518,7 @@ const About = () => {
           className="carousel slide carousel-fade"
           data-bs-ride="carousel"
         >
-          {/* <!-- Indicators/dots --> */}
-          <div className="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#demo"
-              data-bs-slide-to="0"
-              className="active"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#demo"
-              data-bs-slide-to="1"
-            ></button>
-
-            {/* <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-     <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>  */}
-          </div>
+         
 
           {/* <!-- The slideshow/carousel --> */}
           <div className="carousel-inner">
@@ -634,6 +618,14 @@ const About = () => {
               </div>
             </div>
           </div>
+   
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+          
         </div>
       </div>
 
