@@ -499,7 +499,7 @@ const Home = () => {
               data-wow-delay="0.7s"
             >
               <div className="inner-col">
-                <h5>{homeData?.Whats_Happening?.Happening_List[1].Title}</h5>
+                <h5>{homeData?.Whats_Happening?.Happening_List[1]?.Title}</h5>
                 <p>
                   <a
                     href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[0]?.link}`}
@@ -528,7 +528,7 @@ const Home = () => {
               data-wow-delay="0.9s"
             >
               <div className="inner-col">
-                <h5>{homeData?.Whats_Happening?.Happening_List[2].Title}</h5>
+                <h5>{homeData?.Whats_Happening?.Happening_List[2]?.Title}</h5>
                 <ul>
                   <li>
                     <a
