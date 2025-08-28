@@ -299,7 +299,7 @@ const About = () => {
       </section>
       <section
         className="horizontal_parallax team_section d-none"
-        id="team-leaders"
+            
       >
         {/* <div className="panel">
           <div className="row">
@@ -505,7 +505,7 @@ const About = () => {
 
       {/* <!----about-mobile-slider-section----> */}
 
-      <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center" id="team-leaders">
+        <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center" id="team-leaders">
         {/* <!-- Carousel --> */}
         <div
           id="demo"
