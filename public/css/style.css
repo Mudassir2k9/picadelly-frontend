@@ -1676,6 +1676,9 @@ padding: 0px !important;
 .mobile-creative-section.team-section{
   min-height: 100vh !important;
   overflow: hidden !important;
+  position: relative;
+  z-index: 111;
+  
 }
 .team-section .carousel {
   width: 100%;
