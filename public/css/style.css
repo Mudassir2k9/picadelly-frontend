@@ -1514,7 +1514,7 @@ body .education_col {
   background-image: url("../images/half-ring.jpg");
   background-blend-mode: multiply;
   background-position: right;
-  /* background-size: cover; */
+  background-size: 575px;
       background-repeat: no-repeat;
 }
 
@@ -1859,7 +1859,7 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
   width: 300px; /* adjust width */
   height: 100%; /* takes parent height */
   overflow: hidden;
-  height: 570px;
+  height: 595px;
   padding-top: 50px;
   margin: 250px auto 0px auto !important;
 }
@@ -2169,7 +2169,9 @@ body .testimonials-inner .carousel-indicators{
     line-height: 90px;
   }
   .about_section h4.piccadilly-style {
-    font-size: 98pt !important;
+    font-size: 115pt !important;
+    font-weight: 600 !important;
+    color: #212529 !important;
   }
   .team_section .heading_col p {
     font-size: 24px !important;
