@@ -505,7 +505,7 @@ const About = () => {
 
       {/* <!----about-mobile-slider-section----> */}
 
-      <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center">
+      <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center" id="team-leaders">
         {/* <!-- Carousel --> */}
         <div
           id="demo"

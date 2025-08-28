@@ -198,11 +198,11 @@ const NewsItem = () => {
                         <i className="fa-solid fa-envelope"></i>
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href="#">
                         <i className="fa-brands fa-pinterest-p"></i>
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
