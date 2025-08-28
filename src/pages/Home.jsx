@@ -517,7 +517,7 @@ const Home = () => {
                     {
                       homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[1]?.text
                     }
-                    <i className="fa-regular fa-arrow-right-long"></i>
+                    {/* <i className="fa-regular fa-arrow-right-long"></i> */}
                   </a>
                 </p>
               </div>
@@ -547,7 +547,7 @@ const Home = () => {
                       className="color_black"
                     >
                       {
-                        homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[2]?.text
+                        homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[1]?.text
                       }
                       <i className="fa-regular fa-arrow-right-long"></i>
                     </a>
