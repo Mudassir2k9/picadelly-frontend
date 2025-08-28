@@ -562,10 +562,10 @@ const About = () => {
                   </a>
                 </div>
                 <div className="row mx-0">
-                  <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_teal ">
+                  <div className="heading_col d-flex align-items-end wow animate__slideInUp justify-content-center px-5 left_member_col bg_teal"  data-wow-duration="0.6s" data-wow-delay="0.1s">
                     <img src="images/vintage_img.png" />
                   </div>
-                  <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
+                  <div className="right_content_col d-flex align-items-end wow animate__slideInDown justify-content-center px-0 right_member_col"  data-wow-duration="0.6s" data-wow-delay="0.1s">
                     <img
                       src="images/vintage_img2.jpg"
                       className="img-fluid w-100"
@@ -605,10 +605,10 @@ const About = () => {
                   </a>
                 </div>
                 <div className="row mx-0">
-                  <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_yellow ">
+                  <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_yellow wow animate__slideInUp"  data-wow-duration="0.6s" data-wow-delay="0.1s">
                     <img src="images/craig_img.jpg" />
                   </div>
-                  <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
+                  <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col wow animate__slideInDown"  data-wow-duration="0.6s" data-wow-delay="0.1s">
                     <img
                       src="images/craig_img2.jpg"
                       className="img-fluid w-100"
