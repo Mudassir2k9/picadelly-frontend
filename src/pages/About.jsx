@@ -275,7 +275,7 @@ const About = () => {
         </div>
       </section>
       <section
-        className="horizontal_parallax team_section d-none d-md-flex"
+        className="horizontal_parallax team_section d-none"
         id="team-leaders"
       >
         {/* <div className="panel">
@@ -482,7 +482,7 @@ const About = () => {
 
       {/* <!----about-mobile-slider-section----> */}
 
-      <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex d-md-none align-items-center">
+      <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center">
         {/* <!-- Carousel --> */}
         <div
           id="demo"
@@ -550,11 +550,11 @@ const About = () => {
                 </div>
                 <div className="row mx-0">
                   <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_teal ">
-                    <img src="images/vintage-portrait-color.png" />
+                    <img src="images/vintage_img.png" />
                   </div>
                   <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
                     <img
-                      src="images/vintage-personal.png"
+                      src="images/vintage_img2.jpg"
                       className="img-fluid w-100"
                     />
                   </div>
@@ -593,11 +593,11 @@ const About = () => {
                 </div>
                 <div className="row mx-0">
                   <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_yellow ">
-                    <img src="images/Craig-Brown-Portrait.png" />
+                    <img src="images/craig_img.jpg" />
                   </div>
                   <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col ">
                     <img
-                      src="images/Craig-Brown-Personal.jpg"
+                      src="images/craig_img2.jpg"
                       className="img-fluid w-100"
                     />
                   </div>
