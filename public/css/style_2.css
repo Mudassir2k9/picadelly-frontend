@@ -63,8 +63,8 @@
       position: absolute;
     content: "";
     background-image: url(../images/ring.png);
-    height: 450px;
-    width: 450px;
+    height: 530px;
+    width: 530px;
     background-size: 100%;
     bottom: 0;
     margin: auto;
@@ -90,19 +90,18 @@
 }
 
 .impact_section_2 .team_col::after{
-  position: absolute;
+    position: absolute;
     content: "";
     background-image: url(../images/ring.png);
-    height: 450px;
-    width: 450px;
-    background-size: 100%;
+    height: 530px;
+    width: 530px;
+    background-size: 530px;
     left: -215px;
-    top: 0%;
+    top: 82px;
     bottom: 0;
     margin: auto;
     opacity: 1;
-        transform: rotate(112deg);
-        right: auto;
+    right: auto;
 }
 .impact_section_2 .impact_section::after{
       position: absolute;
@@ -135,17 +134,17 @@
   z-index: 11;
 }
 .leader_section .team_col::after {
-    position: absolute;
-    content: "";
-    background-image: url(../images/ring.png);
-    height: 450px;
-    width: 450px;
-    background-size: 100%;
-    right: -215px;
-    top: 0;
+    right: -285px;
+    top: 82px;
     bottom: 0;
     margin: auto;
     opacity: 1;
+position: absolute;
+    content: "";
+    background-image: url(../images/ring.png);
+    height: 530px;
+    width: 530px;
+    background-size: 100%;
 }
 .unordered li{
   margin-bottom: 10px;
@@ -369,13 +368,14 @@
      position: absolute;
     content: "";
     background-image: url(../images/ring.png);
-    height: 430px;
-    width: 430px;
+    height: 450px;
+    width: 450px;
     background-size: 100%;
-    right: -29%;
+    right: -225px;
     top: 0%;
     bottom: 0;
     margin: auto;
+    opacity: 1;
   }
   .faqs_section .heading_col, .case-study-faqs .heading_col{
     flex-wrap: wrap;
@@ -1264,15 +1264,15 @@ body .case-study-faqs .heading_col, .only_content{
   margin: 0px!important;
   padding: 0px !important;
 }
-.impact_section .team_col::after {
-position: absolute;
-    content: "";
-    right: 0%;
-    bottom: -100%;
-    margin: auto;
-    left: 0;
-    height: 350px;
-    width: 360px;
+.impact_section .team_col::after,  .team_col::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: -100%;
+        margin: auto;
+        left: 0;
+        height: 440px;
+        width: 440px;
 
 }
     .impact_section::after {
@@ -1638,22 +1638,6 @@ position: absolute;
         .item {
     position: relative;
 }
-
- /* .strategy_wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none; Hide by default
-    z-index: 2;
-    transform: translateY(412px); 
-}  */
-
-/* .item:hover .strategy_wrap {
-    display: block; Show only when hovering over .item
-} */
-     
    @media (min-width: 992px) {
     #service1 .modal-lg, .modal-xl {
         --bs-modal-width: 70% !important;

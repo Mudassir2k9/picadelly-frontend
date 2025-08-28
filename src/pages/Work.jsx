@@ -127,7 +127,7 @@ const Work = () => {
               <img
                   id="prevThumb"
                   className="img_thumbnail"
-                  src="http://82.25.95.212:1337/uploads/p_img7_859e623fc9.jpg"
+                  src="http://picadelly.site/uploads/p_img7_859e623fc9.jpg"
                   alt="Previous Thumbnail"
                 />
             )}
@@ -169,7 +169,7 @@ const Work = () => {
               <img
                   id="nextThumb"
                   className="img_thumbnail"
-                  src="http://82.25.95.212:1337/uploads/Placeholder_Image_7_9970dda408.png"
+                  src="https://picadelly.site/uploads/Placeholder_Image_7_9970dda408.png"
                   alt="Next Thumbnail"
                 />
                 
@@ -202,7 +202,7 @@ const Work = () => {
               <p className="font_18 color_black py-4">
                 Named one of America's top marketing agencies in healthcare, Piccadilly’s deep knowledge generates measurable results and impact for your organization.
               </p>
-              <a href="#" className="btn btn_light color_black">View the Work</a>
+              <a href="/case-study" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col px-0 d-flex align-items-center team_right_col">
@@ -220,7 +220,7 @@ const Work = () => {
               <p className="font_18 color_black py-4">
                 Our strategic planning and results-driven marketing capabilities spark engagement and foster long-term customer growth, maximizing your ROI.
               </p>
-              <a href="#" className="btn btn_light color_black">View the Work</a>
+              <a href="/case-study" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col px-0 d-flex align-items-center team_right_col financial_right_col">
@@ -238,7 +238,7 @@ const Work = () => {
               <p className="font_18 color_black py-4">
                 Our award-winning travel and tourism experience grabs your audience's attention, increases visitor spending, and boosts transient occupancy tax revenue.
               </p>
-              <a href="#" className="btn btn_light color_black">View the Work</a>
+              <a href="/case-study" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col px-0 d-flex align-items-center team_right_col tourism_right_col">
@@ -252,11 +252,11 @@ const Work = () => {
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary non-profit_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
-              <h3 className="font_40 fw-bold color_black">Non-Profit</h3>
+              <h3 className="font_40 fw-bold color_black">Nonprofit</h3>
               <p className="font_18 color_black py-4">
                 Piccadilly has a proven track record of leveraging nonprofit marketing dollars to produce measurable impact and raise awareness of your mission.
               </p>
-              <a href="#" className="btn btn_light color_black">View the Work</a>
+              <a href="/case-study" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col px-0 d-flex align-items-center team_right_col non-stop_right_col">
@@ -274,7 +274,7 @@ const Work = () => {
               <p className="font_18 color_black py-4">
                 Piccadilly's team of marketing experts craft campaigns and messaging designed to increase brand visibility and differentiation, and to catapult enrollment.
               </p>
-              <a href="#" className="btn btn_light color_black">View the Work</a>
+              <a href="/case-study" className="btn btn_light color_black">View the Work</a>
             </div>
           </div>
           <div className="right_content_col d-flex align-items-center justify-content-center px-0 mx-0 right_member_col financial_right_col education_right_col position-relative">

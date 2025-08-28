@@ -94,25 +94,34 @@ $(document).ready(function () {
 
 // script for sticky nav
 
+let lastScrollTop = 0; // store previous scroll position
+let scrollTimeout;
+
+
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
-  let scrollTimeout;
+  const currentScroll = window.scrollY;
 
-  window.addEventListener("scroll", () => {
-    // Always make header sticky while scrolling
+  if (currentScroll < lastScrollTop) {
+    // ✅ scrolling UP → show header
     header.classList.add("sticky");
 
-    // Clear previous timer
     clearTimeout(scrollTimeout);
 
-    // After 2s of no scroll, remove sticky (only if not hovered)
     scrollTimeout = setTimeout(() => {
       if (!header.matches(":hover")) {
         header.classList.remove("sticky");
       }
     }, 2000);
-  });
+  } else {
+    // ⬇️ scrolling DOWN → hide header immediately
+    header.classList.remove("sticky");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // avoid negative on mobile
 });
+
+
 
 
 // window.addEventListener("scroll", function() {

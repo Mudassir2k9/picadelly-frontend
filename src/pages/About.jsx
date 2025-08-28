@@ -32,7 +32,7 @@ const About = () => {
               loop: true,
               nav: false,
               autoplay: true,
-              autoplayTimeout: 3000,
+              autoplayTimeout: 7000,
               autoplaySpeed: 800,
               margin: 10,
               responsive: {
@@ -40,6 +40,25 @@ const About = () => {
                 1200: { items: 1 },
               },
             });
+
+             // Background toggle using class
+              $slider.on("changed.owl.carousel", function (event) {
+                const current = $(event.target)
+                  .find(".owl-item")
+                  .eq(event.item.index)
+                  .find(".item");
+
+                if (current.hasClass("Piccadilly")) {
+                  $(".about_row .about_right_content_col")
+                    .removeClass("default-bg")
+                    .addClass("transparent-bg");
+                } else {
+                  $(".about_row .about_right_content_col")
+                    .removeClass("transparent-bg")
+                    .addClass("default-bg");
+                }
+              });
+
           }
         }, 1000);
       })
@@ -76,7 +95,7 @@ const About = () => {
         },
       });
     }
-  }, 10000);
+  }, 5000);
 
   console.log(aboutData);
   window.addEventListener("load", function () {
@@ -86,16 +105,24 @@ const About = () => {
         .forEach((p) => {
           p.innerHTML = p.innerHTML.replace(
             "measurable results.",
-            "measurable results.<br>"
+            "measurable results.</br>" 
           );
         });
     }, 2000); // 2000 ms = 2 seconds
+
   });
 
   return (
     <>
       <style>{`
-
+      .about_row .about_right_content_col.transparent-bg {
+        background: transparent !important;
+      }
+        .piccadilly-style {
+  font-size: 98pt !important;
+  font-weight: 700 !important;
+  color: black !important;
+}
       .menu-line{
       background-color: #000 !important;
 }
@@ -188,7 +215,7 @@ const About = () => {
         );
       })}
 
-      <section className="container-fluid executive_banner about_banner">
+{/*      <section className="container-fluid executive_banner about_banner">
         <div className="container">
           <div className="executive_col">
             <h2
@@ -201,15 +228,15 @@ const About = () => {
             </h2>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* <!-- start about section --> */}
 
-      <section className="about_section" id="We-are-Picadilly">
+      <section className="about_section container-fluid executive_banner about_banner px-0" id="We-are-Picadilly">
         <div className="about_row row mx-0">
           <div className="about_heading_col d-flex align-items-end align-items-md-center justify-content-center justify-content-md-end overflow-hidden">
             <h1
-              className="large_heading pe-0 pe-md-5 text-center text-md-start wow animate__fadeInRight"
+              className="large_heading px-0 text-center text-md-start wow animate__fadeInRight"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
             >
@@ -237,8 +264,10 @@ const About = () => {
               ref={sliderRef}
             >
               {aboutData?.Section2?.slidingText?.map((item) => (
-                <div className="item" key={item.id}>
-                  <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
+               <div className={`item ${item.Text}  `} key={item.id}>
+                  <h4 className={`large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0 ${item.Text === "Piccadilly" ? "piccadilly-style" : ""} `}
+                   
+                  >
                     {item.Text}
                   </h4>
                 </div>
@@ -629,6 +658,16 @@ const About = () => {
           </div>
         </div>
         <div className="overflow_slider py-5">
+   {/*     <div>
+           <img src="images/c-img1.jpg"></img>
+           <img src="images/c-img2.jpg"></img>
+           <img src="images/c-img3.jpg"></img>
+           <img src="images/c-img4.jpg"></img>
+            <img src="images/c-img1.jpg"></img>
+           <img src="images/c-img2.jpg"></img>
+           <img src="images/c-img3.jpg"></img>
+           <img src="images/c-img4.jpg"></img>
+        </div>*/}
           <div className="owl-carousel owl-theme c_slider">
             {aboutData?.ImagesSlider?.Images?.map((item, index) => (
               <div className="item" key={index}>

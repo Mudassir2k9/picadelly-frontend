@@ -86,14 +86,14 @@ const Services = () => {
     Healthcare: "healthcare_col",
     "Education ": "education_col",
     Tourism: "tourism_col",
-    "Non-Profit": "non-profit_col",
+    Nonprofit: "non-profit_col",
     "Financial Services": "financial_col",
   };
   const headingRightClassMap = {
     Healthcare: "team_right_col",
     "Education ": "education_right_col",
     Tourism: "tourism_right_col",
-    "Non-Profit": "non-stop_right_col",
+    Nonprofit: "non-stop_right_col",
     "Financial Services": "financial_right_col",
   };
   return (
@@ -131,17 +131,27 @@ const Services = () => {
               <div className="modal-body px-5 pb-5">
                 <div className="row px-0">
                   <div className="col-md-4">
-                    <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
-                    <h5 className="text-dark fw_600 font_28 pt-3">{service.name}</h5>
+                    <img
+                      src={`${baseUrl}${service.image?.url}`}
+                      alt={service.image?.alternativeText || ""}
+                    />
+                    <h5 className="text-dark fw_600 font_28 pt-3">
+                      {service.name}
+                    </h5>
                   </div>
                   <div className="col-md-8">
                     <div
                       className="font_14"
-                      dangerouslySetInnerHTML={{ __html: service.DetailDescription }}
+                      dangerouslySetInnerHTML={{
+                        __html: service.DetailDescription,
+                      }}
                     />
 
                     {/* Accordion for FAQs */}
-                    <div className="accordion accordion-flush" id={`accordion${service.id}`}>
+                    <div
+                      className="accordion accordion-flush"
+                      id={`accordion${service.id}`}
+                    >
                       {service.FAQs?.map((faq, i) => (
                         <div className="accordion-item mb-2" key={i}>
                           <h2 className="accordion-header">
@@ -162,7 +172,11 @@ const Services = () => {
                             data-bs-parent={`#accordion${service.id}`}
                           >
                             <div className="accordion-body">
-                              <div dangerouslySetInnerHTML={{ __html: faq.Description }} />
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: faq.Description,
+                                }}
+                              />
                             </div>
                           </div>
                         </div>
@@ -187,9 +201,6 @@ const Services = () => {
         </div>
       </section>
 
-
-
-
       <section
         className="services_section bg_cover sec_py"
         id="marketing-services"
@@ -198,7 +209,8 @@ const Services = () => {
           <div className="row">
             <div className="fix_width_content mx-auto text-center">
               <h3 className="large_heading">
-                {serviceData?.AllServices?.Heading1} <strong>{serviceData?.AllServices?.Heading2}</strong>
+                {serviceData?.AllServices?.Heading1}{" "}
+                <strong>{serviceData?.AllServices?.Heading2}</strong>
               </h3>
             </div>
           </div>
@@ -207,31 +219,34 @@ const Services = () => {
           <div className="owl-carousel owl-theme strategy_slider">
             {serviceData?.AllServices?.Services?.map((service) => (
               <div key={service.id} className="item">
-              <div className="item_inner">
-                <div className="strategy_wrap">
-                  <div className="inner_wrap">
-                    <div>
-                    <p className="text-dark">{service.description}</p>
-                    <a
-                      href="javascript:void(0)"
-                      className="btn btn_primary btn_dark"
-                      data-bs-toggle="modal"
-                      data-bs-target={`#team${service.id}`}
-                    >
-                      {service.buttonLabel || "Learn More"}
-                    </a>
+                <div className="item_inner">
+                  <div className="strategy_wrap">
+                    <div className="inner_wrap">
+                      <div>
+                        <p className="text-dark">{service.description}</p>
+                        <a
+                          href="javascript:void(0)"
+                          className="btn btn_primary btn_dark"
+                          data-bs-toggle="modal"
+                          data-bs-target={`#team${service.id}`}
+                        >
+                          {service.buttonLabel || "Learn More"}
+                        </a>
+                      </div>
                     </div>
+                    <p className="text-dark fw-bold pt-3 font_18 px-4">
+                      {service.name}
+                    </p>
                   </div>
-                  <p className="text-dark fw-bold pt-3 font_18 px-4">
-                    {service.name}
-                  </p>
-                </div>
-                <div className="before_hover_content">
-                  <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
-                  <p className="text-white fw-bold font_18 pt-3 fade_text">
-                    {service.name}
-                  </p>
-                </div>
+                  <div className="before_hover_content">
+                    <img
+                      src={`${baseUrl}${service.image?.url}`}
+                      alt={service.image?.alternativeText || ""}
+                    />
+                    <p className="text-white fw-bold font_18 pt-3 fade_text">
+                      {service.name}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -242,7 +257,12 @@ const Services = () => {
       {/* <!-- start team section --> */}
       <div className="container-fluid px-0 team-section services_team_slider d-flex justify-content-center align-items-center">
         {/* Carousel */}
-        <div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
+        <div
+          id="demo"
+          className="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          data-bs-touch="true"
+        >
           {/* Indicators/dots */}
           <div className="carousel-indicators">
             <button
@@ -281,7 +301,8 @@ const Services = () => {
               <div
                 key={item.id}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}
-               data-bs-interval="10000">
+                data-bs-interval="10000"
+              >
                 <div className="row mx-0">
                   {/* Left Column */}
                   <div
