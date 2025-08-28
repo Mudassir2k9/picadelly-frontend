@@ -2562,7 +2562,7 @@ body .testimonials-inner .carousel-indicators{
   .only_content h5 {
     font-size: 20pt !important;
   }
-  .leader_section .content > h3 p {
+  .leader_section .content > h3 p, .impact_section h3 p, .impact_section h3{
     font-size: 48pt !important;
   }
   .leader_section .content {
