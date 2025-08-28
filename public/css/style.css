@@ -359,6 +359,33 @@ header.sticky .navbar-custom {
   z-index: 9999;
   min-height: 620px;
 }
+.overflow_slider_inner{
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 30px;
+}
+.culture_section .overflow_slider{
+  position: relative;
+  z-index: 111;
+}
+.culture_section .overflow_slider_inner img{
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.overflow_slider_inner::-webkit-scrollbar {
+  height: 13px !important;
+  border: 0px !important;
+}
+.overflow_slider_inner::-webkit-scrollbar-track{
+   border-radius: 10px !important;
+  margin: 0px 80px;
+  border: 1px solid #d5d5d5;
+}
+ .overflow_slider_inner::-webkit-scrollbar-thumb{
+    border-radius: 10px !important;
+ }
+
+
 
 .nav-items a {
   padding: 5px 10px;

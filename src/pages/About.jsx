@@ -650,7 +650,7 @@ const About = () => {
           </div>
         </div>
         <div className="overflow_slider py-5">
-   {/*     <div>
+       <div className="overflow_slider_inner">
            <img src="images/c-img1.jpg"></img>
            <img src="images/c-img2.jpg"></img>
            <img src="images/c-img3.jpg"></img>
@@ -659,8 +659,8 @@ const About = () => {
            <img src="images/c-img2.jpg"></img>
            <img src="images/c-img3.jpg"></img>
            <img src="images/c-img4.jpg"></img>
-        </div>*/}
-          <div className="owl-carousel owl-theme c_slider">
+        </div>
+          {/* <div className="owl-carousel owl-theme c_slider">
             {aboutData?.ImagesSlider?.Images?.map((item, index) => (
               <div className="item" key={index}>
                 <img
@@ -670,7 +670,7 @@ const About = () => {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </>
