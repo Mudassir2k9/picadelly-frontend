@@ -287,16 +287,10 @@ const About = () => {
                 data-wow-duration="1s"
                 data-wow-delay="0.3s"
               >
-                Meet the Team
+                 {aboutData?.TeamSectionHeading}
               </h3>
               <p className="font_18 text-dark">
-                Our leadership team unites strategic expertise, creative vision
-                and data-driven insights with an unwavering commitment to
-                delivering exceptional client outcomes. This client-centric
-                philosophy drives every decision we make — from carefully
-                selecting the ideal talent for each project to implementing
-                data-driven technologies and methodologies that position our
-                clients ahead of the competition.
+                {aboutData?.TeamSectionDescription}
               </p>
             </div>
           </div>
@@ -393,7 +387,7 @@ const About = () => {
       <div
         className="modal fade team_popup "
         id="m-team2"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -450,7 +444,7 @@ const About = () => {
       <div
         className="modal fade team_popup "
         id="m-team1"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
@@ -522,103 +516,77 @@ const About = () => {
 
           {/* <!-- The slideshow/carousel --> */}
           <div className="carousel-inner">
-            {/* <div className="carousel-item active">
-         <div className="row mx-0">
-               <div className="heading_col d-flex align-items-center px-5 team_col">
-        <div className="px-3 px-md-5 mx-0 mx-md-5 content_div">
-        <h3 className="font_40 fw-semibold color_primary wow animate__slideInLeft text-start" data-wow-duration="1s" data-wow-delay="0.3s">Meet the Team</h3>
-        <p className="font_18 text-dark">Our leadership team unites strategic expertise, creative vision and data-driven insights with an unwavering commitment to delivering exceptional client outcomes. This client-centric philosophy drives every decision we make — from carefully selecting the ideal talent for each project to implementing data-driven technologies and methodologies that position our clients ahead of the competition.</p>
-      </div>
-      </div>
-      <div className="right_content_col px-5 d-flex align-items-center team_right_col"></div>
-         </div>
-    </div> */}
-            <div className="carousel-item active" data-bs-interval="10000">
-              <div className="carousel-inner-div">
-                <div className="team_overlay">
-                  <a
-                    href="javascript:void(0)"
-                    className="text-decoration-none"
-                    data-bs-toggle="modal"
-                    data-bs-target="#m-team1"
-                  >
-                    <div className="team_circle text-center d-flex align-items-center justify-content-center">
-                      <div>
-                        <h3 className="text-dark fw-semibold team_name font_40">
-                          Vintage
-                        </h3>
-                        <h4 className="text-dark fw-semibold team_last_name">
-                          Foster
-                        </h4>
-                        <p className="team_post text-dark text-center">CEO</p>
-                        <p className=" text-dark text-center">
-                          A visionary leader and expert in building
-                          organizations into profitable, high-growth
-                          enterprises.
-                        </p>
-                        <i className="fa-solid fa-circle-user text-dark"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div className="row mx-0">
-                  <div className="heading_col d-flex align-items-end wow animate__slideInUp justify-content-center px-5 left_member_col bg_teal"  data-wow-duration="0.6s" data-wow-delay="0.1s">
-                    <img src="images/vintage_img.png" />
-                  </div>
-                  <div className="right_content_col d-flex align-items-end wow animate__slideInDown justify-content-center px-0 right_member_col"  data-wow-duration="0.6s" data-wow-delay="0.1s">
-                    <img
-                      src="images/vintage_img2.jpg"
-                      className="img-fluid w-100"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+  {aboutData?.PicadellyTeam?.map((member, index) => {
+    const {
+      FirstName,
+      LastName,
+      Portfolio,
+      TagLine,
+      LeftImage,
+      RightImage,
+    } = member;
 
-            <div className="carousel-item" data-bs-interval="10000">
-              <div className="carousel-inner-div">
-                <div className="team_overlay ">
-                  <a
-                    href="javascript:void(0)"
-                    className="text-decoration-none"
-                    data-bs-toggle="modal"
-                    data-bs-target="#m-team2"
-                  >
-                    <div className="team_circle text-center d-flex align-items-center justify-content-center">
-                      <div>
-                        <h3 className="text-dark fw-semibold team_name font_40">
-                          Craig
-                        </h3>
-                        <h4 className="text-dark fw-semibold team_last_name">
-                          Brown
-                        </h4>
-                        <p className="team_post text-dark text-center">
-                          Chief Digital Officer
-                        </p>
-                        <p className=" text-dark text-center">
-                          Innovative digital advertising technologies to deliver
-                          highly effective ROI.
-                        </p>
-                        <i className="fa-solid fa-circle-user text-dark"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div className="row mx-0">
-                  <div className="heading_col d-flex align-items-end justify-content-center px-5 left_member_col bg_yellow wow animate__slideInUp"  data-wow-duration="0.6s" data-wow-delay="0.1s">
-                    <img src="images/craig_img.jpg" />
-                  </div>
-                  <div className="right_content_col d-flex align-items-end justify-content-center px-0 right_member_col wow animate__slideInDown"  data-wow-duration="0.6s" data-wow-delay="0.1s">
-                    <img
-                      src="images/craig_img2.jpg"
-                      className="img-fluid w-100"
-                    />
-                  </div>
+    const leftImgUrl = LeftImage?.url
+      ? `${baseUrl}${LeftImage.url}`
+      : "/default-left.jpg";
+    const rightImgUrl = RightImage?.url
+      ? `${baseUrl}${RightImage.url}`
+      : "/default-right.jpg";
+
+    return (
+      <div
+        className={`carousel-item ${index === 0 ? "active" : ""}`} // ✅ make first active
+        key={index}
+        data-bs-interval="10000"
+      >
+        <div className="carousel-inner-div">
+          <div className="team_overlay">
+            <a
+              href="javascript:void(0)"
+              className="text-decoration-none"
+              data-bs-toggle="modal"
+              data-bs-target={`#team${member.id}`}
+            >
+              <div className="team_circle text-center d-flex align-items-center justify-content-center">
+                <div>
+                  <h3 className="text-dark fw-bold team_name font_40">
+                    {FirstName}
+                  </h3>
+                  <h4 className="text-dark fw-bold team_last_name">
+                    {LastName}
+                  </h4>
+                  <p className="team_post text-dark text-center">
+                    {Portfolio}
+                  </p>
+                  <p className="text-dark text-center">{TagLine}</p>
+                  <i className="fa-solid fa-circle-user text-dark"></i>
                 </div>
               </div>
+            </a>
+          </div>
+
+          <div className="row mx-0">
+            <div className="heading_col d-flex align-items-end wow animate__slideInUp justify-content-center px-5 left_member_col bg_teal"  data-wow-duration="0.6s" data-wow-delay="0.1s">
+            
+              <img src={leftImgUrl} alt={`${FirstName} Left`} />
+            </div>
+            <div className="right_content_col d-flex align-items-end wow animate__slideInDown justify-content-center px-0 right_member_col"  data-wow-duration="0.6s" data-wow-delay="0.1s">
+              <img
+                src={rightImgUrl}
+                className="img-fluid w-100"
+                alt={`${FirstName} Right`}
+              />
             </div>
           </div>
-   
+        </div>
+      </div>
+    );
+  })}
+</div>
+
+
+
+
   <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
