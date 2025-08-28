@@ -9,8 +9,10 @@ const CaseStudy = () => {
 
   useEffect(() => {
     axios
-      .get(`${apiUrl}/case-studies?populate[CaseStudy][populate][Channels][populate]=*&populate[CaseStudy][populate][Integrated_Services][populate]=*&populate[CaseStudy][populate][Projects][populate]=*&populate[CaseStudy][populate][Content][populate]=*&populate[CaseStudy][populate][Case_Study_Media][populate]=Media&populate[CaseStudy][populate]=BannerImage
-`)
+      .get(
+        `${apiUrl}/case-studies?populate[CaseStudy][populate][Channels][populate]=*&populate[CaseStudy][populate][Integrated_Services][populate]=*&populate[CaseStudy][populate][Projects][populate]=*&populate[CaseStudy][populate][Content][populate]=*&populate[CaseStudy][populate][Case_Study_Media][populate]=Media&populate[CaseStudy][populate]=BannerImage
+`
+      )
       .then((res) => {
         setCaseStudies(res.data.data);
       })
@@ -61,8 +63,8 @@ const CaseStudy = () => {
             <div className="inner-div">
               <p className="font_20">{currentCase?.Heading1}</p>
               <div
-                  dangerouslySetInnerHTML={{ __html: currentCase?.Heading2 }}
-                />
+                dangerouslySetInnerHTML={{ __html: currentCase?.Heading2 }}
+              />
             </div>
           </div>
           <div className="col-md-6 banner-col blog_col-2 separate_col_1 separate_col_2 case_study-col-1">
@@ -79,7 +81,6 @@ const CaseStudy = () => {
                         {channel.Channel}
                       </li>
                     ))}
-                    
                   </ul>
                 </div>
               </div>
@@ -108,10 +109,10 @@ const CaseStudy = () => {
       <div className="container-fluid case-study-faqs bg-cover px-0">
         <div className="row mx-0 d-flex">
           <div className="heading_col d-flex align-items-center px-5 team_col pt-5 pb-5">
-            <div className="px-5 content"
-                  dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Title }}
-                >
-            </div>
+            <div
+              className="px-5 content"
+              dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Title }}
+            ></div>
 
             <div className="accordion-part px-5 ">
               <div
@@ -136,12 +137,12 @@ const CaseStudy = () => {
                     className="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample"
                   >
-                    <div className="accordion-body"
-                  dangerouslySetInnerHTML={{ __html: currentCase?.Content?.situationText }}
-               
-                    >
-                      
-                    </div>
+                    <div
+                      className="accordion-body"
+                      dangerouslySetInnerHTML={{
+                        __html: currentCase?.Content?.situationText,
+                      }}
+                    ></div>
                   </div>
                 </div>
                 <div className="accordion-item mb-2">
@@ -162,10 +163,12 @@ const CaseStudy = () => {
                     className="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample"
                   >
-                    <div className="accordion-body"
-                    dangerouslySetInnerHTML={{ __html: currentCase?.Content?.approachText }}>
-                     
-                    </div>
+                    <div
+                      className="accordion-body"
+                      dangerouslySetInnerHTML={{
+                        __html: currentCase?.Content?.approachText,
+                      }}
+                    ></div>
                   </div>
                 </div>
                 <div className="accordion-item  mb-2">
@@ -186,11 +189,12 @@ const CaseStudy = () => {
                     className="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample"
                   >
-                    <div className="accordion-body"
-                    
-                    dangerouslySetInnerHTML={{ __html: currentCase?.Content?.outcomeText }}>
-                      
-                    </div>
+                    <div
+                      className="accordion-body"
+                      dangerouslySetInnerHTML={{
+                        __html: currentCase?.Content?.outcomeText,
+                      }}
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -198,16 +202,30 @@ const CaseStudy = () => {
           </div>
 
           <div className="col-md-6 case-study-col-2 pb-5">
-            <div className="circle-1 circle-one"
-                  dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[0]?.value }}>
-              
-            </div>
-            <div className="circle-1 circle-two"
-            dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[1]?.value }}>
-            </div>
-            <div className="circle-1 circle-three"
-            dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[2]?.value }}>
-            </div>
+            {currentCase?.Content?.Stats?.[0]?.value && (
+              <div
+                className="circle-1 circle-one"
+                dangerouslySetInnerHTML={{
+                  __html: currentCase?.Content?.Stats?.[0]?.value,
+                }}
+              ></div>
+            )}
+            {currentCase?.Content?.Stats?.[1]?.value && (
+              <div
+                className="circle-1 circle-two"
+                dangerouslySetInnerHTML={{
+                  __html: currentCase?.Content?.Stats?.[1]?.value,
+                }}
+              ></div>
+            )}
+            {currentCase?.Content?.Stats?.[2]?.value && (
+              <div
+                className="circle-1 circle-three"
+                dangerouslySetInnerHTML={{
+                  __html: currentCase?.Content?.Stats?.[2]?.value,
+                }}
+              ></div>
+            )}
           </div>
         </div>
       </div>
@@ -220,15 +238,13 @@ const CaseStudy = () => {
             <div key={project.id} className="col-md-6 image-container px-0">
               <a href="#">
                 <div>
-                  <img 
-                    src={`${baseUrl}${project?.Image?.url}`} 
-                    alt={project?.Image?.alternativeText || "Project Image"} 
+                  <img
+                    src={`${baseUrl}${project?.Image?.url}`}
+                    alt={project?.Image?.alternativeText || "Project Image"}
                   />
                   <div className="hover-text">
                     <i className="fa-solid fa-play"></i>
-                    <div 
-                      dangerouslySetInnerHTML={{ __html: project?.Title }} 
-                    />
+                    <div dangerouslySetInnerHTML={{ __html: project?.Title }} />
                   </div>
                 </div>
               </a>
@@ -329,16 +345,27 @@ const CaseStudy = () => {
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center mx-0">
             <div className="col-md-8">
-              <video controls autoPlay muted loop playsInline key={currentCase?.Case_Study_Media?.Media?.url}>
-                  <source 
-                    src={`${baseUrl}${currentCase?.Case_Study_Media?.Media?.url}`} 
-                    type={currentCase?.Case_Study_Media?.Media?.mime || "video/mp4"} 
-                  />
-                </video>
+              <video
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                key={currentCase?.Case_Study_Media?.Media?.url}
+              >
+                <source
+                  src={`${baseUrl}${currentCase?.Case_Study_Media?.Media?.url}`}
+                  type={
+                    currentCase?.Case_Study_Media?.Media?.mime || "video/mp4"
+                  }
+                />
+              </video>
               {/* <video controls muted="" loop="">
                 <source src="images/home-banner-video.mp4" type="video/mp4" />
               </video> */}
-              <h5 className="Video-title text-white mt-2">{currentCase?.Case_Study_Media?.Title}</h5>
+              <h5 className="Video-title text-white mt-2">
+                {currentCase?.Case_Study_Media?.Title}
+              </h5>
             </div>
           </div>
         </div>
@@ -346,133 +373,148 @@ const CaseStudy = () => {
       {/* <!-----project-section-----> */}
 
       <div className="container-fluid px-0">
-  <div className="row mx-0">
-    {/* Previous Project */}
-    <div className="col-md-6 project-col px-0">
-      {prevCase ? (
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            setCurrentIndex(currentIndex - 1);
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          <div className="overlay-div overlay-div-left text-end">
-            <div className="project-inner-col">
-              <span
-                className="mb-5"
-                style={{
-                  fontSize: "32px",
-                  color: "#ffffffad",
-                  display: "inline-block",
+        <div className="row mx-0">
+          {/* Previous Project */}
+          <div className="col-md-6 project-col px-0">
+            {prevCase ? (
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentIndex(currentIndex - 1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                ⟵
-              </span>
-              <br />
-              <h5 className="text-white mb-3 font_18 fw_600">
-                Previous Project :
-              </h5>
-              <h3 className="text-white font_40 fw_600">
-                {prevCase?.Heading1}
-              </h3>
-            </div>
+                <div className="overlay-div overlay-div-left text-end">
+                  <div className="project-inner-col">
+                    <span
+                      className="mb-5"
+                      style={{
+                        fontSize: "32px",
+                        color: "#ffffffad",
+                        display: "inline-block",
+                      }}
+                    >
+                      ⟵
+                    </span>
+                    <br />
+                    <h5 className="text-white mb-3 font_18 fw_600">
+                      Previous Project :
+                    </h5>
+                    <h3 className="text-white font_40 fw_600">
+                      {prevCase?.Heading1}
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={getImageUrl(prevCase?.BannerImage)}
+                  width="100%"
+                  alt={prevCase?.Heading1}
+                />
+              </a>
+            ) : (
+              <a href="#">
+                <div className="overlay-div overlay-div-left text-end">
+                  <div className="project-inner-col">
+                    <span
+                      className="mb-5"
+                      style={{
+                        fontSize: "32px",
+                        color: "#ffffffad",
+                        display: "inline-block",
+                      }}
+                    >
+                      ⟵
+                    </span>
+                    <br />
+                    <h5 className="text-white mb-3 font_18 fw_600">
+                      Previous Project :
+                    </h5>
+                    <h3 className="text-white font_40 fw_600">
+                      No Previous Project
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src="images/previous-project.png"
+                  width="100%"
+                  alt="No Previous Project"
+                />
+              </a>
+            )}
           </div>
-          <img
-            src={getImageUrl(prevCase?.BannerImage)}
-            width="100%"
-            alt={prevCase?.Heading1}
-          />
-        </a>
-      ) : (
-        <a href="#">
-          <div className="overlay-div overlay-div-left text-end">
-            <div className="project-inner-col">
-              <span
-                className="mb-5"
-                style={{
-                  fontSize: "32px",
-                  color: "#ffffffad",
-                  display: "inline-block",
-                }}
-              >
-                ⟵
-              </span>
-              <br />
-              <h5 className="text-white mb-3 font_18 fw_600">
-                Previous Project :
-              </h5>
-              <h3 className="text-white font_40 fw_600">No Previous Project</h3>
-            </div>
-          </div>
-          <img src="images/previous-project.png" width="100%" alt="No Previous Project" />
-        </a>
-      )}
-    </div>
 
-    {/* Next Project */}
-    <div className="col-md-6 project-col px-0">
-      {nextCase ? (
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            setCurrentIndex(currentIndex + 1);
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          <div className="overlay-div text-start">
-            <div className="project-inner-col">
-              <span
-                className="mb-5"
-                style={{
-                  fontSize: "32px",
-                  color: "#ffffffad",
-                  display: "inline-block",
+          {/* Next Project */}
+          <div className="col-md-6 project-col px-0">
+            {nextCase ? (
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setCurrentIndex(currentIndex + 1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                ⟶
-              </span>
-              <br />
-              <h5 className="text-white mb-3 font_18 fw_600">Next Project :</h5>
-              <h3 className="text-white font_40 fw_600">
-                {nextCase?.Heading1}
-              </h3>
-            </div>
+                <div className="overlay-div text-start">
+                  <div className="project-inner-col">
+                    <span
+                      className="mb-5"
+                      style={{
+                        fontSize: "32px",
+                        color: "#ffffffad",
+                        display: "inline-block",
+                      }}
+                    >
+                      ⟶
+                    </span>
+                    <br />
+                    <h5 className="text-white mb-3 font_18 fw_600">
+                      Next Project :
+                    </h5>
+                    <h3 className="text-white font_40 fw_600">
+                      {nextCase?.Heading1}
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src={getImageUrl(nextCase?.BannerImage)}
+                  width="100%"
+                  alt={nextCase?.Heading1}
+                />
+              </a>
+            ) : (
+              <a href="#">
+                <div className="overlay-div text-start">
+                  <div className="project-inner-col">
+                    <span
+                      className="mb-5"
+                      style={{
+                        fontSize: "32px",
+                        color: "#ffffffad",
+                        display: "inline-block",
+                      }}
+                    >
+                      ⟶
+                    </span>
+                    <br />
+                    <h5 className="text-white mb-3 font_18 fw_600">
+                      Next Project :
+                    </h5>
+                    <h3 className="text-white font_40 fw_600">
+                      No Next Project
+                    </h3>
+                  </div>
+                </div>
+                <img
+                  src="images/next-project.png"
+                  width="100%"
+                  alt="No Next Project"
+                />
+              </a>
+            )}
           </div>
-          <img
-            src={getImageUrl(nextCase?.BannerImage)}
-            width="100%"
-            alt={nextCase?.Heading1}
-          />
-        </a>
-      ) : (
-        <a href="#">
-          <div className="overlay-div text-start">
-            <div className="project-inner-col">
-              <span
-                className="mb-5"
-                style={{
-                  fontSize: "32px",
-                  color: "#ffffffad",
-                  display: "inline-block",
-                }}
-              >
-                ⟶
-              </span>
-              <br />
-              <h5 className="text-white mb-3 font_18 fw_600">Next Project :</h5>
-              <h3 className="text-white font_40 fw_600">No Next Project</h3>
-            </div>
-          </div>
-          <img src="images/next-project.png" width="100%" alt="No Next Project" />
-        </a>
-      )}
-    </div>
-  </div>
-</div>
-
+        </div>
+      </div>
     </>
   );
 };
