@@ -199,14 +199,14 @@ const CaseStudy = () => {
 
           <div className="col-md-6 case-study-col-2 pb-5">
             <div className="circle-1 circle-one"
-                  dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[0].value }}>
+                  dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[0]?.value }}>
               
             </div>
             <div className="circle-1 circle-two"
-            dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[1].value }}>
+            dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[1]?.value }}>
             </div>
             <div className="circle-1 circle-three"
-            dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[2].value }}>
+            dangerouslySetInnerHTML={{ __html: currentCase?.Content?.Stats[2]?.value }}>
             </div>
           </div>
         </div>
