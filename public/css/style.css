@@ -981,7 +981,9 @@ background-image: url("../images/bubbles-img.jpg");
   /*    height: 100vh;*/
   background-blend-mode: multiply;
 }
-
+.work_slider .right_content_col, .services_team_slider .right_content_col{
+  height: 100vh !important;
+}
 #myVideo {
   position: absolute;
   right: 0;
@@ -2756,6 +2758,23 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
   left: 0;
   margin: auto;
   top: -170px;
+}
+.mobile-creative-section.team-section .carousel-inner-div .heading_col{
+  padding: 0px !important;
+}
+.mobile-creative-section.team-section{
+  min-height: 800px !important;
+}
+.mobile-creative-section.team-section .team_last_name{
+  margin-top:-12px !important;
+}
+.mobile-creative-section.team-section .carousel-inner-div .left_member_col img{
+  height: 100% !important;
+}
+.mobile-creative-section.team-section .carousel-control-next-icon, .mobile-creative-section.team-section .carousel-control-prev-icon{
+   height: 40px !important;
+   width: 40px !important;
+   background-size: 50% !important;
 }
   .right-img {
     display: none !important;
