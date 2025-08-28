@@ -1514,7 +1514,7 @@ body .education_col {
   background-image: url("../images/half-ring.jpg");
   background-blend-mode: multiply;
   background-position: right;
-  /* background-size: cover; */
+  background-size: 575px;
       background-repeat: no-repeat;
 }
 
