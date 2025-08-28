@@ -73,7 +73,7 @@ const TalentOnDemand = () => {
       }
 `}</style>
 
-{/* Popups Loop */}
+      {/* Popups Loop */}
       {talentDemandData?.Services?.ServicesName?.map((service) => (
         <div
           key={service.id}
@@ -95,17 +95,27 @@ const TalentOnDemand = () => {
               <div className="modal-body px-5 pb-5">
                 <div className="row px-0">
                   <div className="col-md-4">
-                    <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
-                    <h5 className="text-dark fw_600 font_28 pt-3">{service.name}</h5>
+                    <img
+                      src={`${baseUrl}${service.image?.url}`}
+                      alt={service.image?.alternativeText || ""}
+                    />
+                    <h5 className="text-dark fw_600 font_28 pt-3">
+                      {service.name}
+                    </h5>
                   </div>
                   <div className="col-md-8">
                     <div
                       className="font_14"
-                      dangerouslySetInnerHTML={{ __html: service.DetailDescription }}
+                      dangerouslySetInnerHTML={{
+                        __html: service.DetailDescription,
+                      }}
                     />
 
                     {/* Accordion for FAQs */}
-                    <div className="accordion accordion-flush" id={`accordion${service.id}`}>
+                    <div
+                      className="accordion accordion-flush"
+                      id={`accordion${service.id}`}
+                    >
                       {service.FAQs?.map((faq, i) => (
                         <div className="accordion-item mb-2" key={i}>
                           <h2 className="accordion-header">
@@ -126,7 +136,11 @@ const TalentOnDemand = () => {
                             data-bs-parent={`#accordion${service.id}`}
                           >
                             <div className="accordion-body">
-                              <div dangerouslySetInnerHTML={{ __html: faq.Description }} />
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: faq.Description,
+                                }}
+                              />
                             </div>
                           </div>
                         </div>
@@ -194,31 +208,34 @@ const TalentOnDemand = () => {
           <div className="owl-carousel owl-theme strategy_slider">
             {talentDemandData?.Services?.ServicesName?.map((service) => (
               <div key={service.id} className="item">
-              <div className="item_inner">
-                <div className="strategy_wrap">
-                  <div className="inner_wrap">
-                    <div>
-                    <p className="text-dark">{service.description}</p>
-                    <a
-                      href="javascript:void(0)"
-                      className="btn btn_primary btn_dark"
-                      data-bs-toggle="modal"
-                      data-bs-target={`#team${service.id}`}
-                    >
-                      {service.buttonLabel || "Learn More"}
-                    </a>
+                <div className="item_inner">
+                  <div className="strategy_wrap">
+                    <div className="inner_wrap">
+                      <div>
+                        <p className="text-dark">{service.description}</p>
+                        <a
+                          href="javascript:void(0)"
+                          className="btn btn_primary btn_dark d-none"
+                          data-bs-toggle="modal"
+                          data-bs-target={`#team${service.id}`}
+                        >
+                          {service.buttonLabel || "Learn More"}
+                        </a>
+                      </div>
                     </div>
+                    <p className="text-dark fw-bold pt-3 font_18 px-4">
+                      {service.name}
+                    </p>
                   </div>
-                  <p className="text-dark fw-bold pt-3 font_18 px-4">
-                    {service.name}
-                  </p>
-                </div>
-                <div className="before_hover_content">
-                  <img src={`${baseUrl}${service.image?.url}`} alt={service.image?.alternativeText || ""} />
-                  <p className="text-white fw-bold font_18 pt-3 fade_text">
-                    {service.name}
-                  </p>
-                </div>
+                  <div className="before_hover_content">
+                    <img
+                      src={`${baseUrl}${service.image?.url}`}
+                      alt={service.image?.alternativeText || ""}
+                    />
+                    <p className="text-white fw-bold font_18 pt-3 fade_text">
+                      {service.name}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -391,43 +408,48 @@ const TalentOnDemand = () => {
             </div>
             <div className="testimonials d-flex justify-content-end">
               <div className="testimonials-inner">
-  {/* <!-- Carousel --> */}
-  <div
-    id="demo"
-    className="carousel slide"
-    data-bs-ride="carousel"
-  >
-    {/* <!-- Indicators/dots --> */}
-    <div className="carousel-indicators">
-      {talentDemandData?.Testimonials?.Testimonial?.map((_, index) => (
-        <button
-          key={index}
-          type="button"
-          data-bs-target="#demo"
-          data-bs-slide-to={index}
-          className={index === 0 ? "active" : ""}
-          aria-current={index === 0 ? "true" : undefined}
-          aria-label={`Slide ${index + 1}`}
-        ></button>
-      ))}
-    </div>
+                {/* <!-- Carousel --> */}
+                <div
+                  id="demo"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  {/* <!-- Indicators/dots --> */}
+                  <div className="carousel-indicators">
+                    {talentDemandData?.Testimonials?.Testimonial?.map(
+                      (_, index) => (
+                        <button
+                          key={index}
+                          type="button"
+                          data-bs-target="#demo"
+                          data-bs-slide-to={index}
+                          className={index === 0 ? "active" : ""}
+                          aria-current={index === 0 ? "true" : undefined}
+                          aria-label={`Slide ${index + 1}`}
+                        ></button>
+                      )
+                    )}
+                  </div>
 
-    {/* <!-- The slideshow/carousel --> */}
-    <div className="carousel-inner">
-      {talentDemandData?.Testimonials?.Testimonial?.map((item, index) => (
-        <div
-          key={item.id || index}
-          className={`carousel-item ${index === 0 ? "active" : ""}`}
-        >
-          <div
-            dangerouslySetInnerHTML={{ __html: item.Review }}
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
-
+                  {/* <!-- The slideshow/carousel --> */}
+                  <div className="carousel-inner">
+                    {talentDemandData?.Testimonials?.Testimonial?.map(
+                      (item, index) => (
+                        <div
+                          key={item.id || index}
+                          className={`carousel-item ${
+                            index === 0 ? "active" : ""
+                          }`}
+                        >
+                          <div
+                            dangerouslySetInnerHTML={{ __html: item.Review }}
+                          />
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
