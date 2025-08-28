@@ -243,7 +243,7 @@ const About = () => {
               {aboutData?.Section2.Text}
             </h1>
           </div>
-          <div className="about_right_content_col px-0">
+          <div className="about_right_content_col px-0 transparent-bg">
             {/* <div className="about_text">
              <h4 className="large_heading text-white ps-5 pe-5 text-center text-md-start pt-4 pt-md-0">
               A Refreshing Alternative
