@@ -56,8 +56,7 @@ const Home = () => {
 
   return (
     <>
-
-     <style>{`
+      <style>{`
 .menu-line{
       background-color: #000 !important;
 }
@@ -142,14 +141,14 @@ const Home = () => {
                   </div>
                 </div>
                 <a href="/case-study">
-                <div className="result-div-2 circle o_bg_green">
-                  <h5>View The Case Study</h5>
-                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
-                </div>
+                  <div className="result-div-2 circle o_bg_green">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
                 </a>
               </div>
-</section>
- <section className="">
+            </section>
+            <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.3s"
@@ -157,20 +156,20 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_primary">Healthcare:</h5>
+                    <h5 className="color_primary">Healthcare</h5>
                     <h2>148% Increase</h2>
                     <p>in Web Traffic</p>
                   </div>
                 </div>
                 <a href="/case-study">
-                <div className="result-div-2 circle o_bg_primary">
-                  <h5>View The Case Study</h5>
-                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
-                </div>
+                  <div className="result-div-2 circle o_bg_primary">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
                 </a>
               </div>
-</section>
- <section className="">
+            </section>
+            <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.4s"
@@ -178,20 +177,20 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_yellow">Tourism:</h5>
+                    <h5 className="color_yellow">Tourism</h5>
                     <h2>12% Jump</h2>
                     <p>in Occupancy Tax</p>
                   </div>
                 </div>
                 <a href="/case-study">
-                <div className="result-div-2 circle o_bg_yellow">
-                  <h5>View The Case Study</h5>
-                  <i className="fa-regular fa-arrow-right-long text-dark"></i>
-                </div>
+                  <div className="result-div-2 circle o_bg_yellow">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
                 </a>
               </div>
-</section>
- <section className="">
+            </section>
+            <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.5s"
@@ -199,20 +198,20 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_primary">NonProfit:</h5>
+                    <h5 className="color_primary">Nonprofit</h5>
                     <h2>0.73% Increase</h2>
                     <p>Average click-Through Rate</p>
                   </div>
                 </div>
-                 <a href="/case-study">
-                <div className="result-div-2 circle o_bg_primary">
-                  <h5>View The Case Study</h5>
-                 <i className="fa-regular fa-arrow-right-long text-dark"></i>
-                </div>
+                <a href="/case-study">
+                  <div className="result-div-2 circle o_bg_primary">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
                 </a>
               </div>
-</section>
- <section className="">
+            </section>
+            <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.6s"
@@ -220,16 +219,16 @@ const Home = () => {
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part">
-                    <h5 className="color_teal">Education:</h5>
+                    <h5 className="color_teal">Education</h5>
                     <h2>182% Increase</h2>
                     <p>in Student Re-enrollment</p>
                   </div>
                 </div>
-                 <a href="/case-study">
-                <div className="result-div-2 circle o_bg_teal">
-                  <h5>View The Case Study</h5>
-                 <i className="fa-regular fa-arrow-right-long text-dark"></i>
-                </div>
+                <a href="/case-study">
+                  <div className="result-div-2 circle o_bg_teal">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
                 </a>
               </div>
             </section>
@@ -441,7 +440,11 @@ const Home = () => {
           </h3>
         </div>
         <div className="container marquee-container">
-          <div className="owl-carousel owl-theme companies_logos_slider marquee-content " direction="up" loop="1">
+          <div
+            className="owl-carousel owl-theme companies_logos_slider marquee-content "
+            direction="up"
+            loop="1"
+          >
             <div className="item marquee-item">
               <img src="images/valley-children-hospital.svg" alt="Logo 1" />
               <img src="images/Travis.svg" alt="Logo 2" />
@@ -485,7 +488,8 @@ const Home = () => {
                     href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[0]?.Happening_List[0]?.link}`}
                   >
                     {
-                      homeData?.Whats_Happening?.Happening_List[0]?.Happening_List[0]?.text
+                      homeData?.Whats_Happening?.Happening_List[0]
+                        ?.Happening_List[0]?.text
                     }
                     <i className="fa-regular fa-arrow-right-long"></i>
                     <br />
@@ -505,7 +509,8 @@ const Home = () => {
                     href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[0]?.link}`}
                   >
                     {
-                      homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[0]?.text
+                      homeData?.Whats_Happening?.Happening_List[1]
+                        ?.Happening_List[0]?.text
                     }
                     <i className="fa-regular fa-arrow-right-long"></i>
                   </a>
@@ -515,7 +520,8 @@ const Home = () => {
                     href={`${baseUrl}${homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[1]?.link}`}
                   >
                     {
-                      homeData?.Whats_Happening?.Happening_List[1]?.Happening_List[1]?.text
+                      homeData?.Whats_Happening?.Happening_List[1]
+                        ?.Happening_List[1]?.text
                     }
                     {/* <i className="fa-regular fa-arrow-right-long"></i> */}
                   </a>
@@ -536,7 +542,8 @@ const Home = () => {
                       className="color_black"
                     >
                       {
-                        homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[0]?.text
+                        homeData?.Whats_Happening?.Happening_List[2]
+                          ?.Happening_List[0]?.text
                       }
                       <i className="fa-regular fa-arrow-right-long"></i>
                     </a>
@@ -547,7 +554,8 @@ const Home = () => {
                       className="color_black"
                     >
                       {
-                        homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[1]?.text
+                        homeData?.Whats_Happening?.Happening_List[2]
+                          ?.Happening_List[1]?.text
                       }
                       <i className="fa-regular fa-arrow-right-long"></i>
                     </a>
@@ -558,7 +566,8 @@ const Home = () => {
                       className="color_black"
                     >
                       {
-                        homeData?.Whats_Happening?.Happening_List[2]?.Happening_List[2].text
+                        homeData?.Whats_Happening?.Happening_List[2]
+                          ?.Happening_List[2].text
                       }
                       <i className="fa-regular fa-arrow-right-long"></i>
                     </a>
