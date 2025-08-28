@@ -32,7 +32,7 @@ const About = () => {
               loop: true,
               nav: false,
               autoplay: true,
-              autoplayTimeout: 7000,
+              autoplayTimeout: 3000,
               autoplaySpeed: 800,
               margin: 10,
               responsive: {
