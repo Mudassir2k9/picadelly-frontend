@@ -80,7 +80,7 @@ const Buzz = () => {
           ></h1>
         </div>
       </div>
-          <section className="team_section bg_cover py-0 buzz_team_section">
+          <section className="team_section bg_cover py-0 buzz_team_section" id="team_action">
         <div className="row w-auto mx-0 team_row">
           <div className="col-lg-6 col-md-12 col-12 px-0 ">
             <img
@@ -102,7 +102,7 @@ const Buzz = () => {
         </div>
       </section>
 
-      <section className="culture_section announcement-section bg_cover">
+      <section className="culture_section aannouncement-section bg_cover" id="announcement">
         <div className="container">
           <div className="row pt-5 w-auto mx-0">
             <h2 className="culture-heading color_primary">{buzzData?.Announcement?.Heading1}</h2>
@@ -140,7 +140,7 @@ const Buzz = () => {
       </section>
   
 
-      <section className="culture_section awards_section bg_cover px-0">
+      <section className="culture_section awards_section bg_cover px-0" id="awards">
         <div className="container">
           <div className="row pt-5 pb-5 mx-0">
             <div className="col-12">
