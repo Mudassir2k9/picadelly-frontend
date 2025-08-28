@@ -98,28 +98,20 @@ let lastScrollTop = 0; // store previous scroll position
 let scrollTimeout;
 
 
-window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  const currentScroll = window.scrollY;
-
-  if (currentScroll < lastScrollTop) {
-    // ✅ scrolling UP → show header
-    header.classList.add("sticky");
-
-    clearTimeout(scrollTimeout);
-
-    scrollTimeout = setTimeout(() => {
-      if (!header.matches(":hover")) {
-        header.classList.remove("sticky");
-      }
-    }, 2000);
-  } else {
-    // ⬇️ scrolling DOWN → hide header immediately
-    header.classList.remove("sticky");
-  }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // avoid negative on mobile
-});
+window.addEventListener("scroll", function () { 
+  const header = document.querySelector("header"); 
+  const currentScroll = window.scrollY; 
+  // if (currentScroll > lastScrollTop) { 
+    header.classList.add("sticky"); 
+    clearTimeout(scrollTimeout); 
+    scrollTimeout = setTimeout(() => { 
+      // if (!header.matches(":hover")) { 
+        header.classList.remove("sticky"); 
+      // }
+     }, 2000); 
+  // } 
+    // lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;  
+  });
 
 
 
