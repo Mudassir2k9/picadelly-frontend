@@ -1,22 +1,35 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 const apiUrl = import.meta.env.VITE_API_URL;
+import { useLocation } from "react-router-dom";
 
 const BlogDetail = () => {
   const [blogs, setBlogs] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const caseId = params.get("id");
 
   useEffect(() => {
     axios
       .get(`${apiUrl}/blogs?populate[Blogs][populate]=*`)
       .then((res) => {
-        setBlogs(res.data.data);
+        const data = res.data.data;
+        setBlogs(data);
+        if (caseId) {
+          const foundIndex = data.findIndex(
+            (cs) => String(cs.documentId) === String(caseId)
+          );
+          if (foundIndex !== -1) {
+            setCurrentIndex(foundIndex);
+          }
+        }
       })
       .catch((error) => {
         console.error("Error fetching blogs:", error);
       });
   }, []);
-console.log(blogs);
+  console.log(blogs);
   if (blogs.length === 0) {
     return <div>Loading...</div>;
   }
@@ -34,7 +47,7 @@ console.log(blogs);
 
   return (
     <>
-    <style>{`
+      <style>{`
     body header{
      background-color: #fff;
     }
@@ -129,16 +142,15 @@ console.log(blogs);
         <div className="row mx-0">
           {/* Sticky Left Sidebar */}
           <div className="col-md-4 left-sidebar px-5 pt-5 pb-5">
-
             <div class="search-box">
               <i class="fa fa-search search-icon"></i>
               <input type="text" placeholder="Search" />
               <i class="fa fa-times clear-icon"></i>
-           </div>
+            </div>
 
             {/* <div className="sticky-sidebar" id="sidebar"> */}
-              {/* Dynamically generate links based on Blog_Content Titles */}
-              {/* {currentBlog?.Blog_Content?.map((section, idx) => (
+            {/* Dynamically generate links based on Blog_Content Titles */}
+            {/* {currentBlog?.Blog_Content?.map((section, idx) => (
                 <a
                   key={section.id}
                   href={`#section-${idx}`}
