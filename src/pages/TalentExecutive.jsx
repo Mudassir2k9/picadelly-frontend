@@ -119,17 +119,7 @@ const TalentExecutive = () => {
     right: -290px !important;
         }
 
-        .impact_section_2 .team_col::before{
-        position: absolute;
-    content: "";
-    height: 360px;
-    width: 360px;
-    background-color: #f2682ab5;
-    z-index: 1;
-    border-radius: 100%;
-    left: -175px;
-        display: block !important;
-        }
+
 `}</style>
       <div className="container-fluid executive_banner">
         <div className="container">
