@@ -205,3 +205,4 @@ function myFunction() {
 $(document).ready(function () {
   // script for portfolio section on the work page
 });
+
