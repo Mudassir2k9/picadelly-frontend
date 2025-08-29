@@ -83,9 +83,13 @@ export default function CookieConsent({ policyHtml }) {
               </div>
             </div>
             <div style={styles.btnRow}>
-              <button onClick={rejectAll} style={styles.btnGhost}>Reject all</button>
+              {/* <button onClick={rejectAll} style={styles.btnGhost}>Reject all</button>
               <button onClick={() => setShowManage(true)} style={styles.btnGhost}>Customize</button>
-              <button onClick={acceptAll} style={styles.btnPrimary}>Accept all</button>
+              <button onClick={acceptAll} style={styles.btnPrimary}>Accept all</button> */}
+
+              <button onClick={rejectAll} class="btn_primary ">Reject all</button>
+              <button onClick={() => setShowManage(true)} class="btn_primary ">Customize</button>
+              <button onClick={acceptAll} class="btn_primary ">Accept all</button>
             </div>
           </div>
         </div>
@@ -146,9 +150,12 @@ export default function CookieConsent({ policyHtml }) {
             )}
 
             <div style={{ display: "flex", gap: 8, justifyContent: "flex-end", marginTop: 16 }}>
-              <button onClick={rejectAll} style={styles.btnGhost}>Reject all</button>
+              {/* <button onClick={rejectAll} style={styles.btnGhost}>Reject all</button>
               <button onClick={acceptAll} style={styles.btnPrimary}>Accept all</button>
-              <button onClick={saveSelection} style={styles.btnAccent}>Save selection</button>
+              <button onClick={saveSelection} style={styles.btnAccent}>Save selection</button> */}
+              <button onClick={rejectAll} class="btn_primary ">Reject all</button>
+              <button onClick={acceptAll} class="btn_primary ">Accept all</button>
+              <button onClick={saveSelection} class="btn_primary ">Save selection</button>
             </div>
           </div>
         </div>
