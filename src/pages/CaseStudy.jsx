@@ -2,10 +2,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 const apiUrl = import.meta.env.VITE_API_URL;
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
+import { useLocation } from "react-router-dom";
 
 const CaseStudy = () => {
   const [caseStudies, setCaseStudies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const caseId = params.get("id");
+  console.log("id---", caseId);
 
   useEffect(() => {
     axios
@@ -14,12 +19,21 @@ const CaseStudy = () => {
 `
       )
       .then((res) => {
-        setCaseStudies(res.data.data);
+        const data = res.data.data;
+        setCaseStudies(data);
+        if (caseId) {
+          const foundIndex = data.findIndex(
+            (cs) => String(cs.documentId) === String(caseId)
+          );
+          if (foundIndex !== -1) {
+            setCurrentIndex(foundIndex);
+          }
+        }
       })
       .catch((error) => {
         console.error("Error fetching caseStudies:", error);
       });
-  }, []);
+  }, [caseId]);
   console.log(caseStudies);
   if (caseStudies.length === 0) {
     return <div>Loading...</div>;
@@ -73,31 +87,37 @@ const CaseStudy = () => {
                 className="list-col d-flex justify-content-center"
                 style={{ width: "50%" }}
               >
-                <div className="list-inner">
-                  <h5 className="fw_600">Channels</h5>
-                  <ul style={{ paddingLeft: "26px" }}>
-                    {currentCase?.Channels.map((channel, index) => (
-                      <li key={index} className="font_18 mb-1">
-                        {channel.Channel}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {currentCase?.Channels.length > 0 && (
+                  <div className="list-inner">
+                    <h5 className="fw_600">Channels</h5>
+                    <ul style={{ paddingLeft: "26px" }}>
+                      {currentCase?.Channels.map((channel, index) => (
+                        <li key={index} className="font_18 mb-1">
+                          {channel.Channel}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
               <div
                 className="list-col d-flex justify-content-center"
                 style={{ width: "50%" }}
               >
-                <div className="list-inner">
-                  <h5 className="fw_600">Integrated Services</h5>
-                  <ul style={{ paddingLeft: "26px" }}>
-                    {currentCase?.Integrated_Services.map((channel, index) => (
-                      <li key={index} className="font_18 mb-1">
-                        {channel.Service}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {currentCase?.Integrated_Services.length > 0 && (
+                  <div className="list-inner">
+                    <h5 className="fw_600">Integrated Services</h5>
+                    <ul style={{ paddingLeft: "26px" }}>
+                      {currentCase?.Integrated_Services.map(
+                        (channel, index) => (
+                          <li key={index} className="font_18 mb-1">
+                            {channel.Service}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </div>
