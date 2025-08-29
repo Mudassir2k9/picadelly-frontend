@@ -1717,11 +1717,7 @@ padding: 0px !important;
   height: 100% !important;
 
 }
-.mobile-creative-section.team-section .left_member_col img{
-      width: 100% !important;
-      object-fit: cover !important;
 
-}
 .mobile-creative-section.team-section .carousel-control-next-icon, .mobile-creative-section.team-section .carousel-control-prev-icon{
   height: 60px !important;
   width: 60px !important;
@@ -1945,20 +1941,18 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
 .parallax_container .right-column{
   position: relative;
 }
-/*.parallax_container .left-column::after{
-position: absolute;
-    content: "";
-    height: 360px;
-    width: 360px;
-    background-color: #f2682ab5;
-    z-index: 1;
-    border-radius: 100%;
-    right: -175px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-}*/
+#team-leaders.mobile-creative-section.team-section .left_member_col img{
+      width: 100% !important;
+      object-fit: cover !important;
+      height: 110% !important;
+
+}
 @media only screen and (min-width: 1300px) {
+
+/* body  .accordion-part .accordion-button, .accordion-part .accordion-body,   body .faqs_stick_part .heading_col .content p{
+    font-size: 18px !important;
+  }*/
+
   .form-inner-div h5 {
     font-size: 24pt !important;
   }
@@ -2348,6 +2342,11 @@ body .testimonials-inner .carousel-indicators{
     font-size: 64pt !important;
     line-height: 70pt;
     font-weight: 600 !important;
+  }
+  .case_study-col-1 h2, body .heading_part.case_study-col-1 .inner-div h2 span{
+        font-size: 45pt !important;
+        line-height: 50pt;
+        font-weight: 600 !important;
   }
   .news_item_banner .inner-div h2,
   .blog_detail_banner .inner-div h2 {
