@@ -206,30 +206,3 @@ $(document).ready(function () {
   // script for portfolio section on the work page
 });
 
-export function whenConsent(category, cb) {
-  const LS_KEY = "cookie-consent:v1";
-  const runIfAllowed = () => {
-    try {
-      const prefs = JSON.parse(localStorage.getItem(LS_KEY) || "{}");
-      if (prefs?.[category]) cb();
-    } catch {}
-  };
-
-  // run now if already allowed
-  runIfAllowed();
-
-  // run later when user updates
-  window.addEventListener("cookie-consent-updated", () => runIfAllowed(), { once: true });
-}
-
-// dynamic script loader
-export function loadScript(src, attrs = {}) {
-  return new Promise((resolve, reject) => {
-    const s = document.createElement("script");
-    s.src = src;
-    Object.entries(attrs).forEach(([k, v]) => s.setAttribute(k, v));
-    s.onload = resolve;
-    s.onerror = reject;
-    document.head.appendChild(s);
-  });
-}
