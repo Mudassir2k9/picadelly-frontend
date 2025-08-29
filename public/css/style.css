@@ -1949,9 +1949,9 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
 }
 @media only screen and (min-width: 1300px) {
 
- body  .accordion-part .accordion-button, .accordion-part .accordion-body,   body .faqs_stick_part .heading_col .content p{
+/* body  .accordion-part .accordion-button, .accordion-part .accordion-body,   body .faqs_stick_part .heading_col .content p{
     font-size: 18px !important;
-  }
+  }*/
 
   .form-inner-div h5 {
     font-size: 24pt !important;
