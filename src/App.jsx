@@ -15,11 +15,14 @@ import NewsLanding from "./pages/NewsLanding";
 import Work from "./pages/Work";
 import Legal from "./pages/Legal";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookieConsent from "./components/CookieConsent";
+
 
 function App() {
   return (
     <Router>
       <Header />
+      <CookieConsent /* policyHtml={policyFromStrapi} */ />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

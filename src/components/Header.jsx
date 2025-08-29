@@ -58,13 +58,13 @@ const Header = () => {
           <ul className="nav-items">
             {headerData?.menuItems?.map((menuItem, index) => (
               <li key={menuItem.id}>
-                <a href={menuItem.url} onClick={navBarClose}>{menuItem.title}</a>
+                <a href={menuItem.url} onClick={navBar}>{menuItem.title}</a>
 
                 {menuItem.submenuItems?.length > 0 && (
                   <ul className={index === 0 ? "visible" : ""}>
                     {menuItem.submenuItems.map((subItem) => (
                       <li key={subItem.id}>
-                        <a href={subItem.url} onClick={navBarClose}>{subItem.title}</a>
+                        <a href={subItem.url} onClick={navBar}>{subItem.title}</a>
                       </li>
                     ))}
                   </ul>
