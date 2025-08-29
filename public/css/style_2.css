@@ -325,6 +325,8 @@ position: absolute;
 .companies_section{
     background-image: url(../images/companies_bg.png);
     min-height: 100vh;
+    position: relative !important;
+    z-index: 11;
   }
   .logo_col{
     width: 18%;
@@ -363,6 +365,11 @@ position: absolute;
     background-image: url(../images/flexible_bg.png);
     position: relative;
     min-height: 100vh;
+   
+  }
+  .faqs_stick_part{
+    position: sticky !important;
+    top: 0;
   }
   .faqs_section .team_col::after{
      position: absolute;
@@ -372,6 +379,19 @@ position: absolute;
     width: 450px;
     background-size: 100%;
     right: -225px;
+    top: 0%;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+  }
+   .faqs_section.faqs_stick_part .team_col::after{
+     position: absolute;
+    content: "";
+    background-image: url(../images/ring.png);
+    height: 490px;
+    width: 490px;
+    background-size: 100%;
+    right: -272px;
     top: 0%;
     bottom: 0;
     margin: auto;

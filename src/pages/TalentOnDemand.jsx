@@ -56,6 +56,55 @@ const TalentOnDemand = () => {
   return (
     <>
       <style>{`
+       .split_parent{
+      position: relative;
+    }
+    .cc-image, .cc-text{
+      width: 50%;
+          height: 100svh;
+    }
+    .cc-text{
+      height: 100svh;
+      background-color: #e9e9e9;
+      position: sticky !important;
+      top: 0;
+          // margin-top: -50svh;
+          display: flex;
+          align-items: center;
+          padding: 10px 5%
+    }
+    .cc-image{
+      position: sticky;
+      top: 0;
+          height: 100svh;
+    }
+    .cc-image img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .img_1{
+      margin-right: auto;
+    }
+    .img_3{
+      margin-left: auto;
+    }
+        .cc-text{
+        overflow: hidden
+        }
+          .img_2{
+          margin-left: auto
+          }
+    .cc-text-1{
+      margin-left: auto;
+        margin-top: 0px;
+    }
+           .cc-text-3{
+          margin-right: auto
+           }
+    .split_image-parent{
+      height: 100%;
+    }
   .hamburger i {
     color: #fff !important;
   }
@@ -71,6 +120,38 @@ const TalentOnDemand = () => {
         color:#fff !important;
 
       }
+        .join-right-col{
+        background-image: url("../images/office_bg-right.png");
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        }
+        .join-left-col{
+        background-image: url("../images/office_bg-left.png");
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        }
+        .join-right-col::before{
+         position:absolute;
+         content:"";
+         background-image: url("../images/ring_img.png");
+         width:400px;
+         height:400px;
+         z-index:1111;
+         background-size:cover;
+          left: -200px
+        }
+          .join-left-col::before{
+         position:absolute;
+         content:"";
+         background-image: url("../images/ring_img.png");
+         width:400px;
+         height:400px;
+         z-index:1111;
+         background-size:cover;
+          right: -200px
+        }
 `}</style>
 
       {/* Popups Loop */}
@@ -245,7 +326,7 @@ const TalentOnDemand = () => {
 
       {/* <!------FAQ's Section------> */}
 
-      <div className="container-fluid faqs_section d-flex bg_cover px-0">
+      <div className="container-fluid faqs_section faqs_stick_part d-flex bg_cover px-0">
         <div className="row mx-0 d-flex">
           <div className="heading_col d-flex align-items-center px-5 team_col pt-5 pb-5">
             <div className="px-5 content">
@@ -306,10 +387,67 @@ const TalentOnDemand = () => {
           <div className="px-5 col-md-6 d-flex align-items-center"></div>
         </div>
       </div>
+ {/*<------split-scroll-section----->*/}
 
+         <div className="container-fluid bg_cover px-0  position-relative  justify-content-center align-items-center">
+             <div className="cc-text split_col content-col-1 cc-text-1 join-right-col">
+                 <div className="content-outer-div">
+              <div className="px-5 content mx-5">
+                <h3 className="fw_600 text-start" style={{ fontSize: "38px" }}>
+                  {talentDemandData?.Section5?.Column1_Heading}
+                </h3>
+                <div
+                  className="pt-3"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      talentDemandData?.Section5?.Column1_Description || "",
+                  }}
+                ></div>
+                <div className="text-center btn_div mt-5">
+                  <a
+                    href={talentDemandData?.Section5?.Column1_Button_URL}
+                    className="btn_light color_black"
+                  >
+                    {talentDemandData?.Section5?.Column1_Button_Label}
+                  </a>
+                </div>
+              </div>
+            </div>
+             </div>
+             <div className=" d-flex px-5 align-items-center content-col-1 join-left-col dif-col cc-text split_col cc-text-3">
+            <div className="content-outer-div">
+              <div className="px-5 content mx-5">
+                <h3
+                  className="fw_600  text-start"
+                  style={{ fontSize: "38px" }}
+                  dangerouslySetInnerHTML={{
+                    __html: talentDemandData?.Section5?.Column2_Heading || "",
+                  }}
+                ></h3>
+                <div
+                  className="pt-3"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      talentDemandData?.Section5?.Column2_Description || "",
+                  }}
+                ></div>
+                <div className="text-center btn_div mt-5">
+                  <a
+                    href={talentDemandData?.Section5?.Column2_Button_URL}
+                    className="btn_light color_black"
+                    target="_blank"
+                  >
+                    {talentDemandData?.Section5?.Column2_Button_Label}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+     
       {/* <!-- join-section --> */}
 
-      <div className="container-fluid bg_cover px-0 join-section justify-content-center d-flex align-items-center">
+      {/* <div className="container-fluid bg_cover px-0 join-section justify-content-center d-flex align-items-center">
         <div className="row mx-0">
           <div className="col-md-6 d-flex px-5 align-items-center content-col-1 dif-col">
             <div className="content-outer-div">
@@ -365,7 +503,7 @@ const TalentOnDemand = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* <!----companies-logo-section-----> */}
 
