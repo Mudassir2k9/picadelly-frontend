@@ -36,7 +36,7 @@ const TalentExecutive = () => {
     .cc-text{
       height: 100svh;
       background-color: #e9e9e9;
-      position: sticky;
+      position: sticky !important;
       top: 0;
           // margin-top: -50svh;
           display: flex;
@@ -44,7 +44,7 @@ const TalentExecutive = () => {
           padding: 10px 5%
     }
     .cc-image{
-      position: sticky;
+      position: sticky !important;
       top: 0;
           height: 100svh;
     }
@@ -164,19 +164,19 @@ const TalentExecutive = () => {
             ></div>
           </div>
         </div>
-        <div className="empty_col">
+        <div className="empty_col col-md-6 d-flex align-items-center">
           
         </div>
         </div>
     </div>
 
     {/*end first section*/}
-      <div className="container-fluid impact_section  px-0 executive_impact_section position-relative">
+      <div className="container-fluid impact_section  px-0 executive_impact_section split_impact-section position-relative">
         {/*<div className="row mx-0">*/}
   
 
 
-<div className=" cc-text split_col cc-text-1 ">
+<div className=" cc-text split_col cc-text-1 impact team_col d-flex align-items-center">
           <div className="px-5 content">
             <h3
               className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
@@ -195,7 +195,7 @@ const TalentExecutive = () => {
         </div>
 
 
-        <div className=" cc-image split_col img_1 ">
+        <div className=" cc-image split_col img_1 d-flex justify-content-center align-items-center">
           <img src="images/left-impact-bg.jpg" className="img-fluid"></img>
         </div>
         {/*     </div>
