@@ -105,9 +105,9 @@ window.addEventListener("scroll", function () {
     header.classList.add("sticky"); 
     clearTimeout(scrollTimeout); 
     scrollTimeout = setTimeout(() => { 
-      // if (!header.matches(":hover")) { 
+      if (!header.matches(":hover")) { 
         header.classList.remove("sticky"); 
-      // }
+      }
      }, 2000); 
   // } 
     // lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;  
