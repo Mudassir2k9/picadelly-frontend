@@ -371,6 +371,10 @@ header.sticky .navbar-custom {
 .culture_section .overflow_slider_inner img{
   margin-left: 4px;
   margin-right: 4px;
+      max-height: 400px;
+    width: auto !important;
+    min-height: 300px !important;
+    object-fit: cover;
 }
 .overflow_slider_inner::-webkit-scrollbar, .strategy_row::-webkit-scrollbar{
   height: 13px !important;
