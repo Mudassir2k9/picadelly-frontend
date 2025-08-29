@@ -90,7 +90,129 @@ const Work = () => {
        
       </div>
 
-      <div className="portfolio_row" id="client-results">
+
+
+      {/* <!-- start results section --> */}
+      <section>
+        <div className="parallax_container">
+          <div
+            className="left-column d-flex align-items-center">
+              <h2 class="large_heading fw-bold px-0 px-md-5 mx-0 mx-md-3 text-center text-md-start wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s" >Outstanding Results<span class="color_primary">.</span></h2>
+            </div>
+          <div className="right-column">
+            <section className="">
+              <div
+                className="inner-row wow animate__zoomIn"
+                data-wow-duration="1.2s"
+                data-wow-delay="0.1s"
+              >
+                <div className="result-div-1 circle">
+                  <div className="inner-part">
+                    <h5 className="color_green">Financial Services</h5>
+                    <h2>25% Growth</h2>
+                    <p>in New Members</p>
+                  </div>
+                </div>
+                <a href="/case-study">
+                  <div className="result-div-2 circle o_bg_green">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section className="">
+              <div
+                className="inner-row wow animate__zoomIn"
+                data-wow-duration="1.3s"
+                data-wow-delay="0.2s"
+              >
+                <div className="result-div-1 circle">
+                  <div className="inner-part">
+                    <h5 className="color_primary">Healthcare</h5>
+                    <h2>148% Increase</h2>
+                    <p>in Web Traffic</p>
+                  </div>
+                </div>
+                <a href="/case-study">
+                  <div className="result-div-2 circle o_bg_primary">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section className="">
+              <div
+                className="inner-row wow animate__zoomIn"
+                data-wow-duration="1.4s"
+                data-wow-delay="0.3s"
+              >
+                <div className="result-div-1 circle">
+                  <div className="inner-part">
+                    <h5 className="color_yellow">Tourism</h5>
+                    <h2>12% Jump</h2>
+                    <p>in Occupancy Tax</p>
+                  </div>
+                </div>
+                <a href="/case-study">
+                  <div className="result-div-2 circle o_bg_yellow">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section className="">
+              <div
+                className="inner-row wow animate__zoomIn"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.4s"
+              >
+                <div className="result-div-1 circle">
+                  <div className="inner-part">
+                    <h5 className="color_primary">Nonprofit</h5>
+                    <h2>0.73% Increase</h2>
+                    <p>Average click-Through Rate</p>
+                  </div>
+                </div>
+                <a href="/case-study">
+                  <div className="result-div-2 circle o_bg_primary">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
+                </a>
+              </div>
+            </section>
+            <section className="">
+              <div
+                className="inner-row wow animate__zoomIn"
+                data-wow-duration="1.6s"
+                data-wow-delay="0.5s"
+              >
+                <div className="result-div-1 circle">
+                  <div className="inner-part">
+                    <h5 className="color_teal">Education</h5>
+                    <h2>182% Increase</h2>
+                    <p>in Student Re-enrollment</p>
+                  </div>
+                </div>
+                <a href="/case-study">
+                  <div className="result-div-2 circle o_bg_teal">
+                    <h5>View The Case Study</h5>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <div className="portfolio_row d-none" id="client-results">
         <div className="links_col">
           {workData?.Work_History?.map((item, index) => (
             <div
