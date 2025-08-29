@@ -372,16 +372,16 @@ header.sticky .navbar-custom {
   margin-left: 4px;
   margin-right: 4px;
 }
-.overflow_slider_inner::-webkit-scrollbar {
+.overflow_slider_inner::-webkit-scrollbar, .strategy_row::-webkit-scrollbar{
   height: 13px !important;
   border: 0px !important;
 }
-.overflow_slider_inner::-webkit-scrollbar-track{
+.overflow_slider_inner::-webkit-scrollbar-track, .strategy_row::-webkit-scrollbar-track{
    border-radius: 10px !important;
   margin: 0px 80px;
   border: 1px solid #d5d5d5;
 }
- .overflow_slider_inner::-webkit-scrollbar-thumb{
+ .overflow_slider_inner::-webkit-scrollbar-thumb, .strategy_row::-webkit-scrollbar-thumb{
     border-radius: 10px !important;
  }
 
@@ -1358,38 +1358,54 @@ body .footer-col-1 img {
   position: relative;
   z-index: 1;
 }
-.strategy_slider img {
+.strategy_row{
+  display: block !important;
+  z-index: 1;
+  display: flex !important;
+  /* align-items: center; */
+  position: relative;
+  overflow-x: auto !important;
+}
+.strategy_row img {
   height: 200px;
   width: 200px !important;
   border-radius: 100%;
   object-fit: cover;
   margin: auto;
 }
-.strategy_slider .item {
+.strategy_row .service_1{
   text-align: center;
 }
-.strategy_slider .item:hover .fade_text {
+.strategy_row .service_1:hover .fade_text {
   opacity: 0;
+}
+.service_1{
+  /* width: 332.5px; */
+  padding: 0px 30px;
+  position: relative !important;
+}
+.strategy_row .service_1 img{
+  position: relative;
 }
 .strategy_wrap {
   position: absolute;
   right: 0;
   left: 0;
   margin: auto;
-
+  z-index: 11;
   /* opacity: 0; */
   transition: all 0.7s;
   transform: scale(0) !important;
 }
-.strategy_slider .owl-stage-outer {
+.strategy_row{
   padding-bottom: 70px;
 }
 
-.strategy_slider .item .item_inner:hover .before_hover_content {
+.strategy_row .service_1 .item_inner:hover .before_hover_content {
   opacity: 0;
   transition: all 0.2s;
 }
-.strategy_slider .item .item_inner:hover .strategy_wrap {
+.strategy_row .service_1 .item_inner:hover .strategy_wrap {
   /* opacity: 1; */
   transition: all 0.7s;
   transform: scale(1) !important;
@@ -1834,7 +1850,7 @@ padding: 0px !important;
 }
 .multi_heading p,
 .multi_heading span,
-.strategy_slider p {
+.strategy_row p {
   color: #000 !important;
 }
 #team-leaders.horizontal_parallax {
@@ -2280,7 +2296,7 @@ body .testimonials-inner .carousel-indicators{
   .services_section {
     padding-top: 100px !important;
   }
-  .services_section .item div:nth-child(2) p,
+  .services_section .service_1 div:nth-child(2) p,
   .strategy_wrap p {
     font-size: 18pt !important;
     font-weight: 600 !important;
@@ -2290,7 +2306,7 @@ body .testimonials-inner .carousel-indicators{
 
     font-weight: 400 !important;
   }
-  .strategy_slider img {
+  .strategy_row img {
     width: 240px !important;
     height: 240px !important;
   }
@@ -2587,7 +2603,7 @@ body .testimonials-inner .carousel-indicators{
   }
 }
 @media (min-width: 1300px) and (max-width: 1440px) {
-  .strategy_slider img {
+  .strategy_row img {
     width: 200px !important;
     height: 200px !important;
   }
@@ -2752,6 +2768,13 @@ body .services_team_slider .non-profit_col::after,
 body .services_team_slider .education_col::after,  body .work_slider .tourism_col::after, body .work_slider .non-profit_col::after,
  body .work_slider .education_col::after,  body .work_slider .financial_col::after, body .work_slider .healthcare_col::after {
   display: block !important;
+}
+.strategy_row{
+  padding-bottom: 40px !important;
+        padding-top: 30px;
+}
+.service_1{
+  padding: 0px 20px;
 }
 .team_right_col::before, .financial_right_col::before, .team_right_col::before{
   right: 0;
@@ -3254,11 +3277,11 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
     margin-bottom: 0px !important;
     margin-left: 0px !important;
   }
-  .strategy_slider img {
+  .strategy_row img {
     width: 200px !important;
     height: 200px !important;
   }
-  .strategy_slider .owl-stage-outer {
+  .strategy_row .owl-stage-outer {
     padding-bottom: 10px !important;
   }
   .inner_wrap {

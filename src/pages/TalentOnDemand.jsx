@@ -205,9 +205,9 @@ const TalentOnDemand = () => {
           </div>
         </div>
         <div className="overflow_slider py-5">
-          <div className="owl-carousel owl-theme strategy_slider">
+          <div className="strategy_row">
             {talentDemandData?.Services?.ServicesName?.map((service) => (
-              <div key={service.id} className="item">
+              <div key={service.id} className="service_1">
                 <div className="item_inner">
                   <div className="strategy_wrap">
                     <div className="inner_wrap">

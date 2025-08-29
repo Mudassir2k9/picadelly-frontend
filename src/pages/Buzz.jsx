@@ -126,9 +126,9 @@ const Buzz = () => {
           </div>
         </div>
         <div className="overflow_slider py-5">
-          <div className="owl-carousel owl-theme c_slider">
+          <div className="overflow_slider_inner">
             {buzzData?.Announcement?.Images?.map((img, index) => (
-              <div className="item col-sm-12" key={img.id || index}>
+              <div className="item" key={img.id || index}>
                 <img
                   src={`${baseUrl}${img.url}`}
                   alt={img.alternativeText || `Announcement Image ${index + 1}`}
