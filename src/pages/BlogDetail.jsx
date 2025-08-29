@@ -28,7 +28,7 @@ const BlogDetail = () => {
       .catch((error) => {
         console.error("Error fetching blogs:", error);
       });
-  }, []);
+  }, [caseId]);
   console.log(blogs);
   if (blogs.length === 0) {
     return <div>Loading...</div>;
