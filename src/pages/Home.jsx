@@ -19,7 +19,8 @@ const Home = () => {
         console.error("Error fetching header data:", error);
       });
   }, []);
-console.log(homeData);
+  let Results_List = homeData?.Results?.Results_List.slice(-5);
+console.log(Results_List);
   setTimeout(() => {
     if (window.$) {
       const $cSlider = window.$(".companies_logos_sliders");
@@ -447,7 +448,7 @@ console.log(homeData);
             direction="up"
             loop="1"
           >
-            {Array.from({ length: 120 }, (_, i) => homeData?.Company?.Logos[i % homeData.Company.Logos.length])
+            {Array.from({ length: 130 }, (_, i) => homeData?.Company?.Logos[i % homeData.Company.Logos.length])
             .reduce((rows, logo, index) => {
               if (index % 4 === 0) rows.push([]);
               rows[rows.length - 1].push(logo);
@@ -458,7 +459,7 @@ console.log(homeData);
                 {group.map((logo, j) => (
                   <img
                     key={j}
-                    src={`${baseUrl}${logo.url}`}
+                    src={`${baseUrl}${logo?.url}`}
                   />
                 ))}
               </div>

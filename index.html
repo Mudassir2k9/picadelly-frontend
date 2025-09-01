@@ -211,7 +211,7 @@
                         const box = document.querySelector("#myBox");
                         const box1 = document.querySelector("#myBox1");
                         let state = "before"; // before | fixed | after
-                        let boxOffset = box.offsetTop;
+                        let boxOffset = box?.offsetTop;
 
                         function update() {
                             const scrollTop = window.scrollY;
