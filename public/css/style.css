@@ -1117,7 +1117,8 @@ background-image: url("../images/bubbles-img.jpg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  top: 0 !important;
 }
 /*start about page styling */
 .about_banner.executive_banner,
@@ -2769,6 +2770,9 @@ body .testimonials-inner .carousel-indicators{
   }
 }
 @media only screen and (max-width: 576px) {
+  .banner_section #myVideo{
+        object-position: 85% 50%;
+  }
   body .services_team_slider .healthcare_col::after,
 body .services_team_slider .financial_col::after,
 body .services_team_slider .tourism_col::after,
