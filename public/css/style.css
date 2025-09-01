@@ -575,6 +575,7 @@ header.sticky .navbar-custom {
 .happening_section {
   /* padding-bottom: 112px !important; */
   padding-top: 70px;
+  z-index: 1111;
 }
 .happening_video video,
 .happening_video {
@@ -1765,6 +1766,7 @@ padding: 0px !important;
   height: 1000px;
   position: relative;
   min-height: 100vh;
+  z-index: 111;
 }
 .search-box {
   position: relative;
