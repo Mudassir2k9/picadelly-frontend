@@ -64,7 +64,7 @@ const Home = () => {
 `}</style>
 
       {/* start layered video section */}
-      <section className="section2 container-sticky">
+      <section className="section2 container-sticky" id="myBox">
         <div className="video-sticky">
           <div className="video-container">
            {/* <span
@@ -96,7 +96,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <div className="container-fluid banner_section"  id="myBox">
+      <div className="container-fluid banner_section"  >
         <div className="container">
           <div className="row banner-row">
             <div className="col-md-6 banner-col">
@@ -120,7 +120,7 @@ const Home = () => {
       {/* start results section */}
 
       {/* <!-- start results section --> */}
-      <section>
+      <section id="myBox1">
         <div className="parallax_container">
           <div
             className="left-column d-flex align-items-center"

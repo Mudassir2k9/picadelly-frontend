@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Picadelly</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css"
-    />
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/animate.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css" />
-  </head>
-  <body>
-    <!-- Loader visible immediately -->
-<div id="simple-loader" style="
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Picadelly</title>
+        <link rel="stylesheet" type="text/css" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css" />
+    </head>
+    <body>
+        <!-- Loader visible immediately -->
+        <div id="simple-loader" style="
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -25,15 +21,15 @@
   display: flex; align-items: center; justify-content: center;
   z-index: 9999;
 ">
-  <div style="
+            <div style="
     width: 50px; height: 50px;
     border: 6px solid rgb(255, 255, 255);
     border-left-color: #f2682a;
     border-radius: 50%;
     animation: spin 1s linear infinite;
   "></div>
-</div>
-<div id="overlay" style="
+        </div>
+        <div id="overlay" style="
   display: none;
   position: fixed;
   top: 0; left: 0;
@@ -41,230 +37,264 @@
   background: rgba(0,0,0,0.5);
   z-index: 99;
 "></div>
+        <div id="root"></div>
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <script type="module" src="/src/main.jsx"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+        <script src="/js/wow.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+        <script src="/js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/style_2.css" />
+        <link rel="stylesheet" type="text/css" href="css/style-1.css" />
+        <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+        <script type="text/javascript" src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>
+        <script type="text/javascript" src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
+        <script type="text/javascript">
+            window.addEventListener("load", function() {
+                gsap.registerPlugin(ScrollTrigger);
+                const interval = setInterval(() => {
+                    const sections = gsap.utils.toArray(".panel");
+                    console.log("Checking panels:", sections.length);
+                    if (sections.length > 1) {
+                        clearInterval(interval); // Stop checking
+                        const horizontalParallax = document.querySelector(".horizontal_parallax");
+                        if (horizontalParallax) {
+                            gsap.to(sections, {
+                                xPercent: -100 * (sections.length - 1),
+                                ease: "none",
+                                scrollTrigger: {
+                                    trigger: horizontalParallax,
+                                    pin: true,
+                                    scrub: 1,
+                                    snap: 1 / (sections.length - 1),
+                                    end: () => "+=" + horizontalParallax.offsetWidth,
+                                },
+                            });
+                        }
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 1200); // Check every 200ms
+            });
 
+            document.addEventListener("DOMContentLoaded", function() {
+                var xxf = 1;
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    // Mobile
+                    // window.addEventListener("load", function() {
+                    //     const box = document.querySelector("#myBox"); // Change selector if needed
+                    //     const box1 = document.querySelector("#myBox1"); // Change selector if needed
+                    //     if (box) {
+                    //         box.style.transition = "margin-top 0.3s ease"; // smooth margin animation
+                    //     }
+                    //     $(window).on("scroll", function() {
+                    //         var scrollTop = $(window).scrollTop();
+                           
+                    //         if (scrollTop > 0) {
+                    //             let radius = (scrollTop - 0) * 0.8 + "px";
+                    //             $(".second_video").css("clip-path", `circle(${radius} at 50vw 50vh)`);
+                    //         } else {
+                    //             $(".second_video").css("clip-path", "circle(0px at 20%)");
+                    //         }
+                    //         // Sticky logic for mobile
+                    //         if (!box) return; // safety check
+                    //         if (scrollTop >= 0 && scrollTop <= 1350) {
+                    //             // Fixed range for mobile
+                    //             // var xt = 0;
+                    //             // if(scrollTop > 1250){
+                    //             //   xt = scrollTop - 1250;
+                    //             // }
+                    //             box.style.position = "fixed";
+                    //             box.style.top = "0";
+                    //             box.style.left = "0";
+                    //             box.style.width = "100%";
+                    //             box.style.zIndex = "99";
+                    //             box.style.marginTop = "0"; // Adjust margin based on scroll position
+                    //         } else if (scrollTop > 1350) {
+                    //             // After fixed range, add margin
+                    //             box1.style.position = "sticky";
+                    //             box.style.top = "";
+                    //             box.style.left = "";
+                    //             box.style.width = "";
+                    //             box1.style.zIndex = "999";
+                    //             box1.style.marginTop = "560px";
+                    //             if (xxf === 1) {
+                    //                 xxf = 0;
+                    //                 ScrollTrigger.refresh();
+                    //             }
+                    //         } else {
+                    //             // Before fixed range
+                    //             box.style.position = "";
+                    //             box.style.top = "";
+                    //             box.style.left = "";
+                    //             box.style.width = "";
+                    //             box.style.zIndex = "";
+                    //             box1.style.marginTop = "560px";
+                    //         }
+                    //     });
+                    // });
 
+                    window.addEventListener("load", function() {
+                        const box = document.querySelector("#myBox");
+                        const box1 = document.querySelector("#myBox1");
+                        let state = "before"; // before | fixed | after
+                        let boxOffset = box.offsetTop;
 
-    <div id="root"></div>
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <script type="module" src="/src/main.jsx"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-      crossorigin="anonymous"
-    ></script>
+                        function update() {
+                            const scrollTop = window.scrollY;
+                            const boxTop = box.getBoundingClientRect().top;
+                            // Clip-path effect
+                            
+                            if (boxTop <= 0) {
+                                let radius = (scrollTop - boxOffset) * 2.5 + "px";
+                                // console.log(radius);
+                                $(".second_video").css("clip-path", `circle(${radius} at 50% 50%)`);
+                            } else {
+                                $(".second_video").css("clip-path", "circle(0px at center)");
+                            }
+                            // State machine for smoother fix/release
+                            if (scrollTop >= boxOffset && scrollTop <= boxOffset + 800) {
+                              console.log(scrollTop);
+                                if (state !== "fixed") {
+                                  console.log(state);
+                                    state = "fixed";
+                                    box.style.position = "fixed";
+                                    box.style.top = "0";
+                                    box.style.left = "0";
+                                    box.style.width = "100%";
+                                    box.style.zIndex = "99";
+                                    box1.style.marginTop = "800px";
+                                }
+                            } else if (scrollTop > boxOffset + 800) {
+                                if (state !== "after") {
+                                    state = "after";
+                                    box1.style.position = "sticky";
+                                    // box.style.top = "";
+                                    // box.style.left = "";
+                                    // box.style.width = "";
+                                    box1.style.zIndex = "999";
+                                    box1.style.marginTop = "800px";
+                                    if (typeof xxf !== "undefined" && xxf === 1) {
+                                        xxf = 0;
+                                        ScrollTrigger.refresh();
+                                    }
+                                }
+                            } else {
+                                if (state !== "before") {
+                                    state = "before";
+                                    box.style.position = "";
+                                    box.style.top = "";
+                                    box.style.left = "";
+                                    box.style.width = "";
+                                    box.style.zIndex = "";
+                                    box1.style.marginTop = "800px";
+                                }
+                            }
+                        }
+                        // Throttle updates with requestAnimationFrame for smoothness
+                        let ticking = false;
+                        window.addEventListener("scroll", function() {
+                            if (!ticking) {
+                                requestAnimationFrame(function() {
+                                    update();
+                                    ticking = false;
+                                });
+                                ticking = true;
+                            }
+                        });
+                    });
+                    
+                } else {
+                    // Laptop/Desktop
+                    window.addEventListener("load", function() {
+                        const box = document.querySelector("#myBox");
+                        const box1 = document.querySelector("#myBox1");
+                        let state = "before"; // before | fixed | after
+                        let boxOffset = box.offsetTop;
 
-    <script src="/js/wow.min.js"></script>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="/js/owl.carousel.min.js"></script>
-    <script src="/js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/style_2.css" />
-
-    <link rel="stylesheet" type="text/css" href="css/style-1.css" />
-    <script
-      type="text/javascript"
-      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://assets.codepen.io/16327/ScrollTrigger.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"
-    ></script>
-    <script type="text/javascript">
-      window.addEventListener("load", function () {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const interval = setInterval(() => {
-          const sections = gsap.utils.toArray(".panel");
-          console.log("Checking panels:", sections.length);
-
-          if (sections.length > 1) {
-            clearInterval(interval); // Stop checking
-            const horizontalParallax = document.querySelector(
-              ".horizontal_parallax"
-            );
-
-            if (horizontalParallax) {
-              gsap.to(sections, {
-                xPercent: -100 * (sections.length - 1),
-                ease: "none",
-                scrollTrigger: {
-                  trigger: horizontalParallax,
-                  pin: true,
-                  scrub: 1,
-                  snap: 1 / (sections.length - 1),
-                  end: () => "+=" + horizontalParallax.offsetWidth,
-                },
-              });
-            }
-          } else {
-            clearInterval(interval);
-          }
-        }, 1200); // Check every 200ms
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        var xxf = 1;
-        if (window.matchMedia("(max-width: 768px)").matches) {
-          // Mobile
-window.addEventListener("load", function () {
-  
-  const box = document.querySelector("#myBox"); // Change selector if needed
-  if (box) {
-    box.style.transition = "margin-top 0.3s ease"; // smooth margin animation
-  }
-
-  $(window).on("scroll", function () {
-    var scrollTop = $(window).scrollTop();
-    // console.log("Scroll position:", scrollTop);
-
-    // Your layered video scroll effect
-    if (scrollTop > 790) {
-      let radius = (scrollTop - 790) * 0.8 + "px";
-      $(".second_video").css("clip-path", `circle(${radius} at 50vw 50vh)`);
-    } else {
-      $(".second_video").css("clip-path", "circle(0px at 20%)");
-    }
-
-    // Sticky logic for mobile
-    if (!box) return; // safety check
-
-    if (scrollTop >= 790 && scrollTop <= 1350) {
-      // Fixed range for mobile
-      // var xt = 0;
-      // if(scrollTop > 1250){
-      //   xt = scrollTop - 1250;
-      // }
-      
-      box.style.position = "fixed";
-      box.style.top = "0";
-      box.style.left = "0";
-      box.style.width = "100%";
-      box.style.zIndex = "999";
-      box.style.marginTop = "0"; // Adjust margin based on scroll position
-    } 
-    else if (scrollTop > 1350) {
-      // After fixed range, add margin
-      box.style.position = "";
-      box.style.top = "";
-      box.style.left = "";
-      box.style.width = "";
-      box.style.zIndex = "";
-      box.style.marginTop = "560px";
-      if(xxf === 1) {
-        xxf = 0;
-        ScrollTrigger.refresh();
-      }
-      
-    } 
-    else {
-      // Before fixed range
-      box.style.position = "";
-      box.style.top = "";
-      box.style.left = "";
-      box.style.width = "";
-      box.style.zIndex = "";
-      box.style.marginTop = "0";
-    }
-  });
-});
-
-        } else {
-          // Laptop/Desktop
-window.addEventListener("load", function () {
-  const box = document.querySelector("#myBox");
-  let state = "before"; // before | fixed | after
-  let boxOffset = box.offsetTop;
-
-  function update() {
-    const scrollTop = window.scrollY;
-    const boxTop = box.getBoundingClientRect().top;
-
-    // Clip-path effect
-    if (boxTop <= 0) {
-      let radius = (scrollTop - boxOffset) * 2.5 + "px";
-      $(".second_video").css("clip-path", `circle(${radius} at 71.5% 50%)`);
-    } else {
-      $(".second_video").css("clip-path", "circle(0px at center)");
-    }
-
-    // State machine for smoother fix/release
-    if (scrollTop >= boxOffset && scrollTop <= boxOffset + 900) {
-      if (state !== "fixed") {
-        state = "fixed";
-        box.style.position = "fixed";
-        box.style.top = "0";
-        box.style.left = "0";
-        box.style.width = "100%";
-        box.style.zIndex = "999";
-        box.style.marginTop = "0";
-      }
-    } 
-    else if (scrollTop > boxOffset + 900) {
-      if (state !== "after") {
-        state = "after";
-        box.style.position = "";
-        box.style.top = "";
-        box.style.left = "";
-        box.style.width = "";
-        box.style.zIndex = "";
-        box.style.marginTop = "900px";
-        if (typeof xxf !== "undefined" && xxf === 1) {
-          xxf = 0;
-          ScrollTrigger.refresh();
-        }
-      }
-    } 
-    else {
-      if (state !== "before") {
-        state = "before";
-        box.style.position = "";
-        box.style.top = "";
-        box.style.left = "";
-        box.style.width = "";
-        box.style.zIndex = "";
-        box.style.marginTop = "0";
-      }
-    }
-  }
-
-  // Throttle updates with requestAnimationFrame for smoothness
-  let ticking = false;
-  window.addEventListener("scroll", function () {
-    if (!ticking) {
-      requestAnimationFrame(function () {
-        update();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-});
-
-        }
-      });
-
-const timestamp = Date.now();
-
-  // Select all link elements with rel="stylesheet"
-  document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-    const href = link.getAttribute('href');
-    // Only add ?v= if not already present
-    if (href && !href.includes('?v=')) {
-      link.setAttribute('href', href + '?v=' + timestamp);
-    }
-  });
-     
-    </script>
-    <script>
-  window.addEventListener('load', function () {
-    var loader = document.getElementById('simple-loader');
-    if (loader) {
-      loader.style.display = 'none';
-    }
-  });
-</script>
-  </body>
+                        function update() {
+                            const scrollTop = window.scrollY;
+                            const boxTop = box.getBoundingClientRect().top;
+                            // Clip-path effect
+                            
+                            if (boxTop <= 0) {
+                                let radius = (scrollTop - boxOffset) * 2.5 + "px";
+                                // console.log(radius);
+                                $(".second_video").css("clip-path", `circle(${radius} at 71.5% 50%)`);
+                            } else {
+                                $(".second_video").css("clip-path", "circle(0px at center)");
+                            }
+                            // State machine for smoother fix/release
+                            if (scrollTop >= boxOffset && scrollTop <= boxOffset + 900) {
+                              console.log(scrollTop);
+                                if (state !== "fixed") {
+                                  console.log(state);
+                                    state = "fixed";
+                                    box.style.position = "fixed";
+                                    box.style.top = "0";
+                                    box.style.left = "0";
+                                    box.style.width = "100%";
+                                    box.style.zIndex = "99";
+                                    box1.style.marginTop = "900px";
+                                }
+                            } else if (scrollTop > boxOffset + 900) {
+                                if (state !== "after") {
+                                    state = "after";
+                                    box1.style.position = "sticky";
+                                    // box.style.top = "";
+                                    // box.style.left = "";
+                                    // box.style.width = "";
+                                    box1.style.zIndex = "999";
+                                    box1.style.marginTop = "900px";
+                                    if (typeof xxf !== "undefined" && xxf === 1) {
+                                        xxf = 0;
+                                        ScrollTrigger.refresh();
+                                    }
+                                }
+                            } else {
+                                if (state !== "before") {
+                                    state = "before";
+                                    box.style.position = "";
+                                    box.style.top = "";
+                                    box.style.left = "";
+                                    box.style.width = "";
+                                    box.style.zIndex = "";
+                                    box1.style.marginTop = "900px";
+                                }
+                            }
+                        }
+                        // Throttle updates with requestAnimationFrame for smoothness
+                        let ticking = false;
+                        window.addEventListener("scroll", function() {
+                            if (!ticking) {
+                                requestAnimationFrame(function() {
+                                    update();
+                                    ticking = false;
+                                });
+                                ticking = true;
+                            }
+                        });
+                    });
+                }
+            });
+            const timestamp = Date.now();
+            // Select all link elements with rel="stylesheet"
+            document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+                const href = link.getAttribute('href');
+                // Only add ?v= if not already present
+                if (href && !href.includes('?v=')) {
+                    link.setAttribute('href', href + '?v=' + timestamp);
+                }
+            });
+        </script>
+        <script>
+            window.addEventListener('load', function() {
+                var loader = document.getElementById('simple-loader');
+                if (loader) {
+                    loader.style.display = 'none';
+                }
+            });
+        </script>
+    </body>
 </html>
