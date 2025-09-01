@@ -250,7 +250,7 @@ const TalentOnDemand = () => {
       <div className="container-fluid impact_section d-flex align-items-center px-0 flexible_part executive_impact_section">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col">
-            <div className="px-5 content mx-5">
+            <div className="px-0 px-md-5 content mx-0 mx-md-5">
               <div
                 dangerouslySetInnerHTML={{
                   __html: talentDemandData?.Section2Heading || "",
@@ -392,7 +392,7 @@ const TalentOnDemand = () => {
          <div className="container-fluid bg_cover px-0  position-relative  justify-content-center align-items-center">
              <div className="cc-text split_col content-col-1 cc-text-1 join-right-col">
                  <div className="content-outer-div">
-              <div className="px-5 content mx-5">
+              <div className="px-0 px-md-5 content mx-0 mx-md-5">
                 <h3 className="fw_600 text-start" style={{ fontSize: "38px" }}>
                   {talentDemandData?.Section5?.Column1_Heading}
                 </h3>
@@ -416,7 +416,7 @@ const TalentOnDemand = () => {
              </div>
              <div className=" d-flex px-5 align-items-center content-col-1 join-left-col dif-col cc-text split_col cc-text-3">
             <div className="content-outer-div">
-              <div className="px-5 content mx-5">
+              <div className="px-0 px-md-5 content mx-0 mx-md-5">
                 <h3
                   className="fw_600  text-start"
                   style={{ fontSize: "38px" }}
@@ -451,7 +451,7 @@ const TalentOnDemand = () => {
         <div className="row mx-0">
           <div className="col-md-6 d-flex px-5 align-items-center content-col-1 dif-col">
             <div className="content-outer-div">
-              <div className="px-5 content mx-5">
+              <div className="px-0 px-md-5 content mx-0 mx-md-5">
                 <h3 className="fw_600 text-start" style={{ fontSize: "38px" }}>
                   {talentDemandData?.Section5?.Column1_Heading}
                 </h3>
@@ -475,7 +475,7 @@ const TalentOnDemand = () => {
           </div>
           <div className="col-md-6 d-flex px-5 align-items-center content-col-1">
             <div className="content-outer-div">
-              <div className="px-5 content mx-5">
+              <div className="px-0 px-md-5 content mx-0 mx-md-5">
                 <h3
                   className="fw_600  text-start"
                   style={{ fontSize: "38px" }}
