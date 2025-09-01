@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/home?populate[Results][populate][Results_List][populate]=*&populate[Slider][populate]=*&populate[Whats_Happening][populate][Happening_List][populate]=*`
+        `${apiUrl}/home?populate[Results][populate][Results_List][populate]=*&populate[Slider][populate]=*&populate[Whats_Happening][populate][Happening_List][populate]=*&populate[Company][populate]=*`
       )
       .then((res) => {
         // console.log("-----", res);
@@ -19,7 +19,7 @@ const Home = () => {
         console.error("Error fetching header data:", error);
       });
   }, []);
-
+console.log(homeData);
   setTimeout(() => {
     if (window.$) {
       const $cSlider = window.$(".companies_logos_sliders");
@@ -447,156 +447,23 @@ const Home = () => {
             direction="up"
             loop="1"
           >
-            <div className="item marquee-item">
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-              <img src="images/valley-children-hospital.svg" alt="Logo 1" />
-              <img src="images/Travis.svg" alt="Logo 2" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Abbot.svg" alt="Logo 3" />
-              <img src="images/Harbour.svg" alt="Logo 4" />
-              <img src="images/Monterey-college.svg" alt="Logo 5" />
-              <img src="images/Intuit.svg" alt="Logo 6" />
-            </div>
-            <div className="item marquee-item">
-              <img src="images/Monterra.svg" alt="Logo 7" />
-              <img src="images/Workday.svg" width="70%" alt="Logo 8" />
-              <img src="images/Seneca.svg" alt="Logo 9" />
-              <img src="images/SanMateo-Libaries.svg" alt="Logo 10" />
-            </div>
+            {Array.from({ length: 120 }, (_, i) => homeData?.Company?.Logos[i % homeData.Company.Logos.length])
+            .reduce((rows, logo, index) => {
+              if (index % 4 === 0) rows.push([]);
+              rows[rows.length - 1].push(logo);
+              return rows;
+            }, [])
+            .map((group, i) => (
+              <div className="item marquee-item" key={i}>
+                {group.map((logo, j) => (
+                  <img
+                    key={j}
+                    src={`${baseUrl}${logo.url}`}
+                  />
+                ))}
+              </div>
+            ))}
+            
           </div>
         </div>
       </section>
