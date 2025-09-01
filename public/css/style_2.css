@@ -423,7 +423,8 @@ position: absolute;
     opacity: 1;
   }
   .faqs_section .heading_col, .case-study-faqs .heading_col{
-    flex-wrap: wrap;
+  flex-direction: column;
+      align-items: flex-start !important;
   }
 .accordion-button:not(.collapsed),
 .accordion-button:focus {
@@ -1463,8 +1464,11 @@ body .case-study-faqs .heading_col, .only_content{
 }
 
 .faqs_section .team_col::after{
-           right: 0%;
-        left: -7%;
+        right: 0% !important;
+        left: 0 !important;
+        margin: auto !important;
+        top: 0 !important;
+        bottom: 0 !important;
 }
 .btn_div{
   text-align: left !important;
@@ -1710,7 +1714,7 @@ body .case-study-faqs .heading_col, .only_content{
                 padding: 0px 10px 30px 10px !important;
           }
           .impact_section .content h3{
-            font-size: 34px !important;
+            font-size: 22px !important;
           }
           .content-part p{
             font-size: 14px !important;

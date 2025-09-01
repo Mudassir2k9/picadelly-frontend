@@ -2772,6 +2772,25 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
  body .work_slider .education_col::after,  body .work_slider .financial_col::after, body .work_slider .healthcare_col::after {
   display: block !important;
 }
+.about_row .item.Piccadilly{
+      justify-content: center !important;
+    padding-right: 0px !important;
+    text-align: center;
+}
+.cc-image, .cc-text, body .faqs_stick_part, .impact_section_2{
+  width: 100% !important ;
+  position: relative !important;
+}
+
+.about_row .about_right_content_col.transparent-bg {
+    background-color: rgb(242 104 42 / 70%) !important;
+}
+
+
+.about_row .item.Piccadilly h4{
+  padding-right: 0px !important;
+  color: #fff !important;
+}
 .strategy_row{
   padding-bottom: 40px !important;
         padding-top: 30px;
@@ -2779,11 +2798,38 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
 .service_1{
   padding: 0px 20px;
 }
-.team_right_col::before, .financial_right_col::before, .team_right_col::before{
-  right: 0;
-  left: 0;
+.empty_col{
+  height: 400px;
+  position: relative;
+}
+body .executive_impact_section .img_1::after, .impact_section_2 .empty_col::after, .team_right_col::before, .financial_right_col::before, .team_right_col::before, .cc-text.join-right-col::before, .cc-text.join-left-col::before{
+  right: 0 !important;
+  left: 0 !important;
   margin: auto;
   top: -170px;
+}
+.impact_section_2.impact_section .team_col::after, body .split_impact-section .team_col::before{
+        right: 0 !important;
+        left: 0 !important;
+        top: auto;
+        bottom: -260px !important;
+        width: 440px;
+}
+body .split_impact-section .team_col::before{
+  bottom: -320px !important;
+}
+.impact_section h3.font_40 p, .impact_section h3.font_40 {
+    font-size: 22pt !important;
+}
+.cc-text.join-right-col::before{
+        top: 0 !important;
+        bottom: -500px !important;
+}
+.cc-text.join-left-col::before{
+        top: -200px;
+}
+.impact_section .team_col::after, .team_col::after{
+         width: 118% !important;
 }
 .mobile-creative-section.team-section .carousel-inner-div .heading_col{
   padding: 0px !important;
@@ -2806,7 +2852,7 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
     display: none !important;
   }
   .work_banner .executive_col h2 {
-        font-size: 55px !important;
+        font-size: 65px !important;
         margin-top: 12px;
     }
   .case_study_banner .list-inner ul{
@@ -3031,7 +3077,10 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
     width: 100%;
   }
   .team-section .right_content_col {
-    height: 400px;
+    height: 400px !important;
+  }
+  body .services_team_slider .heading_col::after{
+    display: none !important;
   }
   .team-section .carousel {
     height: auto;
