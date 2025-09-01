@@ -62,35 +62,16 @@ const Home = () => {
 }
 
 `}</style>
-      <div className="container-fluid banner_section">
-        <div className="container">
-          <div className="row banner-row">
-            <div className="col-md-6 banner-col">
-              <div
-                className="inner-div"
-                dangerouslySetInnerHTML={{
-                  __html: homeData?.mainHeading || "",
-                }}
-              ></div>
-            </div>
-          </div>
-        </div>
-        <div className="banner_video">
-          <video autoPlay muted loop id="myVideo">
-            <source src="images/home-video-cropped.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
 
       {/* start layered video section */}
-      <section className="section2 container-sticky" id="myBox">
+      <section className="section2 container-sticky">
         <div className="video-sticky">
           <div className="video-container">
-            <span
+           {/* <span
               dangerouslySetInnerHTML={{
                 __html: homeData?.Section2_Heading || "",
               }}
-            ></span>
+            ></span>*/}
 
             <video autoPlay muted controls loop className="second_video">
               <source src="images/new_compressed_reel.mp4" type="video/mp4" />
@@ -115,6 +96,27 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <div className="container-fluid banner_section"  id="myBox">
+        <div className="container">
+          <div className="row banner-row">
+            <div className="col-md-6 banner-col">
+              <div
+                className="inner-div"
+                dangerouslySetInnerHTML={{
+                  __html: homeData?.mainHeading || "",
+                }}
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div className="banner_video">
+
+          <video autoPlay muted loop id="myVideo">
+            <source src="images/home-video-cropped.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+
       {/* start results section */}
 
       {/* <!-- start results section --> */}

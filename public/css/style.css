@@ -1111,7 +1111,7 @@ background-image: url("../images/bubbles-img.jpg");
 .section2 {
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/single-concentric-bg.jpg");
+/*  background-image: url("../images/single-concentric-bg.jpg");*/
 
   background-size: cover;
   background-position: center;
@@ -2734,7 +2734,9 @@ body .testimonials-inner .carousel-indicators{
     -ms-flex-direction: column;
     align-items: center;
     -ms-align-items: center;
-    background-attachment: fixed;
+/*    background-attachment: fixed;*/
+    top: 0px !important;
+    position: fixed !important;
   }
   .video-sticky {
     position: -webkit-sticky;
