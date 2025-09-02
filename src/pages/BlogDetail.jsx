@@ -9,6 +9,8 @@ const BlogDetail = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const caseId = params.get("id");
+  const [catData, setCatData] = useState(null);
+  const [newsData, setNewsData] = useState(null);
 
   useEffect(() => {
     axios
@@ -28,6 +30,30 @@ const BlogDetail = () => {
       .catch((error) => {
         console.error("Error fetching blogs:", error);
       });
+
+      axios
+        .get(
+          `${apiUrl}/categories`
+        )
+        .then((res) => {
+          setCatData(res.data.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching landing data:", error);
+        });
+
+        axios
+        .get(
+          `${apiUrl}/news?populate[News][populate][Feature_Image][populate]=*&populate[News][populate]=category`
+        )
+        .then((res) => {
+          setNewsData(res.data.data);
+        })
+        .catch((error) => {
+          console.error("Error fetching landing data:", error);
+        });
+
+
   }, [caseId]);
   console.log(blogs);
   if (blogs.length === 0) {
@@ -147,20 +173,67 @@ const BlogDetail = () => {
               <i class="fa fa-times clear-icon"></i>
             </div>
               <div class="sidebar">
-                <button type="button" class="btn btn-primary dropdown-heading dropdown-heading1">
-    BLOGS
-  </button>
-  <div class="dropdown">
-    
-  <button type="button" class="btn btn-primary dropdown-toggle dropdown-heading dropdown-heading2" data-bs-toggle="dropdown">
-    ANNOUNCEMENTS
-  </button>
-  <ul class="dropdown-menu submenu">
-    <li><a class="dropdown-item sub-item" href="#">Company News</a></li>
-    <li><a class="dropdown-item sub-item" href="#">Events</a></li>
-  </ul>
-</div>
-</div>  
+               
+                {catData?.map((cat) => {
+                // 🔹 Count items based on category type
+                const count =
+                  cat.name === "Blogs"
+                    ? blogs?.length || 0
+                    : newsData?.filter((news) => news.News.category?.id === cat.id).length || 0;
+
+                return (
+                  <div className="dropdown" key={cat.id}>
+                    {/* 🔹 Button with category name + counter */}
+                    <button
+                      type="button"
+                      className="btn btn-primary dropdown-toggle dropdown-heading dropdown-heading2 d-flex justify-content-between align-items-center"
+                      data-bs-toggle="dropdown"
+                      style={{ minWidth: "220px" }}
+                    >
+                      <span>{cat.name}</span>
+                      <span className="badge bg-light text-dark ms-2">{count}</span>
+                    </button>
+
+                    {/* 🔹 Dropdown items */}
+                    <ul className="dropdown-menu submenu">
+                      {cat.name === "Blogs" ? (
+                        // ✅ Blogs loop
+                        blogs?.map((blog, j) => (
+                          <li key={j}>
+                            <a
+                              className="dropdown-item sub-item"
+                              href={`/blog-detail?id=${blog?.documentId}`}
+                            >
+                              {blog?.Blogs?.Blog_Title_2}
+                            </a>
+                          </li>
+                        ))
+                      ) : (
+                        // ✅ News loop
+                        newsData
+                          ?.filter((news) => news.News.category?.id === cat.id)
+                          .map((news, j) => (
+                            <li key={j}>
+                              <a
+                                className="dropdown-item sub-item"
+                                href={
+                                  cat.name === "Announcements"
+                                    ? "/buzz#announcement"
+                                    : `/news-item/${news.documentId}`
+                                }
+                              >
+                                {news.News.Title}
+                              </a>
+                            </li>
+                          ))
+                      )}
+                    </ul>
+                  </div>
+                );
+              })}
+
+
+              </div>  
 
             {/* <div className="sticky-sidebar" id="sidebar"> */}
             {/* Dynamically generate links based on Blog_Content Titles */}
