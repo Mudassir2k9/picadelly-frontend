@@ -609,6 +609,9 @@ position: absolute;
   background: linear-gradient(to right, #eeeeee8f, #f3f3f3 10%, #ffffff);
   min-height: 400px;
  }
+ .blog_detail_banner  .separate_col_1, .blog_detail_banner  .blog_col_2{
+  min-height: 320px !important;
+ }
  .heading_part{
   padding-left:6% !important;
   padding-right:6% !important;
@@ -1187,6 +1190,9 @@ position: absolute;
   height: 100%;
 }
 @media only screen and (max-width:576px) {
+  .blog_detail_banner .separate_col_1, .blog_detail_banner .blog_col_2{
+    min-height: auto !important;
+  }
   .executive_impact_section, .impact_section{
     background-image: none;
 
