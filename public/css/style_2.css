@@ -1199,10 +1199,12 @@ position: absolute;
   flex-direction: column-reverse;
 }
   .impact_section .right-img::after, .executive_impact_section .right-img-2::after{
-    left: 0;
-    right: 0;
-  top: -175px;
-  margin: auto;
+   left: -8px;
+        right: 0;
+        top: -186px;
+        margin: auto;
+        width: 390px !important;
+        height: 390px !important;
   }
     .impact_section .right-img{
       display: block !important;
@@ -1316,11 +1318,11 @@ body .case-study-faqs .heading_col, .only_content{
         position: absolute;
         content: "";
         right: 0;
-        bottom: -100%;
+        bottom: -96%;
         margin: auto;
-        left: 0;
-        height: 440px;
-        width: 440px;
+        left: -46px;
+        height: 550px;
+        width: 550px !important;
 
 }
     .impact_section::after {
@@ -1467,10 +1469,12 @@ body .case-study-faqs .heading_col, .only_content{
 
 .faqs_section .team_col::after{
         right: 0% !important;
-        left: 0 !important;
+        left: -46px !important;
         margin: auto !important;
         top: 0 !important;
         bottom: 0 !important;
+        height: 550px !important;
+    width: 550px !important;
 }
 .btn_div{
   text-align: left !important;
