@@ -105,11 +105,7 @@ const BlogDetail = () => {
                         <i className="fa-solid fa-envelope"></i>
                       </a>
                     </li>
-                    <li>
-                      <a href="#">
-                        <i className="fa-brands fa-pinterest-p"></i>
-                      </a>
-                    </li>
+                   
                   </ul>
                 </div>
               </div>

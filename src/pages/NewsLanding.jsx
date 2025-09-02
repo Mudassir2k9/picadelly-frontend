@@ -8,7 +8,8 @@ const NewsLanding = () => {
     const [landingData, setLandingData] = useState(null);
     const [catData, setCatData] = useState(null);
     const [newsData, setNewsData] = useState(null);
-  
+    const [blogs, setBlogs] = useState([]);
+   
     useEffect(() => {
       axios
         .get(
@@ -43,7 +44,18 @@ const NewsLanding = () => {
           console.error("Error fetching landing data:", error);
         });
 
+        axios
+            .get(`${apiUrl}/blogs?populate[Blogs][populate]=*`)
+            .then((res) => {
+              const data = res.data.data;
+              setBlogs(data);
+            })
+            .catch((error) => {
+              console.error("Error fetching blogs:", error);
+            });
     }, []);
+
+    console.log(blogs);
     console.log("newsData", newsData);
     console.log("catData", catData);
     console.log("landingData", landingData);
@@ -135,36 +147,63 @@ const NewsLanding = () => {
                       id={cat.slug}
                       className={`tab-pane fade ${i === 0 ? "show active" : ""}`}
                     >
-                      {newsData
-                        ?.filter((news) => news.News.category?.id === cat.id)
-                        .map((news, j) => (
-                          <a key={j} href={
-                              cat.name === "Announcements"
-                                ? "/buzz#announcement"
-                                : `/news-item/${news.documentId}`
-                            }>
+                      {cat.name === "Blogs" ? (
+                        // ✅ Blogs loop
+                        blogs?.map((blog, j) => (
+                          <a key={j} href={`/blog-detail?id=${blog?.documentId}`}>
                             <div className="Articles_intro">
                               <div className="info">
                                 <p className="text-dark">{cat.name}</p>
                                 <h3
                                   className="text-dark"
                                   style={{ maxWidth: "80%" }}
-                                  dangerouslySetInnerHTML={{ __html: news.News.Title }}
+                                  dangerouslySetInnerHTML={{ __html: blog?.Blogs?.Blog_Title_1 }}
                                 />
                               </div>
                               <div className="on_hover-img">
                                 <img
-                                  src={`${baseUrl}${news.News.Feature_Image?.url}`}
-                                  alt={news.News.Feature_Image?.alternativeText || ""}
+                                  src={`${baseUrl}${blog?.Blogs?.Feature_Image?.url}`}
                                 />
                               </div>
                             </div>
                           </a>
-                        ))}
+                        ))
+                      ) : (
+                        // ✅ News loop
+                        newsData
+                          ?.filter((news) => news.News.category?.id === cat.id)
+                          .map((news, j) => (
+                            <a
+                              key={j}
+                              href={
+                                cat.name === "Announcements"
+                                  ? "/buzz#announcement"
+                                  : `/news-item/${news.documentId}`
+                              }
+                            >
+                              <div className="Articles_intro">
+                                <div className="info">
+                                  <p className="text-dark">{cat.name}</p>
+                                  <h3
+                                    className="text-dark"
+                                    style={{ maxWidth: "80%" }}
+                                    dangerouslySetInnerHTML={{ __html: news.News.Title }}
+                                  />
+                                </div>
+                                <div className="on_hover-img">
+                                  <img
+                                    src={`${baseUrl}${news.News.Feature_Image?.url}`}
+                                    alt={news.News.Feature_Image?.alternativeText || ""}
+                                  />
+                                </div>
+                              </div>
+                            </a>
+                          ))
+                      )}
                     </div>
                   ))}
-                  
                 </div>
+
               </div>
             </div>
           </div>

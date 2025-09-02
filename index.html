@@ -215,7 +215,7 @@
 
                         function update() {
                             const scrollTop = window.scrollY;
-                            const boxTop = box.getBoundingClientRect().top;
+                            const boxTop = box?.getBoundingClientRect().top;
                             // Clip-path effect
                             
                             if (boxTop <= 0) {
