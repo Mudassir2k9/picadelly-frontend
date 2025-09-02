@@ -83,18 +83,18 @@ const Services = () => {
     }
   }, 1000); // small delay to allow DOM to render
   const headingClassMap = {
-    Healthcare: "healthcare_col",
-    "Education ": "education_col",
-    Tourism: "tourism_col",
-    Nonprofit: "non-profit_col",
-    "Financial Services": "financial_col",
+    "b2c935": "healthcare_col",
+    "72c9d4": "education_col",
+    "f5b816": "tourism_col",
+    "f18857": "non-profit_col",
+    "f28452": "financial_col",
   };
   const headingRightClassMap = {
-    Healthcare: "team_right_col",
-    "Education ": "education_right_col",
-    Tourism: "tourism_right_col",
-    Nonprofit: "non-stop_right_col",
-    "Financial Services": "financial_right_col",
+    "b2c935": "team_right_col",
+    "72c9d4": "education_right_col",
+    "f5b816": "tourism_right_col",
+    "f18857": "non-stop_right_col",
+    "f28452": "financial_right_col",
   };
   return (
     <>
@@ -298,7 +298,7 @@ const Services = () => {
           <div className="carousel-inner">
             {/* Healthcare */}
 
-            {serviceData?.Slider?.map((item, index) => (
+            {serviceData?.Slider?.slice(0, 5)?.map((item, index) => (
               <div
                 key={item.id}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}
@@ -308,7 +308,7 @@ const Services = () => {
                   {/* Left Column */}
                   <div
                     className={`heading_col d-flex align-items-center px-5 team_col bg_primary ${
-                      headingClassMap[item.Heading] || ""
+                      headingClassMap[item.Slider_Color_Code] || ""
                     }`}
                   >
                     <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -330,7 +330,7 @@ const Services = () => {
                   {/* Right Column */}
                   <div
                     className={`right_content_col px-0 d-flex align-items-center team_right_col ${
-                      headingRightClassMap[item.Heading] || ""
+                      headingRightClassMap[item.Slider_Color_Code] || ""
                     }`}
                   >
                     <img
