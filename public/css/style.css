@@ -2951,7 +2951,7 @@ body .split_impact-section .team_col::before{
 }
 .cc-text.join-right-col::before{
         top: 0 !important;
-        bottom: -577px !important;
+        bottom: -540px !important;
         width: 460px !important;
         height: 460px !important;
 }
