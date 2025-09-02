@@ -125,12 +125,12 @@ const TalentExecutive = () => {
       <div className="container-fluid executive_banner">
         <div className="container">
           <div className="executive_col">
-            <h2
+            <h1
               className="large_heading_2 fw-semibold text-center text-white wow animate__fadeInDownBig"
               dangerouslySetInnerHTML={{
                 __html: talentExectiveData?.BannerHeading || "",
               }}
-            ></h2>
+            ></h1>
           </div>
         </div>
       </div>

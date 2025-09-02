@@ -239,12 +239,12 @@ const TalentOnDemand = () => {
       <div className="container-fluid executive_banner On-Demand-banner">
         <div className="container">
           <div className="executive_col">
-            <h2
+            <h1
               className="large_heading_2  text-center text-white"
               dangerouslySetInnerHTML={{
                 __html: talentDemandData?.BannerHeading || "",
               }}
-            ></h2>
+            ></h1>
           </div>
         </div>
       </div>
