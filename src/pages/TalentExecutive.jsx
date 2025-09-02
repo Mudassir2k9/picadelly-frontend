@@ -154,7 +154,7 @@ const TalentExecutive = () => {
             ></div>
           </div>
         </div>
-        <div className="empty_col col-md-6 d-flex align-items-center">
+        <div className="empty_col col-md-6 d-flex align-items-center position-relative">
           
         </div>
         </div>

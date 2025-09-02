@@ -1095,7 +1095,17 @@ background-image: url("../images/bubbles-img.jpg");
 }
 .mobile_slider img,
 .mobile_slider .carousel-item {
-  height: 100%;
+  /* height: 100%; */
+     max-width: 85% !important;
+    max-height: 120px;
+    width: auto;
+    min-height: 120px;
+}
+.mobile_slider img{
+      max-width: 85% !important;
+    max-height: 130px !important;
+    width: auto;
+    min-height: 130px;
 }
 /*start layerd video styling*/
 .section2 h1 {
@@ -2781,6 +2791,10 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
  body .work_slider .education_col::after,  body .work_slider .financial_col::after, body .work_slider .healthcare_col::after {
   display: block !important;
 }
+.join-left-col::before{
+  width: 460px !important;
+  height: 460px !important;
+}
 .about_row .item.Piccadilly{
       justify-content: center !important;
     padding-right: 0px !important;
@@ -2835,7 +2849,7 @@ body .split_impact-section .team_col::before{
         bottom: -500px !important;
 }
 .cc-text.join-left-col::before{
-        top: -200px;
+        top: -224px;
 }
 .impact_section .team_col::after, .team_col::after{
          width: 118% !important;
@@ -2891,8 +2905,8 @@ body .split_impact-section .team_col::before{
     align-items: flex-start;
   }
   .marquee-container {
-    height: 434px;
-    margin: 360px auto 0px auto !important;
+    height: 407px;
+    margin: 360px auto 0px 60px !important;
   }
  
   .services_team_slider .heading_col::after {
@@ -3054,7 +3068,10 @@ body .split_impact-section .team_col::before{
     padding-top: 50px;
   }
   .mobile_slider img {
-    height: 100px;
+       max-height: 85px;
+        max-width: 85%;
+        width: auto;
+        min-height: 85px;
   }
   .mobile_slider .container {
     width: 250px !important;
