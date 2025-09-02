@@ -57,6 +57,7 @@ console.log(homeData);
 
   return (
     <>
+    <title>{homeData?.PageTitle}</title>
       <style>{`
 .menu-line{
       background-color: #000 !important;

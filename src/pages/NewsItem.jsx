@@ -68,6 +68,7 @@ const NewsItem = () => {
 
   return (
     <>
+    <title>{newsItemData?.PageTitle}</title>
       <style>{`
         body header{
         background-color: #fff;

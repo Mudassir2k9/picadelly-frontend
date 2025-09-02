@@ -19,6 +19,7 @@ const PrivacyPolicy = () => {
   }, []);
   return (
     <>
+    <title>{privacyPolicyData?.PageTitle}</title>
       <style>{`
 
       .menu-line{

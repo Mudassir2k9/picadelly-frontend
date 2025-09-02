@@ -57,6 +57,7 @@ const ContactUs = () => {
   };
   return (
     <>
+    <title>{contactData?.PageTitle}</title>
       <style>{`
     .navbar-brand p{
       color:#fff !important;

@@ -35,6 +35,8 @@ const BlogDetail = () => {
   }
 
   const currentBlog = blogs[currentIndex]?.Blogs;
+  const currentBlogC = blogs[currentIndex];
+  console.log("currentBlog",currentBlogC);
   const prevBlog = currentIndex > 0 ? blogs[currentIndex - 1].Blogs : null;
   const nextBlog =
     currentIndex < blogs.length - 1 ? blogs[currentIndex + 1].Blogs : null;
@@ -47,6 +49,7 @@ const BlogDetail = () => {
 
   return (
     <>
+    <title>{currentBlogC?.PageTitle}</title>
       <style>{`
     body header{
      background-color: #fff;
@@ -190,7 +193,7 @@ const BlogDetail = () => {
                   <span className=""> ⟵</span>
                   <br />
                   <h5 className="text-white mb-3 font_18 fw_500">
-                    Category : {/* If you have category, put here */}
+                    BLOG POST {/* If you have category, put here */}
                   </h5>
                   <h3 className="text-white fw_600">{prevBlog.Blog_Title_1}</h3>
                 </div>
@@ -204,7 +207,7 @@ const BlogDetail = () => {
                 <div className="overlay-div text-end">
                   <span className=""> ⟵</span>
                   <br />
-                  <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
+                  <h5 className="text-white mb-3 font_18 fw_500">BLOG POST</h5>
                   <h3 className="text-white fw_600">No Previous Blog</h3>
                 </div>
                 <img src="images/previous-blog.png" alt="No previous blog" />
@@ -227,7 +230,7 @@ const BlogDetail = () => {
                   <span className=""> ⟶</span>
                   <br />
                   <h5 className="text-white mb-3 font_18 fw_500">
-                    Category : {/* If you have category, put here */}
+                    BLOG POST {/* If you have category, put here */}
                   </h5>
                   <h3 className="text-white font_40 fw_600">
                     {nextBlog.Blog_Title_1}
@@ -243,7 +246,7 @@ const BlogDetail = () => {
                 <div className="overlay-div text-start">
                   <span className=""> ⟶</span>
                   <br />
-                  <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
+                  <h5 className="text-white mb-3 font_18 fw_500">BLOG POST</h5>
                   <h3 className="text-white font_40 fw_600">No Next Blog</h3>
                 </div>
                 <img src="images/next-blog.png" alt="No next blog" />

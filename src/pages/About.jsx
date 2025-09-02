@@ -114,6 +114,7 @@ const About = () => {
 
   return (
     <>
+    <title>{aboutData?.PageTitle}</title>
       <style>{`
       .about_row .about_right_content_col.transparent-bg {
         background: transparent !important;

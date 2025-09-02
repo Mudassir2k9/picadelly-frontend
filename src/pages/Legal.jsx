@@ -19,6 +19,7 @@ const Legal = () => {
   }, []);
   return (
     <>
+    <title>{legalData?.PageTitle}</title>
       <style>{`
 
       .menu-line{
