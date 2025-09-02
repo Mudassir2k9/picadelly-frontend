@@ -356,12 +356,12 @@ const TalentOnDemand = () => {
                       <h2 className="accordion-header" id={headingId}>
                         <button
                           className={`accordion-button font_20 color_teal fw-semibold ${
-                            index !== 0 ? "collapsed" : ""
+                            index !== 0 ? "collapsed" : "collapsed"
                           }`}
                           type="button"
                           data-bs-toggle="collapse"
                           data-bs-target={`#${collapseId}`}
-                          aria-expanded={index === 0 ? "true" : "false"}
+                          aria-expanded={index === 0 ? "false" : "false"}
                           aria-controls={collapseId}
                           dangerouslySetInnerHTML={{ __html: faq.Heading }}
                         />
@@ -369,7 +369,7 @@ const TalentOnDemand = () => {
                       <div
                         id={collapseId}
                         className={`accordion-collapse collapse ${
-                          index === 0 ? "show" : ""
+                          index === 0 ? "" : ""
                         }`}
                         data-bs-parent="#accordionFlushExample"
                       >
