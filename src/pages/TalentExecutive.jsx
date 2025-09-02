@@ -22,6 +22,7 @@ const TalentExecutive = () => {
   console.log(talentExectiveData);
   return (
     <>
+    <title>{talentExectiveData?.PageTitle}</title>
       <style>{`
 // .executive_banner{
 //           margin-bottom: 80vh; 

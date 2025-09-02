@@ -56,6 +56,7 @@ const CaseStudy = () => {
   console.log("0-00-0-", currentCase);
   return (
     <>
+    <title>{currentCase?.PageTitle}</title>
       <style>{`
     body header{
      background-color: #fff

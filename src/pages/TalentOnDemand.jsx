@@ -55,6 +55,8 @@ const TalentOnDemand = () => {
 
   return (
     <>
+    <title>{talentDemandData?.PageTitle}</title>
+    
       <style>{`
        .split_parent{
       position: relative;

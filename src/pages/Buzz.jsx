@@ -52,7 +52,7 @@ const Buzz = () => {
 
   return (
     <>
-
+    <title>{buzzData?.PageTitle}</title>
     <style>{`
      @media only screen and (max-width :576px) {
      .hamburger .menu-line{

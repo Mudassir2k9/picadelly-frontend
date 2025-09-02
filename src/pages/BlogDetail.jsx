@@ -47,6 +47,7 @@ const BlogDetail = () => {
 
   return (
     <>
+    <title>{blogs?.PageTitle}</title>
       <style>{`
     body header{
      background-color: #fff;

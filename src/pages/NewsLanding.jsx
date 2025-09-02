@@ -62,6 +62,7 @@ const NewsLanding = () => {
 
   return (
     <>
+    <title>{landingData?.PageTitle}</title>
       <style>{`
     .navbar-brand p{
       color:#fff !important;

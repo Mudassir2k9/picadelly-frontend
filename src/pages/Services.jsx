@@ -98,6 +98,7 @@ const Services = () => {
   };
   return (
     <>
+    <title>{serviceData?.PageTitle}</title>
       {/* <!-- team modals --> */}
       <style>{`
   .hamburger i {

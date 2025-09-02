@@ -63,6 +63,7 @@ const Work = () => {
 
   return (
     <>
+    <title>{workData?.PageTitle}</title>
     <style>{`
     .navbar-brand p{
       color:#fff !important;
