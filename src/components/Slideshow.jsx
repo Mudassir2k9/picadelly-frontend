@@ -31,6 +31,9 @@ export default function Slideshow() {
   return (
     <>
       <style>{`
+        .slide .logo{
+       height: 150px;
+        }
         .parent_slideshow{
             position: absolute;
             top:0;
@@ -78,7 +81,7 @@ export default function Slideshow() {
           justify-content: center;
           align-items: center;
           background: #fff;
-          transition: transform 3s cubic-bezier(.22,.61,.36,1);
+          transition: transform 6s cubic-bezier(.22,.61,.36,1);
         }
         #slide2 .split.left {
           display: flex;
@@ -105,13 +108,26 @@ export default function Slideshow() {
         #slide3.active {
           background-color: lightgray !important;
         }
+        @media only screen and (max-width: 576px){
+        .slide .logo {
+    height: auto;
+    width: 90%;
+        margin: auto
+}
+        #slide2 img{
+        height: 90px;
+        }
+        }
+
       `}</style>
 
       <div className="slideshow" id="slideshow">
         {/* Slide 1 */}
-        <div id="slide1" className="slide active">
+        <div id="slide1" className="slide active flex-wrap text-center ">
+        <div>
           <img src="images/AMF_logo.png" className="logo" alt="AMF Media Group" />
-          <p>is now</p>
+          <p className="font_20 d-block w-100 mt-4">is now</p>
+          </div>
         </div>
 
         {/* Slide 3 */}
