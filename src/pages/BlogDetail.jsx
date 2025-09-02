@@ -69,7 +69,7 @@ const BlogDetail = () => {
         <div className="row banner-row mx-0">
           <div className="col-md-8 case_study-col-1 heading_part separate_col_1 px-0 blog_col-1  pb-5">
             <div className="inner-div ">
-              <p className="font_20">BLOG POST</p>
+              <h1 className="font_20">BLOG POST</h1>
               <h2
                 className="color_primary fw_600"
                 data-wow-duration="1s"

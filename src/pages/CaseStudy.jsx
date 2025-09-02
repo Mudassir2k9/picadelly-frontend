@@ -77,7 +77,7 @@ const CaseStudy = () => {
         <div className="row banner-row mx-0">
           <div className="col-md-6 case_study-col-1 heading_part separate_col_1 px-0 blog_col-2">
             <div className="inner-div">
-              <p className="font_20">{currentCase?.Heading1}</p>
+              <h1 className="font_20">{currentCase?.Heading1}</h1>
               <div
                 dangerouslySetInnerHTML={{ __html: currentCase?.Heading2 }}
               />

@@ -2096,7 +2096,7 @@ body .testimonials-inner .carousel-indicators{
   .form-inner-div p {
     font-size: 16pt !important;
   }
-  .contact-col h3 {
+  .contact-col h1 {
     font-size: 83pt !important;
   }
   body .form-inner-div .btn_primary {
@@ -3072,7 +3072,7 @@ body .cc-text.join-right-col::before, body .cc-text.join-left-col::before{
     align-items: flex-end !important;
     padding-bottom: 20px !important;
   }
-  .contact-col h3 {
+  .contact-col h1 {
     font-size: 60px !important;
     text-align: center !important;
   }
