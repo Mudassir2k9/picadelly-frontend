@@ -5,6 +5,7 @@ export default function Slideshow() {
     const slide1 = document.getElementById("slide1");
     const slide2 = document.getElementById("slide2");
     const slide3 = document.getElementById("slide3");
+    const slideshow = document.getElementById("slideshow");
 
     // Step 1: Show slide 1
     slide1.classList.add("active");
@@ -17,7 +18,7 @@ export default function Slideshow() {
 
     const t2 = setTimeout(() => {
       // Step 3: Show slide3 behind & split slide2
-    //   slide3.classList.add("active");
+      slideshow.style.background = "transparent";
       slide2.classList.add("fade-out", "split-out");
     }, 6000);
 
@@ -43,7 +44,7 @@ export default function Slideshow() {
           height: 100vh;
           overflow: hidden;
           z-index: 9999;
-          background: #ffffff00;
+          background: #fff;
         }
         .slide {
           position: absolute;
@@ -106,7 +107,7 @@ export default function Slideshow() {
         }
       `}</style>
 
-      <div className="slideshow">
+      <div className="slideshow" id="slideshow">
         {/* Slide 1 */}
         <div id="slide1" className="slide active">
           <img src="images/AMF_logo.png" className="logo" alt="AMF Media Group" />
