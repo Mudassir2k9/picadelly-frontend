@@ -37,6 +37,7 @@
         background-repeat: no-repeat;
       min-height: 100vh;
       position: relative;
+      overflow: hidden;
 }
 
 .executive_impact_section .right-img, .executive_impact_section .team_col, .impact_section_2 .right-img, .executive_impact_section .right-img-2{
@@ -78,15 +79,15 @@
     margin: auto;
 }
 .split_impact-section .team_col::before{
-       position: absolute;
+    position: absolute;
     content: "";
     background-image: url(../images/ring.png);
-    height: 510px;
-    width: 510px;
+    height: 540px;
+    width: 540px;
     background-size: 100%;
     bottom: auto !important;
-    left: -217px;
-    margin-top: 60px !important;
+    left: -230px;
+    margin-top: 86px !important;
 }
 .split_impact-section .team_col{
   min-height: 100vh !important;
