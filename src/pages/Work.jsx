@@ -80,12 +80,12 @@ const Work = () => {
       <div className="container-fluid executive_banner work_banner">
         <div className="container">
            <div className="executive_col">
-          <h2
+          <h1
             className="large_heading_2 text-center fw_300 text-white wow animate__fadeInDownBig"
             dangerouslySetInnerHTML={{
               __html: workData?.BannerHeading || "",
             }}
-          ></h2>
+          ></h1>
         </div>
         </div>
        
