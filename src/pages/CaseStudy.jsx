@@ -40,6 +40,7 @@ const CaseStudy = () => {
   }
 
   const currentCase = caseStudies[currentIndex]?.CaseStudy;
+  const currentCaseC = caseStudies[currentIndex];
   const prevCase =
     currentIndex > 0 ? caseStudies[currentIndex - 1].CaseStudy : null;
   const nextCase =
@@ -56,7 +57,7 @@ const CaseStudy = () => {
   console.log("0-00-0-", currentCase);
   return (
     <>
-    <title>{currentCase?.PageTitle}</title>
+    <title>{currentCaseC?.PageTitle}</title>
       <style>{`
     body header{
      background-color: #fff
