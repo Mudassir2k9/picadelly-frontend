@@ -35,6 +35,8 @@ const BlogDetail = () => {
   }
 
   const currentBlog = blogs[currentIndex]?.Blogs;
+  const currentBlogC = blogs[currentIndex];
+  console.log("currentBlog",currentBlogC);
   const prevBlog = currentIndex > 0 ? blogs[currentIndex - 1].Blogs : null;
   const nextBlog =
     currentIndex < blogs.length - 1 ? blogs[currentIndex + 1].Blogs : null;
@@ -47,7 +49,7 @@ const BlogDetail = () => {
 
   return (
     <>
-    <title>{blogs?.PageTitle}</title>
+    <title>{currentBlogC?.PageTitle}</title>
       <style>{`
     body header{
      background-color: #fff;
