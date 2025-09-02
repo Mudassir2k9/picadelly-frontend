@@ -1,10 +1,12 @@
 import { useEffect, useState, useRef } from "react";
+import Slideshow from "../components/Slideshow";
 import axios from "axios";
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const Home = () => {
   const [homeData, setHomeData] = useState(null);
+  const [showSlideshow, setShowSlideshow] = useState(false);
 
   useEffect(() => {
     axios
@@ -18,6 +20,11 @@ const Home = () => {
       .catch((error) => {
         console.error("Error fetching header data:", error);
       });
+
+      const referrer = document.referrer;
+        if (referrer.includes("qmlogics.com")) {
+          setShowSlideshow(true);
+        }
   }, []);
   
 console.log(homeData);
@@ -58,6 +65,13 @@ console.log(homeData);
   return (
     <>
     <title>{homeData?.PageTitle}</title>
+    <div>
+     {showSlideshow ? (
+        <Slideshow />
+      ):(
+        <Slideshow />
+      )}
+    </div>
       <style>{`
 .menu-line{
       background-color: #000 !important;
