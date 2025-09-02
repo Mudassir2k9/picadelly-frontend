@@ -207,7 +207,7 @@ const BlogDetail = () => {
                 <div className="overlay-div text-end">
                   <span className=""> ⟵</span>
                   <br />
-                  <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
+                  <h5 className="text-white mb-3 font_18 fw_500">BLOG POST</h5>
                   <h3 className="text-white fw_600">No Previous Blog</h3>
                 </div>
                 <img src="images/previous-blog.png" alt="No previous blog" />
@@ -246,7 +246,7 @@ const BlogDetail = () => {
                 <div className="overlay-div text-start">
                   <span className=""> ⟶</span>
                   <br />
-                  <h5 className="text-white mb-3 font_18 fw_500">Category :</h5>
+                  <h5 className="text-white mb-3 font_18 fw_500">BLOG POST</h5>
                   <h3 className="text-white font_40 fw_600">No Next Blog</h3>
                 </div>
                 <img src="images/next-blog.png" alt="No next blog" />
