@@ -82,7 +82,7 @@ export default function CookieConsent({ policyHtml }) {
                 <a href="/privacy-policy" style={styles.linkA}>Privacy Policy</a>
               </div>
             </div>
-            <div style={styles.btnRow}>
+            <div className="cookies_btn" style={styles.btnRow}>
               {/* <button onClick={rejectAll} style={styles.btnGhost}>Reject all</button>
               <button onClick={() => setShowManage(true)} style={styles.btnGhost}>Customize</button>
               <button onClick={acceptAll} style={styles.btnPrimary}>Accept all</button> */}
