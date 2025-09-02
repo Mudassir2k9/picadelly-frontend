@@ -2190,7 +2190,7 @@ body .testimonials-inner .carousel-indicators{
     font-size: 16pt;
   }
 
-  .banner_section .banner-col h2 {
+  .banner_section .banner-col h1 {
     font-size: 78px !important;
     font-weight: 400 !important;
   }
@@ -2909,11 +2909,11 @@ body .executive_impact_section .img_1::after, .impact_section_2 .empty_col::afte
   top: -170px;
 }
 body .impact_section_2 .empty_col::after, body .executive_impact_section .img_1::after, .team_right_col::before{
-          right: 0 !important;
-        left: -7px !important;
+        right: 0 !important;
+        left: -3% !important;
         margin: auto;
         top: -184px;
-        width: 390px !important;
+        width: 107% !important;
         height: 390px !important;
 }
 .impact_section_2.impact_section .team_col::after, body .split_impact-section .team_col::before{
@@ -2927,10 +2927,10 @@ body .impact_section_2 .empty_col::after, body .executive_impact_section .img_1:
   text-align: left !important;
 }
 .impact_section_2.impact_section .team_col::after, body .split_impact-section .team_col::before{
-  left: -47px !important;
-  bottom: -300px !important;
-  width: 550px !important;
-  height: 550px !important;
+left: -16.5% !important;
+        bottom: -300px !important;
+        width: 156% !important;
+        height: 550px !important;
 }
 body .split_impact-section .team_col::before{
   bottom: -320px !important;
@@ -3506,7 +3506,7 @@ body .cc-text.join-right-col::before, body .cc-text.join-left-col::before{
   .services_section .overflow_slider {
     padding: 16px 0px !important;
   }
-  .banner-col h2 {
+  .banner-col h1 {
     font-size: 50px !important;
   }
   .banner-row {
@@ -3572,13 +3572,13 @@ body .cc-text.join-right-col::before, body .cc-text.join-left-col::before{
     padding: 40px 0px !important;
   }
   body .team-item::after {
-    height: 350px;
-    width: 350px;
-    bottom: -20%;
-    margin: auto;
-    top: auto;
-    right: 0;
-    left: 0;
+height: 390px;
+        width: 107%;
+        bottom: -25%;
+        margin: auto;
+        top: auto;
+        right: 0;
+        left: -3%;
   }
   .banner_section #myVideo {
     height: 100vh;

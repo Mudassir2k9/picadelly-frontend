@@ -1199,11 +1199,11 @@ position: absolute;
   flex-direction: column-reverse;
 }
   .impact_section .right-img::after, .executive_impact_section .right-img-2::after{
-   left: -8px;
+left: -3.5%;
         right: 0;
         top: -186px;
         margin: auto;
-        width: 390px !important;
+        width: 107% !important;
         height: 390px !important;
   }
     .impact_section .right-img{
@@ -1320,9 +1320,9 @@ body .case-study-faqs .heading_col, .only_content{
         right: 0;
         bottom: -96%;
         margin: auto;
-        left: -46px;
+        left: -16.5%;
         height: 550px;
-        width: 550px !important;
+        width: 156% !important;
 
 }
     .impact_section::after {
