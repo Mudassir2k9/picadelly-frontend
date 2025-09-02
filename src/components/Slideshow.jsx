@@ -17,7 +17,7 @@ export default function Slideshow() {
 
     const t2 = setTimeout(() => {
       // Step 3: Show slide3 behind & split slide2
-      slide3.classList.add("active");
+    //   slide3.classList.add("active");
       slide2.classList.add("fade-out", "split-out");
     }, 6000);
 
@@ -30,12 +30,20 @@ export default function Slideshow() {
   return (
     <>
       <style>{`
+        .parent_slideshow{
+            position: absolute;
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+        }
         .slideshow {
           position: relative;
           width: 100%;
           height: 100vh;
           overflow: hidden;
-          background: #fff;
+          z-index: 9999;
+          background: #ffffff00;
         }
         .slide {
           position: absolute;
@@ -107,7 +115,7 @@ export default function Slideshow() {
 
         {/* Slide 3 */}
         <div id="slide3" className="slide">
-          <img src="new-brand.png" className="logo" alt="New Brand" />
+          {/* <img src="new-brand.png" className="logo" alt="New Brand" /> */}
         </div>
 
         {/* Slide 2 */}

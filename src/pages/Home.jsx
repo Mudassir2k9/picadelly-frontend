@@ -65,7 +65,7 @@ console.log(homeData);
   return (
     <>
     <title>{homeData?.PageTitle}</title>
-    <div>
+    <div className="parent_slideshow">
      {showSlideshow ? (
         <Slideshow />
       ):(
