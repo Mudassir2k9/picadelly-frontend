@@ -157,7 +157,7 @@ const NewsLanding = () => {
                                 <h3
                                   className="text-dark"
                                   style={{ maxWidth: "80%" }}
-                                  dangerouslySetInnerHTML={{ __html: blog?.Blogs?.Blog_Title_1 }}
+                                  dangerouslySetInnerHTML={{ __html: blog?.Blogs?.Blog_Title_2 }}
                                 />
                               </div>
                               <div className="on_hover-img">
