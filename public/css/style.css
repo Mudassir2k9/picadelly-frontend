@@ -2831,12 +2831,26 @@ body .executive_impact_section .img_1::after, .impact_section_2 .empty_col::afte
   margin: auto;
   top: -170px;
 }
+body .impact_section_2 .empty_col::after, body .executive_impact_section .img_1::after{
+          right: 0 !important;
+        left: -7px !important;
+        margin: auto;
+        top: -184px;
+        width: 390px !important;
+        height: 390px !important;
+}
 .impact_section_2.impact_section .team_col::after, body .split_impact-section .team_col::before{
         right: 0 !important;
         left: 0 !important;
         top: auto;
         bottom: -260px !important;
         width: 440px;
+}
+.impact_section_2.impact_section .team_col::after, body .split_impact-section .team_col::before{
+  left: -47px !important;
+  bottom: -300px !important;
+  width: 550px !important;
+  height: 550px !important;
 }
 body .split_impact-section .team_col::before{
   bottom: -320px !important;
@@ -2846,7 +2860,12 @@ body .split_impact-section .team_col::before{
 }
 .cc-text.join-right-col::before{
         top: 0 !important;
-        bottom: -500px !important;
+        bottom: -577px !important;
+        width: 460px !important;
+        height: 460px !important;
+}
+body .cc-text.join-right-col::before, body .cc-text.join-left-col::before{
+  left: -43px !important;
 }
 .cc-text.join-left-col::before{
         top: -224px;
