@@ -10,7 +10,7 @@ const Work = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/work?populate[Work_History][populate]=*&populate[Testimonials][populate]=*&populate[Results][populate][Results_List][populate]=*`
+        `${apiUrl}/work?populate[Work_History][populate]=*&populate[Testimonials][populate]=*&populate[Results][populate][Results_List][populate]=*&populate[Slider][populate]=*`
       )
       .then((res) => {
         setWorkData(res.data.data);
@@ -20,6 +20,20 @@ const Work = () => {
       });
   }, []);
   console.log(workData);
+  const headingClassMap = {
+    "b2c935": "healthcare_col",
+    "72c9d4": "education_col",
+    "f5b816": "tourism_col",
+    "f18857": "non-profit_col",
+    "f28452": "financial_col",
+  };
+  const headingRightClassMap = {
+    "b2c935": "team_right_col",
+    "72c9d4": "education_right_col",
+    "f5b816": "tourism_right_col",
+    "f18857": "non-stop_right_col",
+    "f28452": "financial_right_col",
+  };
   const imageData = useMemo(() => {
     return (
       workData?.Work_History?.map((item) => ({
@@ -340,8 +354,54 @@ const Work = () => {
 
     {/* The slideshow/carousel */}
     <div className="carousel-inner">
+
+            {workData?.Slider?.slice(0, 5)?.map((item, index) => (
+              <div
+                key={item.id}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+                data-bs-interval="10000"
+              >
+                <div className="row mx-0">
+                  {/* Left Column */}
+                  <div
+                    className={`heading_col d-flex align-items-center px-5 team_col bg_primary ${
+                      headingClassMap[item.Slider_Color_Code] || ""
+                    }`}
+                  >
+                    <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
+                      <h3 className="font_40 fw-semibold color_black">
+                        {item.Heading}
+                      </h3>
+                      <p className="font_18 color_black py-4">
+                        {item.Description}
+                      </p>
+                      <a
+                        href={item.ButtonUrl}
+                        className="btn btn_light color_black"
+                      >
+                        {item.ButtonLabel}
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Right Column */}
+                  <div
+                    className={`right_content_col px-0 d-flex align-items-center team_right_col ${
+                      headingRightClassMap[item.Slider_Color_Code] || ""
+                    }`}
+                  >
+                    <img
+                      src={`${baseUrl}${item.image?.url}`}
+                      className="img-fluid w-100 h-100 object_cover"
+                      alt={item.image?.alternativeText || item.Heading}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+
       {/* Healthcare */}
-      <div className="carousel-item active" data-bs-interval="10000">
+      {/* <div className="carousel-item active" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary healthcare_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -356,10 +416,10 @@ const Work = () => {
             <img src="images/healthcare-img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Healthcare" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Financial Services */}
-      <div className="carousel-item" data-bs-interval="10000">
+      {/* <div className="carousel-item" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary financial_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -374,10 +434,10 @@ const Work = () => {
             <img src="images/financial-img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Financial Services" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Tourism */}
-      <div className="carousel-item" data-bs-interval="10000">
+      {/* <div className="carousel-item" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary tourism_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -392,10 +452,10 @@ const Work = () => {
             <img src="images/tourism_img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Tourism" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Non-Profit */}
-      <div className="carousel-item" data-bs-interval="10000">
+      {/* <div className="carousel-item" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary non-profit_col">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -410,10 +470,10 @@ const Work = () => {
             <img src="images/non-profit_img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Non-Profit" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Education */}
-      <div className="carousel-item" data-bs-interval="10000">
+      {/* <div className="carousel-item" data-bs-interval="10000">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col bg_primary education_col mx-0">
             <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -428,7 +488,7 @@ const Work = () => {
             <img src="images/education_img.jpg" className="img-fluid w-100 h-100 object_cover" alt="Education" />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
 
     {/* Controls (optional) */}

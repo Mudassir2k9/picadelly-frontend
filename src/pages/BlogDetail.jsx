@@ -146,37 +146,21 @@ const BlogDetail = () => {
               <input type="text" placeholder="Search" />
               <i class="fa fa-times clear-icon"></i>
             </div>
-               <div class="sidebar">
-   
-
-   
-    <ul class="menu">
-      <a href="#">
-      <li>
-         <div class="submenu-heading">
-        BLOGS
-        <span class="count">20</span>
-
-      </div>
-      </li>
-    </a>
-    <a href="#">
-      <li>
-        <div class="submenu-heading">
-        ANNOUNCEMENTS ▾
-        <span class="count">15</span>
-      </div>
-       <ul class="submenu">
-      <li>Company News</li>
-      <li>Events</li>
-    </ul>
-     </li>
-   </a>
-    </ul>
-
-  
+              <div class="sidebar">
+                <button type="button" class="btn btn-primary dropdown-heading dropdown-heading1">
+    BLOGS
+  </button>
+  <div class="dropdown">
     
-  </div>
+  <button type="button" class="btn btn-primary dropdown-toggle dropdown-heading dropdown-heading2" data-bs-toggle="dropdown">
+    ANNOUNCEMENTS
+  </button>
+  <ul class="dropdown-menu submenu">
+    <li><a class="dropdown-item sub-item" href="#">Company News</a></li>
+    <li><a class="dropdown-item sub-item" href="#">Events</a></li>
+  </ul>
+</div>
+</div>  
 
             {/* <div className="sticky-sidebar" id="sidebar"> */}
             {/* Dynamically generate links based on Blog_Content Titles */}
