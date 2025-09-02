@@ -19,8 +19,8 @@ const Home = () => {
         console.error("Error fetching header data:", error);
       });
   }, []);
-  let Results_List = homeData?.Results?.Results_List.slice(-5);
-console.log(Results_List);
+  
+console.log(homeData);
   setTimeout(() => {
     if (window.$) {
       const $cSlider = window.$(".companies_logos_sliders");
@@ -137,15 +137,21 @@ console.log(Results_List);
                 data-wow-delay="0.1s"
               >
                 <div className="result-div-1 circle">
-                  <div className="inner-part">
-                    <h5 className="color_green">Financial Services</h5>
-                    <h2>25% Growth</h2>
-                    <p>in New Members</p>
+                  <div className="inner-part"
+                  dangerouslySetInnerHTML={{
+                        __html: homeData?.Results?.Results_List?.slice(-5)[0]?.Heading || "",
+                      }}
+                  >
+                    
                   </div>
                 </div>
-                <a href="/case-study">
+                <a href={homeData?.Results?.Results_List?.slice(-5)[0]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_green">
-                    <h5>View The Case Study</h5>
+                    <div
+                      dangerouslySetInnerHTML={{
+                      __html: homeData?.Results?.Results_List?.slice(-5)[0]?.View_Button_Label || "",
+                    }}
+                    ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
                   </div>
                 </a>
@@ -158,15 +164,19 @@ console.log(Results_List);
                 data-wow-delay="0.2s"
               >
                 <div className="result-div-1 circle">
-                  <div className="inner-part">
-                    <h5 className="color_primary">Healthcare</h5>
-                    <h2>148% Increase</h2>
-                    <p>in Web Traffic</p>
+                  <div className="inner-part"dangerouslySetInnerHTML={{
+                        __html: homeData?.Results?.Results_List?.slice(-5)[1]?.Heading || "",
+                      }}
+                  >
                   </div>
                 </div>
-                <a href="/case-study">
+                <a href={homeData?.Results?.Results_List?.slice(-5)[1]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_primary">
-                    <h5>View The Case Study</h5>
+                    <div
+                      dangerouslySetInnerHTML={{
+                      __html: homeData?.Results?.Results_List?.slice(-5)[1]?.View_Button_Label || "",
+                    }}
+                    ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
                   </div>
                 </a>
@@ -179,15 +189,19 @@ console.log(Results_List);
                 data-wow-delay="0.3s"
               >
                 <div className="result-div-1 circle">
-                  <div className="inner-part">
-                    <h5 className="color_yellow">Tourism</h5>
-                    <h2>12% Jump</h2>
-                    <p>in Occupancy Tax</p>
+                  <div className="inner-part"dangerouslySetInnerHTML={{
+                        __html: homeData?.Results?.Results_List?.slice(-5)[2]?.Heading || "",
+                      }}
+                  >
                   </div>
                 </div>
-                <a href="/case-study">
+                <a href={homeData?.Results?.Results_List?.slice(-5)[2]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_yellow">
-                    <h5>View The Case Study</h5>
+                    <div
+                      dangerouslySetInnerHTML={{
+                      __html: homeData?.Results?.Results_List?.slice(-5)[2]?.View_Button_Label || "",
+                    }}
+                    ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
                   </div>
                 </a>
@@ -200,15 +214,19 @@ console.log(Results_List);
                 data-wow-delay="0.4s"
               >
                 <div className="result-div-1 circle">
-                  <div className="inner-part">
-                    <h5 className="color_primary">Nonprofit</h5>
-                    <h2>0.73% Increase</h2>
-                    <p>Average click-Through Rate</p>
+                  <div className="inner-part"dangerouslySetInnerHTML={{
+                        __html: homeData?.Results?.Results_List?.slice(-5)[3]?.Heading || "",
+                      }}
+                  >
                   </div>
                 </div>
-                <a href="/case-study">
+                <a href={homeData?.Results?.Results_List?.slice(-5)[3]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_primary">
-                    <h5>View The Case Study</h5>
+                    <div
+                      dangerouslySetInnerHTML={{
+                      __html: homeData?.Results?.Results_List?.slice(-5)[3]?.View_Button_Label || "",
+                    }}
+                    ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
                   </div>
                 </a>
@@ -221,15 +239,19 @@ console.log(Results_List);
                 data-wow-delay="0.5s"
               >
                 <div className="result-div-1 circle">
-                  <div className="inner-part">
-                    <h5 className="color_teal">Education</h5>
-                    <h2>182% Increase</h2>
-                    <p>in Student Re-enrollment</p>
+                  <div className="inner-part"dangerouslySetInnerHTML={{
+                        __html: homeData?.Results?.Results_List?.slice(-5)[4]?.Heading || "",
+                      }}
+                  >
                   </div>
                 </div>
-                <a href="/case-study">
+                <a href={homeData?.Results?.Results_List?.slice(-5)[4]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_teal">
-                    <h5>View The Case Study</h5>
+                    <div
+                      dangerouslySetInnerHTML={{
+                      __html: homeData?.Results?.Results_List?.slice(-5)[4]?.View_Button_Label || "",
+                    }}
+                    ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
                   </div>
                 </a>
