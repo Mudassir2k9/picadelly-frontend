@@ -22,9 +22,14 @@ export default function Slideshow() {
       slide2.classList.add("fade-out", "split-out");
     }, 6000);
 
+    const t3 = setTimeout(() => {
+      slideshow.style.setProperty("z-index", "0", "important");
+    }, 10000);
+
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
+      clearTimeout(t3);
     };
   }, []);
 
