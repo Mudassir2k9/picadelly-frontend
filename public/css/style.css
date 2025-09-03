@@ -2897,12 +2897,12 @@ body .testimonials-inner .carousel-indicators{
 
 @media only screen and (max-width: 425px){
     .banner_section #myVideo{
-        object-position: 93% 50% !important;
+        object-position: 84% 50% !important;
   }
 }
 @media only screen and (max-width: 390px){
     .banner_section #myVideo{
-        object-position: 88% 50% !important;
+        object-position: 82% 50% !important;
   }
 }
 @media only screen and (max-width: 576px) {
@@ -2935,13 +2935,13 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
 }
 
 .about_row .about_right_content_col.transparent-bg {
-    background-color: rgb(242 104 42 / 70%) !important;
+    background-color: transparent !important;
 }
 
 
 .about_row .item.Piccadilly h4{
   padding-right: 0px !important;
-  color: #fff !important;
+  color: #212529 !important;
   font-size: 55px !important;
   font-weight: 600 !important;
 }
