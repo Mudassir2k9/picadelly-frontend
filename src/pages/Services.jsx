@@ -219,7 +219,7 @@ const Services = () => {
         <div className="overflow_slider py-5">
           <div className="strategy_row">
             {serviceData?.AllServices?.Services?.map((service) => (
-              <div key={service.id} className="service_1">
+              <div key={service.id} className="service_1" id={`ser-${service.id}`}>
                 <div className="item_inner">
                   <div className="strategy_wrap">
                     <div className="inner_wrap">

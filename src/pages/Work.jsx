@@ -194,7 +194,7 @@ const Work = () => {
                 </a>
               </div>
             </section>
-            <section className="">
+            <section className="" id="results">
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.5s"
@@ -251,7 +251,7 @@ const Work = () => {
 
 
 
-      <div className="portfolio_row d-none" id="client-results">
+      <div className="portfolio_row d-none" id="">
         <div className="links_col">
           {workData?.Work_History?.map((item, index) => (
             <div
@@ -340,7 +340,7 @@ const Work = () => {
       </div>
 
       {/* <!-- start team section --> */}
-<div className="container-fluid px-0 team-section work_slider d-flex justify-content-center align-items-center">
+<div className="container-fluid px-0 team-section work_slider d-flex justify-content-center align-items-center" id="client-results">
   {/* Carousel */}
   <div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
     {/* Indicators/dots */}
