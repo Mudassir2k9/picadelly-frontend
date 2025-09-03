@@ -89,7 +89,7 @@ console.log(homeData);
               }}
             ></span>*/}
 
-            <video autoPlay muted controls loop className="second_video">
+            <video autoPlay muted controls playsinline loop className="second_video">
               <source src="images/new_compressed_reel.mp4" type="video/mp4" />
             </video>
 
@@ -127,7 +127,7 @@ console.log(homeData);
         </div>
         <div className="banner_video">
 
-          <video autoPlay muted loop id="myVideo">
+          <video autoPlay muted loop playsinline id="myVideo">
             <source src="images/home-video-cropped.mp4" type="video/mp4" />
           </video>
         </div>
@@ -324,7 +324,7 @@ console.log(homeData);
                 </div>
               </div>
               <div className="right_content_col px-5 d-flex align-items-center right_video_col">
-                <video autoPlay muted loop id="myVideo">
+                <video autoPlay muted loop playsinline id="myVideo">
                   <source src="images/creative-video.mp4" type="video/mp4" />
                 </video>
               </div>
@@ -617,7 +617,7 @@ console.log(homeData);
           </div>
         </div>
         <div className="happening_video" id="myVideo">
-          <video autoPlay muted loop>
+          <video autoPlay playsinline muted loop>
             <source src="images/happening-video.mp4" type="video/mp4" />
           </video>
         </div>
