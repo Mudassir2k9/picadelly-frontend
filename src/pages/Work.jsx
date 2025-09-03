@@ -108,7 +108,7 @@ const Work = () => {
 
 
       {/* <!-- start results section --> */}
-      <section>
+      <section id="results">
         <div className="parallax_container">
           <div
             className="left-column d-flex align-items-center"
@@ -194,7 +194,7 @@ const Work = () => {
                 </a>
               </div>
             </section>
-            <section className="" id="results">
+            <section className="" >
               <div
                 className="inner-row wow animate__zoomIn"
                 data-wow-duration="1.5s"
