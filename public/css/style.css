@@ -108,6 +108,7 @@
     color: #8f8d8d;
     border-color: #cbcbcb78;
   }
+  
   .dropdown-heading1::before{
     position: absolute;
     content: "20";
@@ -171,12 +172,13 @@
     font-weight: 900;
     left: 30px;
     color: orange;
+    top: 6px !important;
 
   }
   .submenu li{
     position: relative;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
   }
   .sub-item{
     padding-left: 50px !important;
@@ -884,7 +886,7 @@ body .footer-col .icon-col i:hover {
   position: relative;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 51%;
   background-position: right 53.2%;
 }
 .growth_heading {
@@ -904,8 +906,8 @@ body .footer-col .icon-col i:hover {
   background-position: center;
 }
 
-.right-column {
-  width: 50%;
+.parallax_container .right-column {
+  width: 51%;
   /* height:4000px;
 background-image: url("../images/bubbles-img.jpg");
   background-attachment: fixed;
@@ -1218,6 +1220,7 @@ background-image: url("../images/bubbles-img.jpg");
     max-height: 130px !important;
     width: auto;
     min-height: 130px;
+    object-fit: cover;
 }
 /*start layerd video styling*/
 .section2 h1 {
@@ -2016,7 +2019,7 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
 
 /* Duplicate items to make seamless loop */
 .marquee-content > * {
-  padding: 10px;
+  padding: 0px 10px;
   text-align: center;
 }
 
@@ -2891,9 +2894,23 @@ body .testimonials-inner .carousel-indicators{
     /*    margin-top: 15vh;*/
   }
 }
+
+@media only screen and (max-width: 425px){
+    .banner_section #myVideo{
+        object-position: 93% 50% !important;
+  }
+}
+@media only screen and (max-width: 390px){
+    .banner_section #myVideo{
+        object-position: 88% 50% !important;
+  }
+}
 @media only screen and (max-width: 576px) {
   .banner_section #myVideo{
-        object-position: 85% 50%;
+        object-position: 81% 50%;
+  }
+  .news_banner .large_heading_2{
+    max-width: 70% !important;
   }
   body .services_team_slider .healthcare_col::after,
 body .services_team_slider .financial_col::after,
@@ -3220,12 +3237,13 @@ body .cc-text.join-right-col::before, body .cc-text.join-left-col::before{
         min-height: 85px;
   }
   .mobile_slider .container {
-    width: 250px !important;
+    width: 248px !important;
     padding-top: 250px;
   }
   .nav-items a {
     font-size: 14px !important;
   }
+ 
   .nav-items {
     padding-left: 10px;
   }
