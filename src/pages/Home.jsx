@@ -89,7 +89,14 @@ console.log(homeData);
               }}
             ></span>*/}
 
-            <video autoPlay muted controls playsinline loop className="second_video">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              webkit-playsinline="true"
+              className="second_video"
+            >
               <source src="images/new_compressed_reel.mp4" type="video/mp4" />
             </video>
 
