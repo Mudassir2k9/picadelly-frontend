@@ -85,10 +85,17 @@ const Work = () => {
       .menu-line{
       background-color: #000 !important;
 }
+     .parallax_container .right-column{
+      width:50% !important;
+    }
         @media only screen and (max-width: 576px) {
        .hamburger .menu-line{
     background-color: #fff !important;
   }
+    .parallax_container .right-column{
+      width:100% !important;
+    }
+    
       }
 `}</style>
       <div className="container-fluid executive_banner work_banner">
