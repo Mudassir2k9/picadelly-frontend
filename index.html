@@ -202,7 +202,7 @@
                 // console.log(radius);
                 $(".second_video").css(
                   "clip-path",
-                  `circle(${radius} at 50% 50%)`
+                  `circle(${radius} at center)`
                 );
               } else {
                 $(".second_video").css("clip-path", "circle(0px at center)");
@@ -213,7 +213,7 @@
                 if (state !== "fixed") {
                   console.log(state);
                   state = "fixed";
-                  // box.style.position = "fixed";
+                  box.style.position = "fixed";
                   box.style.top = "0";
                   box.style.left = "0";
                   box.style.width = "100%";
