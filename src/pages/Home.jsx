@@ -89,7 +89,7 @@ console.log(homeData);
               }}
             ></span>*/}
 
-            <video autoPlay muted controls playsinline loop className="second_video"> 
+            <video autoPlay muted controls playsinline loop className="second_video">
               <source src="images/new_compressed_reel.mp4" type="video/mp4" />
             </video>
 
@@ -276,7 +276,89 @@ console.log(homeData);
         </div>
       </section>
 
-    
+      {/* start creative section */}
+      <section className="d-none ">
+        <div className="horizontal_parallax home_parallax">
+          <div className="panel">
+            <div className="row">
+              <div
+                className="heading_col d-flex align-items-center px-5"
+                dangerouslySetInnerHTML={{
+                  __html: homeData?.Slider[0]?.Left_Column_Heading || "",
+                }}
+              ></div>
+              <div
+                className="right_content_col px-5 d-flex align-items-center"
+                dangerouslySetInnerHTML={{
+                  __html: homeData?.Slider[0]?.Right_Column_Heading || "",
+                }}
+              ></div>
+            </div>
+          </div>
+
+          <div className="panel">
+            <div className="row reverse_row">
+              <div className="heading_col d-flex align-items-center px-5">
+                <div
+                  className="px-0 px-md-5 mx-3 mx-md-5 text-start wow animate__fadeInDownBig"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.3s"
+                >
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: homeData?.Slider[1]?.Left_Column_Heading || "",
+                    }}
+                  ></span>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        homeData?.Slider[1]?.Left_Column_Description || "",
+                    }}
+                  ></span>
+                  <a
+                    href={`${baseUrl}${homeData?.Slider[1]?.Left_Column_Button_Link}`}
+                    className="btn_light"
+                  >
+                    {homeData?.Slider[1]?.Left_Column_Button_Label}
+                  </a>
+                </div>
+              </div>
+              <div className="right_content_col px-5 d-flex align-items-center right_video_col">
+                <video autoPlay muted loop playsinline id="myVideo">
+                  <source src="images/creative-video.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div className="panel">
+            <div className="row reverse_row">
+              <div className="video_col d-flex align-items-center px-5"></div>
+              <div className="right_content_col px-5 d-flex align-items-center">
+                <div className="px-0 px-md-5 mx-3 mx-md-5 text-start">
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: homeData?.Slider[2]?.Right_Column_Heading || "",
+                    }}
+                  ></span>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        homeData?.Slider[2]?.Right_Column_Description || "",
+                    }}
+                  ></span>
+                  <a
+                    href={`${baseUrl}${homeData?.Slider[2]?.Right_Column_Button_Link}`}
+                    className="btn_light"
+                  >
+                    {homeData?.Slider[2]?.Right_Column_Button_Label}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* start mobile creative section */}
       <div className="container-fluid px-0 team-section mobile-creative-section d-flex justify-content-center align-items-center d-none">
