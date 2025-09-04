@@ -88,10 +88,12 @@ console.log(homeData);
                 __html: homeData?.Section2_Heading || "",
               }}
             ></span>*/}
-
-            <video autoPlay muted controls loop className="second_video"> 
+            
+<div class="video-wrapper"> 
+            <video autoPlay muted controls playsinline loop className="second_video"> 
               <source src="images/new_compressed_reel.mp4" type="video/mp4" />
             </video>
+</div> 
 
             {/* SVG Mask */}
             <svg
