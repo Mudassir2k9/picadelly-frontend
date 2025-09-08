@@ -925,6 +925,9 @@ background-image: url("../images/bubbles-img.jpg");
 .team_last_name {
   margin-top: -20px !important;
 }
+.award-col ul{
+  padding-left: 20px !important;
+}
 .right-column section {
   position: sticky;
   justify-content: center;
@@ -1348,7 +1351,7 @@ position: absolute;
 .team_right_col {
   background-image: url("../images/about-background-1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-color: transparent;
   position: relative;
 }
@@ -1403,14 +1406,17 @@ position: absolute;
   transition: all 0.3s;
 }
 .team_popup img {
-  height: 200px;
-  width: 200px;
+     max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
 }
+
 .service_modal img {
   height: 250px;
   width: 250px;
   object-fit: cover;
   border-radius: 100%;
+  object-position: 85%;
 }
 .btn-close {
   opacity: 1;
@@ -1503,6 +1509,7 @@ body .footer-col-1 img {
   border-radius: 100%;
   object-fit: cover;
   margin: auto;
+  object-position: 85%;
 }
 .strategy_row .service_1{
   text-align: center;
@@ -2085,6 +2092,9 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
   .form-inner-div h5 {
     font-size: 24pt !important;
   }
+  .award-col{
+    padding: 0px 20px !important;
+  }
   .testimonials_part .container{
     max-width: 1480px !important;
   }
@@ -2200,11 +2210,12 @@ body .testimonials-inner .carousel-indicators{
   }
   .award-col h5 {
     font-size: 18pt;
+    min-height: 90px !important;
   }
   .award-col h6 {
     font-size: 18pt;
     font-weight: 600;
-    padding: 0px 20px !important;
+    /* padding: 0px 20px !important; */
   }
   .lists {
     font-size: 13pt;
@@ -2395,7 +2406,7 @@ body .testimonials-inner .carousel-indicators{
     font-size: 14pt !important;
   }
   .team_popup .modal-body .col-md-4 {
-    padding: 0px 0px 0px 50px !important;
+    padding: 0px 0px 0px 20px !important;
   }
 
   /* .executive_banner .large_heading_2 span{

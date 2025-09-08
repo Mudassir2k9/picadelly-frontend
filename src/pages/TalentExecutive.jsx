@@ -283,6 +283,7 @@ const TalentExecutive = () => {
                   id="demo"
                   className="carousel slide"
                   data-bs-ride="carousel"
+                  data-bs-interval="8000"
                 >
                   {/* <!-- Indicators/dots --> */}
                   <div className="carousel-indicators">

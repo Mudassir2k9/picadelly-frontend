@@ -604,13 +604,13 @@ const About = () => {
       <section className="culture_section bg_cover" id="our-culture">
         <div className="container">
           <div className="row pt-5">
-            <div className="col-md-7">
+            <div className="col-md-6">
               <h3 className="color_black fw-bold pb-2">
                 {aboutData?.InfoHeading1}
               </h3>
               <p className="color_black">{aboutData?.InfoDescription1}</p>
             </div>
-            <div className="col-md-5">
+            <div className="col-md-6">
               <h3 className="color_black fw-bold pb-2">
                 {aboutData?.InfoHeading2}
               </h3>

@@ -704,6 +704,10 @@ position: absolute;
     .image-container img {
       width: 100%;
       display: block;
+      min-height: 550px;
+      max-height: 550px;
+      object-fit: cover;
+      object-position: top !important;
     }
 
     .hover-text {
@@ -730,7 +734,7 @@ position: absolute;
     .image-container:hover .hover-text {
       opacity: 1;
     }
-    .video-section::after{
+    /* .video-section::after{
       position: absolute;
       content: "";
       width: 600px;
@@ -738,7 +742,7 @@ position: absolute;
       background-image: url(../images/circles.png);
       background-size: 100%;
     
-    }
+    } */
      .video-section{
       position: relative;
       min-height: 100vh;

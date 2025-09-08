@@ -553,6 +553,7 @@ const TalentOnDemand = () => {
                   id="demo"
                   className="carousel slide"
                   data-bs-ride="carousel"
+                  data-bs-interval="10000"
                 >
                   {/* <!-- Indicators/dots --> */}
                   <div className="carousel-indicators">

@@ -532,6 +532,7 @@ const Work = () => {
     id="testimonial_slider"
     className="carousel slide"
     data-bs-ride="carousel"
+    data-bs-interval="12000"
   >
     {/* Indicators/dots */}
     <div className="carousel-indicators">
