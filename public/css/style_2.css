@@ -1518,15 +1518,7 @@ body .case-study-faqs .heading_col, .only_content{
     margin: auto;
     bottom: auto;
 }
-.video-section::after{
-      position: absolute;
-      content: "";
-      width: 350px;
-      height: 350px;
-      background-image: url(../images/circles.png);
-      background-size: 100%;
-    
-    }
+
     .video-section{
         min-height: 60vh !important;
         padding-top: 20px;

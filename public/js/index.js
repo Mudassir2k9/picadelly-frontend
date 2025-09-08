@@ -94,24 +94,42 @@ $(document).ready(function () {
 
 // script for sticky nav
 
-let lastScrollTop = 0; // store previous scroll position
-let scrollTimeout;
+let lastScrollTop = 0; // previous scroll position
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollTop && currentScroll > 100) {
+    // Scrolling DOWN → show navbar
+    header.classList.add("sticky");
+  } else {
+    // Scrolling UP → hide navbar
+    header.classList.remove("sticky");
+  }
+
+  // update last scroll position
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+// let lastScrollTop = 0; // store previous scroll position
+// let scrollTimeout;
 
 
-window.addEventListener("scroll", function () { 
-  const header = document.querySelector("header"); 
-  const currentScroll = window.scrollY; 
-  // if (currentScroll > lastScrollTop) { 
-    header.classList.add("sticky"); 
-    clearTimeout(scrollTimeout); 
-    scrollTimeout = setTimeout(() => { 
-      if (!header.matches(":hover")) { 
-        header.classList.remove("sticky"); 
-      }
-     }, 2000); 
-  // } 
-    // lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;  
-  });
+// window.addEventListener("scroll", function () { 
+//   const header = document.querySelector("header"); 
+//   const currentScroll = window.scrollY; 
+//   // if (currentScroll > lastScrollTop) { 
+//     header.classList.add("sticky"); 
+//     clearTimeout(scrollTimeout); 
+//     scrollTimeout = setTimeout(() => { 
+//       if (!header.matches(":hover")) { 
+//         header.classList.remove("sticky"); 
+//       }
+//      }, 2000); 
+//   // } 
+//     // lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;  
+//   });
 
 
 
