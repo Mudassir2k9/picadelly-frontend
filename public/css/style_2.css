@@ -976,13 +976,13 @@ position: absolute;
 }
 .blog_banner{
   background-image: url(../images/blog-banner.jpg);
-  min-height: 70vh;
+  height: 550px;
 }
 .blog_banner .row{
-  height: 100vh;
+  height: 100%;
 }
 .empty-overlay{
-   min-height: 70vh;
+   height: 100%;
    position: relative;
 }
 .empty-overlay::after{
