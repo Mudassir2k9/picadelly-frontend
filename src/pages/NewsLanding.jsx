@@ -158,10 +158,12 @@ const NewsLanding = () => {
                                 <h3
                                   className="text-dark"
                                   style={{ maxWidth: "80%" }}
-                                  dangerouslySetInnerHTML={{ __html: blog?.Blogs?.Blog_Title_2 }}
+                                  dangerouslySetInnerHTML={{
+                                    __html: `${blog?.Blogs?.Blog_Title_1 || ""} ${blog?.Blogs?.Blog_Title_2 || ""}`
+                                  }}
                                 />
                               </div>
-                              <div className="on_hover-img">
+                              <div className="on_hover-img d-none">
                                 <img
                                   src={`${baseUrl}${blog?.Blogs?.Feature_Image?.url}`}
                                 />
@@ -191,7 +193,7 @@ const NewsLanding = () => {
                                     dangerouslySetInnerHTML={{ __html: news.News.Title }}
                                   />
                                 </div>
-                                <div className="on_hover-img">
+                                <div className="on_hover-img d-none">
                                   <img
                                     src={`${baseUrl}${news.News.Feature_Image?.url}`}
                                     alt={news.News.Feature_Image?.alternativeText || ""}

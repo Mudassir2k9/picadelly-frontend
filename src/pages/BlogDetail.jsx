@@ -281,7 +281,7 @@ const BlogDetail = () => {
                   <span className=""> ⟵</span>
                   <br />
                   <h5 className="text-white mb-3 font_18 fw_500">
-                    BLOG POST {/* If you have category, put here */}
+                    {prevBlog?.category?.name} {/* If you have category, put here */}
                   </h5>
                   <h3 className="text-white fw_600">{prevBlog.Blog_Title_1}</h3>
                 </div>
@@ -318,7 +318,7 @@ const BlogDetail = () => {
                   <span className=""> ⟶</span>
                   <br />
                   <h5 className="text-white mb-3 font_18 fw_500">
-                    BLOG POST {/* If you have category, put here */}
+                    {nextBlog?.category?.name} {/* If you have category, put here */}
                   </h5>
                   <h3 className="text-white font_40 fw_600">
                     {nextBlog.Blog_Title_1}
