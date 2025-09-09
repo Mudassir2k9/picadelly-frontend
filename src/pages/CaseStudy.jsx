@@ -264,7 +264,7 @@ const CaseStudy = () => {
                     src={`${baseUrl}${project?.Image?.url}`}
                     alt={project?.Image?.alternativeText || "Project Image"}
                   />
-                  <div className="hover-text">
+                  <div className="hover-text  d-none">
                     <i className="fa-solid fa-play"></i>
                     <div dangerouslySetInnerHTML={{ __html: project?.Title }} />
                   </div>
@@ -362,7 +362,7 @@ const CaseStudy = () => {
       </div>
 
       {/* <!------video-section------> */}
-
+      {currentCase?.Case_Study_Media?.Media?.url && (
       <div className="container-fluid d-flex justify-content-center align-items-center bg-cover video-section px-0">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center mx-0">
@@ -392,6 +392,7 @@ const CaseStudy = () => {
           </div>
         </div>
       </div>
+      )}
       {/* <!-----project-section-----> */}
 
       <div className="container-fluid px-0">

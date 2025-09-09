@@ -167,7 +167,7 @@ const BlogDetail = () => {
         <div className="row mx-0">
           {/* Sticky Left Sidebar */}
           <div className="col-md-4 left-sidebar px-5 pt-5 pb-5">
-            <div class="search-box">
+            <div class="search-box d-none">
               <i class="fa fa-search search-icon"></i>
               <input type="text" placeholder="Search" />
               <i class="fa fa-times clear-icon"></i>
