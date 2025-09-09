@@ -523,7 +523,7 @@ position: absolute;
       height: 350px;
       border-radius: 50%;
       overflow: hidden;
-      cursor: pointer;
+     
       transition: transform 0.3s ease;
       padding: 0px;
     }
