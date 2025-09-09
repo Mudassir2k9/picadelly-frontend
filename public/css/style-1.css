@@ -3,7 +3,7 @@
     background-image: url("../images/buzz-banner.png");
 }
 .buzz_col h1{
-    padding-right: 260px;
+    padding-left: 40px;
 }
 .buzz_col h1 strong{
     color: #000 !important;
@@ -158,6 +158,8 @@
        padding-right: 0px !important;
        font-size: 72px !important;
         margin-top: -107px;
+        max-width: 70% !important;
+        padding-left: 0px !important;
     }
     .team_row{
         flex-direction: column-reverse;

@@ -211,6 +211,9 @@ body .team_section .heading_col h3,
 body .team-item h2 {
   font-weight: 600 !important;
 }
+.executive_banner .large_heading_2 span:nth-child(2){
+  font-weight: 300 !important;
+}
 /* body .carousel-inner-div .left_member_col img{
   height: auto !important;
   width: 600px !important;
@@ -2123,7 +2126,7 @@ body .testimonials-inner .carousel-indicators{
     margin-top: 130px !important;
   }
   .work_banner .large_heading_2 {
-    padding-right: 65px !important;
+    padding-right: 43px !important;
   }
    .work_banner.news_banner .large_heading_2{
     padding-right: 0px !important;
@@ -2380,6 +2383,9 @@ body .testimonials-inner .carousel-indicators{
     max-width: inherit !important;
     line-height: 98pt;
            font-weight: 600 !important;
+  }
+  .executive_banner.work_banner .large_heading_2 p{
+        font-weight: 300 !important;
   }
   .executive_banner .large_heading_2.fw_300{
     font-weight: 300 !important;
@@ -2927,7 +2933,22 @@ body .testimonials-inner .carousel-indicators{
     /*    margin-top: 15vh;*/
   }
 }
-
+@media (min-width: 768px) and (max-width: 1300px){
+     .buzz_col h1{
+    padding-left: 30px !important;
+}
+.work_banner.news_banner .large_heading_2 {
+    margin-left: -87px !important;
+    padding-right: 0px !important;
+}
+.work_banner .large_heading_2 {
+        padding-right: 30px !important;
+    }
+    .footer-col .btn_primary{
+      padding: 9px 30px !important;
+      font-size: 13px !important;
+    }
+}
 @media only screen and (max-width: 425px){
     .banner_section #myVideo{
         object-position: 84% 50% !important;
@@ -2941,6 +2962,11 @@ body .testimonials-inner .carousel-indicators{
 @media only screen and (max-width: 576px) {
   .banner_section #myVideo{
         object-position: 81% 50%;
+  }
+  .news_banner .large_heading_2, .work_banner .large_heading_2{
+    margin: 0px !important;
+    padding: 0px !important;
+    max-width: 70%;
   }
   .image-container img{
     min-height: 300px !important;
