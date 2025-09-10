@@ -2110,6 +2110,10 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
         height: 300px !important;
       overflow-y: scroll !important;
       }
+     .case-study-faqs .accordion-part{
+        height: auto !important;
+        overflow-y: auto !important;
+    }
 }
 @media only screen and (min-width: 1300px) {
 
