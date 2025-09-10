@@ -260,7 +260,7 @@ const CaseStudy = () => {
         <div className="row mx-0" key={currentCase?.id}>
           {currentCase?.Projects?.map((project) => (
             <div key={project.id} className="col-md-6 image-container px-0">
-              <a href="#">
+              {/* <a href="#"> */}
                 <div>
                   <img
                     src={`${baseUrl}${project?.Image?.url}`}
@@ -271,7 +271,7 @@ const CaseStudy = () => {
                     <div dangerouslySetInnerHTML={{ __html: project?.Title }} />
                   </div>
                 </div>
-              </a>
+              {/* </a> */}
             </div>
           ))}
 
