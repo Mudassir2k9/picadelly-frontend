@@ -57,22 +57,34 @@ const Footer = () => {
               </ul>
               <ul className="pt-3 icon-col">
                 <li>
-                  <a href={footerData?.socialLink[0].url}>
+                  <a href={footerData?.socialLink[0].url}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  >
                     <i className="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
-                  <a href={footerData?.socialLink[2].url}>
+                  <a href={footerData?.socialLink[2].url}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  >
                     <i className="fa-brands fa-linkedin-in"></i>
                   </a>
                 </li>
                 <li>
-                  <a href={footerData?.socialLink[1].url}>
+                  <a href={footerData?.socialLink[1].url}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  >
                     <i className="fa-brands fa-instagram"></i>
                   </a>
                 </li>
                 <li>
-                  <a href={footerData?.socialLink[3].url}>
+                  <a href={footerData?.socialLink[3].url}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  >
                     <i className="fa-brands fa-youtube"></i>
                   </a>
                 </li>

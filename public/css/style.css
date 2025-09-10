@@ -101,6 +101,10 @@
    .cc-text, .cc-image{
     margin-top: 50px !important;
    }
+   .connect a{
+    text-decoration:none !important;
+    color: #212529;
+   }
   
   .submenu{
     width: 80%;
