@@ -42,6 +42,7 @@ const CaseStudy = () => {
   const currentCase = caseStudies[currentIndex]?.CaseStudy;
   const currentCaseC = caseStudies[currentIndex];
   // console.log("currentIndex",currentIndex);
+  const first_prv = caseStudies.length - 1;
   const prevCase =
     currentIndex > 0 ? caseStudies[currentIndex - 1].CaseStudy : caseStudies[caseStudies.length - 1].CaseStudy;
   const nextCase =
@@ -405,7 +406,7 @@ const CaseStudy = () => {
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
-                  setCurrentIndex(currentIndex - 1);
+                  setCurrentIndex(currentIndex > 0 ? currentIndex - 1 : first_prv);
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
