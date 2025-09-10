@@ -41,8 +41,9 @@ const CaseStudy = () => {
 
   const currentCase = caseStudies[currentIndex]?.CaseStudy;
   const currentCaseC = caseStudies[currentIndex];
+  // console.log("currentIndex",currentIndex);
   const prevCase =
-    currentIndex > 0 ? caseStudies[currentIndex - 1].CaseStudy : null;
+    currentIndex > 0 ? caseStudies[currentIndex - 1].CaseStudy : caseStudies[caseStudies.length - 1].CaseStudy;
   const nextCase =
     currentIndex < caseStudies.length - 1
       ? caseStudies[currentIndex + 1].CaseStudy

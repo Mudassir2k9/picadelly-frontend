@@ -477,6 +477,7 @@ header.sticky .navbar-custom {
   display: flex;
   overflow-x: auto;
   padding-bottom: 30px;
+  justify-content: space-around;
 }
 .culture_section .overflow_slider{
   position: relative;
