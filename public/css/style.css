@@ -98,6 +98,10 @@
    .dropdown-heading1{
     position:relative;
    }
+   .cc-text, .cc-image{
+    margin-top: 50px !important;
+   }
+  
   .submenu{
     width: 80%;
     border-radius: 3px;
@@ -2096,6 +2100,12 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
       object-fit: cover !important;
       height: 110% !important;
 
+}
+@media only screen and (min-width: 768px){
+      .accordion-part{
+        height: 300px !important;
+      overflow-y: scroll !important;
+      }
 }
 @media only screen and (min-width: 1300px) {
 

@@ -79,6 +79,7 @@ const TalentOnDemand = () => {
       position: sticky;
       top: 0;
           height: 100svh;
+          margin-top:45px;
     }
     .cc-image img{
       width: 100%;
@@ -92,14 +93,15 @@ const TalentOnDemand = () => {
       margin-left: auto;
     }
         .cc-text{
-        overflow: hidden
+        overflow: hidden;
+        margin-top:45px;
         }
           .img_2{
           margin-left: auto
           }
     .cc-text-1{
       margin-left: auto;
-        margin-top: 0px;
+        margin-top: 45px;
     }
            .cc-text-3{
           margin-right: auto
