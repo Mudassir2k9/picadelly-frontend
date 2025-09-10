@@ -148,7 +148,7 @@ console.log(homeData);
             <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
-                data-wow-duration="1.2s"
+                data-wow-duration="1.4s"
                 data-wow-delay="0.1s"
               >
                 <div className="result-div-1 circle">
@@ -175,7 +175,7 @@ console.log(homeData);
             <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
-                data-wow-duration="1.3s"
+                data-wow-duration="1.5s"
                 data-wow-delay="0.2s"
               >
                 <div className="result-div-1 circle">
@@ -200,7 +200,7 @@ console.log(homeData);
             <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
-                data-wow-duration="1.4s"
+                data-wow-duration="1.6s"
                 data-wow-delay="0.3s"
               >
                 <div className="result-div-1 circle">
@@ -225,7 +225,7 @@ console.log(homeData);
             <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
-                data-wow-duration="1.5s"
+                data-wow-duration="1.7s"
                 data-wow-delay="0.4s"
               >
                 <div className="result-div-1 circle">
@@ -250,7 +250,7 @@ console.log(homeData);
             <section className="">
               <div
                 className="inner-row wow animate__zoomIn"
-                data-wow-duration="1.6s"
+                data-wow-duration="1.8s"
                 data-wow-delay="0.5s"
               >
                 <div className="result-div-1 circle">

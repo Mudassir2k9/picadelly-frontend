@@ -118,6 +118,9 @@
       border-radius: 6px;
       font-weight: normal;
   }
+  .case-study-faqs .team_col .content>h3{
+      min-height: 80px !important;
+  }
    .dropdown-heading2 .badge{
     position: absolute;
     right: 10px;
@@ -1411,7 +1414,14 @@ position: absolute;
     max-height: 200px;
     object-fit: cover;
 }
+.second_video::-webkit-media-controls-panel {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 
+.second_video::-webkit-media-controls {
+  display: flex !important;
+}
 .service_modal img {
   height: 250px;
   width: 250px;
@@ -2747,6 +2757,18 @@ body .testimonials-inner .carousel-indicators{
   }
 }
 @media (min-width: 1300px) and (max-width: 1440px) {
+  .nav-items {
+    padding-top: 100px;
+    height: 100%;
+    width: 60%;
+}
+.nav-items li ul{
+  padding-top: 100px;
+}
+.overlay{
+  min-height: 500px;
+  /* right: 25px; */
+}
   .strategy_row img {
     width: 200px !important;
     height: 200px !important;
@@ -2920,6 +2942,10 @@ body .testimonials-inner .carousel-indicators{
 @media only screen and (max-width: 576px) {
   .banner_section #myVideo{
         object-position: 81% 50%;
+  }
+  .image-container img{
+    min-height: 300px !important;
+    max-height: 300px !important;
   }
   .news_banner .large_heading_2{
     max-width: 70% !important;
