@@ -1095,6 +1095,7 @@ position: absolute;
   width: 100%;
   min-height: 250px;
   object-fit: cover;
+  object-position: top;
 }
  :root {
    --teal-light:#87D2D9;

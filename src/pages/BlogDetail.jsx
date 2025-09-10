@@ -115,22 +115,26 @@ const BlogDetail = () => {
                   <p className="fw_600">SHARE THIS:</p>
                   <ul className="blog_icon_col d-flex justify-content-between">
                     <li>
-                      <a href="#">
+                      <a href="#" target="_blank" 
+                  rel="noopener noreferrer">
                         <i className="fa-brands fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="#" target="_blank" 
+                  rel="noopener noreferrer">
                         <i className="fa-brands fa-linkedin-in"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="#" target="_blank" 
+                  rel="noopener noreferrer">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="#" target="_blank" 
+                  rel="noopener noreferrer">
                         <i className="fa-solid fa-envelope"></i>
                       </a>
                     </li>
