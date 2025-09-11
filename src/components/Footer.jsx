@@ -22,9 +22,9 @@ const Footer = () => {
   console.log("footer", footerData);
   return (
     <>
-      <div className="container-fluid footer-section footer_light pt-5 pb-5">
+      <div className="container-fluid footer-section footer_light pt-5 pb-5 px-0">
         <div className="container">
-          <div className="row footer-row-1">
+          <div className="row footer-row-1 mx-0">
             {footerData?.footerLinks?.map((linkGroup) => (
               <div key={linkGroup.id} className="footer-col">
                 <h5>
@@ -91,7 +91,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="row footer-row-2 pt-5 pb-3">
+          <div className="row footer-row-2 pt-5 pb-3 mx-0">
             {footerData?.location?.map((loc) => (
               <div key={`location-${loc.id}`} className="col-md-2 footer-col">
                 <h5>{loc.name}</h5>

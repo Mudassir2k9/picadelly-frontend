@@ -164,25 +164,25 @@ const TalentExecutive = () => {
       <div className="container-fluid impact_section  px-0 executive_impact_section split_impact-section position-relative">
         {/*<div className="row mx-0">*/}
   
-
-
-<div className=" cc-text split_col cc-text-1 impact team_col d-flex align-items-center">
+        <div className=" cc-text split_col cc-text-1 team_col">
           <div className="px-5 content">
             <h3
-              className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
+              className="font_40 fw-semibold color_primary  wow animate__slideInLeft text-start"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
               dangerouslySetInnerHTML={{
-                __html: talentExectiveData?.Section3Heading || "",
+                __html: talentExectiveData?.Section5?.Column1_Heading || "",
               }}
             ></h3>
             <div
               dangerouslySetInnerHTML={{
-                __html: talentExectiveData?.Section3Description || "",
+                __html: talentExectiveData?.Section5?.Column1_Description || "",
               }}
             ></div>
           </div>
         </div>
+
+
 
 
         <div className=" cc-image split_col img_1 d-flex justify-content-center align-items-center">
@@ -224,23 +224,24 @@ const TalentExecutive = () => {
 
         {/* <div className="container-fluid leader_section bg_cover only_content px-0">
         <div className="row mx-0">*/}
-        <div className=" cc-text split_col cc-text-3">
+        <div className=" cc-text split_col cc-text-3 impact  d-flex align-items-center">
           <div className="px-5 content">
             <h3
-              className="font_40 fw-semibold color_primary wow animate__slideInLeft text-start"
+              className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
               dangerouslySetInnerHTML={{
-                __html: talentExectiveData?.Section5?.Column1_Heading || "",
+                __html: talentExectiveData?.Section3Heading || "",
               }}
             ></h3>
             <div
               dangerouslySetInnerHTML={{
-                __html: talentExectiveData?.Section5?.Column1_Description || "",
+                __html: talentExectiveData?.Section3Description || "",
               }}
             ></div>
           </div>
         </div>
+        
 
         {/* <div className=" cc-image split_col img_2">
           <img src="images/impact_bg.png" className="img-fluid"></img>

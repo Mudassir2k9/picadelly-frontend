@@ -108,6 +108,9 @@
   .connect a:hover{
     color: var(--teal-dark);
   }
+  .orange_right_col .content div:nth-child(2) p{
+    display: none;
+  }
   .submenu{
     width: 80%;
     border-radius: 3px;
@@ -2116,15 +2119,23 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
         height: auto !important;
         overflow-y: auto !important;
     }
+    .faqs_stick_part .heading_col{
+      height: 100vh !important;
+    }
 }
 @media only screen and (min-width: 1300px) {
 
 /* body  .accordion-part .accordion-button, .accordion-part .accordion-body,   body .faqs_stick_part .heading_col .content p{
     font-size: 18px !important;
   }*/
-
+  body .accordion-button p{
+  max-width: 500px !important;
+}
   .form-inner-div h5 {
     font-size: 24pt !important;
+  }
+  body .join-right-col .content{
+    margin: 0px !important;
   }
   .award-col{
     padding: 0px 20px !important;
@@ -2745,7 +2756,7 @@ body .testimonials-inner .carousel-indicators{
     font-size: 16pt !important;
     transition: all 0.3s !important;
   }
-
+ 
   .impact_section .content .impact_section_heading p {
     font-size: 36pt !important;
   }
@@ -2787,6 +2798,18 @@ body .testimonials-inner .carousel-indicators{
     padding-top: 100px;
     height: 100%;
     width: 60%;
+}
+.impact_section h3.font_40 p{
+  font-size: 44pt !important;
+}
+.orange_right_col .content_inner h3{
+  font-size: 28pt !important;
+}
+body .split_impact-section .team_col::before{
+  margin-top: 85px !important;
+}
+.executive_impact_section .img_1::after{
+  margin-top:20px;
 }
 .nav-items li ul{
   padding-top: 100px;
@@ -2958,10 +2981,29 @@ body .testimonials-inner .carousel-indicators{
      .buzz_col h1{
     padding-left: 30px !important;
 }
+.footer-row-1 .footer-col:nth-child(1){
+  width: 15%;
+}
+.footer-row-1 .footer-col:nth-child(2){
+  width: 20%;
+}
+.footer-row-1 .footer-col:nth-child(3){
+  width: 17%;
+}
+.footer-row-1 .footer-col:nth-child(4){
+  width: 14%;
+}
+.footer-row-1 .footer-col:nth-child(5){
+  width: 16%;
+}
+.footer-row-1 .footer-col:nth-child(6){
+  width: 18%;
+}
 .work_banner.news_banner .large_heading_2 {
     margin-left: -87px !important;
     padding-right: 0px !important;
 }
+
 .work_banner .large_heading_2 {
         padding-right: 30px !important;
     }
