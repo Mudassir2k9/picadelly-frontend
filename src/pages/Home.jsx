@@ -154,17 +154,17 @@ console.log(homeData);
                 <div className="result-div-1 circle">
                   <div className="inner-part"
                   dangerouslySetInnerHTML={{
-                        __html: homeData?.Results?.Results_List?.slice(-5)[0]?.Heading || "",
+                        __html: homeData?.Results?.Results_List?.slice(-6)[0]?.Heading || "",
                       }}
                   >
                     
                   </div>
                 </div>
-                <a href={homeData?.Results?.Results_List?.slice(-5)[0]?.Case_Study_Link}>
+                <a href={homeData?.Results?.Results_List?.slice(-6)[0]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_green">
                     <div
                       dangerouslySetInnerHTML={{
-                      __html: homeData?.Results?.Results_List?.slice(-5)[0]?.View_Button_Label || "",
+                      __html: homeData?.Results?.Results_List?.slice(-6)[0]?.View_Button_Label || "",
                     }}
                     ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
@@ -180,16 +180,16 @@ console.log(homeData);
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part"dangerouslySetInnerHTML={{
-                        __html: homeData?.Results?.Results_List?.slice(-5)[1]?.Heading || "",
+                        __html: homeData?.Results?.Results_List?.slice(-6)[1]?.Heading || "",
                       }}
                   >
                   </div>
                 </div>
-                <a href={homeData?.Results?.Results_List?.slice(-5)[1]?.Case_Study_Link}>
+                <a href={homeData?.Results?.Results_List?.slice(-6)[1]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_primary">
                     <div
                       dangerouslySetInnerHTML={{
-                      __html: homeData?.Results?.Results_List?.slice(-5)[1]?.View_Button_Label || "",
+                      __html: homeData?.Results?.Results_List?.slice(-6)[1]?.View_Button_Label || "",
                     }}
                     ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
@@ -205,16 +205,16 @@ console.log(homeData);
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part"dangerouslySetInnerHTML={{
-                        __html: homeData?.Results?.Results_List?.slice(-5)[2]?.Heading || "",
+                        __html: homeData?.Results?.Results_List?.slice(-6)[2]?.Heading || "",
                       }}
                   >
                   </div>
                 </div>
-                <a href={homeData?.Results?.Results_List?.slice(-5)[2]?.Case_Study_Link}>
+                <a href={homeData?.Results?.Results_List?.slice(-6)[2]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_yellow">
                     <div
                       dangerouslySetInnerHTML={{
-                      __html: homeData?.Results?.Results_List?.slice(-5)[2]?.View_Button_Label || "",
+                      __html: homeData?.Results?.Results_List?.slice(-6)[2]?.View_Button_Label || "",
                     }}
                     ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
@@ -230,16 +230,16 @@ console.log(homeData);
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part"dangerouslySetInnerHTML={{
-                        __html: homeData?.Results?.Results_List?.slice(-5)[3]?.Heading || "",
+                        __html: homeData?.Results?.Results_List?.slice(-6)[3]?.Heading || "",
                       }}
                   >
                   </div>
                 </div>
-                <a href={homeData?.Results?.Results_List?.slice(-5)[3]?.Case_Study_Link}>
+                <a href={homeData?.Results?.Results_List?.slice(-6)[3]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_primary">
                     <div
                       dangerouslySetInnerHTML={{
-                      __html: homeData?.Results?.Results_List?.slice(-5)[3]?.View_Button_Label || "",
+                      __html: homeData?.Results?.Results_List?.slice(-6)[3]?.View_Button_Label || "",
                     }}
                     ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
@@ -255,16 +255,42 @@ console.log(homeData);
               >
                 <div className="result-div-1 circle">
                   <div className="inner-part"dangerouslySetInnerHTML={{
-                        __html: homeData?.Results?.Results_List?.slice(-5)[4]?.Heading || "",
+                        __html: homeData?.Results?.Results_List?.slice(-6)[4]?.Heading || "",
                       }}
                   >
                   </div>
                 </div>
-                <a href={homeData?.Results?.Results_List?.slice(-5)[4]?.Case_Study_Link}>
+                <a href={homeData?.Results?.Results_List?.slice(-6)[4]?.Case_Study_Link}>
                   <div className="result-div-2 circle o_bg_teal">
                     <div
                       dangerouslySetInnerHTML={{
-                      __html: homeData?.Results?.Results_List?.slice(-5)[4]?.View_Button_Label || "",
+                      __html: homeData?.Results?.Results_List?.slice(-6)[4]?.View_Button_Label || "",
+                    }}
+                    ></div>
+                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                  </div>
+                </a>
+              </div>
+            </section>
+
+            <section className="">
+              <div
+                className="inner-row wow animate__zoomIn"
+                data-wow-duration="1.8s"
+                data-wow-delay="0.5s"
+              >
+                <div className="result-div-1 circle">
+                  <div className="inner-part"dangerouslySetInnerHTML={{
+                        __html: homeData?.Results?.Results_List?.slice(-6)[5]?.Heading || "",
+                      }}
+                  >
+                  </div>
+                </div>
+                <a href={homeData?.Results?.Results_List?.slice(-6)[5]?.Case_Study_Link}>
+                  <div className="result-div-2 circle o_bg_green">
+                    <div
+                      dangerouslySetInnerHTML={{
+                      __html: homeData?.Results?.Results_List?.slice(-6)[5]?.View_Button_Label || "",
                     }}
                     ></div>
                     <i className="fa-regular fa-arrow-right-long text-dark"></i>
