@@ -111,6 +111,9 @@
   .orange_right_col .content div:nth-child(2) p{
     display: none;
   }
+  .service_1:hover .item_inner p{
+    opacity: 1 !important;
+  }
   .submenu{
     width: 80%;
     border-radius: 3px;
@@ -3040,6 +3043,9 @@ body .testimonials-inner .carousel-indicators{
   .banner_section #myVideo{
         object-position: 81% 50%;
   }
+  .team_popup .modal-body{
+    padding: 0px 25px !important;
+  }
   .cc-text, .cc-image{
     margin-top: 0px !important;
   }
@@ -3047,18 +3053,19 @@ body .testimonials-inner .carousel-indicators{
     width: 50% !important;
     margin-bottom: 0px !important;
   }
+  .footer-row-2 .footer-col-1{
+    width: 100% !important;
+  }
   .news_banner .large_heading_2, .work_banner .large_heading_2{
     margin: 0px !important;
     padding: 0px !important;
-    max-width: 70%;
+    max-width: 80%;
   }
   .image-container img{
     min-height: 300px !important;
     max-height: 300px !important;
   }
-  .news_banner .large_heading_2{
-    max-width: 70% !important;
-  }
+ 
   body .services_team_slider .healthcare_col::after,
 body .services_team_slider .financial_col::after,
 body .services_team_slider .tourism_col::after,

@@ -1268,10 +1268,14 @@ left: -3.5%;
     min-height: auto;
   }
   .blog_banner{
-    min-height: 150px
+    min-height: 150px;
+    height: auto !important;
   }
   .blog_banner .row{
     height: auto;
+  }
+  .project-col img{
+    max-height: 250px;
   }
   .blog_col_2{
     background-color: transparent;
@@ -1323,8 +1327,11 @@ left: -3.5%;
   align-items: center !important;
   min-height: 80vh;
 }
-body .case-study-faqs .heading_col, .only_content{
+.only_content{
   min-height: 80vh !important;
+}
+body .case-study-faqs .heading_col{
+  min-height: 70vh;
 }
 .impact_section .content, .leader_section .content, .join-section .content, .blog-spotlight .content, .case-study-faqs .content, .case-study-faqs .accordion-part{
   margin: 0px!important;
