@@ -894,7 +894,7 @@ position: absolute;
   .info{
     position: relative;
   }
-  .info h3::after{
+  .info::after{
     position: absolute;
     content: "\f062";
     font-family: "Font Awesome 6 Free" !important;
@@ -902,6 +902,7 @@ position: absolute;
     right: 5px;
     bottom: 25px;
     transform: rotate(45deg);
+    color: #000;
 }
 .info h3{
   font-weight: 500;
@@ -919,11 +920,11 @@ position: absolute;
 /*  padding-right: 20px;*/
   transition: all 0.3s;
 }
-.Articles_intro:hover h3, .Articles_intro:hover .info h3::after, .Articles_intro:hover p{
+.Articles_intro:hover h3, .Articles_intro:hover .info::after, .Articles_intro:hover p{
   color: #fff !important;
   transition: all 0.5s;
 }
-.Articles_intro:hover .info h3:after{
+.Articles_intro:hover .info:after{
   right: 20px !important;
 }
 .on_hover-img{
@@ -1331,7 +1332,7 @@ left: -3.5%;
   min-height: 80vh !important;
 }
 body .case-study-faqs .heading_col{
-  min-height: 70vh;
+  min-height: 70vh !important;
 }
 .impact_section .content, .leader_section .content, .join-section .content, .blog-spotlight .content, .case-study-faqs .content, .case-study-faqs .accordion-part{
   margin: 0px!important;
@@ -1583,8 +1584,8 @@ body .case-study-faqs .heading_col{
       font-size: 15px !important;
     }
 
-    .info h3::after{
-      bottom: 21px !important;
+    .info::after{
+      bottom: 0px !important;
       font-size: 23px;
     }
     .Articles_intro:hover{

@@ -99,7 +99,7 @@
     position:relative;
    }
    .cc-text, .cc-image{
-    margin-top: 50px !important;
+    margin-top: 60px !important;
    }
    .connect a{
     text-decoration:none !important;
@@ -2797,23 +2797,55 @@ body .testimonials-inner .carousel-indicators{
   }
 }
 @media (min-width: 1300px) and (max-width: 1440px) {
+  .circle-container{
+    width: 350px !important;
+    height: 350px !important;
+  }
+  .circle-overlay p{
+    font-size: 13pt !important;
+  }
+  .impact_section .content p{
+    font-size: 16pt !important;
+  }
+  .cc-text, .cc-image{
+    height: 100vh;
+  }
+  body .split_impact-section .team_col::before{
+    margin-top: 60px !important;
+  }
+  .circle-overlay h3{
+    font-size: 20pt !important;
+  }
+  .circle-hover h3{
+    font-size: 18pt !important;
+  }
+
   .nav-items {
     padding-top: 100px;
     height: 100%;
     width: 60%;
 }
+.flexible_part .heading_col>div{
+  margin: 0px !important;
+}
 .impact_section h3.font_40 p{
   font-size: 44pt !important;
+}
+.faqs_section .heading_col .content p{
+  font-size: 16pt !important;
+}
+.flexible_part .content > div > p{
+  font-size: 32px !important;
 }
 .orange_right_col .content_inner h3{
   font-size: 28pt !important;
 }
-body .split_impact-section .team_col::before{
-  margin-top: 85px !important;
+.split_last_col.cc-text{
+  margin-top: 20px !important;
 }
-.executive_impact_section .img_1::after{
+/* .executive_impact_section .img_1::after{
   margin-top:20px;
-}
+} */
 .nav-items li ul{
   padding-top: 100px;
 }
