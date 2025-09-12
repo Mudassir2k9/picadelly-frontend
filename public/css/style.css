@@ -119,6 +119,12 @@
     border-radius: 3px;
     border-color: #cbcbcb78;
   }
+  body .accordion-body{
+    padding-top: 0px !important;
+  }
+   .join-left-col .content-outer-div>div{
+    margin: 0px !important;
+  }
   .dropdown-heading:hover, .dropdown-heading.show{
     background-color: #fff  !important;
     color: #8f8d8d;
@@ -2801,8 +2807,18 @@ body .testimonials-inner .carousel-indicators{
     width: 350px !important;
     height: 350px !important;
   }
+ 
   .circle-overlay p{
     font-size: 13pt !important;
+  }
+  .content-outer-div .content div:nth-child(2) h3{
+    font-size: 24pt !important;
+  }
+  body .accordion-button{
+    font-size: 20pt !important;
+  }
+  .accordion-body{
+    font-size: 16pt !important;
   }
   .impact_section .content p{
     font-size: 16pt !important;
@@ -3074,6 +3090,12 @@ body .testimonials-inner .carousel-indicators{
 @media only screen and (max-width: 576px) {
   .banner_section #myVideo{
         object-position: 81% 50%;
+  }
+  .executive_impact_section .img_1{
+    height: 400px !important;
+  }
+  body .split_impact-section .team_col{
+    min-height: 80vh !important;
   }
   .team_popup .modal-body{
     padding: 0px 25px !important;
