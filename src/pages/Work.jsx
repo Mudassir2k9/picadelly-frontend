@@ -146,7 +146,7 @@ const Work = () => {
                       __html: workData?.Results?.Results_List?.slice(-6)[0]?.View_Button_Label || "",
                     }}
                     ></div>
-                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                    <i className="fa-regular fa-arrow-right-long color_black"></i>
                   </div>
                 </a>
               </div>
@@ -171,7 +171,7 @@ const Work = () => {
                       __html: workData?.Results?.Results_List?.slice(-6)[1]?.View_Button_Label || "",
                     }}
                     ></div>
-                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                    <i className="fa-regular fa-arrow-right-long color_black"></i>
                   </div>
                 </a>
               </div>
@@ -196,7 +196,7 @@ const Work = () => {
                       __html: workData?.Results?.Results_List?.slice(-6)[2]?.View_Button_Label || "",
                     }}
                     ></div>
-                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                    <i className="fa-regular fa-arrow-right-long color_black"></i>
                   </div>
                 </a>
               </div>
@@ -221,7 +221,7 @@ const Work = () => {
                       __html: workData?.Results?.Results_List?.slice(-6)[3]?.View_Button_Label || "",
                     }}
                     ></div>
-                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                    <i className="fa-regular fa-arrow-right-long color_black"></i>
                   </div>
                 </a>
               </div>
@@ -246,7 +246,7 @@ const Work = () => {
                       __html: workData?.Results?.Results_List?.slice(-6)[4]?.View_Button_Label || "",
                     }}
                     ></div>
-                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                    <i className="fa-regular fa-arrow-right-long color_black"></i>
                   </div>
                 </a>
               </div>
@@ -271,7 +271,7 @@ const Work = () => {
                       __html: workData?.Results?.Results_List?.slice(-6)[5]?.View_Button_Label || "",
                     }}
                     ></div>
-                    <i className="fa-regular fa-arrow-right-long text-dark"></i>
+                    <i className="fa-regular fa-arrow-right-long color_black"></i>
                   </div>
                 </a>
               </div>

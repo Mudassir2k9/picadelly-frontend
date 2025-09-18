@@ -106,18 +106,18 @@ const Buzz = () => {
         <div className="container">
           <div className="row pt-5 w-auto mx-0">
             <h2 className="culture-heading color_primary">{buzzData?.Announcement?.Heading1}</h2>
-            <h2 className="text-dark pt-2 pb-5">
+            <h2 className="color_black pt-2 pb-5">
               {buzzData?.Announcement?.Heading2}
             </h2>
             <div
-              className="col-md-7 col-sm-12 text-dark announcement_para"
+              className="col-md-7 col-sm-12 color_black announcement_para"
               dangerouslySetInnerHTML={{
                 __html:
                   buzzData?.Announcement?.Announcement_Description_1 || "",
               }}
             ></div>
             <div
-              className="col-md-5 col-sm-12 text-dark announcement_para"
+              className="col-md-5 col-sm-12 color_black announcement_para"
               dangerouslySetInnerHTML={{
                 __html:
                   buzzData?.Announcement?.Announcement_Description_2 || "",

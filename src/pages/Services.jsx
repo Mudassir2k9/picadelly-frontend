@@ -209,7 +209,7 @@ const Services = () => {
         <div className="container">
           <div className="row">
             <div className="fix_width_content mx-auto text-center">
-              <h3 className="large_heading">
+              <h3 className="large_heading color_black">
                 {serviceData?.AllServices?.Heading1}{" "}
                 <strong>{serviceData?.AllServices?.Heading2}</strong>
               </h3>
@@ -224,7 +224,7 @@ const Services = () => {
                   <div className="strategy_wrap">
                     <div className="inner_wrap">
                       <div>
-                        <p className="text-dark">{service.description}</p>
+                        <p className="color_black">{service.description}</p>
                         <a
                           href="javascript:void(0)"
                           className="btn btn_primary btn_dark"
@@ -235,7 +235,7 @@ const Services = () => {
                         </a>
                       </div>
                     </div>
-                    <p className="text-dark fw-bold pt-3 font_18 px-4">
+                    <p className="color_black fw-bold pt-3 font_18 px-4">
                       {service.name}
                     </p>
                   </div>

@@ -197,7 +197,7 @@ const TalentExecutive = () => {
         <div className="col-md-6 px-5 d-flex align-items-center content_inner cc-image split_col img_3  orange_right_col">
            <div className="px-5 content ">
             <h3
-              className="font_40 fw-semibold text-dark wow animate__slideInLeft text-start"
+              className="font_40 fw-semibold color_black wow animate__slideInLeft text-start"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
               dangerouslySetInnerHTML={{

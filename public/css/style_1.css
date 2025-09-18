@@ -6,7 +6,7 @@
     padding-left: 40px;
 }
 .buzz_col h1 strong{
-    color: #000 !important;
+    color: #555 !important;
     font-weight: 600 !important;
 }
  .tourism_col {
@@ -107,10 +107,10 @@
      background-size: cover;
  }
  .announcement_para p{
-    color: #000 !important;
+    color: #555 !important;
  }
  .award-col h6, .award-col li{
-    color: #000 !important;
+    color: #555 !important;
  }
 
 

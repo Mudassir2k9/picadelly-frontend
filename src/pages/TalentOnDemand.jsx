@@ -172,7 +172,7 @@ const TalentOnDemand = () => {
               <div className="modal-header border-0">
                 <button
                   type="button"
-                  className="btn-close text-dark"
+                  className="btn-close color_black"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
@@ -184,7 +184,7 @@ const TalentOnDemand = () => {
                       src={`${baseUrl}${service.image?.url}`}
                       alt={service.image?.alternativeText || ""}
                     />
-                    <h5 className="text-dark fw_600 font_28 pt-3">
+                    <h5 className="color_black fw_600 font_28 pt-3">
                       {service.name}
                     </h5>
                   </div>
@@ -283,7 +283,7 @@ const TalentOnDemand = () => {
               <h3 className="color_black fw-bold">
                 {talentDemandData?.Services?.Heading}
               </h3>
-              <p className="font_20">
+              <p className="font_20 color_black">
                 {talentDemandData?.Services?.Description}
               </p>
             </div>
@@ -297,7 +297,7 @@ const TalentOnDemand = () => {
                   <div className="strategy_wrap">
                     <div className="inner_wrap">
                       <div>
-                        <p className="text-dark">{service.description}</p>
+                        <p className="color_black">{service.description}</p>
                         <a
                           href="javascript:void(0)"
                           className="btn btn_primary btn_dark d-none"
@@ -308,7 +308,7 @@ const TalentOnDemand = () => {
                         </a>
                       </div>
                     </div>
-                    <p className="text-dark fw-bold pt-3 font_18 px-4">
+                    <p className="color_black fw-bold pt-3 font_18 px-4">
                       {service.name}
                     </p>
                   </div>
@@ -521,7 +521,7 @@ const TalentOnDemand = () => {
             >
               {talentDemandData?.Brand_Section_Heading}
             </h3>
-            <p className="font_28 text-dark companies_section_para">
+            <p className="font_28 color_black companies_section_para">
               {talentDemandData?.Brand_Section_Description}
             </p>
           </div>

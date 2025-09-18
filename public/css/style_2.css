@@ -240,7 +240,7 @@ position: absolute;
 }
 
  .testimonials-inner .carousel-indicators .active, .team-section .carousel-indicators .active{
-     background-color:#000 !important;
+     background-color:#555 !important;
 }
 .testimonials_part::after {
   content: "";
@@ -471,6 +471,7 @@ position: absolute;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+    top:16px;
 }
 
 .accordion-part{
@@ -914,7 +915,7 @@ position: absolute;
   text-decoration: none;
 }
 .Articles_intro:hover{
-  background-color: #000;
+  background-color: #555;
   color: #fff !important;
   padding-left: 20px;
 /*  padding-right: 20px;*/
@@ -1048,7 +1049,7 @@ position: absolute;
     label {
       font-weight: 600;
       font-size: 13.6px;
-      color: #6c757d;
+      color: #555;
     }
   /*  .btn-submit {
       background-color: #f16522;

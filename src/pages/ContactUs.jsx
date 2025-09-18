@@ -190,7 +190,7 @@ const ContactUs = () => {
                 <h3 className="fw_600 text-white font_40">
                   {contactData?.Contact_Heading}
                 </h3>
-                <p className="font_18 fw_500 text-dark">
+                <p className="font_18 fw_500 color_black">
                   <a href={`mailto:${contactData?.Email}`}>
                     {contactData?.Email}
                   </a>

@@ -154,9 +154,9 @@ const NewsLanding = () => {
                           <a key={j} href={`/blog-detail?id=${blog?.documentId}`}>
                             <div className="Articles_intro">
                               <div className="info">
-                                <p className="text-dark">{cat.name}</p>
+                                <p className="color_black">{cat.name}</p>
                                 <h3
-                                  className="text-dark"
+                                  className="color_black"
                                   style={{ maxWidth: "80%" }}
                                   dangerouslySetInnerHTML={{
                                     __html: `${blog?.Blogs?.Blog_Title_1 || ""} ${blog?.Blogs?.Blog_Title_2 || ""}`
@@ -186,9 +186,9 @@ const NewsLanding = () => {
                             >
                               <div className="Articles_intro">
                                 <div className="info">
-                                  <p className="text-dark">{cat.name}</p>
+                                  <p className="">{cat.name}</p>
                                   <h3
-                                    className="text-dark"
+                                    className="color_black"
                                     style={{ maxWidth: "80%" }}
                                     dangerouslySetInnerHTML={{ __html: news.News.Title }}
                                   />

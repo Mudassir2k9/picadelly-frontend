@@ -122,7 +122,7 @@ const About = () => {
         .piccadilly-style {
   font-size: 98pt !important;
   font-weight: 700 !important;
-  color: black !important;
+  color: #555 !important;
 }
       .menu-line{
       background-color: #000 !important;
@@ -164,7 +164,7 @@ const About = () => {
                 <div className="modal-header border-0">
                   <button
                     type="button"
-                    className="btn-close text-dark"
+                    className="btn-close color_black"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   ></button>
@@ -173,7 +173,7 @@ const About = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <img src={imgSrc} alt={fullName} className="img-fluid" />
-                      <h5 className="text-dark fw-bold pt-3">{fullName}</h5>
+                      <h5 className="color_black fw-bold pt-3">{fullName}</h5>
                       <p>{Portfolio}</p>
                       <p className="team_contacts">
                         {Contact?.map((contact, i) => (
@@ -237,7 +237,7 @@ const About = () => {
         <div className="about_row row mx-0">
           <div className="about_heading_col d-flex align-items-end align-items-md-center justify-content-center justify-content-md-end overflow-hidden">
             <h1
-              className="large_heading px-0 text-center text-md-start wow animate__fadeInRight"
+              className="large_heading color_black px-0 text-center text-md-start wow animate__fadeInRight"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
             >
@@ -290,7 +290,7 @@ const About = () => {
               >
                  {aboutData?.TeamSectionHeading}
               </h3>
-              <p className="font_18 text-dark">
+              <p className="font_18 color_black">
                 {aboutData?.TeamSectionDescription}
               </p>
             </div>
@@ -349,17 +349,17 @@ const About = () => {
                 >
                   <div className="team_circle text-center d-flex align-items-center justify-content-center">
                     <div>
-                      <h3 className="text-dark fw-bold team_name font_40">
+                      <h3 className="color_black fw-bold team_name font_40">
                         {FirstName}
                       </h3>
-                      <h4 className="text-dark fw-bold team_last_name">
+                      <h4 className="color_black fw-bold team_last_name">
                         {LastName}
                       </h4>
-                      <p className="team_post text-dark text-center">
+                      <p className="team_post color_black text-center">
                         {Portfolio}
                       </p>
-                      <p className="text-dark text-center">{TagLine}</p>
-                      <i className="fa-solid fa-circle-user text-dark"></i>
+                      <p className="color_black text-center">{TagLine}</p>
+                      <i className="fa-solid fa-circle-user color_black"></i>
                     </div>
                   </div>
                 </a>
@@ -397,7 +397,7 @@ const About = () => {
             <div className="modal-header border-0">
               <button
                 type="button"
-                className="btn-close text-dark"
+                className="btn-close color_black"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
@@ -406,7 +406,7 @@ const About = () => {
               <div className="row">
                 <div className="col-md-4">
                   <img src="images/pop-up-craig.png" />
-                  <h5 className="text-dark fw-bold pt-3">Craig Brown</h5>
+                  <h5 className="color_black fw-bold pt-3">Craig Brown</h5>
                   <p>Chief Digital Officer</p>
                   <p className="team_contacts">
                     <a href="javascript:void(0)">
@@ -418,7 +418,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="col-md-8">
-                  <p className="font_14">
+                  <p className="font_14 color_black">
                     Craig is a seasoned advertising and marketing leader with
                     over 30 years of experience working with C-level executives
                     and brand specialists to deliver performance-driven digital
@@ -454,7 +454,7 @@ const About = () => {
             <div className="modal-header border-0">
               <button
                 type="button"
-                className="btn-close text-dark"
+                className="btn-close color_black"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
@@ -463,7 +463,7 @@ const About = () => {
               <div className="row">
                 <div className="col-md-4">
                   <img src="images/pop-up-vintage.png" />
-                  <h5 className="text-dark fw-bold pt-3">Vintage Foster</h5>
+                  <h5 className="color_black fw-bold pt-3">Vintage Foster</h5>
                   <p>CEO</p>
                   <p className="team_contacts">
                     <a href="javascript:void(0)">
@@ -475,7 +475,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="col-md-8">
-                  <p className="font_14">
+                  <p className="font_14 color_black">
                     Vintage founded Piccadilly in the Bay Area in 2007 and has
                     since expanded it across multiple cities, including Los
                     Angeles, Dallas, and Vancouver. Under his leadership,
@@ -550,17 +550,17 @@ const About = () => {
             >
               <div className="team_circle text-center d-flex align-items-center justify-content-center">
                 <div>
-                  <h3 className="text-dark fw-bold team_name font_40">
+                  <h3 className="color_black fw-bold team_name font_40">
                     {FirstName}
                   </h3>
-                  <h4 className="text-dark fw-bold team_last_name">
+                  <h4 className="color_black fw-bold team_last_name">
                     {LastName}
                   </h4>
-                  <p className="team_post text-dark text-center">
+                  <p className="team_post color_black text-center">
                     {Portfolio}
                   </p>
-                  <p className="text-dark text-center">{TagLine}</p>
-                  <i className="fa-solid fa-circle-user text-dark"></i>
+                  <p className="color_black text-center">{TagLine}</p>
+                  <i className="fa-solid fa-circle-user color_black"></i>
                 </div>
               </div>
             </a>
