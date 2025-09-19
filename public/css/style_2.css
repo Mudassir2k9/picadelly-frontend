@@ -1,6 +1,6 @@
 .executive_banner{
           background-image: url(../images/services-bg1.jpg);
-        height: 800px;
+        /* height: 800px; */
         background-size: cover;
         background-position: center;
         background-repealt: no-repealt;
@@ -10,11 +10,12 @@
      color: #fff;
      font-size: 30px;
 }
+
 .join-section .content div:nth-child(2) p{
   display: none !important;
 }
 .executive_col{
-    min-height: 500px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -832,6 +833,8 @@ position: absolute;
      }
      .blog-right-col{
       background-image: url(../images/spotlight-img.png);
+      background-size: cover;
+      background-repeat: no-repeat;
 
      }
      .blog-right-col::after{
@@ -864,15 +867,19 @@ position: absolute;
         color: var(--primary_color) !important;
       }
   .pills-part .nav-pills .nav-link{
-        color: gray !important;
+      color: gray !important;
     font-weight: 600;
     font-size: 18px;
-    padding: 8px 20px !important;
-/*    width: 130px;*/
+    padding: 0px 20px !important;
+    /* width: 130px; */
     text-align: center;
     border-right: 1px solid #b5b0b0;
+    /* margin-bottom: 12px; */
     border-radius: 0px;
 
+  }
+  .nav-pills{
+    margin-bottom: 20px;
   }
   .pills-part .nav-pills .nav-link:nth-last-child() {
     border-right: 0px !important;

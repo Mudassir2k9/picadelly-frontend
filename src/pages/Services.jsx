@@ -235,19 +235,18 @@ const Services = () => {
                         </a>
                       </div>
                     </div>
-                    <p className="color_black fw-bold pt-3 font_18 px-4">
-                      {service.name}
-                    </p>
+                  
                   </div>
                   <div className="before_hover_content">
                     <img
                       src={`${baseUrl}${service.image?.url}`}
                       alt={service.image?.alternativeText || ""}
                     />
-                    <p className="text-white fw-bold font_18 pt-3 fade_text">
+                    
+                  </div>
+                  <p className="text-white fw-bold font_18 pt-3 fade_text">
                       {service.name}
                     </p>
-                  </div>
                 </div>
               </div>
             ))}

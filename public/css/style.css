@@ -99,7 +99,7 @@
     position:relative;
    }
    .cc-text, .cc-image{
-    margin-top: 60px !important;
+    margin-top: 200px !important;
    }
    .connect a{
     text-decoration:none !important;
@@ -108,12 +108,18 @@
   .connect a:hover{
     color: var(--teal-dark);
   }
+  .pills-part ul li:last-child a{
+    border-right: 0px !important;
+  }
   .orange_right_col .content div:nth-child(2) p{
     display: none;
   }
   .team-item p{
     position: relative;
     z-index: 11111;
+  }
+  .services_section .col-xl-10 p{
+         max-width: 100% !important;
   }
   .heading_inner_col h3{
     line-height: 80px !important;
@@ -189,6 +195,11 @@
     border-bottom: 0;
     border-left: .3em solid transparent;
   }
+   .parallax_container .large_heading {
+   
+    line-height: 58pt;
+    font-weight: 600 !important;
+  }
   .sidebar{
     margin-top:30px !important;
   }
@@ -212,6 +223,9 @@
     color: orange;
     top: 6px !important;
 
+  }
+  .footer-section .container {
+    max-width: 90% !important;
   }
   .submenu li{
     position: relative;
@@ -404,7 +418,7 @@ header.sticky {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgb(233 233 233 / 45%);
+  background-color: rgb(233 233 233 / 100%);
   will-change: transform;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 111111;
@@ -589,6 +603,10 @@ header.sticky .navbar-custom {
 .circle-hover a:hover {
   color: #000 !important;
   transition: all 0.3s;
+}
+.on_demand_services_section .col-xl-10 h3{
+  font-size: 36pt !important;
+  font-weight: 600 !important;
 }
 .banner_section {
   height: 700px;
@@ -1612,6 +1630,14 @@ body .footer-col-1 img {
   transform: scale(1) !important;
   z-index: 111;
 }
+.strategy_row .service_1 .item_inner:hover  p:nth-child(3){
+  transform: translateY(60px) !important;
+   transition: transform 0.5s ease;
+   font-weight: 600 !important;
+}
+.on_demand_services_section .item_inner .inner_wrap p{
+  margin-bottom: 0px !important;
+}
 .inner_wrap {
   height: 240px;
   width: 240px;
@@ -2278,9 +2304,7 @@ body .testimonials-inner .carousel-indicators{
   .footer-col ul li {
     line-height: 30px !important;
   }
-  .footer-section .container {
-    max-width: 90% !important;
-  }
+  
 
   .footer-col h5 {
     font-size: 20px !important;
@@ -2470,7 +2494,7 @@ body .testimonials-inner .carousel-indicators{
   }
   .team_section .heading_col p {
     font-size: 20pt !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
   }
   .team_section .heading_col > div {
     padding: 0px !important;
@@ -2503,7 +2527,7 @@ body .testimonials-inner .carousel-indicators{
   }
   .parallax_container .large_heading {
     font-size: 64pt !important;
-    line-height: 77pt;
+    line-height: 58pt;
     font-weight: 600 !important;
   }
   .about_section .fix_width_content {
@@ -3120,8 +3144,16 @@ body .testimonials-inner .carousel-indicators{
   .banner_section #myVideo{
         object-position: 81% 50%;
   }
+  .strategy_row .service_1 .item_inner:hover p:nth-child(3) {
+    transform: translateY(36px) !important;
+    transition: transform 0.5s ease;
+    font-weight: 600 !important;
+}
   .executive_impact_section .img_1{
     height: 400px !important;
+  }
+  .footer-section .container{
+    max-width: 100% !important;
   }
   body .split_impact-section .team_col{
     min-height: 80vh !important;
@@ -3178,7 +3210,7 @@ body .services_team_slider .education_col::after,  body .work_slider .tourism_co
 
 .about_row .item.Piccadilly h4{
   padding-right: 0px !important;
-  color: #212529 !important;
+  color: #555 !important;
   font-size: 55px !important;
   font-weight: 600 !important;
 }

@@ -19,7 +19,9 @@ const TalentExecutive = () => {
         console.error("Error fetching header data:", error);
       });
   }, []);
+     
   console.log(talentExectiveData);
+  
   return (
     <>
     <title>{talentExectiveData?.PageTitle}</title>
@@ -119,6 +121,16 @@ const TalentExecutive = () => {
     left: auto !important;
     right: -290px !important;
         }
+    .scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.scroll-reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 `}</style>
