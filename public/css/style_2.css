@@ -298,11 +298,15 @@ position: absolute;
 
   .On-Demand-banner{
     background-image: url(../images/on-demand_bg.png);
+    background-attachment: fixed;
 
   }
   .flexible_part{
     background-image: url(../images/flexible_bg.png);
       min-height: 100vh;
+      background-attachment: fixed;
+      position: sticky;
+      top: 0;
 
   }
   .flexible_part::after{
@@ -397,6 +401,7 @@ position: absolute;
   .faqs_stick_part{
     position: sticky !important;
     top: 0;
+    background-attachment: fixed;
   }
   .faqs_section .team_col::after{
      position: absolute;

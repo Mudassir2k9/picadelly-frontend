@@ -325,6 +325,7 @@ const TalentOnDemand = () => {
             ))}
           </div>
         </div>
+        
       </section>
 
       {/* <!------FAQ's Section------> */}
@@ -390,6 +391,7 @@ const TalentOnDemand = () => {
           <div className="px-5 col-md-6 d-flex align-items-center"></div>
         </div>
       </div>
+
  {/*<------split-scroll-section----->*/}
 
          <div className="container-fluid bg_cover px-0  position-relative  justify-content-center align-items-center">
