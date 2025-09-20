@@ -118,6 +118,7 @@
  .team-section {
      background-color: gray;
      height: auto;
+     min-height: 100vh !important;
 
  }
 

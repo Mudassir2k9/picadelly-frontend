@@ -133,6 +133,9 @@
   .service_1:hover .item_inner p{
     opacity: 1 !important;
   }
+  #slide1 p{
+     color: #88898d !important;
+  }
   .submenu{
     width: 80%;
     border-radius: 3px;
@@ -408,7 +411,7 @@ header {
   position: absolute !important; /* normal at first */
   padding: 0px 6%;
   border-bottom-right-radius: 0px !important;
-  z-index: 100;
+  z-index: 11111;
   background-color: transparent; /* or same as page background */
   transition: all 0.3s ease;
   width: 100% !important;
@@ -522,7 +525,7 @@ header.sticky .navbar-custom {
   transform: translateY(-11px) translateY(50%) rotate(45deg);
 }
 #header.open .overlay {
-  width: 50% !important;
+  width: 45% !important;
 }
 .overlay {
   height: 100%;
@@ -698,7 +701,7 @@ header.sticky .navbar-custom {
 .nav-items {
   padding-top: 130px;
   height: 100%;
-  width: 60%;
+  width: 55%;
 }
 .nav-items li {
   list-style: none;
@@ -719,14 +722,14 @@ header.sticky .navbar-custom {
   padding-left: 30px;
 }
 .nav-items li:hover ul {
-  width: 40%;
+  width: 45%;
   transition: all 0.3s;
 }
 .nav-items li ul li a {
   padding: 2px 10px !important;
 }
 .nav-items li ul.visible {
-  width: 40%;
+  width: 45%;
 }
 .nav-items > li > a {
   position: relative;
@@ -738,7 +741,7 @@ header.sticky .navbar-custom {
   height: 15px;
   width: 15px;
   background-color: rgb(36 145 154 / 80%);
-  right: -14px;
+  right: 16px;
   z-index: 11;
   margin-top: 18px;
   display: none;
@@ -762,6 +765,7 @@ header.sticky .navbar-custom {
   /* padding-bottom: 112px !important; */
   padding-top: 70px;
   z-index: 1111;
+  min-height: 100vh;
 }
 .happening_video video,
 .happening_video {
@@ -1554,6 +1558,7 @@ position: absolute;
   position: relative;
   background-position: bottom;
   background-attachment: fixed;
+  min-height: 100vh;
 }
 body .footer-col-1 img {
   max-width: 160px;
@@ -1617,9 +1622,11 @@ body .footer-col-1 img {
   transform: scale(0) !important;
 }
 .strategy_row{
-  padding-bottom: 70px;
+  padding-bottom: 50px;
 }
-
+.strategy_row p{
+  min-height: 100px;
+}
 .strategy_row .service_1 .item_inner:hover .before_hover_content {
   opacity: 0;
   transition: all 0.2s;
@@ -2142,6 +2149,7 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
 .meet_team, .team_section, .culture_section{
   position: relative;
   z-index: 11;
+  min-height: 100vh;
 }
 .img_wrapper:has(#nextText), .img_wrapper:has(#prevText){
   position: relative;
@@ -2275,7 +2283,7 @@ body .testimonials-inner .carousel-indicators{
     height: 25px !important;
     width: 25px !important;
     font-size: 15px !important;
-    margin-left: 20px;
+    
   }
 
   body .service_modal.team_popup .modal-body .col-md-4 {
@@ -2540,7 +2548,7 @@ body .testimonials-inner .carousel-indicators{
     max-width: 100% !important;
   }
   .services_section {
-    padding-top: 100px !important;
+    padding-top: 70px !important;
   }
   .services_section .service_1 div:nth-child(2) p,
   .strategy_wrap p {
@@ -2561,7 +2569,7 @@ body .testimonials-inner .carousel-indicators{
     width: 300px;
   }
   .services_section .overflow_slider {
-    padding-top: 5rem !important;
+    padding-top: 3rem !important;
     padding-bottom: 30px !important;
   }
   /*.services_section .strategy_slider .owl-stage-outer {
@@ -2626,17 +2634,17 @@ body .testimonials-inner .carousel-indicators{
     font-size: 16pt !important;
   }
   .accordion-button {
-    font-size: 24pt !important;
+    font-size: 18pt !important;
   }
   .accordion-button::after {
-    height: 30px !important;
-    width: 30px !important;
-    font-size: 19px !important;
+    height: 28px !important;
+    width: 28px !important;
+    font-size: 18px !important;
     margin-left: 20px;
   }
   .accordion-body {
-    font-size: 18pt;
-    line-height: 26pt !important;
+    font-size: 16pt;
+    line-height: 22pt !important;
   }
   .circle-1 h2 {
     font-size: 60pt !important;
@@ -2859,7 +2867,7 @@ body .testimonials-inner .carousel-indicators{
     height: 350px !important;
   }
     body .accordion-button p{
-  max-width: 400px !important;
+  max-width: 500px !important;
 }
   .circle-overlay p{
     font-size: 13pt !important;
@@ -2868,10 +2876,10 @@ body .testimonials-inner .carousel-indicators{
     font-size: 24pt !important;
   }
   body .accordion-button{
-    font-size: 20pt !important;
+    font-size: 16pt !important;
   }
   .accordion-body{
-    font-size: 16pt !important;
+    font-size: 14pt !important;
   }
   .impact_section .content p{
     font-size: 16pt !important;
@@ -2892,7 +2900,7 @@ body .testimonials-inner .carousel-indicators{
   .nav-items {
     padding-top: 100px;
     height: 100%;
-    width: 60%;
+    width: 55%;
 }
 .flexible_part .heading_col>div{
   margin: 0px !important;
@@ -2910,7 +2918,7 @@ body .testimonials-inner .carousel-indicators{
   font-size: 28pt !important;
 }
 .split_last_col.cc-text{
-  margin-top: 20px !important;
+  margin-top: 200px !important;
 }
 /* .executive_impact_section .img_1::after{
   margin-top:20px;

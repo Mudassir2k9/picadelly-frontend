@@ -181,7 +181,7 @@ position: absolute;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 100vh !important;
 }
 .testimonials-heading{
   max-width: 500px;
@@ -299,7 +299,13 @@ position: absolute;
   .On-Demand-banner{
     background-image: url(../images/on-demand_bg.png);
     background-attachment: fixed;
+    position: relative;
 
+  }
+ 
+  .On-Demand-banner .executive_col{
+    position: relative;
+    z-index: 1111;
   }
   .flexible_part{
     background-image: url(../images/flexible_bg.png);
