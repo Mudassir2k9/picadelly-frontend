@@ -100,17 +100,21 @@ window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
   const currentScroll = window.scrollY;
 
-  if (currentScroll > lastScrollTop && currentScroll > 100) {
-    // Scrolling DOWN → show navbar
-    header.classList.add("sticky");
-  } else {
-    // Scrolling UP → hide navbar
+  if (currentScroll <= 0) {
+    // At the very top → always remove sticky
     header.classList.remove("sticky");
+  } else if (currentScroll > lastScrollTop) {
+    // Scrolling DOWN → hide navbar
+    header.classList.remove("sticky");
+  } else {
+    // Scrolling UP → show navbar
+    header.classList.add("sticky");
   }
 
   // update last scroll position
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  lastScrollTop = currentScroll;
 });
+
 
 // let lastScrollTop = 0; // store previous scroll position
 // let scrollTimeout;
