@@ -441,7 +441,7 @@ header.sticky {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgb(233 233 233 / 100%);
+  background-color: #fff;
   will-change: transform;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 111111;
@@ -2273,7 +2273,7 @@ body .testimonials-inner .carousel-indicators{
     font-size: 16pt !important;
   }
   .contact-col h1 {
-    font-size: 83pt !important;
+    font-size: 74pt !important;
   }
   body .form-inner-div .btn_primary {
     padding: 8px 45px !important;
@@ -2460,7 +2460,7 @@ body .testimonials-inner .carousel-indicators{
     line-height: 90px;
   }
   .about_section h4.piccadilly-style {
-    font-size: 115pt !important;
+    font-size: 105pt !important;
     font-weight: 600 !important;
     color: #555 !important;
   }
@@ -2513,7 +2513,7 @@ body .testimonials-inner .carousel-indicators{
     font-weight: 300 !important;
   }
   .about_heading_col h1 {
-    font-size: 115pt !important;
+    font-size: 105pt !important;
     font-weight: 400;
     padding-right: 30px !important;
   }
