@@ -81,25 +81,25 @@
       height: 100%;
       margin: 0;
     }
-    body:has(.snap-container){
+/*    body:has(.snap-container){
    height: 100%;
       margin: 0;
       overflow: hidden;
     }
 .snap-container {
   position: fixed;
-  inset: 0;                        /* top:0; right:0; bottom:0; left:0; */
-  overflow-y: auto;                /* only this element scrolls */
+  inset: 0; 
+  overflow-y: auto;  
   -webkit-overflow-scrolling: touch;
-  scroll-snap-type: y mandatory;   /* enable vertical snap */
-  scroll-behavior: smooth;          /* smooth snapping */
+  scroll-snap-type: y mandatory;   
+  scroll-behavior: smooth;         
 }
 .snap-container > section {
  min-height: 100vh;   
-  scroll-snap-align: start;   /* align to top when snapped */
-  scroll-snap-stop: always;   /* be strict about snapping */
+  scroll-snap-align: start; 
+  scroll-snap-stop: always; 
   display: block;
-}
+}*/
 :root {
   --primary_color: #f2682a;
   --black: #000;
