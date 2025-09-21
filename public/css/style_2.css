@@ -789,6 +789,14 @@ position: absolute;
           list-style: none;
           width: 250px;
      }
+     .social_listing ul{
+       width: 250px;
+       padding-left: 0px;
+     }
+     .social_listing li{
+      list-style: none;
+     
+     }
      .overlay-div{
       padding: 30px;
      }
@@ -1216,6 +1224,9 @@ position: absolute;
   height: 100%;
 }
 @media only screen and (max-width:576px) {
+  .list-col{
+    justify-content: flex-start !important;
+  }
   .blog_detail_banner .separate_col_1, .blog_detail_banner .blog_col_2{
     min-height: auto !important;
   }

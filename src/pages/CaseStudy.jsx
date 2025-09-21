@@ -77,14 +77,51 @@ const CaseStudy = () => {
 `}</style>
       <div className="container-fluid case_study_banner separate px-0">
         <div className="row banner-row mx-0">
-          <div className="col-md-6 case_study-col-1 heading_part separate_col_1 px-0 blog_col-2">
+          <div className="col-md-6 case_study-col-1 heading_part separate_col_1 px-0 blog_col-2 flex-wrap justify-content-start">
+          <div>
             <div className="inner-div">
+            <div>
               <h1 className="font_20">{currentCase?.Heading1}</h1>
               <div
                 dangerouslySetInnerHTML={{ __html: currentCase?.Heading2 }}
               />
             </div>
+            </div>
+                          <div className=" d-flex pt-3 social_listing ">
+                <div className="list-inner">
+                  <p className="fw_600">SHARE THIS:</p>
+                  <ul className="blog_icon_col d-flex justify-content-between">
+                    <li>
+                      <a href="#" target="_blank" 
+                  rel="noopener noreferrer">
+                        <i className="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" 
+                  rel="noopener noreferrer">
+                        <i className="fa-brands fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" 
+                  rel="noopener noreferrer">
+                        <i className="fa-brands fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" target="_blank" 
+                  rel="noopener noreferrer">
+                        <i className="fa-solid fa-envelope"></i>
+                      </a>
+                    </li>
+                   
+                  </ul>
+                </div>
+              </div>
+              </div>
           </div>
+
           <div className="col-md-6 banner-col blog_col-2 separate_col_1 separate_col_2 case_study-col-1">
             <div className="inner-div d-flex" style={{ width: "100%" }}>
               <div

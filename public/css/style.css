@@ -448,6 +448,8 @@ header.sticky {
   backdrop-filter: blur(10px);
   padding-top: 7px;
   padding-bottom: 7px;
+  height: 110px;
+  display: flex;
 }
 .modal-body .col-md-8 p, .flexible_part .content > div > p, .content-outer-div .content div:nth-child(2) h3, .content-outer-div .content > h3, .companies_section_heading, .stories-section-heading, .testimonials_part .carousel-item p, .impact_section .content .impact_section_heading span, .impact_section .content div:nth-child(2) p, .unordered li, .unordered li span, .only_content .content_inner span, .executive_banner.work_banner .large_heading_2 span, .right-sidebar p, .right-sidebar li, .team-item p, .award-col h5{
   color: #555 !important;
