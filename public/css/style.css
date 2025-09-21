@@ -2202,6 +2202,21 @@ body .services_team_slider .right_content_col img, body .work_slider .right_cont
       height: 110% !important;
 
 }
+.buzz_img{
+  height: 250px;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.buzz_img img{
+    width: auto !important;
+    max-height: 250px !important;
+    height: auto !important;
+    max-width: 240px;
+}
 @media only screen and (min-width: 768px){
       .accordion-part{
         height: 300px !important;
