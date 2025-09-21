@@ -115,25 +115,51 @@ const BlogDetail = () => {
                   <p className="fw_600">SHARE THIS:</p>
                   <ul className="blog_icon_col d-flex justify-content-between">
                     <li>
-                      <a href="#" target="_blank" 
+                      <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+    window.location.origin + window.location.pathname + "?id=" + currentBlogC?.documentId
+  )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-brands fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank" 
+                      <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+    window.location.origin + window.location.pathname + "?id=" + currentBlogC.documentId
+  )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-brands fa-linkedin-in"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#" target="_blank" 
-                  rel="noopener noreferrer">
+                      <a
+                        href={`${window.location.origin}${window.location.pathname}?id=${currentBlogC.documentId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => {
+                          e.preventDefault();
+
+                          const shareUrl = `${window.location.origin}${window.location.pathname}?id=${currentBlogC.documentId}`;
+
+                          if (navigator.share) {
+                            // 📱 Mobile → open native share sheet (Instagram will appear if installed)
+                            navigator.share({
+                              title: "Check this out!",
+                              url: shareUrl,
+                            });
+                          } else {
+                            // 💻 Desktop → fallback, just open the link so user can copy/share
+                            window.open(shareUrl, "_blank");
+                          }
+                        }}
+                      >
                         <i className="fa-brands fa-instagram"></i>
                       </a>
+
                     </li>
                     <li>
-                      <a href="#" target="_blank" 
+                      <a href={`mailto:?subject=Check this out!&body=${encodeURIComponent(
+    window.location.origin + window.location.pathname + "?id=" + currentBlogC?.documentId
+  )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-solid fa-envelope"></i>
                       </a>

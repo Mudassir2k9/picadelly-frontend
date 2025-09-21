@@ -543,7 +543,7 @@ const About = () => {
         <div className="carousel-inner-div">
           <div className="team_overlay">
             <a
-              href="javascript:void(0)"
+              href="#!"
               className="text-decoration-none"
               data-bs-toggle="modal"
               data-bs-target={`#team${member.id}`}
