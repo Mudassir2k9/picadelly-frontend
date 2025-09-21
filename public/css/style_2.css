@@ -298,7 +298,6 @@ position: absolute;
 
   .On-Demand-banner{
     background-image: url(../images/on-demand_bg.png);
-    background-attachment: fixed;
     position: relative;
 
   }

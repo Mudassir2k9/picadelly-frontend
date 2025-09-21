@@ -77,6 +77,29 @@
   font-style: normal;
   font-display: swap;
 }
+  html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body:has(.snap-container){
+   height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+.snap-container {
+  position: fixed;
+  inset: 0;                        /* top:0; right:0; bottom:0; left:0; */
+  overflow-y: auto;                /* only this element scrolls */
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y mandatory;   /* enable vertical snap */
+  scroll-behavior: smooth;          /* smooth snapping */
+}
+.snap-container > section {
+ min-height: 100vh;   
+  scroll-snap-align: start;   /* align to top when snapped */
+  scroll-snap-stop: always;   /* be strict about snapping */
+  display: block;
+}
 :root {
   --primary_color: #f2682a;
   --black: #000;
@@ -273,8 +296,6 @@ body .team-item h2 {
 } */
 body {
   font-family: "Inter Tight";
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 .left_member_col img{
   height: 100% !important;
@@ -283,7 +304,6 @@ body {
 html {
   margin: 0;
   padding: 0;
-  /*      overflow-x: hidden;*/
 }
 
 
@@ -1333,10 +1353,10 @@ background-image: url("../images/bubbles-img.jpg");
   background-position: center;
   min-height: 100vh;
 }
-.about_banner.executive_banner {
+/*.about_banner.executive_banner {
   position: sticky;
   top: 0;
-}
+}*/
 .about_section {
   position: relative;
   z-index: 11;
@@ -2479,7 +2499,7 @@ body .testimonials-inner .carousel-indicators{
 }*/
   .executive_banner .large_heading_2,
   .executive_banner .large_heading_2 p {
-    font-size: 98pt;
+    font-size: 89pt;
     max-width: inherit !important;
     line-height: 98pt;
            font-weight: 600 !important;

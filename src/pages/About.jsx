@@ -232,7 +232,7 @@ const About = () => {
       </section>*/}
 
       {/* <!-- start about section --> */}
-
+<div className="snap-container">
       <section className="about_section container-fluid executive_banner about_banner px-0" id="We-are-Picadilly">
         <div className="about_row row mx-0">
           <div className="about_heading_col d-flex align-items-end align-items-md-center justify-content-center justify-content-md-end overflow-hidden">
@@ -506,7 +506,7 @@ const About = () => {
 
       {/* <!----about-mobile-slider-section----> */}
 
-        <div className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center" id="team-leaders">
+        <section className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center" id="team-leaders">
         {/* <!-- Carousel --> */}
         <div
           id="demo"
@@ -596,7 +596,7 @@ const About = () => {
   </button>
           
         </div>
-      </div>
+      </section>
 
       {/* //for mobile view */}
 
@@ -637,6 +637,7 @@ const About = () => {
           </div> */}
         </div>
       </section>
+      </div>
     </>
   );
 };
