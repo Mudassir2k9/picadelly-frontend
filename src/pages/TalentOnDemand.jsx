@@ -115,10 +115,7 @@ const TalentOnDemand = () => {
     .navbar-brand p{
       color:#fff !important;
     }
-      .nav-btn .btn_primary{
-      color:#000;
-      background-color:#fff;
-      }
+      
       .nav-btn .btn_primary:hover{
         background-color:var(--primary_color) !important;
         color:#fff !important;
