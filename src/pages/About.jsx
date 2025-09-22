@@ -10,7 +10,7 @@ const About = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/about?populate[PicadellyTeam][populate]=*&populate[Section2][populate]=*&populate[ImagesSlider][populate]=*`
+        `${apiUrl}/about?populate[PicadellyTeam][populate]=*&populate[Section2][populate]=*&populate[ImagesSlider][populate]=*&populate[seo][populate]=*`
       )
       .then((res) => {
         setAboutData(res.data.data);
@@ -114,7 +114,15 @@ const About = () => {
 
   return (
     <>
-    <title>{aboutData?.PageTitle}</title>
+    <title>{aboutData?.seo?.metaTitle || aboutData?.PageTitle}</title>
+    <meta
+      name="description"
+      content={aboutData?.seo?.metaDescription}
+    />
+    <meta
+      property="og:image"
+      content={`${baseUrl}${aboutData?.seo?.metaImage?.url}`}
+    />
       <style>{`
       .about_row .about_right_content_col.transparent-bg {
         background: transparent !important;
