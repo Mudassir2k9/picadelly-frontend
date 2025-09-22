@@ -234,7 +234,7 @@ const BlogDetail = () => {
                               className="dropdown-item sub-item"
                               href={`/blog-detail?id=${blog?.documentId}`}
                             >
-                              {blog?.Blogs?.Blog_Title_2}
+                              {blog?.Blogs?.Blog_Title_2 || blog?.Blogs?.Blog_Title_1}
                             </a>
                           </li>
                         ))
