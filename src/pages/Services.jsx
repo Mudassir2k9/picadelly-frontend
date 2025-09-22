@@ -101,6 +101,10 @@ const Services = () => {
     <title>{serviceData?.PageTitle}</title>
       {/* <!-- team modals --> */}
       <style>{`
+              body .nav-btn .btn_primary{
+    background-color: #fff !important;
+    color: #000 !important;
+    }
   .hamburger i {
     color: #fff !important;
   }

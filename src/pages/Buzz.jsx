@@ -54,10 +54,15 @@ const Buzz = () => {
     <>
     <title>{buzzData?.PageTitle}</title>
     <style>{`
+        body .nav-btn .btn_primary{
+    background-color: #fff !important;
+    color: #000 !important;
+    }
      @media only screen and (max-width :576px) {
      .hamburger .menu-line{
     background-color: #000 !important;
   }
+
      } 
 `}</style>
       <div className="container-fluid buzz-banner pt-5 px-0 bg_cover">

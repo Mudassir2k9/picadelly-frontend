@@ -453,6 +453,10 @@ header.sticky {
 header.sticky .menu-line {
   background-color: #000 !important;
 }
+header.sticky .nav-btn .btn_primary{
+  background-color: var(--primary_color) !important;
+  color: #fff !important
+}
 .modal-body .col-md-8 p,
 .flexible_part .content > div > p,
 .content-outer-div .content div:nth-child(2) h3,

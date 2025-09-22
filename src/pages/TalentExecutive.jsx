@@ -26,6 +26,10 @@ const TalentExecutive = () => {
     <>
     <title>{talentExectiveData?.PageTitle}</title>
       <style>{`
+              body .nav-btn .btn_primary{
+    background-color: #fff !important;
+    color: #000 !important;
+    }
 // .executive_banner{
 //           margin-bottom: 80vh; 
 // }
