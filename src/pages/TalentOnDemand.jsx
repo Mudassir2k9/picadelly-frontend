@@ -238,7 +238,7 @@ const TalentOnDemand = () => {
           </div>
         </div>
       ))}
-      <div className="container-fluid executive_banner On-Demand-banner">
+      <div className="inner_page_section container-fluid executive_banner On-Demand-banner">
         <div className="container">
           <div className="executive_col">
             <h1
@@ -251,7 +251,7 @@ const TalentOnDemand = () => {
         </div>
       </div>
 
-      <div className="container-fluid impact_section d-flex align-items-center px-0 flexible_part executive_impact_section">
+      <div className="inner_page_section container-fluid impact_section d-flex align-items-center px-0 flexible_part executive_impact_section">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col">
             <div className="px-0 px-md-5 content mx-0 mx-md-5">
@@ -276,7 +276,7 @@ const TalentOnDemand = () => {
       </div>
 
       {/* <!-- start services section --> */}
-      <section className="services_section bg_cover sec_py on_demand_services_section">
+      <section className="inner_page_section services_section bg_cover sec_py on_demand_services_section">
         <div className="container">
           <div className="row">
             <div className="col-xl-10">
@@ -330,7 +330,7 @@ const TalentOnDemand = () => {
 
       {/* <!------FAQ's Section------> */}
 
-      <div className="container-fluid faqs_section faqs_stick_part d-flex bg_cover px-0">
+      <div className="inner_page_section container-fluid faqs_section faqs_stick_part d-flex bg_cover px-0">
         <div className="row mx-0 d-flex">
           <div className="heading_col d-flex align-items-center px-5 team_col pt-5 pb-5">
             <div className="px-5 content">
@@ -394,7 +394,7 @@ const TalentOnDemand = () => {
 
  {/*<------split-scroll-section----->*/}
 
-         <div className="container-fluid bg_cover px-0  position-relative  justify-content-center align-items-center">
+         <div className="inner_page_section container-fluid bg_cover px-0  position-relative  justify-content-center align-items-center">
              <div className="cc-text split_col content-col-1 cc-text-1 join-right-col">
                  <div className="content-outer-div">
               <div className="px-0 px-md-5 content mx-0 mx-md-5">
@@ -512,7 +512,7 @@ const TalentOnDemand = () => {
 
       {/* <!----companies-logo-section-----> */}
 
-      <div className="container-fluid companies_section bg_cover pt-5 pb-5 ">
+      <div className="inner_page_section container-fluid companies_section bg_cover pt-5 pb-5 ">
         <div className="container mt-4 mb-4">
           <div className="row">
             <h3
@@ -539,7 +539,7 @@ const TalentOnDemand = () => {
       </div>
 
       {/* <!-- testimonials-section --> */}
-      <div className="container-fluid bg_cover testimonials_part px-0">
+      <div className="inner_page_section container-fluid bg_cover testimonials_part px-0">
         <div className="container">
           <div className="row mx-0">
             <div className="testimonials-heading mt-5 pt-3">
@@ -599,7 +599,7 @@ const TalentOnDemand = () => {
         </div>
       </div>
       <div
-        className="container-fluid faqs_section stories-section d-flex bg_cover px-0 sec_py align-items-center"
+        className="inner_page_section container-fluid faqs_section stories-section d-flex bg_cover px-0 sec_py align-items-center"
         id="fractional-contractors"
       >
         <div className="container py-4">
