@@ -398,7 +398,7 @@ const Work = () => {
                   {/* Left Column */}
                   <div
                     className={`heading_col d-flex align-items-center px-5 team_col bg_primary ${
-                      headingClassMap[item.Slider_Color_Code] || ""
+                      headingClassMap[item.Slider_Color_Code] || "financial_col"
                     }`}
                   >
                     <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -420,7 +420,7 @@ const Work = () => {
                   {/* Right Column */}
                   <div
                     className={`right_content_col px-0 d-flex align-items-center team_right_col ${
-                      headingRightClassMap[item.Slider_Color_Code] || ""
+                      headingRightClassMap[item.Slider_Color_Code] || "financial_right_col"
                     }`}
                   >
                     <img
