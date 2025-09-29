@@ -2261,8 +2261,12 @@ body .work_slider .right_content_col img {
   height: auto !important;
   max-width: 240px;
 }
-.parent_slideshow{
-  z-index: 999999999;
+header.sticky_x .menu-line{
+  background-color: #000 !important;
+}
+header.sticky_x .nav-btn .btn_primary{
+  background-color: var(--primary_color) !important;
+  color: #fff !important;
 }
 @media only screen and (min-width: 768px) {
   .accordion-part {
