@@ -40,10 +40,10 @@ const Header = () => {
             
             <button className="hamburger" onClick={navBar}>
               {/*<i className="fa-regular fa-bars hamburger-icon text-dark"></i>*/}
-               <span class="menu-icon">
-      <span class="menu-line menu-line-1"></span>
-      <span class="menu-line menu-line-2"></span>
-      <span class="menu-line menu-line-3"></span>
+               <span className="menu-icon">
+      <span className="menu-line menu-line-1"></span>
+      <span className="menu-line menu-line-2"></span>
+      <span className="menu-line menu-line-3"></span>
     </span>
             </button>
           </div>

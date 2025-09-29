@@ -22,7 +22,7 @@ const Footer = () => {
   console.log("footer", footerData);
   return (
     <>
-      <div className="container-fluid footer-section footer_light pt-5 pb-5 px-0">
+      <div className=" inner_page_section container-fluid footer-section footer_light pt-5 pb-5 px-0">
         <div className="container">
           <div className="row footer-row-1 mx-0">
             {footerData?.footerLinks?.map((linkGroup) => (

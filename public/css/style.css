@@ -4036,3 +4036,15 @@ body .work_slider .right_content_col img {
     padding: 0px !important;
   }
 }
+
+
+.parent_container_snap {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.inner_page_section {
+  scroll-snap-align: start;
+}
+

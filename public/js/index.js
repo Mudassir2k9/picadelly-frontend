@@ -94,26 +94,129 @@ $(document).ready(function () {
 
 // script for sticky nav
 
-let lastScrollTop = 0; // previous scroll position
+(function () {
+  // CONFIG
+  const THRESHOLD = 8;      // ignore micro-movements
+  const SETTLE_MS = 150;    // wait after last scroll to "settle"
 
-window.addEventListener("scroll", function () {
-  const header = document.querySelector("header");
-  const currentScroll = window.scrollY;
+  // helpers
+  const getWindowScrollTop = () =>
+    window.pageYOffset || document.documentElement.scrollTop || 0;
 
-  if (currentScroll <= 0) {
-    // At the very top → always remove sticky
-    header.classList.remove("sticky");
-  } else if (currentScroll > lastScrollTop) {
-    // Scrolling DOWN → hide navbar
-    header.classList.remove("sticky");
-  } else {
-    // Scrolling UP → show navbar
-    header.classList.add("sticky");
+  function attachScrollLogic(targetElement) {
+    const header = document.querySelector("header");
+    if (!header) {
+      console.warn("Header not found");
+      return;
+    }
+    if (!targetElement) {
+      console.warn("No scroll target to attach to");
+      return;
+    }
+
+    let last =
+      targetElement === window ? getWindowScrollTop() : targetElement.scrollTop || 0;
+    let ticking = false;
+    let settleTimer = null;
+
+    function getScrollTop() {
+      return targetElement === window
+        ? getWindowScrollTop()
+        : targetElement.scrollTop || 0;
+    }
+
+    // ✅ combined transform + background logic
+    function applyTransform(show, scrollTop) {
+      if (show) {
+        header.style.transform = "translateY(0)";
+        header.style.backgroundColor = scrollTop > 100 ? "white" : "transparent";
+      } else {
+        header.style.transform = "translateY(-100%)";
+        header.style.backgroundColor = "transparent";
+      }
+    }
+
+    function handleUpdate() {
+      const st = Math.max(0, getScrollTop());
+      const delta = st - last;
+
+      if (Math.abs(delta) < THRESHOLD) {
+        last = st;
+        return;
+      }
+
+      if (st <= 0) {
+        applyTransform(true, st);   // top → visible + transparent
+      } else if (delta > 0) {
+        applyTransform(false, st);  // scrolling down → hide
+      } else {
+        applyTransform(true, st);   // scrolling up → visible (with bg)
+      }
+
+      last = st;
+
+      // settle after scrolling stops (helpful with snap jumps)
+      clearTimeout(settleTimer);
+      settleTimer = setTimeout(() => {
+        const final = getScrollTop();
+        if (final <= 0) applyTransform(true, final);
+        last = final;
+      }, SETTLE_MS);
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          handleUpdate();
+          ticking = false;
+        });
+      }
+    }
+
+    targetElement.addEventListener("scroll", onScroll, { passive: true });
+
+    console.log(
+      "attached scroll listener to",
+      targetElement === window ? "window" : targetElement
+    );
+
+    // ✅ Run once immediately so header starts in correct state
+    handleUpdate();
   }
 
-  // update last scroll position
-  lastScrollTop = currentScroll;
-});
+  function init() {
+    const snap = document.querySelector(".parent_container_snap");
+
+    if (snap) {
+      attachScrollLogic(snap);
+      return;
+    }
+
+    attachScrollLogic(window);
+
+    const observer = new MutationObserver((mutations, obs) => {
+      const found = document.querySelector(".parent_container_snap");
+      if (found) {
+        attachScrollLogic(found);
+        obs.disconnect();
+      }
+    });
+
+    observer.observe(document.documentElement || document.body, {
+      childList: true,
+      subtree: true,
+    });
+  }
+
+  if (document.readyState === "complete" || document.readyState === "interactive") {
+    init();
+  } else {
+    document.addEventListener("DOMContentLoaded", init);
+  }
+})();
+
+
 
 
 // let lastScrollTop = 0; // store previous scroll position

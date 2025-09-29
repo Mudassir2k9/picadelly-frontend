@@ -41,7 +41,7 @@ const About = () => {
               },
             });
 
-             // Background toggle using class
+             // Background toggle using className
               $slider.on("changed.owl.carousel", function (event) {
                 const current = $(event.target)
                   .find(".owl-item")
@@ -240,8 +240,8 @@ const About = () => {
       </section>*/}
 
       {/* <!-- start about section --> */}
-<div className="snap-container">
-      <section className="about_section container-fluid executive_banner about_banner px-0" id="We-are-Picadilly">
+{/* <div className="snap-container"> */}
+      <section className="inner_page_section about_section container-fluid executive_banner about_banner px-0" id="We-are-Picadilly">
         <div className="about_row row mx-0">
           <div className="about_heading_col d-flex align-items-end align-items-md-center justify-content-center justify-content-md-end overflow-hidden">
             <h1
@@ -287,7 +287,7 @@ const About = () => {
       </section>
 
       {/* <!-- start team section --> */}
-      <section className="team_section meet_team">
+      <section className="inner_page_section team_section meet_team">
         <div className="row mx-0">
           <div className="heading_col d-flex align-items-center px-5 team_col">
             <div className="px-3 px-md-5 mx-0 mx-md-5">
@@ -514,7 +514,7 @@ const About = () => {
 
       {/* <!----about-mobile-slider-section----> */}
 
-        <section className="container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center" id="team-leaders">
+        <section className="inner_page_section container-fluid px-0 team-section mobile-creative-section about-mobile-slider d-flex justify-content-center d-flex align-items-center" id="team-leaders">
         {/* <!-- Carousel --> */}
         <div
           id="demo"
@@ -596,11 +596,11 @@ const About = () => {
 
 
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
+  <button className="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon"></span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
+  <button className="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span className="carousel-control-next-icon"></span>
   </button>
           
         </div>
@@ -609,7 +609,7 @@ const About = () => {
       {/* //for mobile view */}
 
       {/* <!-- start culture section --> */}
-      <section className="culture_section bg_cover" id="our-culture">
+      <section className="inner_page_section culture_section bg_cover" id="our-culture">
         <div className="container">
           <div className="row pt-5">
             <div className="col-md-6">
@@ -629,7 +629,7 @@ const About = () => {
         <div className="overflow_slider py-5">
        <div className="overflow_slider_inner">
         {aboutData?.ImagesSlider?.Images?.map((item, index) => (
-          <img src={`${baseUrl}${item.url}`}></img>
+          <img key={index} src={`${baseUrl}${item.url}`}></img>
           ))}
         </div>
           {/* <div className="owl-carousel owl-theme c_slider">
@@ -645,7 +645,7 @@ const About = () => {
           </div> */}
         </div>
       </section>
-      </div>
+      {/* </div> */}
     </>
   );
 };

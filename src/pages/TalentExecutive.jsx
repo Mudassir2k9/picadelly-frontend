@@ -138,11 +138,11 @@ const TalentExecutive = () => {
 
 
 `}</style>
-      <div className="container-fluid executive_banner">
+      <div className=" inner_page_section container-fluid executive_banner">
         <div className="container">
           <div className="executive_col">
             <h1
-              className="large_heading_2 fw-semibold text-center text-white wow animate__fadeInDownBig"
+              className="large_heading_2 fw-semibold text-center text-white woww aanimate__fadeInDownBig"
               dangerouslySetInnerHTML={{
                 __html: talentExectiveData?.BannerHeading || "",
               }}
@@ -151,14 +151,14 @@ const TalentExecutive = () => {
         </div>
       </div>
       {/* <!-- Impact-section --> */}
-  <div className="container-fluid impact_section impact_section_2 d-flex align-items-center px-0">
+  <div className="inner_page_section container-fluid impact_section impact_section_2 d-flex align-items-center px-0">
         <div className="row mx-0">
                <div className=" heading_col col-md-6 d-flex align-items-center px-5 team_col">
           <div className="px-5 content">
             <h3
-              className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
-              data-wow-duration="1s"
-              data-wow-delay="0.3s"
+              className="font_40 fw-semibold color_primary impact_section_heading woww aanimate__slideInLeft text-start"
+              data-woww-duration="1s"
+              data-woww-delay="0.3s"
               dangerouslySetInnerHTML={{
                 __html: talentExectiveData?.Section2Heading || "",
               }}
@@ -177,15 +177,15 @@ const TalentExecutive = () => {
     </div>
 
     {/*end first section*/}
-      <div className="container-fluid impact_section  px-0 executive_impact_section split_impact-section position-relative">
+      <div className="inner_page_section container-fluid impact_section  px-0 executive_impact_section split_impact-section position-relative">
         {/*<div className="row mx-0">*/}
   
         <div className=" cc-text split_col cc-text-1 team_col">
           <div className="px-5 content">
             <h3
-              className="font_40 fw-semibold color_primary  wow animate__slideInLeft text-start"
-              data-wow-duration="1s"
-              data-wow-delay="0.3s"
+              className="font_40 fw-semibold color_primary  woww aanimate__slideInLeft text-start"
+              data-woww-duration="1s"
+              data-woww-delay="0.3s"
               dangerouslySetInnerHTML={{
                 __html: talentExectiveData?.Section5?.Column1_Heading || "",
               }}
@@ -213,9 +213,9 @@ const TalentExecutive = () => {
         <div className="col-md-6 px-5 d-flex align-items-center content_inner cc-image split_col img_3  orange_right_col">
            <div className="px-5 content ">
             <h3
-              className="font_40 fw-semibold color_black wow animate__slideInLeft text-start"
-              data-wow-duration="1s"
-              data-wow-delay="0.3s"
+              className="font_40 fw-semibold color_black woww aanimate__slideInLeft text-start"
+              data-woww-duration="1s"
+              data-woww-delay="0.3s"
               dangerouslySetInnerHTML={{
                 __html: talentExectiveData?.Section5?.Column2_Heading || "",
               }}
@@ -243,9 +243,9 @@ const TalentExecutive = () => {
         <div className=" cc-text split_col cc-text-3 impact split_last_col d-flex align-items-center">
           <div className="px-5 content">
             <h3
-              className="font_40 fw-semibold color_primary impact_section_heading wow animate__slideInLeft text-start"
-              data-wow-duration="1s"
-              data-wow-delay="0.3s"
+              className="font_40 fw-semibold color_primary impact_section_heading woww aanimate__slideInLeft text-start"
+              data-woww-duration="1s"
+              data-woww-delay="0.3s"
               dangerouslySetInnerHTML={{
                 __html: talentExectiveData?.Section3Heading || "",
               }}
@@ -269,7 +269,7 @@ const TalentExecutive = () => {
       {/*</div>*/}
 
       {/* <!-- Content-section --> */}
-      <div className="container-fluid only_content bg_cover d-flex  align-items-center px-0">
+      <div className="inner_page_section container-fluid only_content bg_cover d-flex  align-items-center px-0">
         <div className="container">
           <div className="row d-flex align-items-center justify-content-center mx-0">
             <div
@@ -283,7 +283,7 @@ const TalentExecutive = () => {
       </div>
 
       {/* <!-- testimonials-section --> */}
-      <div className="container-fluid bg_cover testimonials_part px-0">
+      <div className="inner_page_section container-fluid bg_cover testimonials_part px-0">
         <div className="container">
           <div className="row mx-0">
             <div className="testimonials-heading mt-5 pt-3">
