@@ -2262,7 +2262,7 @@ body .work_slider .right_content_col img {
   max-width: 240px;
 }
 .parent_slideshow{
-  z-index: 9999;
+  z-index: 999999999;
 }
 header.sticky_x .menu-line{
   background-color: #000 !important;
