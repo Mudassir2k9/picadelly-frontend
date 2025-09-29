@@ -579,7 +579,7 @@ header.sticky .navbar-custom {
   transform: translateY(-11px) translateY(50%) rotate(45deg);
 }
 #header.open .overlay {
-  width: 45% !important;
+  width: 40% !important;
 }
 .overlay {
   height: 100%;
@@ -777,14 +777,14 @@ header.sticky .navbar-custom {
   padding-left: 30px;
 }
 .nav-items li:hover ul {
-  width: 45%;
+  width: 50%;
   transition: all 0.3s;
 }
 .nav-items li ul li a {
   padding: 2px 10px !important;
 }
 .nav-items li ul.visible {
-  width: 45%;
+  width: 50%;
 }
 .nav-items > li > a {
   position: relative;
@@ -825,6 +825,8 @@ header.sticky .navbar-custom {
 .happening_video video,
 .happening_video {
   width: 100% !important;
+  height: 100%;
+  object-fit: cover;
 }
 .happening_section .container {
   position: relative;
@@ -1061,7 +1063,7 @@ background-image: url("../images/bubbles-img.jpg");
   padding-left: 20px !important;
 }
 .right-column section {
-  position: sticky;
+  /* position: sticky; */
   justify-content: center;
   top: 15%;
   min-height: 100vh;
@@ -2980,7 +2982,7 @@ body .work_slider .right_content_col img {
   .nav-items {
     padding-top: 100px;
     height: 100%;
-    width: 55%;
+    width: 50%;
   }
   .flexible_part .heading_col > div {
     margin: 0px !important;
@@ -3007,7 +3009,7 @@ body .work_slider .right_content_col img {
     padding-top: 100px;
   }
   .overlay {
-    min-height: 500px;
+    min-height: 470px;
     /* right: 25px; */
   }
   .strategy_row img {

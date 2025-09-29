@@ -912,8 +912,9 @@ position: absolute;
   .tab-pane a{
      text-decoration: none !important;
   }
-  .latest_news{
-    background-color: #efefef70;
+  .latest-news{
+    /* background-color: #efefef70; */
+    min-height: 100vh !important;
   }
 
   
@@ -938,6 +939,7 @@ position: absolute;
 .info p{
   margin-bottom: 2px !important;
   text-decoration: none;
+  color: #555;
 }
 .Articles_intro:hover{
   background-color: #555;
