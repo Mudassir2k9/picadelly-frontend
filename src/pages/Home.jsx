@@ -63,6 +63,27 @@ console.log(homeData);
     jQuery(".parent_container_snap").removeClass("parent_container_snap");
   }, 3000);
 
+  let lastScrollTop = 0; // previous scroll position
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const currentScroll = window.scrollY;
+
+  if (currentScroll <= 0) {
+    // At the very top → always remove sticky
+    header.classList.remove("sticky");
+  } else if (currentScroll > lastScrollTop) {
+    // Scrolling DOWN → hide navbar
+    header.classList.remove("sticky");
+  } else {
+    // Scrolling UP → show navbar
+    header.classList.add("sticky");
+  }
+
+  // update last scroll position
+  lastScrollTop = currentScroll;
+});
+
   return (
     <>
     <title>{homeData?.PageTitle}</title>
