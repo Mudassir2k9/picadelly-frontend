@@ -98,6 +98,7 @@ window.addEventListener("scroll", function () {
 .menu-line{
       background-color: #000 !important;
 }
+      
       #header{
       transform: translateY(0) !important;
       }

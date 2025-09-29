@@ -386,6 +386,7 @@ const Work = () => {
     </div>
 
     {/* The slideshow/carousel */}
+    
     <div className="carousel-inner">
 
             {workData?.Slider?.slice(0, 5)?.map((item, index) => (
