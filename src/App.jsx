@@ -23,6 +23,7 @@ function App() {
     <Router>
       <Header />
       <CookieConsent /* policyHtml={policyFromStrapi} */ />
+      <div className="parent_container_snap">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -40,6 +41,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
+      </div>
     </Router>
   );
 }
