@@ -131,7 +131,7 @@ $(document).ready(function () {
         header.style.transform = "translateY(0)";
         header.style.backgroundColor = scrollTop > 100 ? "white" : "transparent";
       } else {
-        header.style.transform = "translateY(-100%)";
+        header.style.transform = scrollTop > 100 ?? "translateY(-100%)";
         header.style.backgroundColor = "transparent";
       }
     }
@@ -216,6 +216,27 @@ $(document).ready(function () {
   }
 })();
 
+let lastScrollTop = 0; // previous scroll position
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const currentScroll = window.scrollY;
+
+  if (currentScroll <= 0) {
+    // At the very top → always remove sticky
+    header.classList.remove("sticky");
+  } else if (currentScroll > lastScrollTop) {
+    // Scrolling DOWN → hide navbar
+    header.classList.remove("sticky");
+  } else {
+    // Scrolling UP → show navbar
+    header.classList.add("sticky");
+  }
+
+  // update last scroll position
+  lastScrollTop = currentScroll;
+});
+
 
 
 
@@ -293,15 +314,15 @@ function openNav() {
 // }
 
 // script for wow JS activation
-wow = new WOW({
-  boxClass: "wow", // default
-  animateClass: "animate__animated", // default
-  offset: 0, // default
-  mobile: true, // default
-  desktop: true,
-  live: true, // default
-});
-wow.init();
+// wow = new WOW({
+//   boxClass: "wow", // default
+//   animateClass: "animate__animated", // default
+//   offset: 0, // default
+//   mobile: true, // default
+//   desktop: true,
+//   live: true, // default
+// });
+// wow.init();
 
 // script for horizontal scroll
 window.addEventListener("scroll", function () {

@@ -60,6 +60,7 @@ console.log(homeData);
         },
       });
     }
+    jQuery(".parent_container_snap").removeClass("parent_container_snap");
   }, 3000);
 
   return (
@@ -76,11 +77,11 @@ console.log(homeData);
 .menu-line{
       background-color: #000 !important;
 }
-  body .parent_container_snap {
-  scroll-snap-type: none;
-  overflow-y: unset;
-  height: 100vh;
-}
+//   body .parent_container_snap {
+//   scroll-snap-type: none;
+//   overflow-y: unset;
+//   height: 100vh;
+// }
       
 
 `}</style>
