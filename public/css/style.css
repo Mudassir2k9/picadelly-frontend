@@ -1047,7 +1047,7 @@ background-image: url("../images/bubbles-img.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center; */
-  padding-top: 200px;
+  padding-top: 40px;
   z-index: 111;
   scroll-behavior: smooth;
 }
@@ -4047,6 +4047,7 @@ body .work_slider .right_content_col img {
 }
 
 .inner_page_section {
+  
   scroll-snap-align: start;
 }
 

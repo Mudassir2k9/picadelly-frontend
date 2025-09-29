@@ -73,7 +73,7 @@ const ContactUs = () => {
 `}</style>
       {/* <!------contact-banner------> */}
 
-      <div className="container-fluid px-0 bg_cover contact-banner">
+      <div className="inner_page_section container-fluid px-0 bg_cover contact-banner">
         <div className="row mx-0">
           <div className="col-md-6 contact-col bg_cover d-flex align-items-center justify-content-end px-4">
             <span
@@ -177,7 +177,7 @@ const ContactUs = () => {
 
       {/* <!------Locations-section------> */}
 
-      <div className="container-fluid locations-section pt-5 pb-5 d-flex justify-content-center px-0">
+      <div className="inner_page_section container-fluid locations-section pt-5 pb-5 d-flex justify-content-center px-0">
         <div className="container">
           <div className="row pt-5 mx-0 contact-row">
             <div className="col-md-6 locations-heading">

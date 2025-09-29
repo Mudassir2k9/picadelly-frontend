@@ -156,7 +156,7 @@ const NewsItem = () => {
           background: #f0f0f0;
         }
     `}</style>
-      <div className="container-fluid news_item_banner separate px-0 blog_detail_banner">
+      <div className="inner_page_section container-fluid news_item_banner separate px-0 blog_detail_banner">
         <div className="row banner-row mx-0">
           <div className="col-md-8 case_study-col-1 heading_part separate_col_1 blog_col-1 px-0 pb-5">
             <div className="inner-div">
@@ -213,7 +213,7 @@ const NewsItem = () => {
       </div>
       {/* <!-----News-banner-section----> */}
 
-      <div className="container-fluid news_banner-img bg_cover" style={{backgroundImage: `url(${baseUrl}${newsItemData?.News?.Banner_Image?.url})`}}>
+      <div className="inner_page_section container-fluid news_banner-img bg_cover" style={{backgroundImage: `url(${baseUrl}${newsItemData?.News?.Banner_Image?.url})`}}>
         <div className="container">
           <div className="row"></div>
         </div>
@@ -222,7 +222,7 @@ const NewsItem = () => {
       {/* <!-----blog-detail-----> */}
 
       <div
-        className="container-fluid px-0"
+        className="inner_page_section container-fluid px-0"
         data-bs-spy="scroll"
         data-bs-target="#sidebar"
         data-bs-offset="100"

@@ -75,7 +75,7 @@ const CaseStudy = () => {
       }
       }
 `}</style>
-      <div className="container-fluid case_study_banner separate px-0">
+      <div className="inner_page_section container-fluid case_study_banner separate px-0">
         <div className="row banner-row mx-0">
           <div className="col-md-6 case_study-col-1 heading_part separate_col_1 px-0 blog_col-2 flex-wrap justify-content-start">
           <div>
@@ -193,7 +193,7 @@ const CaseStudy = () => {
 
       {/* <!------case-study-faqs------> */}
 
-      <div className="container-fluid case-study-faqs bg-cover px-0">
+      <div className="inner_page_section container-fluid case-study-faqs bg-cover px-0">
         <div className="row mx-0 d-flex">
           <div className="heading_col d-flex align-items-center px-5 team_col pt-5 pb-5">
             <div
@@ -319,7 +319,7 @@ const CaseStudy = () => {
 
       {/* <!-----case-study-posts-----> */}
 
-      <div className="container-fluid px-0">
+      <div className="inner_page_section container-fluid px-0">
         <div className="row mx-0" key={currentCase?.id}>
           {currentCase?.Projects?.map((project) => (
             <div key={project.id} className="col-md-6 image-container px-0">
@@ -428,7 +428,7 @@ const CaseStudy = () => {
 
       {/* <!------video-section------> */}
       {currentCase?.Case_Study_Media?.Media?.url && (
-      <div className="container-fluid d-flex justify-content-center align-items-center bg-cover video-section px-0">
+      <div className="inner_page_section container-fluid d-flex justify-content-center align-items-center bg-cover video-section px-0">
         <div className="container">
           <div className="row d-flex justify-content-center align-items-center mx-0">
             <div className="col-md-8">
@@ -460,7 +460,7 @@ const CaseStudy = () => {
       )}
       {/* <!-----project-section-----> */}
 
-      <div className="container-fluid px-0">
+      <div className="inner_page_section container-fluid px-0">
         <div className="row mx-0">
           {/* Previous Project */}
           <div className="col-md-6 project-col px-0">

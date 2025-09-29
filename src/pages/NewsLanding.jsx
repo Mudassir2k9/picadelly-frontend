@@ -76,7 +76,7 @@ const NewsLanding = () => {
   }
       }
 `}</style>
-      <div className="container-fluid executive_banner work_banner news_banner">
+      <div className="inner_page_section container-fluid executive_banner work_banner news_banner">
         <div className="container">
           <div className="executive_col" 
           dangerouslySetInnerHTML={{ __html: landingData?.BannerHeading }}>
@@ -86,7 +86,7 @@ const NewsLanding = () => {
       </div>
 
       <div
-        className="container-fluid px-0 blog-spotlight d-flex justify-content-center align-items-center"
+        className="inner_page_section container-fluid px-0 blog-spotlight d-flex justify-content-center align-items-center"
         id="blog-spotlights"
       >
         <div className="row mx-0">
@@ -120,7 +120,7 @@ const NewsLanding = () => {
 
       {/* <!------Articles-section-------> */}
 
-      <div className="container-fluid px-0 pt-5 pb-5 latest-news bg-white position-relative" id="hot-news">
+      <div className="inner_page_section container-fluid px-0 pt-5 pb-5 latest-news bg-white position-relative" id="hot-news">
         <div className="container px-0">
           <div className="row px-0 mx-0 pt-5 pb-5">
             <div className="col-md-12 px-0">

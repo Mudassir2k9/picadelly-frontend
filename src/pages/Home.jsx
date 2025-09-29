@@ -76,6 +76,12 @@ console.log(homeData);
 .menu-line{
       background-color: #000 !important;
 }
+  body .parent_container_snap {
+  scroll-snap-type: none;
+  overflow-y: unset;
+  height: 100vh;
+}
+      
 
 `}</style>
 
@@ -112,7 +118,7 @@ console.log(homeData);
           </div>
         </div>
       </section>
-      <div className="container-fluid banner_section"  >
+      <div className=" container-fluid banner_section"  >
         <div className="container">
           <div className="row banner-row">
             <div className="col-md-6 banner-col">
@@ -136,7 +142,7 @@ console.log(homeData);
       {/* start results section */}
 
       {/* <!-- start results section --> */}
-      <section id="myBox1">
+      <section id="myBox1" className="">
         <div className="parallax_container">
           <div
             className="left-column d-flex align-items-center"
@@ -387,7 +393,7 @@ console.log(homeData);
       </section>
 
       {/* start mobile creative section */}
-      <div className="container-fluid px-0 team-section mobile-creative-section d-flex justify-content-center align-items-center d-none">
+      <div className=" container-fluid px-0 team-section mobile-creative-section d-flex justify-content-center align-items-center d-none">
         {/* Carousel */}
         <div id="demo" className="carousel slide" data-bs-ride="carousel">
           {/* Indicators/dots */}
@@ -496,7 +502,7 @@ console.log(homeData);
         </div>
       </div>
 
-      <section className="mobile_slider">
+      <section className=" mobile_slider">
         <div className="mobile_slider_left_heading">
           <h3 className="text-white fw-bold large_heading">Company</h3>
         </div>
@@ -533,7 +539,7 @@ console.log(homeData);
       </section>
 
       {/* Happening-section */}
-      <div className="container-fluid happening_section pb-5 position-relative">
+      <div className=" container-fluid happening_section pb-5 position-relative">
         <div className="container">
           <span
             dangerouslySetInnerHTML={{

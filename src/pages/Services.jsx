@@ -195,7 +195,7 @@ const Services = () => {
         </div>
       ))}
 
-      <section className="container-fluid executive_banner services_banner">
+      <section className="inner_page_section container-fluid executive_banner services_banner">
         <div className="container">
           <div
             className="executive_col"
@@ -207,7 +207,7 @@ const Services = () => {
       </section>
 
       <section
-        className="services_section bg_cover sec_py"
+        className="inner_page_section services_section bg_cover sec_py"
         id="marketing-services"
       >
         <div className="container">
@@ -259,7 +259,7 @@ const Services = () => {
       </section>
 
       {/* <!-- start team section --> */}
-      <div className="container-fluid px-0 team-section services_team_slider d-flex justify-content-center align-items-center">
+      <div className="inner_page_section container-fluid px-0 team-section services_team_slider d-flex justify-content-center align-items-center">
         {/* Carousel */}
         <div
           id="demo"

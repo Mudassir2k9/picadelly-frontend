@@ -91,7 +91,7 @@ const BlogDetail = () => {
       }
       }
 `}</style>
-      <div className="container-fluid  blog_detail_banner separate px-0">
+      <div className="inner_page_section container-fluid  blog_detail_banner separate px-0">
         <div className="row banner-row mx-0">
           <div className="col-md-8 case_study-col-1 heading_part separate_col_1 px-0 blog_col-1  pb-5">
             <div className="inner-div ">
@@ -175,7 +175,7 @@ const BlogDetail = () => {
 
       {/* Blog Banner with Header Image */}
       <div
-        className="container-fluid blog_banner bg_cover px-0"
+        className="inner_page_section container-fluid blog_banner bg_cover px-0"
         style={{
           backgroundImage: `url(${getImageUrl(currentBlog?.Header_Image)})`,
         }}
@@ -188,7 +188,7 @@ const BlogDetail = () => {
 
       {/* Blog Detail Content */}
       <div
-        className="container-fluid px-0"
+        className="inner_page_section container-fluid px-0"
         data-bs-spy="scroll"
         data-bs-target="#sidebar"
         data-bs-offset="100"
@@ -294,7 +294,7 @@ const BlogDetail = () => {
       </div>
 
       {/* Previous and Next Blogs */}
-      <div className="container-fluid px-0">
+      <div className="inner_page_section container-fluid px-0">
         <div className="row mx-0">
           {/* Previous Blog */}
           <div className="col-md-6 project-col px-0">

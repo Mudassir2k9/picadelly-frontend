@@ -98,7 +98,7 @@ const Work = () => {
     
       }
 `}</style>
-      <div className="container-fluid executive_banner work_banner">
+      <div className="inner_page_section container-fluid executive_banner work_banner">
         <div className="container">
            <div className="executive_col">
           <h1
@@ -115,7 +115,7 @@ const Work = () => {
 
 
       {/* <!-- start results section --> */}
-      <section id="results">
+      <section id="results" className="inner_page_section">
         <div className="parallax_container">
           <div
             className="left-column d-flex align-items-center"
@@ -373,7 +373,7 @@ const Work = () => {
       </div>
 
       {/* <!-- start team section --> */}
-<div className="container-fluid px-0 team-section work_slider d-flex justify-content-center align-items-center" id="client-results">
+<div className="inner_page_section container-fluid px-0 team-section work_slider d-flex justify-content-center align-items-center" id="client-results">
   {/* Carousel */}
   <div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
     {/* Indicators/dots */}
@@ -537,7 +537,7 @@ const Work = () => {
 </div>
 
       {/* Testimonials Section */}
-      <div className="container-fluid bg_cover testimonials_part px-0" id="testimonials">
+      <div className="inner_page_section container-fluid bg_cover testimonials_part px-0" id="testimonials">
         <div className="container">
           <div className="row mx-0">
             <div className="testimonials-heading mt-5 pt-3">
