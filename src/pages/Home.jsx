@@ -98,6 +98,9 @@ window.addEventListener("scroll", function () {
 .menu-line{
       background-color: #000 !important;
 }
+      #header{
+      transform: translateY(0) !important;
+      }
 //   body .parent_container_snap {
 //   scroll-snap-type: none;
 //   overflow-y: unset;
