@@ -2261,6 +2261,9 @@ body .work_slider .right_content_col img {
   height: auto !important;
   max-width: 240px;
 }
+.parent_slideshow{
+  z-index: 9999;
+}
 header.sticky_x .menu-line{
   background-color: #000 !important;
 }
