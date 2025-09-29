@@ -130,6 +130,11 @@ $(document).ready(function () {
       if (show) {
         header.style.transform = "translateY(0)";
         header.style.backgroundColor = scrollTop > 100 ? "white" : "transparent";
+        if (scrollTop > 100) {
+          header.classList.add("sticky_x");
+        } else {
+          header.classList.remove("sticky_x");
+        }
       } else {
         header.style.transform = "translateY(-100%)";
         header.style.backgroundColor = "transparent";
