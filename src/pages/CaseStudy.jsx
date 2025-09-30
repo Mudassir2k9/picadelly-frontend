@@ -3,14 +3,16 @@ import axios from "axios";
 const apiUrl = import.meta.env.VITE_API_URL;
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const CaseStudy = () => {
   const [caseStudies, setCaseStudies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const caseId = params.get("id");
-  console.log("id---", caseId);
+  // const params = new URLSearchParams(location.search);
+  // const caseId = params.get("id");
+  const { slug } = useParams();
+  // console.log("id---", caseId);
 
   useEffect(() => {
     axios
@@ -21,9 +23,9 @@ const CaseStudy = () => {
       .then((res) => {
         const data = res.data.data;
         setCaseStudies(data);
-        if (caseId) {
+        if (slug) {
           const foundIndex = data.findIndex(
-            (cs) => String(cs.documentId) === String(caseId)
+            (cs) => String(cs.slug) === String(slug)
           );
           if (foundIndex !== -1) {
             setCurrentIndex(foundIndex);
@@ -33,7 +35,7 @@ const CaseStudy = () => {
       .catch((error) => {
         console.error("Error fetching caseStudies:", error);
       });
-  }, [caseId]);
+  }, [slug]);
   console.log(caseStudies);
   if (caseStudies.length === 0) {
     return <div>Loading...</div>;
@@ -56,6 +58,29 @@ const CaseStudy = () => {
     return apiUrl.replace("/api", "") + image.url;
   };
 
+   jQuery(".parent_container_snap").removeClass("parent_container_snap");
+
+  let lastScrollTop = 0; // previous scroll position
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const currentScroll = window.scrollY;
+
+  if (currentScroll <= 0) {
+    // At the very top → always remove sticky
+    header.classList.remove("sticky");
+  } else if (currentScroll > lastScrollTop) {
+    // Scrolling DOWN → hide navbar
+    header.classList.remove("sticky");
+  } else {
+    // Scrolling UP → show navbar
+    header.classList.add("sticky");
+  }
+
+  // update last scroll position
+  lastScrollTop = currentScroll;
+});
+
   console.log("0-00-0-", currentCase);
   return (
     <>
@@ -67,6 +92,9 @@ const CaseStudy = () => {
               .menu-line{
       background-color: #000 !important;
 }
+      #header{
+      transform: translateY(0) !important;
+      }
      .nav-btn .btn_primary:hover{
         background-color:#000 !important;
         color:#fff !important;
