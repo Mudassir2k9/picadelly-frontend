@@ -1,7 +1,9 @@
+import { Helmet } from "react-helmet-async";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 const baseUrl = import.meta.env.VITE_API_BASE_URL;
 const apiUrl = import.meta.env.VITE_API_URL;
+
 
 const About = () => {
   const [aboutData, setAboutData] = useState(null);
