@@ -2263,6 +2263,7 @@ body .work_slider .right_content_col img {
 }
 .parent_slideshow{
   z-index: 999999999;
+  pointer-events: none;
 }
 header.sticky_x .menu-line{
   background-color: #000 !important;

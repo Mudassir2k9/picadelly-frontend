@@ -62,6 +62,7 @@ export default function Slideshow() {
           align-items: center;
           opacity: 0;
           transition: opacity 3s ease;
+          pointer-events:none;
         }
         .slide.active {
           opacity: 1;
