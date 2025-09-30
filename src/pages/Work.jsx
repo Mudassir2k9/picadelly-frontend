@@ -400,11 +400,15 @@ const Work = () => {
   <div id="demo" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
     {/* Indicators/dots */}
     <div className="carousel-indicators">
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" className="active"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+      {workData?.Slider?.slice(0, 6)?.map((item, index) => (
+        <button
+          key={index}
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to={index}
+          className={index === 0 ? "active" : ""}
+        ></button>
+      ))}
     </div>
 
     {/* The slideshow/carousel */}
