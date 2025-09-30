@@ -9,7 +9,7 @@ const Buzz = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/buzz?populate[Announcement][populate]=*&populate[Team_Action][populate]=*&populate[Awards][populate][All_Awards][populate]=Image`
+        `${apiUrl}/buzz?populate[Announcement][populate]=*&populate[Team_Action][populate]=*&populate[Awards][populate][All_Awards][populate]=Image&populate[seo][populate]=*`
       )
       .then((res) => {
         // console.log("-----", res);
@@ -52,7 +52,28 @@ const Buzz = () => {
 
   return (
     <>
-    <title>{buzzData?.PageTitle}</title>
+    <title>{buzzData?.seo?.metaTitle || buzzData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={buzzData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={buzzData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={buzzData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={buzzData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={buzzData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={buzzData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={buzzData?.seo?.openGraph?.ogUrl} />
+        {buzzData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${buzzData?.seo?.metaImage?.url}`} />
+        )}
     <style>{`
         body .nav-btn .btn_primary{
     background-color: #fff !important;

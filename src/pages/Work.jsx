@@ -10,7 +10,7 @@ const Work = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/work?populate[Work_History][populate]=*&populate[Testimonials][populate]=*&populate[Results][populate][Results_List][populate]=*&populate[Slider][populate]=*`
+        `${apiUrl}/work?populate[Work_History][populate]=*&populate[Testimonials][populate]=*&populate[Results][populate][Results_List][populate]=*&populate[Slider][populate]=*&populate[seo][populate]=*`
       )
       .then((res) => {
         setWorkData(res.data.data);
@@ -77,7 +77,29 @@ const Work = () => {
 
   return (
     <>
-    <title>{workData?.PageTitle}</title>
+    
+    <title>{workData?.seo?.metaTitle || workData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={workData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={workData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={workData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={workData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={workData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={workData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={workData?.seo?.openGraph?.ogUrl} />
+        {workData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${workData?.seo?.metaImage?.url}`} />
+        )}
     <style>{`
     .navbar-brand p{
       color:#fff !important;
@@ -389,7 +411,7 @@ const Work = () => {
     
     <div className="carousel-inner">
 
-            {workData?.Slider?.slice(0, 5)?.map((item, index) => (
+            {workData?.Slider?.slice(0, 6)?.map((item, index) => (
               <div
                 key={item.id}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}

@@ -17,7 +17,7 @@ const ContactUs = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/contact-us?populate[Locations][populate][all_locations][populate]=*`
+        `${apiUrl}/contact-us?populate[Locations][populate][all_locations][populate]=*&populate[seo][populate]=*`
       )
       .then((res) => {
         // console.log("-----", res);
@@ -57,7 +57,29 @@ const ContactUs = () => {
   };
   return (
     <>
-    <title>{contactData?.PageTitle}</title>
+    
+    <title>{contactData?.seo?.metaTitle || contactData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={contactData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={contactData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={contactData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={contactData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={contactData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={contactData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={contactData?.seo?.openGraph?.ogUrl} />
+        {contactData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${contactData?.seo?.metaImage?.url}`} />
+        )}
       <style>{`
     .navbar-brand p{
       color:#fff !important;

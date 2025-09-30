@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/home?populate[Results][populate][Results_List][populate]=*&populate[Slider][populate]=*&populate[Whats_Happening][populate][Happening_List][populate]=*&populate[Company][populate]=*`
+        `${apiUrl}/home?populate[Results][populate][Results_List][populate]=*&populate[Slider][populate]=*&populate[Whats_Happening][populate][Happening_List][populate]=*&populate[Company][populate]=*&populate[seo][populate]=*`
       )
       .then((res) => {
         // console.log("-----", res);
@@ -86,7 +86,29 @@ window.addEventListener("scroll", function () {
 
   return (
     <>
-    <title>{homeData?.PageTitle}</title>
+    
+    <title>{homeData?.seo?.metaTitle || homeData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={homeData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={homeData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={homeData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={homeData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={homeData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={homeData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={homeData?.seo?.openGraph?.ogUrl} />
+        {homeData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${homeData?.seo?.metaImage?.url}`} />
+        )}
     <div className="parent_slideshow">
      {showSlideshow ? (
         <Slideshow />

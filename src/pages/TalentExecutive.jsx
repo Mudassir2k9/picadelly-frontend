@@ -9,7 +9,7 @@ const TalentExecutive = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/talent-executive?populate[Section5][populate]=*&populate[Testimonial][populate]=*`
+        `${apiUrl}/talent-executive?populate[Section5][populate]=*&populate[Testimonial][populate]=*&populate[seo][populate]=*`
       )
       .then((res) => {
         // console.log("-----", res);
@@ -24,7 +24,29 @@ const TalentExecutive = () => {
   
   return (
     <>
-    <title>{talentExectiveData?.PageTitle}</title>
+
+    <title>{talentExectiveData?.seo?.metaTitle || talentExectiveData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={talentExectiveData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={talentExectiveData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={talentExectiveData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={talentExectiveData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={talentExectiveData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={talentExectiveData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={talentExectiveData?.seo?.openGraph?.ogUrl} />
+        {talentExectiveData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${talentExectiveData?.seo?.metaImage?.url}`} />
+        )}
       <style>{`
               body .nav-btn .btn_primary{
     background-color: #fff !important;

@@ -8,7 +8,7 @@ const TalentOnDemand = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/talent-on-demand?populate[Services][populate][ServicesName][populate]=*&populate[FAQs][populate]=*&populate[Section5][populate]=*&populate[Brands_Images][populate]=*&populate[Testimonials][populate]=*&populate[Stories][populate][All_Stories][populate]=*`
+        `${apiUrl}/talent-on-demand?populate[Services][populate][ServicesName][populate]=*&populate[FAQs][populate]=*&populate[Section5][populate]=*&populate[Brands_Images][populate]=*&populate[Testimonials][populate]=*&populate[Stories][populate][All_Stories][populate]=*&populate[seo][populate]=*`
       )
       .then((res) => {
         // console.log("-----", res);
@@ -55,7 +55,28 @@ const TalentOnDemand = () => {
 
   return (
     <>
-    <title>{talentDemandData?.PageTitle}</title>
+    <title>{talentDemandData?.seo?.metaTitle || talentDemandData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={talentDemandData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={talentDemandData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={talentDemandData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={talentDemandData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={talentDemandData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={talentDemandData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={talentDemandData?.seo?.openGraph?.ogUrl} />
+        {talentDemandData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${talentDemandData?.seo?.metaImage?.url}`} />
+        )}
     
       <style>{`
        .split_parent{

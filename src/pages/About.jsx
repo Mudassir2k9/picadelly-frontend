@@ -114,15 +114,30 @@ const About = () => {
 
   return (
     <>
-    <title>{aboutData?.seo?.metaTitle || aboutData?.PageTitle}</title>
-    <meta
-      name="description"
-      content={aboutData?.seo?.metaDescription}
-    />
-    <meta
-      property="og:image"
-      content={`${baseUrl}${aboutData?.seo?.metaImage?.url}`}
-    />
+    
+        <title>{aboutData?.seo?.metaTitle || aboutData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={aboutData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={aboutData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={aboutData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={aboutData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={aboutData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={aboutData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={aboutData?.seo?.openGraph?.ogUrl} />
+        {aboutData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${aboutData?.seo?.metaImage?.url}`} />
+        )}
+    
       <style>{`
       .about_row .about_right_content_col.transparent-bg {
         background: transparent !important;

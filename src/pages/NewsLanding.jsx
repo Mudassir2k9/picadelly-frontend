@@ -13,7 +13,7 @@ const NewsLanding = () => {
     useEffect(() => {
       axios
         .get(
-          `${apiUrl}/news-landing`
+          `${apiUrl}/news-landing?populate[seo][populate]=*`
         )
         .then((res) => {
           setLandingData(res.data.data);
@@ -35,7 +35,7 @@ const NewsLanding = () => {
 
         axios
         .get(
-          `${apiUrl}/news?populate[News][populate][Feature_Image][populate]=*&populate[News][populate]=category`
+          `${apiUrl}/news?populate[News][populate][Feature_Image][populate]=*&populate[News][populate]=category&populate[seo][populate]=*`
         )
         .then((res) => {
           setNewsData(res.data.data);
@@ -45,7 +45,7 @@ const NewsLanding = () => {
         });
 
         axios
-            .get(`${apiUrl}/blogs?populate[Blogs][populate]=*`)
+            .get(`${apiUrl}/blogs?populate[Blogs][populate]=*&populate[seo][populate]=*`)
             .then((res) => {
               const data = res.data.data;
               setBlogs(data);
@@ -62,7 +62,29 @@ const NewsLanding = () => {
 
   return (
     <>
-    <title>{landingData?.PageTitle}</title>
+    
+    <title>{landingData?.seo?.metaTitle || landingData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={landingData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={landingData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={landingData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={landingData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={landingData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={landingData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={landingData?.seo?.openGraph?.ogUrl} />
+        {landingData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${landingData?.seo?.metaImage?.url}`} />
+        )}
       <style>{`
     .navbar-brand p{
       color:#fff !important;
@@ -151,7 +173,7 @@ const NewsLanding = () => {
                       {cat.name === "Blogs" ? (
                         // ✅ Blogs loop
                         blogs?.map((blog, j) => (
-                          <a key={j} href={`/blog-detail?id=${blog?.documentId}`}>
+                          <a key={j} href={`/blog-detail/${blog?.slug}`}>
                             <div className="Articles_intro">
                               <div className="info">
                                 <p className="color_black">{cat.name}</p>

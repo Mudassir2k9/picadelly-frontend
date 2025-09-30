@@ -17,7 +17,7 @@ const CaseStudy = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/case-studies?populate[CaseStudy][populate][Channels][populate]=*&populate[CaseStudy][populate][Integrated_Services][populate]=*&populate[CaseStudy][populate][Projects][populate]=*&populate[CaseStudy][populate][Content][populate]=*&populate[CaseStudy][populate][Case_Study_Media][populate]=Media&populate[CaseStudy][populate]=BannerImage
+        `${apiUrl}/case-studies?populate[CaseStudy][populate][Channels][populate]=*&populate[CaseStudy][populate][Integrated_Services][populate]=*&populate[CaseStudy][populate][Projects][populate]=*&populate[CaseStudy][populate][Content][populate]=*&populate[CaseStudy][populate][Case_Study_Media][populate]=Media&populate[CaseStudy][populate]=BannerImage&populate[seo][populate]=*
 `
       )
       .then((res) => {
@@ -84,7 +84,28 @@ window.addEventListener("scroll", function () {
   console.log("0-00-0-", currentCase);
   return (
     <>
-    <title>{currentCaseC?.PageTitle}</title>
+    <title>{currentCaseC?.seo?.metaTitle || currentCaseC?.PageTitle}</title>
+        <meta
+          name="description"
+          content={currentCaseC?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={currentCaseC?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={currentCaseC?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={currentCaseC?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={currentCaseC?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={currentCaseC?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={currentCaseC?.seo?.openGraph?.ogUrl} />
+        {currentCaseC?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${currentCaseC?.seo?.metaImage?.url}`} />
+        )}
       <style>{`
     body header{
      background-color: #fff
@@ -121,7 +142,7 @@ window.addEventListener("scroll", function () {
                   <ul className="blog_icon_col d-flex justify-content-between">
                     <li>
                       <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-    window.location.origin + window.location.pathname + "?id=" + currentCaseC?.documentId
+    window.location.origin + window.location.pathname + "/" + currentCaseC?.slug
   )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-brands fa-facebook-f"></i>
@@ -129,7 +150,7 @@ window.addEventListener("scroll", function () {
                     </li>
                     <li>
                       <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-    window.location.origin + window.location.pathname + "?id=" + currentCaseC.documentId
+    window.location.origin + window.location.pathname + "/" + currentCaseC.slug
   )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-brands fa-linkedin-in"></i>
@@ -137,13 +158,13 @@ window.addEventListener("scroll", function () {
                     </li>
                     <li>
                       <a
-                        href={`${window.location.origin}${window.location.pathname}?id=${currentCaseC.documentId}`}
+                        href={`${window.location.origin}${window.location.pathname}/${currentCaseC.slug}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => {
                           e.preventDefault();
 
-                          const shareUrl = `${window.location.origin}${window.location.pathname}?id=${currentCaseC.documentId}`;
+                          const shareUrl = `${window.location.origin}${window.location.pathname}/${currentCaseC.slug}`;
 
                           if (navigator.share) {
                             // 📱 Mobile → open native share sheet (Instagram will appear if installed)
@@ -163,7 +184,7 @@ window.addEventListener("scroll", function () {
                     </li>
                     <li>
                       <a href={`mailto:?subject=Check this out!&body=${encodeURIComponent(
-    window.location.origin + window.location.pathname + "?id=" + currentCaseC?.documentId
+    window.location.origin + window.location.pathname + "/" + currentCaseC?.slug
   )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-solid fa-envelope"></i>

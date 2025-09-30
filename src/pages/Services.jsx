@@ -9,7 +9,7 @@ const Services = () => {
   useEffect(() => {
     axios
       .get(
-        `${apiUrl}/service?populate[AllServices][populate][Services][populate][FAQs][populate]=*&populate[Slider][populate]=*&populate[AllServices][populate][Services][populate][image][populate]=*`
+        `${apiUrl}/service?populate[AllServices][populate][Services][populate][FAQs][populate]=*&populate[Slider][populate]=*&populate[AllServices][populate][Services][populate][image][populate]=*&populate[seo][populate]=*`
       )
       .then((res) => {
         // console.log("-----", res);
@@ -98,7 +98,29 @@ const Services = () => {
   };
   return (
     <>
-    <title>{serviceData?.PageTitle}</title>
+    
+    <title>{serviceData?.seo?.metaTitle || serviceData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={serviceData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={serviceData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={serviceData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={serviceData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={serviceData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={serviceData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={serviceData?.seo?.openGraph?.ogUrl} />
+        {serviceData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${serviceData?.seo?.metaImage?.url}`} />
+        )}
       {/* <!-- team modals --> */}
       <style>{`
               body .nav-btn .btn_primary{
@@ -301,7 +323,7 @@ const Services = () => {
           <div className="carousel-inner">
             {/* Healthcare */}
 
-            {serviceData?.Slider?.slice(0, 5)?.map((item, index) => (
+            {serviceData?.Slider?.slice(0, 6)?.map((item, index) => (
               <div
                 key={item.id}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}
@@ -311,7 +333,7 @@ const Services = () => {
                   {/* Left Column */}
                   <div
                     className={`heading_col d-flex align-items-center px-5 team_col bg_primary ${
-                      headingClassMap[item.Slider_Color_Code] || ""
+                      headingClassMap[item.Slider_Color_Code] || "financial_col"
                     }`}
                   >
                     <div className="heading_inner_col px-3 px-md-5 mx-0 mx-md-5">
@@ -333,7 +355,7 @@ const Services = () => {
                   {/* Right Column */}
                   <div
                     className={`right_content_col px-0 d-flex align-items-center team_right_col ${
-                      headingRightClassMap[item.Slider_Color_Code] || ""
+                      headingRightClassMap[item.Slider_Color_Code] || "financial_right_col"
                     }`}
                   >
                     <img

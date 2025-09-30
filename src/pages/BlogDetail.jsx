@@ -17,7 +17,7 @@ const BlogDetail = () => {
 // console.log("caseId",slug);
   useEffect(() => {
     axios
-      .get(`${apiUrl}/blogs?populate[Blogs][populate]=*`)
+      .get(`${apiUrl}/blogs?populate[Blogs][populate]=*&populate[seo][populate]=*`)
       .then((res) => {
         const data = res.data.data;
         setBlogs(data);
@@ -100,7 +100,28 @@ window.addEventListener("scroll", function () {
 
   return (
     <>
-    <title>{currentBlogC?.PageTitle}</title>
+    <title>{currentBlogC?.seo?.metaTitle || currentBlogC?.PageTitle}</title>
+        <meta
+          name="description"
+          content={currentBlogC?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={currentBlogC?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={currentBlogC?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={currentBlogC?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={currentBlogC?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={currentBlogC?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={currentBlogC?.seo?.openGraph?.ogUrl} />
+        {currentBlogC?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${currentBlogC?.seo?.metaImage?.url}`} />
+        )}
       <style>{`
     body header{
      background-color: #fff;
@@ -144,7 +165,7 @@ window.addEventListener("scroll", function () {
                   <ul className="blog_icon_col d-flex justify-content-between">
                     <li>
                       <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-    window.location.origin + window.location.pathname + "?id=" + currentBlogC?.documentId
+    window.location.origin + window.location.pathname + "/" + currentBlogC?.slug
   )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-brands fa-facebook-f"></i>
@@ -152,7 +173,7 @@ window.addEventListener("scroll", function () {
                     </li>
                     <li>
                       <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-    window.location.origin + window.location.pathname + "?id=" + currentBlogC.documentId
+    window.location.origin + window.location.pathname + "/" + currentBlogC.slug
   )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-brands fa-linkedin-in"></i>
@@ -160,13 +181,13 @@ window.addEventListener("scroll", function () {
                     </li>
                     <li>
                       <a
-                        href={`${window.location.origin}${window.location.pathname}?id=${currentBlogC.documentId}`}
+                        href={`${window.location.origin}${window.location.pathname}/${currentBlogC.slug}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => {
                           e.preventDefault();
 
-                          const shareUrl = `${window.location.origin}${window.location.pathname}?id=${currentBlogC.documentId}`;
+                          const shareUrl = `${window.location.origin}${window.location.pathname}/${currentBlogC.slug}`;
 
                           if (navigator.share) {
                             // 📱 Mobile → open native share sheet (Instagram will appear if installed)
@@ -186,7 +207,7 @@ window.addEventListener("scroll", function () {
                     </li>
                     <li>
                       <a href={`mailto:?subject=Check this out!&body=${encodeURIComponent(
-    window.location.origin + window.location.pathname + "?id=" + currentBlogC?.documentId
+    window.location.origin + window.location.pathname + "/" + currentBlogC?.slug
   )}`} target="_blank" 
                   rel="noopener noreferrer">
                         <i className="fa-solid fa-envelope"></i>
@@ -260,7 +281,7 @@ window.addEventListener("scroll", function () {
                           <li key={j}>
                             <a
                               className="dropdown-item sub-item"
-                              href={`/blog-detail?id=${blog?.documentId}`}
+                              href={`/blog-detail/${blog?.slug}`}
                             >
                               {blog?.Blogs?.Blog_Title_2 || blog?.Blogs?.Blog_Title_1}
                             </a>

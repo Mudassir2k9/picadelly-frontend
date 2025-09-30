@@ -17,7 +17,7 @@ const NewsItem = () => {
 
     axios
       .get(
-        `${apiUrl}/news/${id}?populate[News][populate][Feature_Image][populate]=*&populate[News][populate]=category&populate[News][populate][Banner_Image][populate]=*`
+        `${apiUrl}/news/${id}?populate[News][populate][Feature_Image][populate]=*&populate[News][populate]=category&populate[News][populate][Banner_Image][populate]=*&populate[seo][populate]=*`
       )
       .then((res) => {
         setNewsItemData(res.data.data);
@@ -30,7 +30,7 @@ const NewsItem = () => {
   useEffect(() => {
       axios
         .get(
-          `${apiUrl}/news?populate[News][populate]=*`
+          `${apiUrl}/news?populate[News][populate]=*&populate[seo][populate]=*`
         )
         .then((res) => {
           setNewsData(res.data.data);
@@ -68,7 +68,28 @@ const NewsItem = () => {
 
   return (
     <>
-    <title>{newsItemData?.PageTitle}</title>
+    <title>{newsItemData?.seo?.metaTitle || newsItemData?.PageTitle}</title>
+        <meta
+          name="description"
+          content={newsItemData?.seo?.metaDescription || "Default description"}
+        />
+        <meta name="keywords" content={newsItemData?.seo?.keywords || ""} />
+        <link
+          rel="canonical"
+          href={newsItemData?.seo?.canonicalURL || window.location.href}
+        />
+
+        {/* OpenGraph */}
+        <meta property="og:title" content={newsItemData?.seo?.openGraph?.ogTitle} />
+        <meta
+          property="og:description"
+          content={newsItemData?.seo?.openGraph?.ogDescription}
+        />
+        <meta property="og:type" content={newsItemData?.seo?.openGraph?.ogType} />
+        <meta property="og:url" content={newsItemData?.seo?.openGraph?.ogUrl} />
+        {newsItemData?.seo?.metaImage?.url && (
+          <meta property="og:image" content={`${baseUrl}${newsItemData?.seo?.metaImage?.url}`} />
+        )}
       <style>{`
         body header{
         background-color: #fff;
