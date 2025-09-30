@@ -355,7 +355,7 @@ position: absolute;
   margin-top: 120px;
 } */
  .content-outer-div{
-   z-index: 11111 !important;
+   z-index: 1111 !important;
  }
  
 .companies_section{
@@ -650,7 +650,7 @@ position: absolute;
 .case-study-col-2::after{
   position: absolute;
     content: "";
-    background-image: url(../images/colourful-ring-2.png);
+    background-image: url(../images/case-study-ring.png);
     height: 430px;
     width: 430px;
     background-size: 100%;
@@ -658,6 +658,7 @@ position: absolute;
     top: 0%;
     bottom: 0;
     margin: auto;
+    transform: rotate(115deg);
 }
 .case-study-col-2{
   position: relative;
@@ -1754,8 +1755,12 @@ body .case-study-faqs .heading_col{
       .footer-row-1 .footer-col:nth-child(odd){
         width: 46% !important;
       }
+      
       .carousel-inner-div .team_circle h3{
   font-size: 36px !important;
+}
+.heading_inner_col h3{
+  line-height: 45px !important;
 }
 .carousel-inner-div .team_circle{
   padding:15px !important;

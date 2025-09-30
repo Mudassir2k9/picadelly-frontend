@@ -158,6 +158,9 @@ body {
 .service_1:hover .item_inner p {
   opacity: 1 !important;
 }
+.strategy_row p{
+  font-weight: 600 !important;
+}
 #slide1 p {
   color: #88898d !important;
 }
@@ -178,7 +181,12 @@ body .accordion-body {
   color: #8f8d8d;
   border-color: #cbcbcb78;
 }
-
+.modal-body .col-md-8 p{
+white-space: normal !important;
+}
+.inner_wrap p{
+  min-height: 0px !important;
+}
 .dropdown-heading1::before {
   position: absolute;
   content: "20";
@@ -188,6 +196,9 @@ body .accordion-body {
   padding: 2px 6px;
   border-radius: 6px;
   font-weight: normal;
+}
+.modal.team_popup{
+  z-index: 11111 !important;
 }
 .case-study-faqs .team_col .content > h3 {
   min-height: 80px !important;
@@ -2754,11 +2765,11 @@ header.sticky_x .nav-btn .btn_primary{
   }
   .circle-one {
     margin-top: 50px !important;
-    margin-left: 70px !important;
+    margin-left: 52px !important;
   }
   .circle-two {
     margin-top: -150px !important;
-    margin-left: 313px !important;
+    margin-left: 293px !important;
   }
   .circle-1 p {
     font-size: 18pt !important;
@@ -2767,7 +2778,7 @@ header.sticky_x .nav-btn .btn_primary{
   .case-study-col-2::after {
     height: 500px !important;
     width: 500px !important;
-    right: 66% !important;
+    right: 62% !important;
   }
   .circle-three {
     margin-top: 5px;
@@ -3268,6 +3279,15 @@ header.sticky_x .nav-btn .btn_primary{
 @media only screen and (max-width: 576px) {
   .banner_section #myVideo {
     object-position: 81% 50%;
+  }
+  .stories-section-para{
+    font-size: 20px !important;
+  }
+  .parallax_container .large_heading{
+    line-height: 36pt !important;
+  }
+  .award-col h6{
+    font-weight: 600;
   }
   .strategy_row .service_1 .item_inner:hover p:nth-child(3) {
     transform: translateY(36px) !important;
