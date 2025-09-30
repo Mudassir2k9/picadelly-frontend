@@ -571,7 +571,7 @@ header.sticky .navbar-custom {
 }
 .menu-line-3 {
   bottom: 0;
-  height: 2.5px;
+  height: 3px;
 }
 .menu-line-1 {
   height: 2.5px;
@@ -2285,6 +2285,7 @@ header.sticky_x .nav-btn .btn_primary{
     height: 300px !important;
     overflow-y: scroll !important;
   }
+  
   .case-study-faqs .accordion-part {
     height: auto !important;
     overflow-y: auto !important;
@@ -2961,6 +2962,16 @@ header.sticky_x .nav-btn .btn_primary{
     font-size: 24pt !important;
   }
 }
+@media (min-width: 1400px){
+  .menu-line-3{
+       height: 2.5px !important;
+  }
+}
+@media (min-width: 1800px){
+  .menu-line-1{
+       height: 3px !important;
+  }
+}
 @media (min-width: 1300px) and (max-width: 1440px) {
   .circle-container {
     width: 350px !important;
@@ -3195,6 +3206,9 @@ header.sticky_x .nav-btn .btn_primary{
     font-size: 13px;
     padding: 9px 25px !important;
   }
+  .menu-line-3{
+    height: 3px;
+  }
 }
 @media (max-width: 992px) {
   .footer-row-1 .footer-col,
@@ -3207,7 +3221,9 @@ header.sticky_x .nav-btn .btn_primary{
   .buzz_col h1 {
     padding-left: 30px !important;
   }
-
+  .menu-line-3{
+    height: 2.5px;
+  }
   .footer-row-1 .footer-col:nth-child(1) {
     width: 15%;
   }
@@ -3523,7 +3539,7 @@ header.sticky_x .nav-btn .btn_primary{
     text-align: center !important;
   }
   .footer-col .btn_primary {
-    padding: 9px 30px !important;
+    padding: 9px 28px !important;
   }
   .footer-col h5 {
     font-size: 16px !important;
