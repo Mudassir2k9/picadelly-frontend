@@ -116,7 +116,7 @@ const About = () => {
 
   return (
     <>
-    
+    <Helmet>
         <title>{aboutData?.seo?.metaTitle || aboutData?.PageTitle}</title>
         <meta
           name="description"
@@ -139,7 +139,7 @@ const About = () => {
         {aboutData?.seo?.metaImage?.url && (
           <meta property="og:image" content={`${baseUrl}${aboutData?.seo?.metaImage?.url}`} />
         )}
-    
+    </Helmet>
       <style>{`
       .about_row .about_right_content_col.transparent-bg {
         background: transparent !important;
