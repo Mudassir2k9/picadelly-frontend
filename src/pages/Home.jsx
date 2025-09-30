@@ -25,6 +25,13 @@ const Home = () => {
         if (referrer.includes("qmlogics.com")) {
           setShowSlideshow(true);
         }
+         // 👇 Add class to body when Home mounts
+    document.body.classList.add("home-page");
+
+    // 👇 Remove it when Home unmounts
+    return () => {
+      document.body.classList.remove("home-page");
+    };
   }, []);
   
 console.log(homeData);

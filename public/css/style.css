@@ -435,12 +435,19 @@ header {
   transition: all 0.3s ease;
   width: 100% !important;
 }
+body.home-page header {
+  pointer-events: none;
+}
+
+body.slides-opened header {
+  pointer-events: auto;
+}
 header.sticky {
   position: fixed !important;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
+  background-color: #fff !important;
   will-change: transform;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 111111;
@@ -2263,7 +2270,8 @@ body .work_slider .right_content_col img {
 }
 .parent_slideshow{
   z-index: 999999999;
-  pointer-events: none;
+  /* pointer-events: none !important; */
+
 }
 header.sticky_x .menu-line{
   background-color: #000 !important;

@@ -1,37 +1,41 @@
 import { useEffect } from "react";
 
 export default function Slideshow() {
-  useEffect(() => {
-    const slide1 = document.getElementById("slide1");
-    const slide2 = document.getElementById("slide2");
-    const slide3 = document.getElementById("slide3");
-    const slideshow = document.getElementById("slideshow");
+ useEffect(() => {
+  const slide1 = document.getElementById("slide1");
+  const slide2 = document.getElementById("slide2");
+  const slide3 = document.getElementById("slide3");
+  const slideshow = document.getElementById("slideshow");
 
-    // Step 1: Show slide 1
-    slide1.classList.add("active");
+  // Step 1: Show slide 1
+  slide1.classList.add("active");
 
-    const t1 = setTimeout(() => {
-      // Step 2: Fade out slide1 → show slide2 only
-      slide1.classList.remove("active");
-      slide2.classList.add("active");
-    }, 2000);
+  const t1 = setTimeout(() => {
+    // Step 2: Fade out slide1 → show slide2 only
+    slide1.classList.remove("active");
+    slide2.classList.add("active");
+  }, 2000);
 
-    const t2 = setTimeout(() => {
-      // Step 3: Show slide3 behind & split slide2
-      slideshow.style.background = "transparent";
-      slide2.classList.add("fade-out", "split-out");
-    }, 6000);
+  const t2 = setTimeout(() => {
+    // Step 3: Show slide3 behind & split slide2
+    slideshow.style.background = "transparent";
+    slide2.classList.add("fade-out", "split-out");
+  }, 6000);
 
-    const t3 = setTimeout(() => {
-      slideshow.style.setProperty("z-index", "0", "important");
-    }, 10000);
+  const t3 = setTimeout(() => {
+    // Step 4: End state → send slideshow behind + enable header
+    slideshow.style.setProperty("z-index", "0", "important");
 
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-    };
-  }, []);
+    // 👇 Add class to parent (or body) so header becomes clickable
+    document.body.classList.add("slides-opened");
+  }, 10000);
+
+  return () => {
+    clearTimeout(t1);
+    clearTimeout(t2);
+    clearTimeout(t3);
+  };
+}, []);
 
   return (
     <>
@@ -45,6 +49,7 @@ export default function Slideshow() {
             bottom:0;
             right:0;
             left:0;
+            pointer-events:none;
         }
         .slideshow {
           position: relative;
@@ -67,16 +72,21 @@ export default function Slideshow() {
         .slide.active {
           opacity: 1;
           z-index: 1;
+          pointer-events:none;
+       
         }
         #slide3 {
           z-index: 0;
+          pointer-events:none;
         }
         #slide2 {
           z-index: 1;
+          pointer-events:none;
         }
         #slide1 {
           z-index: 3 !important;
           background-color: #fff !important;
+          pointer-events:none;
         }
         #slide2 .split {
           position: absolute;
